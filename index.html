@@ -1778,7 +1778,7 @@ document.addEventListener('DOMContentLoaded',()=>{window.DRUK_L10N.capture();app
 */
 (function(){
   const section=document.getElementById('bhutan-map');
-  const files=['bhutan-geography.js?v=20261113-dzongkhags','bhutan-map.js?v=20261114-villages'];
+  const files=['bhutan-geography.js?v=20261113-dzongkhags','bhutan-map.js?v=20261114-cache'];
   let started=false;
   function loadAtlas(){
     if(started)return;started=true;
@@ -1933,6 +1933,18 @@ const OLLAMA_CLOUD_MODELS=[
 ];
 
 let history=[],isOpen=false,busy=false;
+/* The conversation survives page reloads and moving around the site for this browser tab (sessionStorage, R-24); it is
+   gone when the tab closes. Restored messages are shown through the same escaping as live ones. */
+const CHAT_STORE='druk-chat-session';
+function saveConversation(){try{const kept=history.filter(m=>m.content!=='[fallback]').slice(-20);if(kept.length)sessionStorage.setItem(CHAT_STORE,JSON.stringify(kept));else sessionStorage.removeItem(CHAT_STORE);}catch(_err){}}
+function restoreConversation(){
+  let saved=[];try{saved=JSON.parse(sessionStorage.getItem(CHAT_STORE)||'[]');}catch(_err){return false;}
+  if(!Array.isArray(saved))return false;
+  saved=saved.filter(m=>m&&['user','assistant'].includes(m.role)&&typeof m.content==='string'&&m.content.trim()).map(m=>({role:m.role,content:m.content.slice(0,4000)})).slice(-20);
+  if(!saved.length)return false;
+  welcome();history=saved;saved.forEach(m=>m.role==='user'?userMsg(m.content):botMsg(m.content));qr.style.display='none';
+  return true;
+}
 let aiProvider='groq',groqKey='',ollamaModel=OLLAMA_CLOUD_MODELS[0].id,providerChosen=false;
 try{
   providerChosen=Boolean(localStorage.getItem('druk-chat-provider'));
@@ -2027,7 +2039,7 @@ function chatToggle(){
   win.classList.toggle('open',isOpen);
   if(isOpen){
     badge.style.display='none';
-    if(!msgs.children.length)welcome();
+    if(!msgs.children.length&&!restoreConversation())welcome();
     setTimeout(()=>inp.focus(),300);
   }
 }
@@ -2137,7 +2149,7 @@ async function chatSend(override){
   inp.value='';inp.style.height='auto';
   qr.style.display='none';
   userMsg(text);
-  history.push({role:'user',content:text});
+  history.push({role:'user',content:text});saveConversation();
   busy=true;snd.disabled=true;showTyping();
 
   try{
@@ -2164,7 +2176,7 @@ ${context}`;
     }
     hideTyping();
     botMsg(reply,hasAIProviderEnabled()?undefined:guideKey);
-    history.push({role:'assistant',content:reply});
+    history.push({role:'assistant',content:reply});saveConversation();
     updateChatMeta();
   }catch(err){
     hideTyping();
@@ -2181,7 +2193,7 @@ ${context}`;
     }else{
       botMsg(staticFallback(text),fallbackKey(text));
     }
-    history.push({role:'assistant',content:'[fallback]'});
+    history.push({role:'assistant',content:'[fallback]'});saveConversation();
   }finally{busy=false;snd.disabled=false;inp.focus();}
 }
 window.chatSend=chatSend;
@@ -2189,7 +2201,7 @@ window.chatSend=chatSend;
 function chatQuick(text){if(!isOpen)chatToggle();setTimeout(()=>chatSend(CHAT_EN[text]?chatText(text):text),350);}
 window.chatQuick=chatQuick;
 
-function chatClear(){if(busy)return;history=[];msgs.innerHTML='';qr.style.display='flex';welcome();}
+function chatClear(){if(busy)return;history=[];saveConversation();msgs.innerHTML='';qr.style.display='flex';welcome();}
 window.chatClear=chatClear;
 
 function chatSetupToggle(){
@@ -2211,7 +2223,7 @@ function chatSaveKey(){
   saveChatPrefs();
   setup.style.display='none';
   updateChatMeta();
-  msgs.innerHTML='';history=[];qr.style.display='flex';
+  msgs.innerHTML='';history=[];saveConversation();qr.style.display='flex';
   welcome();
   chatSend(chatText('quickItineraries'));
 }
@@ -2228,5 +2240,9 @@ inp.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDef
 setTimeout(()=>{if(!isOpen){badge.style.display='flex';}},3000);
 })();
 </script>
+<script>/* Service worker (R-24): faster repeat visits and offline pages. Only on https or this computer; ?nosw switches it off. */
+  (function(){if(!('serviceWorker' in navigator))return;if(/[?&]nosw/.test(location.search)){navigator.serviceWorker.getRegistrations().then(list=>list.forEach(r=>r.unregister())).catch(()=>{});return;}
+  if(location.protocol!=='https:'&&!['localhost','127.0.0.1'].includes(location.hostname))return;
+  addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));})();</script>
 </body>
 </html>

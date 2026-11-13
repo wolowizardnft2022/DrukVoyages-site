@@ -214,7 +214,9 @@
   const dzName=d=>placeName(d.label||d.name);
   const categoryLabel=type=>atlasText.categories?.[Object.keys(categories).indexOf(type)]||categories[type];
   const hudName=root.querySelector('.geo-hud-name'),hudDefault=hudName.textContent;
-  let openDz=null,overlayScale=1,flightsOn=!reducedMotion,flightsVisible=false,flightClock=0,flightFrame=0,flightLast=0;
+  // A visitor who paused the flights keeps them paused on later visits (R-24); browser storage only, no cookie.
+  let flightsPaused=false;try{flightsPaused=typeof localStorage!=='undefined'&&localStorage.getItem('druk-map-flights')==='paused';}catch(_err){}
+  let openDz=null,overlayScale=1,flightsOn=!reducedMotion&&!flightsPaused,flightsVisible=false,flightClock=0,flightFrame=0,flightLast=0;
   let detailData=window.DRUK_DETAIL||null,detailLoading=null,detailNodes=[],roadsDrawn=false,settled=FULL.slice();
   let selectedSpot=null;
   let view=FULL.slice(),flight=0,selected=null,hovered=null,touring=false,tourStep=-1,tourTimer=null;
@@ -872,7 +874,7 @@
     flightButton.lastElementChild.textContent=label;
   }
   flightButton.hidden=reducedMotion;
-  flightButton.addEventListener('click',()=>{flightsOn=!flightsOn;syncFlights();});
+  flightButton.addEventListener('click',()=>{flightsOn=!flightsOn;try{if(flightsOn)localStorage.removeItem('druk-map-flights');else localStorage.setItem('druk-map-flights','paused');}catch(_err){}syncFlights();});
   if('IntersectionObserver' in window)new IntersectionObserver(entries=>{flightsVisible=entries[0].isIntersecting;syncFlights();}).observe($('geoStage'));
   else flightsVisible=true;
 
