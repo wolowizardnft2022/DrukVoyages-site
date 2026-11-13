@@ -44,7 +44,7 @@
     "sameAs": ["https://instagram.com/drukvoyages","https://facebook.com/drukvoyages"]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261114-villages"/>
+  <link rel="stylesheet" href="styles.css?v=20261114-nav2"/>
   <!-- Intro splash: decided before first paint so the home page never flashes first. Shown on every load
     and refresh, never with reduced motion, and never without JavaScript (the class is set here). Without a
     #section link, the page opens at the top (the home page) instead of the browser's restored scroll. -->
@@ -149,11 +149,15 @@
 <div class="logo-text"><span class="brand"><img class="brand-wordmark" src="img/druk-voyages-wordmark.svg?v=20261002-mainlogo" width="180" height="17" alt="Druk Voyages"/></span><span class="tagline">Authentic Bhutan, Extraordinary Journeys</span></div>
   </a>
   <ul class="nav-links">
+<li><a href="#home" data-nav-i18n="navHome">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#itineraries">Itineraries</a></li>
+<li><a href="#journey-finder" data-nav-i18n="navCompass">Compass</a></li>
 <li><a href="#bhutan-map" data-map-nav>Explore Bhutan</a></li>
 <li><a href="#experiences">Experiences</a></li>
 <li><a href="#gallery">Gallery</a></li>
+<li><a href="#best-time" data-nav-i18n="navBestTime">Best Time</a></li>
+<li><a href="#guest-stories" data-nav-i18n="navStories">Stories</a></li>
 <li><a href="#enquiry" class="nav-cta">Plan My Trip</a></li>
   </ul>
   <div class="language-switcher desktop-language">
@@ -180,11 +184,15 @@
 -->
 <div class="mobile-nav" id="mobileNav">
   <div class="mobile-nav-ornament"></div>
+  <a href="#home" data-nav-i18n="navHome" onclick="closeMobileNav()">Home</a>
   <a href="#about" onclick="closeMobileNav()">About</a>
   <a href="#itineraries" onclick="closeMobileNav()">Itineraries</a>
+  <a href="#journey-finder" data-nav-i18n="navCompass" onclick="closeMobileNav()">Compass</a>
   <a href="#bhutan-map" data-map-nav onclick="closeMobileNav()">Explore Bhutan</a>
   <a href="#experiences" onclick="closeMobileNav()">Experiences</a>
   <a href="#gallery" onclick="closeMobileNav()">Gallery</a>
+  <a href="#best-time" data-nav-i18n="navBestTime" onclick="closeMobileNav()">Best Time</a>
+  <a href="#guest-stories" data-nav-i18n="navStories" onclick="closeMobileNav()">Stories</a>
   <div class="mobile-nav-ornament"></div>
   <a href="#enquiry" class="m-cta" onclick="closeMobileNav()">Plan My Trip</a>
   <div class="language-switcher mobile-language">
@@ -514,7 +522,7 @@
   Seasonal planning cards. Star icons show the recommended quality for each
   season and are styled with .star-on / .star-off utility classes.
 -->
-<section class="calendar-section">
+<section class="calendar-section" id="best-time">
   <!-- Watercolour painting of a Bhutan valley (scripts/build-watercolor.py), loaded as the section approaches. -->
   <div class="season-wash" aria-hidden="true"></div>
   <div class="container">
@@ -746,7 +754,7 @@
 <div class="toast" id="toast"></div>
 
 <script src="translations.js?v=20261002-hero-captions"></script>
-<script src="localization.js?v=20261111-detail"></script>
+<script src="localization.js?v=20261114-nav2"></script>
 <script src="chat-locales.js?v=20261002-complete4"></script>
 <script>
 /* MAIN PAGE SCRIPT
@@ -1103,8 +1111,9 @@ async function applyLanguage(language){
   try{localStorage.setItem('druk-language',activeLanguage);}catch(_err){}
   document.querySelectorAll('[data-language-select]').forEach(select=>{select.value=activeLanguage;select.setAttribute('aria-label',ui.language);});
   setTextList('.logo-text .tagline',[l.tagline,l.tagline]);
-  setTextList('.nav-links a:not([data-map-nav])',l.menu);
-  setTextList('.mobile-nav>a:not([data-map-nav])',l.menu);
+  setTextList('.nav-links a:not([data-map-nav]):not([data-nav-i18n])',l.menu);
+  setTextList('.mobile-nav>a:not([data-map-nav]):not([data-nav-i18n])',l.menu);
+  document.querySelectorAll('[data-nav-i18n]').forEach(link=>{link.textContent=tr(link.dataset.navI18n);});
   document.getElementById('mobilePlanBar').textContent=document.querySelector('.nav-links .nav-cta').textContent;
   const mapNavLabels={en:'Explore Bhutan',ja:'ブータン地図',zh:'探索不丹',ko:'부탄 지도',es:'Explora Bután',fr:'Explorer le Bhoutan',vi:'Khám phá Bhutan',pt:'Explore o Butão'};
   document.querySelectorAll('[data-map-nav]').forEach(link=>{link.textContent=mapNavLabels[activeLanguage]||mapNavLabels.en;});

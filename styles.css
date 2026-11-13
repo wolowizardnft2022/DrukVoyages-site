@@ -415,7 +415,8 @@ section { padding: var(--section-y) var(--gutter); }
 
 /* Closing invitation: one full-bleed photograph. */
 .cta-section { position: relative; overflow: hidden; text-align: center; color: white; padding: clamp(96px, 12vw, 160px) var(--gutter); background: var(--deep); }
-.cta-bg { position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.62)),url('img/web/maps-image/dzongs_of_bhutan/Paro Tasktsang.jpg') center 42%/cover; }
+/* A watercolour painting of the Tiger's Nest photo (img/web/watercolor/cta-bg.webp, scripts/build-watercolor.py cta). */
+.cta-bg { position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.58)),url('img/web/watercolor/cta-bg.webp') center 42%/cover; }
 .cta-content { position: relative; max-width: 720px; margin: 0 auto; }
 .cta-content .section-label { color: #f2f2f2; }
 .cta-content h2 { font: 300 clamp(2.625rem,5vw,4.5rem)/1.06 var(--display); letter-spacing: -.01em; margin-bottom: 22px; text-wrap: balance; }
@@ -1613,3 +1614,17 @@ main > section[id]:not(.hero):not(.about-section) { scroll-margin-top: calc(28px
 .geo-village-list { display: flex; flex-wrap: wrap; gap: 0 14px; margin: 0; padding: 0 0 8px; list-style: none; }
 .geo-village-list button { min-height: 40px; padding: 0; border: 0; background: none; color: var(--on-dark); font: 400 var(--fs-sm)/1.3 var(--body); cursor: pointer; }
 .geo-village-list button:hover, .geo-village-list button[aria-pressed="true"] { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
+
+/* The menu has ten links (Home, Compass, Best Time and Stories added): on laptop widths the gaps and letter-spacing
+   tighten so it stays on one row in all eight languages (French and Vietnamese are the longest). */
+@media (min-width: 1151px) and (max-width: 1439px) {
+  .nav-links { gap: clamp(12px, 1.3vw, 22px); }
+  .nav-links a { letter-spacing: .1em; }
+}
+/* Phone menu with ten links: never clip the top on short screens (safe centring scrolls instead), and tighten it a
+   little when the screen is short. */
+.mobile-nav { justify-content: safe center; }
+@media (max-height: 860px) {
+  .mobile-nav { gap: 8px; }
+  .mobile-nav > a { font-size: clamp(1.5rem, 3.6vh, 2.125rem); }
+}
