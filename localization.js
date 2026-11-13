@@ -44,7 +44,9 @@
   "mapGmcAirportCaption": "Gelephu International Airport (artist’s impression)",
   "mapVillages": "Towns & villages ({count})",
   "navHome": "Home",
-  "navCompass": "Compass",
+  "planStep1": "Step 1 of 2 · Find your journey",
+  "planStep2": "Step 2 of 2 · Send your request",
+  "planSkip": "Already know your plans? Skip to the form",
   "navBestTime": "Best Time",
   "navStories": "Stories",
   "mapEntry": "Entry from India",
@@ -233,7 +235,7 @@
   async function load(lang){
     if(!supported.includes(lang))throw new Error('Unsupported language');
     if(catalogs.has(lang))return;
-    if(!pending.has(lang))pending.set(lang,fetch(`i18n/${lang}.json?v=20261114-nav2`,{cache:'no-cache'}).then(async response=>{
+    if(!pending.has(lang))pending.set(lang,fetch(`i18n/${lang}.json?v=20261114-plan2`,{cache:'no-cache'}).then(async response=>{
       if(!response.ok)throw new Error('Translation catalog unavailable');
       const data=await response.json();
       if(data.language!==lang)throw new Error('Translation catalog mismatch');

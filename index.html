@@ -44,7 +44,7 @@
     "sameAs": ["https://instagram.com/drukvoyages","https://facebook.com/drukvoyages"]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261114-nav2"/>
+  <link rel="stylesheet" href="styles.css?v=20261114-plan2"/>
   <!-- Intro splash: decided before first paint so the home page never flashes first. Shown on every load
     and refresh, never with reduced motion, and never without JavaScript (the class is set here). Without a
     #section link, the page opens at the top (the home page) instead of the browser's restored scroll. -->
@@ -152,13 +152,12 @@
 <li><a href="#home" data-nav-i18n="navHome">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#itineraries">Itineraries</a></li>
-<li><a href="#journey-finder" data-nav-i18n="navCompass">Compass</a></li>
 <li><a href="#bhutan-map" data-map-nav>Explore Bhutan</a></li>
 <li><a href="#experiences">Experiences</a></li>
 <li><a href="#gallery">Gallery</a></li>
 <li><a href="#best-time" data-nav-i18n="navBestTime">Best Time</a></li>
 <li><a href="#guest-stories" data-nav-i18n="navStories">Stories</a></li>
-<li><a href="#enquiry" class="nav-cta">Plan My Trip</a></li>
+<li><a href="#journey-finder" class="nav-cta">Plan My Trip</a></li>
   </ul>
   <div class="language-switcher desktop-language">
 <label class="sr-only" for="desktopLanguage">Language</label>
@@ -187,14 +186,13 @@
   <a href="#home" data-nav-i18n="navHome" onclick="closeMobileNav()">Home</a>
   <a href="#about" onclick="closeMobileNav()">About</a>
   <a href="#itineraries" onclick="closeMobileNav()">Itineraries</a>
-  <a href="#journey-finder" data-nav-i18n="navCompass" onclick="closeMobileNav()">Compass</a>
   <a href="#bhutan-map" data-map-nav onclick="closeMobileNav()">Explore Bhutan</a>
   <a href="#experiences" onclick="closeMobileNav()">Experiences</a>
   <a href="#gallery" onclick="closeMobileNav()">Gallery</a>
   <a href="#best-time" data-nav-i18n="navBestTime" onclick="closeMobileNav()">Best Time</a>
   <a href="#guest-stories" data-nav-i18n="navStories" onclick="closeMobileNav()">Stories</a>
   <div class="mobile-nav-ornament"></div>
-  <a href="#enquiry" class="m-cta" onclick="closeMobileNav()">Plan My Trip</a>
+  <a href="#journey-finder" class="m-cta" onclick="closeMobileNav()">Plan My Trip</a>
   <div class="language-switcher mobile-language">
 <label class="sr-only" for="mobileLanguage">Language</label>
 <select class="language-select" id="mobileLanguage" data-language-select aria-label="Language">
@@ -280,7 +278,7 @@
 -->
 <section class="about-section" id="about">
   <div class="container about-bento">
-<div class="bento-tile bento-photo about-logo"><img src="img/druk-voyages-logo-reversed.svg?v=20261109" width="1254" height="1254" alt="Druk Voyages logo: an endless knot below a mountain peak, with a golden dragon" loading="lazy"/>
+<div class="bento-tile bento-photo about-logo"><img src="img/druk-voyages-logo-reversed.svg?v=20261109" width="1254" height="1254" alt="Druk Voyages logo: an endless knot below a mountain peak, with a golden dragon" loading="lazy"/><p class="about-logo-motto">Authentic Bhutan, Extraordinary Journeys</p>
   <!-- Poster wall: decorative columns of the site's card photos drifting behind the logo. The
     columns are duplicated by script for a seamless loop when motion is allowed. -->
   <div class="logo-wall" aria-hidden="true"><div class="wall-col"><i style="--p:url('img/cards/exp-tigers-nest.jpg')"></i><i style="--p:url('img/cards/season-spring.jpg')"></i><i style="--p:url('img/cards/testi-trongsa.jpg')"></i><i style="--p:url('img/cards/exp-tsechu.jpg')"></i><i style="--p:url('img/cards/season-autumn.jpg')"></i></div><div class="wall-col"><i style="--p:url('img/cards/exp-punakha-dzong.jpg')"></i><i style="--p:url('img/cards/testi-bumthang.jpg')"></i><i style="--p:url('img/cards/season-winter.jpg')"></i><i style="--p:url('img/cards/exp-farm.jpg')"></i><i style="--p:url('img/cards/exp-cranes.jpg')"></i></div><div class="wall-col"><i style="--p:url('img/cards/season-summer.jpg')"></i><i style="--p:url('img/cards/exp-wellness.jpg')"></i><i style="--p:url('img/cards/testi-tigers-nest.jpg')"></i><i style="--p:url('img/cards/exp-tigers-nest.jpg')"></i><i style="--p:url('img/cards/season-spring.jpg')"></i></div><div class="wall-col"><i style="--p:url('img/cards/exp-cranes.jpg')"></i><i style="--p:url('img/cards/season-autumn.jpg')"></i><i style="--p:url('img/cards/exp-tsechu.jpg')"></i><i style="--p:url('img/cards/testi-trongsa.jpg')"></i><i style="--p:url('img/cards/exp-punakha-dzong.jpg')"></i></div></div>
@@ -361,57 +359,6 @@
   </div>
 </section>
 
-<!-- JOURNEY FINDER
-  A lightweight trip-matching tool. Visitors choose what matters most, their
-  available time, and likely season; JavaScript suggests three best-fit routes.
--->
-<section class="journey-finder" id="journey-finder">
-  <div class="container finder-grid">
-    <div class="finder-intro">
-      <div class="section-label">The Journey Compass</div>
-      <h2 class="section-title">Find Your Bhutan <em>Rhythm</em></h2>
-      <p>Bhutan rewards travelling slowly. Use the compass to find a starting point, then let our local planners tune the pacing around your interests and dates.</p>
-      <div class="finder-microfacts" aria-label="How we plan a Bhutan journey">
-        <div><span class="micro-number">01</span><span>Start with what you want to feel, not a checklist.</span></div>
-        <div><span class="micro-number">02</span><span>Build in space for mountain roads, weather and chance encounters.</span></div>
-        <div><span class="micro-number">03</span><span>Keep the route human-scale: fewer beds, deeper days.</span></div>
-      </div>
-    </div>
-    <div class="finder-panel">
-      <div class="finder-panel-top">
-        <span>Journey preferences</span>
-        <span class="finder-live"><i></i> Live match</span>
-      </div>
-      <fieldset class="finder-fieldset">
-        <legend>What are you drawn to?</legend>
-        <div class="interest-chips" id="interestChips">
-          <button type="button" class="interest-chip active" data-interest="culture" aria-pressed="true">Living culture</button>
-          <button type="button" class="interest-chip" data-interest="nature" aria-pressed="false">Wild landscapes</button>
-          <button type="button" class="interest-chip" data-interest="trekking" aria-pressed="false">Trekking</button>
-          <button type="button" class="interest-chip" data-interest="wellness" aria-pressed="false">Stillness &amp; wellness</button>
-          <button type="button" class="interest-chip" data-interest="wildlife" aria-pressed="false">Wildlife</button>
-          <button type="button" class="interest-chip" data-interest="photography" aria-pressed="false">Photography</button>
-        </div>
-      </fieldset>
-      <div class="finder-controls">
-        <label class="finder-range-label" for="tripDays"><span>Travel days</span><strong id="tripDaysValue">9 days</strong></label>
-        <input type="range" id="tripDays" min="5" max="18" value="9" step="1" aria-describedby="tripDaysValue"/>
-        <div class="range-scale" aria-hidden="true"><span style="--p:0">5</span><span style="--p:.3846">10</span><span style="--p:.6923">14</span><span style="--p:1">18+</span></div>
-      </div>
-      <label class="finder-season" for="tripSeason"><span>Likely travel season</span>
-        <select id="tripSeason">
-          <option value="any">I am flexible</option>
-          <option value="spring">Spring · Mar–May</option>
-          <option value="summer">Summer · Jun–Aug</option>
-          <option value="autumn">Autumn · Sep–Nov</option>
-          <option value="winter">Winter · Dec–Feb</option>
-        </select>
-      </label>
-      <div class="finder-results" id="finderResults" aria-live="polite"></div>
-      <button type="button" class="finder-custom-btn" id="customJourneyBtn">I want a route made for me <span>↗</span></button>
-    </div>
-  </div>
-</section>
 
 <!-- Map of Bhutan in the style of a GeoLayers / After Effects map animation: toned relief, a border that
   draws itself, place pins with leader-line callouts and a camera that flies between them. Local SVG; no
@@ -540,13 +487,70 @@
   </div>
 </section>
 
-<!-- ENQUIRY FORM
+<!-- PLAN MY TRIP, STEP 1: JOURNEY FINDER (the Journey Compass)
+  Plan My Trip is one two-step flow: this compass (step 1), then the enquiry form right below (step 2).
+  The menu's "Plan My Trip" lands here; "I want a route made for me" fills the form and moves on.
+  A lightweight trip-matching tool. Visitors choose what matters most, their
+  available time, and likely season; JavaScript suggests three best-fit routes.
+-->
+<section class="journey-finder" id="journey-finder">
+  <div class="container finder-grid">
+    <div class="finder-intro">
+      <div class="plan-step" data-ui-text="planStep1">Step 1 of 2 · Find your journey</div>
+      <div class="section-label">The Journey Compass</div>
+      <h2 class="section-title">Find Your Bhutan <em>Rhythm</em></h2>
+      <p>Bhutan rewards travelling slowly. Use the compass to find a starting point, then let our local planners tune the pacing around your interests and dates.</p>
+      <div class="finder-microfacts" aria-label="How we plan a Bhutan journey">
+        <div><span class="micro-number">01</span><span>Start with what you want to feel, not a checklist.</span></div>
+        <div><span class="micro-number">02</span><span>Build in space for mountain roads, weather and chance encounters.</span></div>
+        <div><span class="micro-number">03</span><span>Keep the route human-scale: fewer beds, deeper days.</span></div>
+      </div>
+    </div>
+    <div class="finder-panel">
+      <div class="finder-panel-top">
+        <span>Journey preferences</span>
+        <span class="finder-live"><i></i> Live match</span>
+      </div>
+      <fieldset class="finder-fieldset">
+        <legend>What are you drawn to?</legend>
+        <div class="interest-chips" id="interestChips">
+          <button type="button" class="interest-chip active" data-interest="culture" aria-pressed="true">Living culture</button>
+          <button type="button" class="interest-chip" data-interest="nature" aria-pressed="false">Wild landscapes</button>
+          <button type="button" class="interest-chip" data-interest="trekking" aria-pressed="false">Trekking</button>
+          <button type="button" class="interest-chip" data-interest="wellness" aria-pressed="false">Stillness &amp; wellness</button>
+          <button type="button" class="interest-chip" data-interest="wildlife" aria-pressed="false">Wildlife</button>
+          <button type="button" class="interest-chip" data-interest="photography" aria-pressed="false">Photography</button>
+        </div>
+      </fieldset>
+      <div class="finder-controls">
+        <label class="finder-range-label" for="tripDays"><span>Travel days</span><strong id="tripDaysValue">9 days</strong></label>
+        <input type="range" id="tripDays" min="5" max="18" value="9" step="1" aria-describedby="tripDaysValue"/>
+        <div class="range-scale" aria-hidden="true"><span style="--p:0">5</span><span style="--p:.3846">10</span><span style="--p:.6923">14</span><span style="--p:1">18+</span></div>
+      </div>
+      <label class="finder-season" for="tripSeason"><span>Likely travel season</span>
+        <select id="tripSeason">
+          <option value="any">I am flexible</option>
+          <option value="spring">Spring · Mar–May</option>
+          <option value="summer">Summer · Jun–Aug</option>
+          <option value="autumn">Autumn · Sep–Nov</option>
+          <option value="winter">Winter · Dec–Feb</option>
+        </select>
+      </label>
+      <div class="finder-results" id="finderResults" aria-live="polite"></div>
+      <button type="button" class="finder-custom-btn" id="customJourneyBtn">I want a route made for me <span>↗</span></button>
+      <a class="plan-skip" href="#enquiry" data-ui-text="planSkip">Already know your plans? Skip to the form</a>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN MY TRIP, STEP 2: ENQUIRY FORM
   Lead-capture form. Field ids and names are used by the submit handler below,
   so keep them in sync if the backend payload changes.
 -->
 <section class="enquiry-section" id="enquiry">
   <div class="container enquiry-grid">
 <div class="enquiry-info">
+  <div class="plan-step" data-ui-text="planStep2">Step 2 of 2 · Send your request</div>
   <div class="section-label">Start Planning</div>
   <h2>Tell Us Your<br><em>Dream Journey</em></h2>
   <p>Every Bhutan journey is unique. Our travel architects will craft a bespoke itinerary based on your interests, travel dates, and group size — at no obligation.</p>
@@ -705,7 +709,7 @@
 <span class="footer-bottom-links"><a href="sitemap.xml">Sitemap</a></span>
   </div>
 </footer>
-<a href="#enquiry" class="mobile-plan-bar" id="mobilePlanBar" aria-hidden="true" tabindex="-1">Plan My Trip</a>
+<a href="#journey-finder" class="mobile-plan-bar" id="mobilePlanBar" aria-hidden="true" tabindex="-1">Plan My Trip</a>
 <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
 <!-- TRANSLATION DISCLAIMER
@@ -754,7 +758,7 @@
 <div class="toast" id="toast"></div>
 
 <script src="translations.js?v=20261002-hero-captions"></script>
-<script src="localization.js?v=20261114-nav2"></script>
+<script src="localization.js?v=20261114-plan2"></script>
 <script src="chat-locales.js?v=20261002-complete4"></script>
 <script>
 /* MAIN PAGE SCRIPT
@@ -1111,9 +1115,11 @@ async function applyLanguage(language){
   try{localStorage.setItem('druk-language',activeLanguage);}catch(_err){}
   document.querySelectorAll('[data-language-select]').forEach(select=>{select.value=activeLanguage;select.setAttribute('aria-label',ui.language);});
   setTextList('.logo-text .tagline',[l.tagline,l.tagline]);
+  setText('.about-logo-motto',l.tagline);
   setTextList('.nav-links a:not([data-map-nav]):not([data-nav-i18n])',l.menu);
   setTextList('.mobile-nav>a:not([data-map-nav]):not([data-nav-i18n])',l.menu);
   document.querySelectorAll('[data-nav-i18n]').forEach(link=>{link.textContent=tr(link.dataset.navI18n);});
+  document.querySelectorAll('[data-ui-text]').forEach(node=>{node.textContent=tr(node.dataset.uiText);});
   document.getElementById('mobilePlanBar').textContent=document.querySelector('.nav-links .nav-cta').textContent;
   const mapNavLabels={en:'Explore Bhutan',ja:'ブータン地図',zh:'探索不丹',ko:'부탄 지도',es:'Explora Bután',fr:'Explorer le Bhoutan',vi:'Khám phá Bhutan',pt:'Explore o Butão'};
   document.querySelectorAll('[data-map-nav]').forEach(link=>{link.textContent=mapNavLabels[activeLanguage]||mapNavLabels.en;});
@@ -1261,9 +1267,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   const planBar=document.getElementById('mobilePlanBar');
   const backToTop=document.getElementById('backToTop');
-  const state={hero:true,enquiry:false,footer:false};
+  // The floating Plan My Trip bar hides wherever planning already happens: the hero, both plan steps and the footer.
+  const state={hero:true,plan:false,enquiry:false,footer:false};
   const sync=()=>{
-    const showPlan=!state.hero&&!state.enquiry&&!state.footer;
+    const showPlan=!state.hero&&!state.plan&&!state.enquiry&&!state.footer;
     planBar.classList.toggle('is-shown',showPlan);
     planBar.setAttribute('aria-hidden',String(!showPlan));
     planBar.tabIndex=showPlan?0:-1;
@@ -1274,7 +1281,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     entries.forEach(entry=>{state[entry.target.dataset.watch]=entry.isIntersecting;});
     sync();
   });
-  [['hero','.hero'],['enquiry','#enquiry'],['footer','footer']].forEach(([key,selector])=>{
+  [['hero','.hero'],['plan','#journey-finder'],['enquiry','#enquiry'],['footer','footer']].forEach(([key,selector])=>{
     const element=document.querySelector(selector);
     if(element){element.dataset.watch=key;watch.observe(element);}
   });
