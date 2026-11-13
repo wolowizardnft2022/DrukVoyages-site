@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-hidden="true">
+  <style>
+    /* Everything loops: the hand waves, the arm rocks, the body bobs, the head tilts and the eyes blink. */
+    .figure, .head, .arm, .hand, .eyes { transform-box: view-box; animation: 0.6s ease-in-out -0.34s infinite alternate both; }
+    .hand { transform-origin: 130px 100px; animation-name: wave; }
+    .arm { transform-origin: 114px 134px; animation-name: rock; }
+    .figure { animation-name: bob; }
+    .head { transform-origin: 80px 104px; animation-name: tilt; animation-duration: 1.2s; }
+    .eyes { transform-origin: 80px 74px; animation: blink 3.6s -1.00s infinite; }
+    @keyframes wave { from { transform: rotate(-10deg); } to { transform: rotate(24deg); } }
+    @keyframes rock { from { transform: rotate(-2deg); } to { transform: rotate(7deg); } }
+    @keyframes bob { from { transform: translateY(1.5px); } to { transform: translateY(-2.5px); } }
+    @keyframes tilt { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+    @keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <defs>
+    <pattern id="check" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 0H10M0 0V10" stroke="#9fb3d9" stroke-width="2"/></pattern>
+    <radialGradient id="glow" cx=".5" cy=".38" r=".7"><stop offset="0" stop-color="#fff" stop-opacity=".14"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="160" height="160" fill="#25283a"/>
+  <rect width="160" height="160" fill="url(#glow)"/>
+  <path d="M0 132 L34 96 L52 112 L82 78 L112 108 L128 94 L160 124 L160 160 L0 160 Z" fill="#000" opacity=".18"/>
+  <g class="figure"><g class="head"></g><rect x="72" y="96" width="16" height="20" rx="6" fill="#d29a6e"/><rect x="72" y="104" width="16" height="8" fill="#000" opacity=".1"/>
+  <path d="M22 166 L22 160 Q24 122 56 112 L104 112 Q136 122 138 160 L138 166 Z" fill="#2c3d6b"/>
+  <path d="M22 166 L22 160 Q24 122 56 112 L104 112 Q136 122 138 160 L138 166 Z" fill="url(#check)" opacity=".35"/>
+  <path d="M60 112 L80 146 L100 112 L92 112 L80 132 L68 112 Z" fill="#f5f0e6"/>
+  <path d="M68 112 L80 132 L92 112" fill="none" stroke="#9fb3d9" stroke-width="1.2" opacity=".6"/>
+  <g class="arm">
+    <path d="M114 134 L127 106" stroke="#2c3d6b" stroke-width="15" stroke-linecap="round"/>
+    <path d="M126 108 L129 101" stroke="#f5f0e6" stroke-width="13"/>
+    <g class="hand">
+      <path d="M130 100 L131 96" stroke="#d29a6e" stroke-width="8" stroke-linecap="round"/>
+      <ellipse cx="132" cy="90" rx="7" ry="7.5" fill="#d29a6e"/>
+      <path d="M127 86 L125 77" stroke="#d29a6e" stroke-width="4" stroke-linecap="round"/><path d="M131 85 L130 75" stroke="#d29a6e" stroke-width="4" stroke-linecap="round"/><path d="M135 85 L136 76" stroke="#d29a6e" stroke-width="4" stroke-linecap="round"/><path d="M138 88 L140 81" stroke="#d29a6e" stroke-width="4" stroke-linecap="round"/><path d="M126 93 L121 89" stroke="#d29a6e" stroke-width="4" stroke-linecap="round"/>
+      <path d="M128 92 Q132 94 136 91" fill="none" stroke="#000" stroke-opacity=".12" stroke-width="1.2"/>
+    </g>
+  </g><g class="head">
+  <ellipse cx="54" cy="76" rx="5" ry="7" fill="#d29a6e"/><ellipse cx="106" cy="76" rx="5" ry="7" fill="#d29a6e"/>
+  <ellipse cx="80" cy="74" rx="26" ry="30" fill="#d29a6e"/>
+  <ellipse cx="64" cy="84" rx="5" ry="3" fill="#d9705a" opacity=".22"/><ellipse cx="96" cy="84" rx="5" ry="3" fill="#d9705a" opacity=".22"/><path d="M64 67 Q70 64 75 67 M85 67 Q90 64 96 67" fill="none" stroke="#2a1d18" stroke-width="2" stroke-linecap="round"/><g class="eyes"><ellipse cx="70" cy="74" rx="2.6" ry="3" fill="#2a1d18"/><ellipse cx="90" cy="74" rx="2.6" ry="3" fill="#2a1d18"/></g><path d="M80 77 Q78 83 80 84" fill="none" stroke="#000" stroke-opacity=".18" stroke-width="1.8" stroke-linecap="round"/><path d="M72 89 Q80 95 88 89" fill="none" stroke="#7a3b2c" stroke-width="2.2" stroke-linecap="round"/><g fill="none" stroke="#e6d9c4" stroke-width="1.8"><circle cx="70" cy="74" r="7"/><circle cx="90" cy="74" r="7"/><path d="M77 74 L83 74 M63 73 L56 71 M97 73 L104 71"/></g><path d="M54 68 Q52 40 80 38 Q108 40 106 66 Q102 50 84 48 Q70 50 62 56 Q57 60 54 68 Z" fill="#1d1a1c"/></g></g>
+</svg>

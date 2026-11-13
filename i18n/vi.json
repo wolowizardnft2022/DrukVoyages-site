@@ -1,0 +1,1517 @@
+{
+  "language": "vi",
+  "ui": {
+    "map2d": "Bản đồ 2D",
+    "map3d": "Vệ tinh 3D",
+    "mapOrbit": "↻ Xem xoay vòng",
+    "mapOrbitStop": "Ⅱ Dừng xoay",
+    "map3dLoading": "Đang tải địa hình 3D…",
+    "map3dUnavailable": "Thiết bị này không hỗ trợ 3D. Hãy khám phá bản đồ 2D.",
+    "map3dCaption": "Phong cảnh vệ tinh · độ cao gấp 2,5 lần",
+    "map3dDescription": "Bản đồ địa hình 3D Bhutan. Kéo để xoay. Dùng phím mũi tên để xoay và nghiêng, dấu cộng và trừ để thu phóng. Chọn địa danh để xem hướng dẫn.",
+    "map3dHint": "Kéo để xoay · mũi tên để nghiêng · + / − để thu phóng",
+    "mapRotateLeft": "Xoay trái",
+    "mapRotateRight": "Xoay phải",
+    "mapTiltUp": "Nghiêng lên",
+    "mapTiltDown": "Nghiêng xuống",
+    "mapGoogle": "Mở trong Google Maps ↗",
+    "mapCluster": "{count} địa điểm gần nhau: {names}. Chọn để phóng to.",
+    "mapPreviewPlay": "▶ Xem trước hành trình",
+    "mapPreviewPause": "Ⅱ Tạm dừng xem trước",
+    "mapMotionPause": "Tạm dừng hiệu ứng",
+    "mapMotionResume": "Tiếp tục hiệu ứng",
+    "mapPrevious": "Địa điểm trước",
+    "mapNext": "Địa điểm tiếp theo",
+    "mapStop": "Điểm {current} trong {total}",
+    "storyPrevious": "Câu chuyện trước",
+    "storyNext": "Câu chuyện tiếp theo",
+    "storyN": "Câu chuyện {current}/{total}",
+    "backToTop": "Lên đầu trang",
+    "mapGuideTip": "Lời khuyên từ hướng dẫn viên",
+    "mapGmcKicker": "Đặc khu hành chính · Dzongkhag Sarpang",
+    "mapGmcLatest": "Tin mới từ Gelephu Mindfulness City",
+    "mapGmcUpdate1": "Th11/2026 · Dự án 108: 108 bảo tháp chorten nay trải dọc 11,7 km bờ sông Mau Chhu.",
+    "mapGmcUpdate2": "Th11/2026 · Aman đã ký thỏa thuận cùng các đối tác để hỗ trợ phát triển lâu dài của thành phố.",
+    "mapGmcUpdate3": "Th10/2026 · Nhà ga xuất nhập cảnh mới với cửa kiểm soát tự động đã mở tại Gelephu.",
+    "mapGmcUpdate4": "Sân bay quốc tế Gelephu đang được xây dựng; giai đoạn đầu dự kiến phục vụ khoảng 1,3 triệu hành khách mỗi năm và đi vào hoạt động khoảng năm 2029.",
+    "mapGmcAsOf": "Thông tin tính đến tháng 11 năm 2026. Kế hoạch và mốc thời gian có thể thay đổi.",
+    "mapGmcMore": "Trang chính thức: gmc.bt ↗",
+    "mapPlanGuide": "Lên kế hoạch cùng hướng dẫn viên địa phương ↗",
+    "mapAirport": "Sân bay {name} ({code})",
+    "mapPhotoIllustrative": "Ảnh minh họa",
+    "mapEntry": "Cửa khẩu từ Ấn Độ",
+    "mapFlightsPause": "Tạm dừng chuyến bay",
+    "mapFlightsPlay": "Phát chuyến bay",
+    "mapDzongkhag": "Dzongkhag (huyện)",
+    "mapDzongkhags": "Các dzongkhag (huyện)",
+    "mapDzongkhagCount": "{count} địa điểm tham quan",
+    "mapEnlarge": "Mở bản đồ lớn",
+    "mapEnlargeClose": "Đóng bản đồ lớn",
+    "mapZoomIn": "Phóng to",
+    "mapZoomOut": "Thu nhỏ",
+    "mapLegendHighway": "Quốc lộ",
+    "mapLegendRoad": "Đường",
+    "mapLegendTown": "Thị trấn",
+    "mapLegendVillage": "Làng",
+    "skip": "Chuyển đến nội dung",
+    "language": "Ngôn ngữ",
+    "discover": "khám phá Bhutan",
+    "glimpse": "Đôi nét về Bhutan",
+    "photos": "Ảnh nền",
+    "pause": "Tạm dừng trình chiếu",
+    "resume": "Tiếp tục trình chiếu",
+    "postcardAlt": "Tu viện Tiger's Nest giữa dãy núi Paro",
+    "postcardPlace": "PARO TAKTSANG · BHUTAN",
+    "heroLocation": "BHUTAN · 27,5° B, 90,4° Đông",
+    "valleyAlt": "Cảnh quan Thung lũng Bhutan",
+    "finderLink": "Bạn không chắc nên bắt đầu từ đâu?",
+    "finderLinkAction": "Tìm nhịp điệu của bạn ↗",
+    "finderIntro": "Bhutan đáng để khám phá thong thả. Dùng la bàn hành trình để tìm điểm khởi đầu, rồi cùng đội ngũ địa phương điều chỉnh nhịp đi theo sở thích và ngày đi của bạn.",
+    "finderHow": "Cách chúng tôi lên kế hoạch cho chuyến hành trình đến Bhutan",
+    "finderFact1": "Bắt đầu với những gì bạn muốn cảm nhận chứ không phải một danh sách kiểm tra.",
+    "finderFact2": "Dành thời gian dự phòng cho đường núi, thời tiết và những cuộc gặp gỡ bất ngờ.",
+    "finderFact3": "Giữ lịch trình vừa sức: ít đổi nơi lưu trú hơn, dành nhiều thời gian hơn để trải nghiệm mỗi ngày.",
+    "finderView": "Xem tuyến đường",
+    "customMessage": "Tôi quan tâm đến hành trình Bhutan kéo dài {days} ngày tập trung vào {focus}. Xin hãy giúp tôi định hình con đường đúng đắn.",
+    "ccSearch": "Tìm quốc gia hoặc mã",
+    "ccNone": "Không có kết quả",
+    "mapKey": "Chú giải bản đồ",
+    "mapSources": "Nguồn và ghi chú",
+    "planThisJourney": "Lên kế hoạch cho hành trình này",
+    "downloadBrochure": "Tải tài liệu giới thiệu (PDF, tiếng Anh)",
+    "itineraryMessage": "Tôi muốn lên kế hoạch cho “{title}” ({days} ngày). Xin hãy giúp tôi điều chỉnh theo lịch và sở thích của tôi.",
+    "prefilled": "Chúng tôi đã điền lựa chọn của bạn vào biểu mẫu.",
+    "planning": "quy hoạch",
+    "customQuote": "Báo giá tùy chỉnh",
+    "customPriceDetail": "Ngày, quy mô nhóm và tuyến đường",
+    "routeLabel": "Tuyến đường: {route}",
+    "route": "Tuyến đường",
+    "continueLanguage": "Tiếp tục với {name}?",
+    "notice": "Thông báo dịch thuật",
+    "noticeTitle": "Xin lưu ý",
+    "noticeText": "Các bản dịch được cung cấp để thuận tiện và có thể không hoàn toàn chính xác. Vui lòng tham khảo phiên bản tiếng Anh hoặc liên hệ với chúng tôi nếu bạn cần làm rõ.",
+    "cancel": "Hủy bỏ",
+    "agree": "đồng ý",
+    "mapEyebrow": "Vương quốc từ một góc nhìn khác",
+    "mapTitle": "Một cái nhìn gần hơn về Bhutan.",
+    "mapIntro": "Từ những tu viện bám trên vách đá đến các cung đường Himalaya trên cao, đây là những nơi khiến Bhutan khó quên. Chạm vào một địa điểm để bay đến gần, hoặc xem trước hành trình từ tây sang đông.",
+    "followJourney": "Theo dõi một cuộc hành trình",
+    "mapAll": "Toàn bộ Bhutan · tự do khám phá",
+    "mapFilters": "Lọc địa điểm theo loại",
+    "mapKicker": "BHUTAN / Địa hình và tập bản đồ du lịch",
+    "mapSummary": "Địa điểm linh thiêng, văn hóa sống và cảnh quan hoang dã",
+    "mapChooseRegion": "Chọn vùng bản đồ",
+    "wholeKingdom": "Toàn bộ vương quốc",
+    "west": "Tây",
+    "central": "miền Trung",
+    "east": "Đông",
+    "mapSvgTitle": "Bản đồ địa hình động của Bhutan với các địa điểm tham quan",
+    "mapSvgDesc": "Bản đồ địa hình với biên giới quốc gia, sông ngòi, ranh giới các huyện và tên thị trấn. Chọn một ghim địa điểm để bay đến gần và đọc hướng dẫn. Danh sách địa điểm bên dưới là một cách khác để khám phá.",
+    "mapZoom": "Thu phóng bản đồ",
+    "zoomIn": "Phóng to",
+    "zoomOut": "Thu nhỏ",
+    "mapReset": "Hiển thị tất cả Bhutan",
+    "mapPan": "Xoay bản đồ đã phóng to",
+    "panWest": "Xoay về phía tây",
+    "panNorth": "Xoay về phía bắc",
+    "panSouth": "Xoay về phía nam",
+    "panEast": "Xoay về phía đông",
+    "north": "N",
+    "dragonLand": "Vùng đất của Rồng Sấm",
+    "roads": "Đường được lập bản đồ",
+    "rivers": "Sông",
+    "borders": "ranh giới huyện",
+    "tourConnections": "Kết nối chuyến tham quan",
+    "trekCorridor": "Hành lang đi bộ",
+    "placePin": "Đặt ghim",
+    "lowlands": "Thung lũng vùng thấp",
+    "highlands": "Himalaya cao",
+    "mapHint": "Phóng to · kéo để khám phá",
+    "mapGuide": "Hướng dẫn địa điểm",
+    "mapPlaces": "Địa điểm để khám phá",
+    "mapChoosePlace": "Chọn một địa điểm",
+    "mapOpenPlace": "Mở hướng dẫn về {name}",
+    "mapMarker": "{name}, {category}, {region}",
+    "mapCount": "{count} địa điểm",
+    "mapCountOne": "{count} địa điểm",
+    "tour": "Tham quan",
+    "trek": "Chuyến đi",
+    "culturalTour": "Du lịch văn hóa",
+    "trekkingJourney": "hành trình trekking",
+    "fullItinerary": "Hành trình đầy đủ {days} ngày",
+    "viewItinerary": "Xem hành trình này ↗",
+    "mapAllHeading": "Toàn bộ vương quốc, theo quan điểm.",
+    "mapAllDescription": "Núi non vươn lên từ vùng đồi phía nam đến dãy Himalaya cao ở phía bắc. Chọn một địa điểm để bay đến gần, hoặc xem trước hành trình từ tây sang đông.",
+    "mapEmptyEyebrow": "Một kiểu khám phá khác",
+    "mapEmptyTitle": "Không có địa điểm nào trong bộ lọc này",
+    "mapEmptyDescription": "Hãy thử danh mục khác hoặc chọn “Toàn bộ Bhutan” để khám phá thêm địa điểm.",
+    "mapFootnote": "Địa hình bóng đổ từ dữ liệu đo đạc. Biên giới và vị trí địa điểm chỉ mang tính tương đối; bản đồ này dùng để chọn địa điểm, không dùng để dẫn đường.",
+    "geographyCredit": "Địa lý:",
+    "riversCredit": ". Sông: ©",
+    "osmContributors": "Người đóng góp OpenStreetMap",
+    "terrainCredit": ", ODbL. Địa hình: SRTM/GMTED2010 do USGS cung cấp; ETOPO1 do NOAA cung cấp, được xử lý bởi",
+    "visualCredit": ". Tham khảo trực quan:",
+    "guideNote": "Một ghi chú từ hướng dẫn viên địa phương của bạn",
+    "culturalNote": "Dzong là pháo đài-tu viện, và lhakhang là đền thờ. Đây là những nơi thiêng liêng sống động: ăn mặc tôn trọng, bỏ mũ và hỏi trước khi chụp ảnh. Để lại những con đường mòn và khoảng sân đẹp đẽ như khi bạn tìm thấy chúng.",
+    "thoughtfulVisit": "Một chuyến thăm đầy ý nghĩa ↗",
+    "tibet": "TÂY TẠNG · TRUNG QUỐC",
+    "india": "ẤN ĐỘ",
+    "galleryView": "Xem {name}",
+    "galleryClose": "Đóng mô tả hình ảnh",
+    "countryCode": "Mã quốc gia",
+    "code": "🌍 Mã",
+    "bhutanAddress": "Norzin Lam, Thimphu, Bhutan",
+    "thimphuAddress": "Norzin Lam, Thimphu",
+    "chatFab": "Trò chuyện với Pema",
+    "chatDialog": "Pema, Hướng dẫn của bạn",
+    "chatMessage": "Tin nhắn",
+    "chatEnabled": "Đã bật AI",
+    "chatPoweredBy": "Được hỗ trợ bởi {provider} · {model} · Druk Voyages",
+    "ollamaModel": "Mô hình Ollama",
+    "groqHint": "Miễn phí tại",
+    "groqStorage": "- chỉ được lưu trữ trong trình duyệt của bạn.",
+    "ollamaHint": "Các yêu cầu mô hình Ollama được gửi qua phần phụ trợ của Druk Voyages, do đó không yêu cầu khóa API của khách truy cập ở đây.",
+    "invalidKey": "Khóa không hợp lệ - Khóa Groq bắt đầu bằng gsk_",
+    "invalidGroq": "Khóa API Groq của bạn có vẻ không hợp lệ. Nhấp vào ⚙ để cập nhật hoặc tôi sẽ trả lời từ hướng dẫn viên du lịch.",
+    "offlineOllama": "Dịch vụ AI tạm thời không khả dụng. Tôi sẽ trả lời từ hướng dẫn du lịch.",
+    "formEmail": "Vui lòng nhập địa chỉ email hợp lệ.",
+    "formShort": "Vui lòng nhập ít nhất {count} ký tự.",
+    "formRequired": "Vui lòng điền vào trường bắt buộc này.",
+    "slide": "Trượt {count}",
+    "mobileOpen": "Mở trình đơn",
+    "mobileClose": "Đóng trình đơn",
+    "modalClose": "Đóng hành trình",
+    "welcome": "Tashi Delek! 🙏 Tôi là Pema, hướng dẫn viên du lịch Bhutan của bạn. Hãy hỏi tôi về trekking, dzong, các mùa hoặc kế hoạch cho hành trình. Tôi có thể giúp gì cho bạn?",
+    "chatGeneric": "Vui lòng liên hệ **hello@drukvoyages.bt** hoặc gọi **+975 17 000 000** để được trợ giúp lên kế hoạch cho chuyến hành trình đến Bhutan của bạn.",
+    "chatIntro": "Hãy cho tôi biết sở thích, ngày đi và tốc độ ưa thích của bạn và tôi có thể giúp bạn khám phá hành trình của chúng tôi.",
+    "chatPricing": "Giá hành trình được công bố bắt đầu từ **$3.290** cho hành trình Cổ điển 8 ngày. Một số tuyến đường yêu cầu báo giá tùy chỉnh. Liên hệ **hello@drukvoyages.bt** để xác nhận các dịch vụ bao gồm và giá cả cho ngày của bạn.",
+    "chatVisa": "Để biết các thỏa thuận về thị thực và nhập cảnh cho quốc tịch và ngày đi của bạn, hãy liên hệ **hello@drukvoyages.bt**. Nhóm địa phương của chúng tôi có thể giúp bạn lập kế hoạch cho các bước tiếp theo.",
+    "chatSeasons": "Mùa xuân (tháng 3 – tháng 5) và mùa thu (tháng 9 – tháng 11) là thời điểm phổ biến cho các chuyến hành trình văn hóa và leo núi. Mùa đông mang đến những thung lũng yên tĩnh hơn và hoạt động ngắm sếu theo mùa. Điều kiện thời tiết và núi non khác nhau; nhóm của chúng tôi có thể giúp đỡ về ngày hẹn của bạn.",
+    "chatTreks": "Khám phá hành trình **12 ngày Druk Path** hoặc hành trình **13 ngày Trại căn cứ Jomolhari**. Cả hai đều bao gồm thời gian ở Bhutan ngoài các chặng trekking. Hãy cho chúng tôi biết về kinh nghiệm và thể lực của bạn để chúng tôi có thể đề xuất tốc độ phù hợp.",
+    "chatNest": "Paro Taktsang, được biết đến với cái tên **Tiger's Nest**, nằm trên vách đá phía trên Paro. Dành riêng một ngày đi bộ đường dài và đi lên từ từ. Hướng dẫn viên sẽ giúp bạn chọn tốc độ phù hợp với thời tiết và độ cao.",
+    "chatFestivals": "Hành trình lễ hội của chúng tôi bao gồm lễ kỷ niệm Paro và Thimphu Tshechu. Ngày và chương trình lễ hội thay đổi hàng năm; chúng tôi định hình lộ trình của bạn theo lịch đã được xác nhận.",
+    "chatContact": "Hãy liên hệ với chúng tôi theo địa chỉ **hello@drukvoyages.bt** hoặc **+975 17 000 000** hoặc sử dụng mẫu yêu cầu trên trang này.",
+    "quickItineraries": "Bạn gợi ý những hành trình nào?",
+    "quickSeasons": "Khi nào là thời điểm tốt nhất để ghé thăm Bhutan?",
+    "quickPricing": "Một chuyến đi Bhutan tốn bao nhiêu tiền?",
+    "quickNest": "Hãy kể cho tôi nghe về Tiger’s Nest.",
+    "quickVisa": "Làm thế nào bạn có thể giúp đỡ trong việc sắp xếp thị thực?",
+    "translationError": "Không thể tải ngôn ngữ. Vui lòng thử lại.",
+    "formSending": "Đang gửi…",
+    "formSuccess": "Cảm ơn bạn! Yêu cầu của bạn đã được gửi. Chúng tôi sẽ liên lạc sớm.",
+    "formFailure": "Chúng tôi không thể gửi yêu cầu của bạn. Vui lòng thử lại hoặc gửi email tới hello@drukvoyages.bt.",
+    "flightDomesticNote": "Từ Paro đến Bumthang, Gelephu và Yonphula. Chọn sân bay hoặc xem cả ba chuyến khởi hành.",
+    "flightControls": "Chuyến bay nội địa",
+    "flightFlyTo": "Bay đến",
+    "flightIllustrated": "Chuyến bay minh họa · không theo dõi trực tiếp",
+    "flightSource": "Thông tin và lịch bay ↗",
+    "flightDomesticPlay": "▶ Phát chuyến bay nội địa",
+    "flightDomesticPause": "Ⅱ Tạm dừng chuyến bay nội địa",
+    "flightDomesticAll": "Tất cả sân bay nội địa",
+    "flightDomesticKicker": "Chuyến bay nội địa từ Paro"
+  },
+  "days": {
+    "1": [
+      [
+        "Đến Paro & Đi bộ trong thung lũng",
+        "Lễ chào mừng, buổi chiều đi dạo qua các trang trại và khu chợ cũ của Paro."
+      ],
+      [
+        "Đi bộ đến Tiger's Nest",
+        "Đi lên Paro Taktsang cả ngày (3.120m). Bữa trưa đóng hộp tại quán cà phê trên vách đá."
+      ],
+      [
+        "Thăm dò Thimphu",
+        "Tashichho Dzong, Phật Dordenma, Bảo tàng Di sản Dân gian, bắn cung truyền thống."
+      ],
+      [
+        "Đèo Dochula & Lái xe đến Punakha",
+        "108 đài tưởng niệm trong sương sớm; toàn cảnh dãy Himalaya ngoạn mục."
+      ],
+      [
+        "Punakha Dzong & Cầu treo",
+        "Dzong đẹp nhất ở ngã ba sông, được xây dựng vào năm 1637."
+      ],
+      [
+        "Đường vòng thung lũng Haa",
+        "Thung lũng xa xôi mở cửa đón khách du lịch vào năm 2002. Thăm Lhakhang Karpo và Nagpo."
+      ],
+      [
+        "Chợ Paro & Bữa tối tại trang trại",
+        "Mua sắm đồ thủ công, rượu gạo đỏ, ema datshi đích thực với một gia đình địa phương."
+      ],
+      [
+        "Chia tay và khởi hành",
+        "Đi bộ thiền buổi sáng, đưa đón sân bay với khăn quàng phước lành (khata)."
+      ]
+    ],
+    "2": [
+      [
+        "Thông tin tóm tắt về Lễ hội & Lễ hội",
+        "Bữa tối chào mừng với chuyên gia văn hóa của chúng tôi. Định hướng nghi thức lễ hội."
+      ],
+      [
+        "Đi dạo làng trước lễ hội",
+        "Khám phá thị trấn Paro khi người dân địa phương chuẩn bị trang phục và lễ vật truyền thống."
+      ],
+      [
+        "Tsechu Ngày 1 - Lễ khai mạc",
+        "Hàng ghế đầu xem các điệu múa mặt nạ khai mạc do Tòa án Hoàng gia tổ chức."
+      ],
+      [
+        "Tsechu Ngày 2 - Múa Chăm",
+        "Điệu nhảy Drubchen Mũ Đen và điệu múa hươu. Truy cập vào hậu trường để gặp gỡ người biểu diễn."
+      ],
+      [
+        "Tsechu Ngày 3 - Ra mắt Thongdrel",
+        "Tụ tập trước bình minh để chiêm ngưỡng tấm thangka đính đá khổng lồ thiêng liêng."
+      ],
+      [
+        "Sau lễ hội Punakha",
+        "Lái xe qua Đèo Dochula - 108 chortens trong không khí lễ hội kéo dài."
+      ],
+      [
+        "Punakha Dzong & Chimi Lhakhang",
+        "Ngôi đền sinh sản của Thần điên Drukpa Kunley."
+      ],
+      [
+        "hành trình Bumthang",
+        "Lái xe về phía đông đến trung tâm tâm linh của Bhutan. Jakar Dzong và Jambay Lhakhang."
+      ],
+      [
+        "Đi bộ vào Thung lũng Bumthang",
+        "Kurjey Lhakhang, vườn táo, xưởng dệt đen truyền thống."
+      ],
+      [
+        "Quay lại Paro và khởi hành",
+        "Chuyến bay leo núi, lễ cầu phúc, quà chia tay."
+      ]
+    ],
+    "3": [
+      [
+        "Paro Đến và Làm quen với Khí hậu",
+        "Đi bộ nhẹ nhàng trong thung lũng, đi ngủ sớm để chuẩn bị cho độ cao."
+      ],
+      [
+        "Chuyến đi khởi động khởi động tại Tiger's Nest",
+        "Làm quen với độ cao và chuẩn bị tinh thần cho chuyến đi."
+      ],
+      [
+        "Chuyến đi ngày 1 - Paro đến Jangchhulakha (4.100m)",
+        "Chuyến đi đầu tiên xuyên qua rừng thông. Cắm trại với tầm nhìn ra Jomolhari."
+      ],
+      [
+        "Chuyến đi ngày 2 - đến hồ Jimilangtso",
+        "Cao nguyên Tây Nguyên, hồ nước trên cao đầu tiên, cảnh tượng bò Tây Tạng hoang dã."
+      ],
+      [
+        "Ngày đi bộ thứ 3 - đến hồ Simkotha",
+        "Ba hồ thiêng được các nhà sư sử dụng để thiền định theo nghi lễ."
+      ],
+      [
+        "Ngày đi bộ 4 - đến Tu viện Phajoding",
+        "Ẩn thất cổ kính bám vào sườn đồi phía trên Thimphu."
+      ],
+      [
+        "Ngày nghỉ tại Phajoding",
+        "Buổi thiền với các tu sĩ thường trú."
+      ],
+      [
+        "Đi xuống Thimphu",
+        "Khu rừng cuối cùng dẫn vào thủ đô duy nhất trên thế giới không có đèn giao thông."
+      ],
+      [
+        "Ngày văn hóa Thimphu",
+        "Buddha Dordenma, viện y học, phòng trưng bày nghệ thuật đương đại."
+      ],
+      [
+        "Phần thưởng sông Punakha",
+        "Dã ngoại trên sông tại dzong sau những ngày đi đường mòn."
+      ],
+      [
+        "Ngày Phục hồi & Spa",
+        "Tắm đá nóng truyền thống, trị liệu Sowa Rigpa."
+      ],
+      [
+        "Khởi hành Paro",
+        "Chuyến bay leo núi (nếu thời tiết cho phép), lễ chia tay."
+      ]
+    ],
+    "4": [
+      [
+        "Paro Arrival — Quá trình cai nghiện kỹ thuật số bắt đầu",
+        "Điện thoại được lưu trữ. Nhận gho/kira truyền thống. Bài tập thở buổi tối."
+      ],
+      [
+        "Tư vấn Sowa Rigpa",
+        "Đánh giá y học cổ truyền Bhutan và kế hoạch thảo dược cá nhân hóa."
+      ],
+      [
+        "Hành hương chánh niệm Tiger's Nest",
+        "Đi lên chậm rãi, đầy suy ngẫm. Ngồi im lặng. Không có lịch trình, không vội vàng."
+      ],
+      [
+        "Punakha — Thiền bên bờ sông",
+        "Yoga bình minh trên sông Mo Chhu, liệu pháp bát hát của người Tây Tạng."
+      ],
+      [
+        "Ngày nhập thất tĩnh lặng Bumthang 1",
+        "Trang trại rút lui. Đầu tiên của hai ngày im lặng."
+      ],
+      [
+        "Khóa tu Bumthang Im lặng Ngày thứ 2",
+        "Tắm rừng, đi dạo trong thiên nhiên, viết nhật ký."
+      ],
+      [
+        "Dotsho - Lễ tắm đá nóng",
+        "Bồn tắm truyền thống được làm nóng bằng đá sông ban lửa. Chữa bệnh sâu sắc."
+      ],
+      [
+        "Tái hòa nhập Thung lũng Paro",
+        "Chia sẻ kinh nghiệm của bạn với hướng dẫn của chúng tôi. Lớp vẽ thangka cuối cùng."
+      ],
+      [
+        "Khởi hành có ý định",
+        "Đơn thuốc chăm sóc sức khỏe cá nhân và các phương pháp điều trị bằng thảo dược của người Bhutan."
+      ]
+    ],
+    "5": [
+      [
+        "Kiểm tra hàng đến và thiết bị",
+        "Gặp gỡ hướng dẫn nhiếp ảnh của bạn. Cây cầu đường vành đai mang tính biểu tượng của Scout Paro."
+      ],
+      [
+        "Tổ hổ trước bình minh",
+        "4 giờ sáng khởi hành - sương mù bao phủ tu viện trong ánh bình minh."
+      ],
+      [
+        "Cuộc sống nông trại ở thung lũng Paro",
+        "Nông dân, trẻ em, tu sĩ trong ánh sáng phim tài liệu buổi sáng."
+      ],
+      [
+        "Kiến trúc Thimphu",
+        "Dzong, chortens, tượng Phật bằng đồng khổng lồ."
+      ],
+      [
+        "Bình minh trên đèo Dochula",
+        "108 chortens nổi lên từ đám mây ở độ cao 3.100m."
+      ],
+      [
+        "Chân dung sông Punakha",
+        "Ngư dân, nhà sư, dzong lúc hoàng hôn phản chiếu."
+      ],
+      [
+        "Thung lũng Haa viên ngọc ẩn",
+        "Những người chăn bò Yak, những ngôi đền cổ, cuộc sống làng quê không thay đổi."
+      ],
+      [
+        "Vùng đất ngập nước Phobjikha",
+        "Sếu cổ đen lúc bình minh, toàn cảnh giờ vàng."
+      ],
+      [
+        "Trongsa Dzong",
+        "Pháo đài trên đỉnh đồi của tổ tiên Hoàng gia."
+      ],
+      [
+        "Địa điểm linh thiêng Bumthang",
+        "Tám thế kỷ nghệ thuật thiêng liêng được chụp ảnh."
+      ],
+      [
+        "Nhà trọ bản làng Ngày 1",
+        "Gắn liền với một gia đình địa phương - bài luận nhiếp ảnh thân mật."
+      ],
+      [
+        "Nhà trọ bản làng Ngày 2",
+        "Các nghi lễ cộng đồng, nấu ăn, chăn nuôi."
+      ],
+      [
+        "Hội thảo xử lý hậu kỳ",
+        "Phiên Lightroom chỉnh sửa những bức ảnh đẹp nhất của bạn."
+      ],
+      [
+        "Triển lãm cuối cùng và khởi hành",
+        "In 5 bức ảnh đẹp nhất của bạn để xem tạm biệt."
+      ]
+    ],
+    "6": [
+      [
+        "Hoàng gia chào mừng",
+        "Cánh hoa, quản gia riêng, rượu sâm panh trên ban công trên núi của bạn."
+      ],
+      [
+        "Khinh Khí Cầu Bình Minh Trên Paro",
+        "Chuyến bay khinh khí cầu riêng vào lúc bình minh trên Thung lũng Paro."
+      ],
+      [
+        "Hành hương tình yêu Tiger’s Nest",
+        "Hướng dẫn đi lên với một nhà sư sẽ ban phước lành cho sự kết hợp của bạn."
+      ],
+      [
+        "Hoàng hôn riêng tư Punakha Dzong",
+        "Bữa tối dưới ánh nến sau giờ làm việc ở sân dzong."
+      ],
+      [
+        "Ngày Spa tại Amankora",
+        "Trị liệu Sowa Rigpa dành cho cặp đôi, tắm đá nóng, massage thảo dược."
+      ],
+      [
+        "Chuyến dã ngoại lãng mạn Phobjikha",
+        "Rượu sâm panh và đồ ăn miền núi có nguồn gốc địa phương."
+      ],
+      [
+        "Thoát khỏi thung lũng Haa",
+        "Xa xôi và hiếm khi được ghé thăm - câu chuyện tình yêu Himalaya riêng tư của bạn."
+      ],
+      [
+        "Đêm di sản Bumthang",
+        "Bữa tối riêng tư với lễ đèn bơ và âm nhạc dân gian."
+      ],
+      [
+        "Nghệ thuật & Văn hóa Thimphu",
+        "Đặt một thangka được cá nhân hóa như một vật kỷ niệm trong đám cưới."
+      ],
+      [
+        "Chia tay buổi tối sang trọng",
+        "Ăn uống trên sân thượng dưới ánh sao Himalaya, lễ cầu phúc."
+      ],
+      [
+        "Khởi hành cùng kỷ niệm",
+        "Sách hành trình cá nhân và quà tặng của người Bhutan tại sân bay."
+      ]
+    ],
+    "7": [
+      [
+        "Đến Paro",
+        "Định cư tại thung lũng và gặp hướng dẫn viên địa phương của bạn để được giới thiệu thực tế về độ cao, đường sá và nghi thức văn hóa."
+      ],
+      [
+        "Địa điểm linh thiêng của Paro",
+        "Ghé thăm Kyichu Lhakhang và khám phá những con phố truyền thống của Paro trước khi đi bộ dễ dàng để thích nghi với khí hậu."
+      ],
+      [
+        "Dochula đến Punakha",
+        "Băng qua Đèo Dochula với 108 hẻm núi và đi xuống Thung lũng Punakha ấm áp hơn."
+      ],
+      [
+        "Punakha và Chimi Lhakhang",
+        "Ngắm nhìn Punakha Dzong tại sông Pho Chhu và Mo Chhu, sau đó đi bộ qua cánh đồng lúa đến Chimi Lhakhang."
+      ],
+      [
+        "Qua Pele La đến Trongsa",
+        "Du hành về phía đông qua cảnh quan rừng núi đang thay đổi; hãy đến thăm Trongsa Dzong chỉ huy nếu thời gian cho phép."
+      ],
+      [
+        "Vào Bumthang",
+        "Băng qua Yotong La và đến Bumthang, trung tâm văn hóa của Bhutan, dành thời gian đi dạo trong làng nhẹ nhàng."
+      ],
+      [
+        "Jakar, Jambay và Kurjey",
+        "Khám phá Jakar Dzong, Jambay Lhakhang và Kurjey Lhakhang với bối cảnh từ hướng dẫn viên người Bhutan của bạn."
+      ],
+      [
+        "Những câu chuyện về Thung lũng Đường",
+        "Dành cả ngày ở Thung lũng Tang yên tĩnh hơn, tham quan các trang trại, di sản và xưởng thủ công nhỏ nếu có."
+      ],
+      [
+        "Làng Ura và Đường Núi",
+        "Đi theo con đường thung lũng cao đến Ura, nơi nổi tiếng với những ngôi nhà bằng đá đặc biệt và khung cảnh đồng quê rộng mở."
+      ],
+      [
+        "Khứ hồi hoặc khởi hành",
+        "Tiếp tục bằng đường bộ hoặc kết nối nội địa theo kế hoạch vận chuyển cuối cùng, với thời gian được cố tình linh hoạt."
+      ]
+    ],
+    "8": [
+      [
+        "Paro đến và định hướng thung lũng",
+        "Dễ dàng đến Bhutan bằng cách đi bộ một đoạn ngắn qua thung lũng và nghe hướng dẫn giới thiệu về phong tục địa phương."
+      ],
+      [
+        "Đi bộ di sản Paro",
+        "Thăm Kyichu Lhakhang, khu vực Bảo tàng Quốc gia và các cửa hàng truyền thống của thị trấn Paro."
+      ],
+      [
+        "Chele La đến Haa",
+        "Lái xe qua Chele La, một trong những con đường cao nhất của Bhutan, đến Thung lũng Haa nhỏ gọn và yên bình."
+      ],
+      [
+        "Đền thung lũng Haa và cuộc sống làng quê",
+        "Ghé thăm Lhakhang Karpo và Lhakhang Nagpo, sau đó dành thời gian với chủ nhà địa phương nếu có thể sắp xếp."
+      ],
+      [
+        "Trở lại Paro",
+        "Quay trở lại khu rừng trên núi và thưởng thức bữa ăn thư giãn trong trang trại hoặc buổi học nấu ăn ở Thung lũng Paro."
+      ],
+      [
+        "Điểm khởi hành hoặc điểm quan sát Taktsang",
+        "Chọn một chuyến đi bộ ngắm cảnh nhẹ nhàng hoặc một buổi sáng thư giãn trước khi đưa đón sân bay."
+      ]
+    ],
+    "9": [
+      [
+        "Đến Paro",
+        "Gặp đoàn trekking và nghỉ ngơi sau khi đến nơi; hydrat hóa và một ngày đầu tiên chậm rãi đã thiết lập nên giai điệu."
+      ],
+      [
+        "Đi bộ thích nghi với khí hậu Paro",
+        "Đi bộ có hướng dẫn, kiểm tra thiết bị và thảo luận về độ cao của chuyến đi cũng như phương pháp không để lại dấu vết."
+      ],
+      [
+        "Lái xe đến Shana và bắt đầu",
+        "Đi lên Thung lũng Paro và bắt đầu đi bộ qua rừng thông xanh bên bờ sông."
+      ],
+      [
+        "Đường mòn đến Thangthangka",
+        "Theo thung lũng dần dần đi lên; nhóm hỗ trợ sẽ giới thiệu các thói quen và nhịp độ cắm trại."
+      ],
+      [
+        "Đến Jangothang",
+        "Hãy đến trại trên cao bên dưới Jomolhari sau khi leo lên đều đặn qua đồng cỏ yak và địa hình núi cao."
+      ],
+      [
+        "Ngày thích nghi",
+        "Tùy chọn đi bộ đường dài hoặc ngày nghỉ ngơi tại Jangohang, để nhóm thích nghi trước những chặng đường cao hơn."
+      ],
+      [
+        "Băng qua hướng Lingshi",
+        "Đi bộ qua một con đèo cao khi điều kiện cho phép, sau đó đi xuống một thung lũng rộng lớn có những ngôi nhà bằng đá và đồng cỏ."
+      ],
+      [
+        "Lingshi đến Shodu",
+        "Tiếp tục băng qua miền núi xa xôi với lộ trình được chọn phù hợp với điều kiện và thời tiết của nhóm."
+      ],
+      [
+        "Shodu đến Barshong",
+        "Đi bộ qua những khu rừng và cắm trại gần tàn tích của khu vực dzong cũ."
+      ],
+      [
+        "gốc rừng",
+        "Đi xuống dần dần qua rừng đỗ quyên và lá kim về phía đầu đường."
+      ],
+      [
+        "Trở lại Thimphu",
+        "Lên đường trở lại, du lịch đến Thimphu và tận hưởng bồn tắm đá nóng phục hồi sức khỏe nếu muốn."
+      ],
+      [
+        "Ngày văn hóa Thimphu",
+        "Một ngày thủ đô thư thái với thời gian dành cho đồ thủ công, khu Buddha Dordenma hay những điểm dừng chân quán cà phê yên tĩnh."
+      ],
+      [
+        "Khởi hành Paro",
+        "Chuyển đến Paro để khởi hành, có thêm một đêm đệm bổ sung khi có lịch trình chuyến bay hoặc thời tiết yêu cầu."
+      ]
+    ],
+    "10": [
+      [
+        "Đến Paro",
+        "Ổn định chỗ ở, gặp hướng dẫn viên của bạn và xem lại nghi thức lễ hội, ranh giới chụp ảnh và chương trình sự kiện cuối cùng."
+      ],
+      [
+        "Paro đến Thimphu",
+        "Du lịch đến thủ đô với các điểm dừng tại những cây cầu truyền thống, nhà hát và bữa trưa địa phương trên đường đi."
+      ],
+      [
+        "Truyền thống thủ công Thimphu",
+        "Ghé thăm các xưởng thủ công và Viện Zorig Chusum Quốc gia để tìm hiểu 13 nghệ thuật truyền thống của Bhutan."
+      ],
+      [
+        "Ngày thứ nhất của Tsechu",
+        "Tham dự các nghi lễ công cộng và các điệu nhảy đeo mặt nạ trong ngày, với bối cảnh từ hướng dẫn viên về những câu chuyện và biểu tượng được biểu diễn."
+      ],
+      [
+        "Tsechu ngày thứ hai",
+        "Quay trở lại với một chương trình khiêu vũ và thời gian khác để khám phá bầu không khí chợ xung quanh sự kiện."
+      ],
+      [
+        "Dochula và Punakha",
+        "Rời thủ đô đến 108 chortens tại Dochula và tiếp tục đi vào các thung lũng sông Punakha."
+      ],
+      [
+        "Punakha Dzong và Paro",
+        "Ghé thăm dzong từ lối đi ven sông trước khi trở về Paro cho buổi tối cuối cùng."
+      ],
+      [
+        "Khởi hành",
+        "Đưa đón sân bay hoặc thêm một ngày tùy chọn ở Paro, tùy thuộc vào lễ hội và lịch trình chuyến bay đã xác nhận."
+      ]
+    ],
+    "11": [
+      [
+        "Đến và giải nén từ từ",
+        "Đến Paro với một buổi tối đầu tiên yên bình và một định hướng đơn giản cho tuần tới."
+      ],
+      [
+        "Đi bộ chánh niệm tại Thung lũng Paro",
+        "Chọn một con đường đi bộ nhẹ nhàng ven sông hoặc sườn đồi, dành thời gian để ghé thăm một ngôi chùa hoặc đơn giản là dừng lại uống trà."
+      ],
+      [
+        "Thung lũng sông Punakha",
+        "Đi qua Dochula và định cư gần Punakha; buổi chiều được cố ý để trống để nghỉ ngơi."
+      ],
+      [
+        "Nấu ăn trong trang trại và đồng ruộng",
+        "Tìm hiểu những điều cơ bản về bữa ăn của người Bhutan với chủ nhà địa phương và đi bộ qua những cánh đồng gần đó với tốc độ không hề vội vã."
+      ],
+      [
+        "Gangtey và Phobjikha",
+        "Đi theo con đường đến thung lũng băng giá rộng lớn Phobjikha, nơi nổi tiếng với những con đường mòn yên tĩnh và khung cảnh rộng mở."
+      ],
+      [
+        "Đường mòn Tự nhiên Gangtey",
+        "Đi bộ trên đoạn đường thích hợp của Đường mòn Tự nhiên Gangtey, sau đó dành thời gian đọc sách, viết nhật ký hoặc tắm đá nóng tại địa phương."
+      ],
+      [
+        "Trở lại Paro",
+        "Quay trở lại những ngọn núi, chỉ dừng lại khi cả nhóm cảm thấy thích thú - mục đích là để lại khoảng trắng."
+      ],
+      [
+        "Khởi hành với tốc độ nhẹ hơn",
+        "Bữa sáng cuối cùng và đưa đón sân bay, hoặc kéo dài thêm đêm nếu cảm thấy phù hợp khi quay về chậm hơn."
+      ]
+    ],
+    "12": [
+      [
+        "Đến Paro",
+        "Gặp hướng dẫn viên của bạn và chuẩn bị cho ngày đầu tiên nhẹ nhàng ở thung lũng."
+      ],
+      [
+        "Paro đến Punakha",
+        "Băng qua Dochula và ghé thăm Punakha Dzong, nơi Pho Chhu và Mo Chhu gặp nhau."
+      ],
+      [
+        "Vào Thung lũng Phobjikha",
+        "Lái xe đến thung lũng băng rộng và ghé thăm trung tâm thông tin sếu khi nó mở cửa."
+      ],
+      [
+        "Sếu và lối đi Gangtey",
+        "Quan sát sếu cổ đen từ các khu vực được chỉ định trong mùa của chúng, sau đó đi bộ trên đoạn đường thoai thoải của Đường mòn Tự nhiên Gangtey."
+      ],
+      [
+        "Ngày làng và tu viện",
+        "Khám phá môi trường xung quanh làng Gangtey và tu viện, với chuyến thăm địa phương tới các trang trại hoặc thợ thủ công nếu có thể."
+      ],
+      [
+        "Trở lại Paro",
+        "Đi về phía tây qua những ngọn núi, dừng lại để ngắm cảnh, uống trà và những ngôi nhà ven đường."
+      ],
+      [
+        "Điểm khởi hành hoặc điểm quan sát Taktsang",
+        "Chọn chuyến đi bộ ngắm cảnh Tiger's Nest, đi bộ đường dài nếu phù hợp hoặc đi thẳng đến sân bay."
+      ]
+    ]
+  },
+  "signals": {
+    "1": [
+      "Tháng 3-Tháng 5 · Tháng 9-Tháng 11",
+      "Chuyến thăm đầu tiên cân bằng với một số lần chuyển đường núi. Tiger's Nest đòi hỏi phải đi bộ lên dốc liên tục; tuyến đường được điều chỉnh cho phù hợp với thời tiết và sự thích nghi."
+    ],
+    "2": [
+      "Ngày lễ hội thay đổi hàng năm",
+      "Các chương trình lễ hội và việc sắp xếp xem lễ hội sẽ được xác nhận sau khi lịch chính thức được công bố. Mong đợi sự khởi đầu sớm, đám đông và những ngày nghi lễ dài, vui vẻ."
+    ],
+    "3": [
+      "Tháng 4-Tháng 5 · Tháng 10-Tháng 11",
+      "Chuyến đi trên cao này cần có kế hoạch thích nghi thận trọng, giày dép phù hợp và khả năng linh hoạt với thời tiết miền núi. Khoảng cách đi bộ hàng ngày được điều chỉnh cho phù hợp với nhóm."
+    ],
+    "4": [
+      "Tháng 3-Tháng 5 · Tháng 9-Tháng 11",
+      "Được thiết kế cho một tốc độ yên tĩnh. Thiền, các liệu pháp chăm sóc sức khỏe truyền thống và tắm đá nóng được bố trí phù hợp với khả năng sẵn có của địa phương thay vì thời gian biểu cứng nhắc hàng ngày."
+    ],
+    "5": [
+      "Tháng 10-Tháng 11 để có ánh sáng trong trẻo",
+      "Hình thức nhóm nhỏ dành chỗ cho việc thay đổi ánh sáng và các sự kiện địa phương. Hướng dẫn chụp ảnh tôn trọng được bao gồm cho các tu viện, con người và bối cảnh lễ hội."
+    ],
+    "6": [
+      "Tháng 3-Tháng 5 · Tháng 9-Tháng 11",
+      "Một tuyến đường riêng tư, nhịp độ chậm hơn, có chỗ cho thời gian nghỉ ngơi và các chuyến đi bộ nhẹ nhàng tùy chọn. Trải nghiệm được định hình dựa trên quyền truy cập đã được xác nhận và sở thích của cặp đôi."
+    ],
+    "7": [
+      "Tháng 3-Tháng 5 · Tháng 9-Tháng 11",
+      "Bạn có thể đến miền Trung Bhutan bằng những con đường núi dài nhưng thơ mộng. Hành trình này giữ thời gian rảnh rỗi trong kế hoạch để cuộc hành trình có cảm giác như một phần của trải nghiệm."
+    ],
+    "8": [
+      "Tháng 3-Tháng 5 · Tháng 9-Tháng 11",
+      "Một tuyến đường phía tây Bhutan dễ dàng với các lựa chọn đi bộ ngắn. Độ cao của Chele La có thể lạnh ngay cả khi thung lũng bên dưới ấm áp."
+    ],
+    "9": [
+      "Tháng 4-Tháng 5 · Tháng 10-Tháng 11",
+      "Một chuyến đi bộ trên cao đòi hỏi phải có giấy phép, người đi bộ phù hợp và điều kiện thời tiết linh hoạt. Đội ngũ hỗ trợ xử lý hậu cần cắm trại và tiến độ an toàn, có chủ ý."
+    ],
+    "10": [
+      "Tính đến ngày Tsechu chính thức",
+      "Ngày và chương trình Tsechu thay đổi theo năm. Mong đợi môi trường công cộng, khởi đầu sớm và ăn mặc tôn trọng; tất cả sự tham dự đều dựa trên lịch lễ hội đã được xác nhận."
+    ],
+    "11": [
+      "Tháng 3-Tháng 5 · Tháng 9-Tháng 11",
+      "Tuyến đường cường độ thấp dành cho những khách thích đi bộ ngắn và buổi tối không có tổ chức. Các phương pháp điều trị tại địa phương và tham quan trang trại được cung cấp tùy vào tình trạng sẵn có."
+    ],
+    "12": [
+      "Cuối thu đến cuối đông",
+      "Sếu cổ đen được quan sát theo mùa và từ những khoảng cách tôn trọng. Thời gian chính xác thay đổi theo năm nên lộ trình được xác nhận trong khoảng thời gian di chuyển."
+    ]
+  },
+  "highlights": {
+    "Tiger's Nest": "Tổ Hổ",
+    "Punakha Dzong": "Punakha Dzong",
+    "Dochula Pass": "Đèo Dochula",
+    "National Museum": "Bảo tàng Quốc gia",
+    "Cham Mask Dances": "Múa mặt nạ Chăm",
+    "Thongdrel Unveiling": "Ra mắt Thongdrel",
+    "Backstage Access": "Truy cập vào hậu trường",
+    "Cultural Workshops": "Hội thảo văn hóa",
+    "High-Altitude Lakes": "Hồ trên cao",
+    "Himalayan Views": "Quang cảnh dãy Himalaya",
+    "Yak Herding": "Chăn nuôi bò Yak",
+    "Forest Camping": "Cắm trại trong rừng",
+    "Sowa Rigpa": "Sowa Rigpa",
+    "Silent Meditation": "Thiền im lặng",
+    "Hot Stone Baths": "Bồn tắm đá nóng",
+    "Monastic Stays": "Ở lại tu viện",
+    "Golden Hour Shoots": "Chụp Giờ Vàng",
+    "Festival Access": "Truy cập lễ hội",
+    "Remote Villages": "Những ngôi làng xa xôi",
+    "Landscape Photography": "Chụp ảnh phong cảnh",
+    "Private Dzong Dinner": "Bữa tối Dzong riêng",
+    "Luxury Lodges": "Nhà nghỉ sang trọng",
+    "Couples' Spa": "Spa dành cho cặp đôi",
+    "Sunrise Balloon": "Bóng Bình Minh",
+    "Jakar Dzong": "Jakar Dzong",
+    "Jambay Lhakhang": "Jambay Lhakhang",
+    "Tang Valley": "Thung lũng Đường",
+    "Traditional Crafts": "Thủ công truyền thống",
+    "Chele La Pass": "Đèo Chele La",
+    "Haa Valley": "Thung lũng Hạa",
+    "Lhakhang Karpo": "Lhakhang Karpo",
+    "Paro Farmhouse": "Trang trại Paro",
+    "Jangothang Camp": "Trại Jangothang",
+    "Yak Pastures": "Đồng cỏ Yak",
+    "High Passes": "Đường chuyền cao",
+    "Paro Valley": "Thung lũng Paro",
+    "Tsechu Ceremonies": "Lễ Tsechu",
+    "Zorig Chusum Crafts": "Hàng thủ công Zorig Chusum",
+    "Paro Heritage": "Di sản Paro",
+    "Forest Walks": "Đi bộ trong rừng",
+    "Dotsho Bath": "Bồn tắm Dotsho",
+    "Gangtey Valley": "Thung lũng Gangtey",
+    "Farmhouse Cooking": "Nấu ăn tại trang trại",
+    "Black-Necked Cranes": "Sếu cổ đen",
+    "Gangtey Nature Trail": "Đường mòn Tự nhiên Gangtey",
+    "Punakha Rivers": "Sông Punakha",
+    "Paro Taktsang": "Paro Taktsang"
+  },
+  "sites": {
+    "gmc": [
+      "Gelephu Mindfulness City",
+      "Đặc khu hành chính của Bhutan",
+      "Gelephu · Nam Bhutan",
+      "Một thành phố mới đang hình thành",
+      "Điểm dừng trên hành trình phía nam",
+      "Được Đức Vua công bố vào tháng 12 năm 2023, Gelephu Mindfulness City là đặc khu hành chính rộng khoảng 2.500 km² giáp biên giới với bang Assam. Thành phố được quy hoạch xoay quanh chánh niệm, năng lượng xanh và sức khỏe, với các khu dân cư nối với nhau bằng hành lang rừng và sông.",
+      "Gelephu là cửa khẩu đường bộ từ Ấn Độ và có sân bay nội địa; hãy kết hợp chuyến đi với suối nước nóng Gelephu hoặc Vườn quốc gia Hoàng gia Manas."
+    ],
+    "buddha": [
+      "Buddha Dordenma",
+      "Trên thung lũng Thimphu",
+      "Thimphu · Tây Bhutan",
+      "Nghệ thuật Phật giáo và cảnh thung lũng",
+      "Điểm dừng văn hóa có hướng dẫn",
+      "Tượng Phật lớn nhìn xuống Thimphu từ Kuenselphodrang. Khám phá điểm ngắm cảnh và ý nghĩa Phật giáo cùng hướng dẫn viên địa phương.",
+      "Hỏi hướng dẫn viên về việc vào tham quan; công việc trùng tu có thể ảnh hưởng đến lối vào."
+    ],
+    "memorial": [
+      "Tháp tưởng niệm",
+      "Nơi cầu nguyện tại Thimphu",
+      "Thimphu · Tây Bhutan",
+      "Truyền thống Phật giáo sống động",
+      "Chuyến thăm văn hóa yên tĩnh",
+      "Tháp trắng với đỉnh vàng giữa trung tâm Thimphu. Quan sát việc cầu nguyện và đi nhiễu tháp hằng ngày cùng hướng dẫn viên.",
+      "Đi theo chiều kim đồng hồ và xin phép trước khi chụp ảnh người hành lễ."
+    ],
+    "museum": [
+      "Bảo tàng Quốc gia",
+      "Tháp canh lịch sử ở Paro",
+      "Paro · Tây Bhutan",
+      "Nghệ thuật và di sản Bhutan",
+      "Tham quan bảo tàng",
+      "Khám phá nghệ thuật và di sản Bhutan tại Ta Dzong, tháp canh lịch sử phía trên Rinpung Dzong ở Paro.",
+      "Kiểm tra giờ mở cửa và quy định chụp ảnh cùng hướng dẫn viên."
+    ],
+    "taktsang": [
+      "Tổ Hổ",
+      "Paro Taktsang",
+      "Paro · Tây Bhutan",
+      "Cuộc hành hương bên vách đá",
+      "Một ngày đi bộ có hướng dẫn",
+      "Một tu viện bám vào vách đá phía trên Paro. Đi lên từ từ, dừng lại bên dưới những lá cờ cầu nguyện và để thung lũng mở ra bên dưới bạn.",
+      "Cho phép một ngày đi bộ đường dài chuyên dụng; việc leo dốc ở nhiều nơi."
+    ],
+    "rinpung": [
+      "Rinpung Dzong",
+      "Tu viện pháo đài Paro",
+      "Paro · Tây Bhutan",
+      "Sân và kiến trúc",
+      "Điểm dừng văn hóa",
+      "Những bức tường pháo đài trắng, phòng trưng bày gỗ và cộng đồng tu viện ở thung lũng Paro. Phần giới thiệu bổ ích về kiến ​​trúc dzong của Bhutan.",
+      "Khám phá với hướng dẫn viên và kiểm tra xem sân nào đang mở."
+    ],
+    "tashichho": [
+      "Tashichho Dzong",
+      "Di sản sống của thủ đô",
+      "Thimphu · Tây Bhutan",
+      "Di sản tu viện và dân sự",
+      "Điểm dừng văn hóa",
+      "Tu viện-pháo đài Thimphu kết hợp truyền thống tu viện và chính phủ của Bhutan. Hãy quan sát kỹ các chi tiết chạm khắc và mái xếp tầng.",
+      "Thời gian thăm viếng phụ thuộc vào việc sử dụng chính thức và tôn giáo."
+    ],
+    "crafts": [
+      "hàng thủ công Thimphu",
+      "Chủ đề văn hóa sống",
+      "Thimphu · Tây Bhutan",
+      "Dệt và nghệ thuật truyền thống",
+      "Đã đến lúc gặp gỡ các nhà sản xuất",
+      "Khám phá hàng dệt, hội họa và nghề thủ công định hình cuộc sống hàng ngày của người Bhutan. Điểm đánh dấu thành phố này thể hiện trải nghiệm văn hóa của Thimphu chứ không phải là một hội thảo đơn lẻ.",
+      "Hãy yêu cầu hướng dẫn viên của bạn kể thêm một chuyến tham quan dệt vải hoặc thủ công."
+    ],
+    "dochula": [
+      "Đèo Dochula",
+      "Chortens trên sườn núi",
+      "Thimphu–Punakha · Tây Bhutan",
+      "108 đài tưởng niệm",
+      "Điểm dừng hoặc đi bộ bên đường",
+      "Một cụm gồm 108 chortens đánh dấu con đường giữa Thimphu và Punakha. Thời tiết trong xanh mở ra tầm nhìn dãy Himalaya; những con đường rừng mang lại một cách yên tĩnh hơn để nán lại.",
+      "Quang cảnh núi non phụ thuộc vào đám mây và thời tiết."
+    ],
+    "punakha": [
+      "Punakha Dzong",
+      "Cung điện hạnh phúc vĩ đại",
+      "Punakha · Tây Bhutan",
+      "Kiến trúc pháo đài thiêng liêng",
+      "Điểm dừng văn hóa",
+      "Được thành lập vào năm 1637, địa danh này kết hợp những bức tường đá đồ sộ với nội thất được trang trí lộng lẫy. Nó vẫn là một nơi quan trọng trong đời sống tôn giáo và dân sự của người Bhutan.",
+      "Hãy dành thời gian cho cách tiếp cận và sân trong."
+    ],
+    "chimi": [
+      "Chimi Lhakhang",
+      "Một ngôi chùa phía trên cánh đồng",
+      "Lobesa, Punakha · Tây Bhutan",
+      "Đi dạo trong làng & chùa",
+      "Một chuyến thăm văn hóa dễ dàng",
+      "Một ngôi chùa trên đỉnh đồi gần Lobesa ở thung lũng Punakha. Kết hợp chuyến thăm với việc đi bộ qua khu định cư và cảnh quan nông nghiệp xung quanh.",
+      "Hãy làm theo lời khuyên của hướng dẫn viên về phong tục địa phương."
+    ],
+    "gangtey": [
+      "Tu viện Gangtey",
+      "Phía trên thung lũng sếu",
+      "Gangtey · Miền Trung Bhutan",
+      "Di sản Phật giáo Nyingma",
+      "Điểm dừng văn hóa",
+      "Tu viện Gangtey là nơi neo giữ đời sống tâm linh của thung lũng. Khoảng sân và kiến ​​trúc truyền thống của nó tạo nên một người bạn đồng hành tự nhiên khi đi bộ qua Phobjikha.",
+      "Ghép nối tu viện với con đường mòn tự nhiên gần đó."
+    ],
+    "phobjikha": [
+      "Thung lũng Phobjikha",
+      "Đồng cỏ, đường mòn và sếu mùa đông",
+      "Phobjikha · Miền Trung Bhutan",
+      "Vùng đất ngập nước và sếu cổ đen",
+      "Bước đi trong thung lũng nhẹ nhàng",
+      "Một thung lũng băng rộng với các trang trại, rừng thông và vùng đất ngập nước. Sếu cổ đen trú đông ở đây, trong khi con đường đi bộ tự nhiên Gangtey mang đến sự giới thiệu nhẹ nhàng về cảnh quan.",
+      "Mùa đông là mùa sếu; quan sát từ một khoảng cách tôn trọng."
+    ],
+    "trongsa": [
+      "Trongsa Dzong",
+      "Một pháo đài phía trên hẻm núi",
+      "Trongsa · Miền Trung Bhutan",
+      "Lịch sử và kiến trúc hoàng gia",
+      "Điểm dừng văn hóa",
+      "Một pháo đài-tu viện rộng lớn nhìn ra hẻm núi Mangde Chhu. Những khoảng sân nhiều tầng nơi đây kể những câu chuyện về triều đại Wangchuck và các tuyến đường xuyên miền trung Bhutan.",
+      "Dành thời gian cho hành trình tham quan di sản có hướng dẫn viên."
+    ],
+    "jakar": [
+      "Jakar Dzong",
+      "Nhìn ra thung lũng Bumthang",
+      "Bumthang · Miền Trung Bhutan",
+      "Di sản pháo đài Bumthang",
+      "Điểm dừng văn hóa",
+      "Đỉnh đồi dzong phía trên Jakar, điểm khởi đầu đáng nhớ để khám phá các ngôi đền, khu định cư nông thôn và cảnh quan linh thiêng của Bumthang.",
+      "Kết hợp chuyến thăm với việc khám phá thung lũng chậm hơn."
+    ],
+    "kurjey": [
+      "Kurjey Lhakhang",
+      "Những câu chuyện thiêng liêng của Bumthang",
+      "Bumthang · Miền Trung Bhutan",
+      "Di sản đền chùa",
+      "Một chuyến thăm văn hóa yên tĩnh",
+      "Quần thể chùa linh thiêng ở Bumthang. Hãy ghé thăm cùng với hướng dẫn viên địa phương, người có thể giải thích những truyền thống và câu chuyện gắn liền với nơi thờ cúng quan trọng này.",
+      "Giữ giọng nói nhỏ và làm theo hướng dẫn chụp ảnh."
+    ],
+    "haa": [
+      "Lhakhang Karpo",
+      "Đền Trắng Haa",
+      "Haa · Tây Bhutan",
+      "Di sản đền thung lũng Haa",
+      "Điểm dừng văn hóa",
+      "Đền Trắng là một địa danh của thung lũng yên tĩnh hơn ở Haa. Tạo không gian cho cuộc sống làng quê địa phương cũng như chuyến viếng thăm đền thờ.",
+      "Một người bạn đồng hành tốt cho cuộc hành trình qua Chele La."
+    ],
+    "chelela": [
+      "Chele La",
+      "Giữa Paro và Haa",
+      "Paro–Haa · Tây Bhutan",
+      "Cờ cầu nguyện và quang cảnh núi non",
+      "Đèo cao hoặc đi bộ đường dài có hướng dẫn",
+      "Là con đèo cao nối liền thung lũng Paro và Haa. Những lá cờ cầu nguyện, không khí mát mẻ và những chuyến đi dạo trong rừng tạo nên nét đặc trưng riêng cho chuyến vượt biển này.",
+      "Chọn đi bộ tùy theo thời tiết trong ngày và sự thoải mái của bạn ở độ cao."
+    ],
+    "drukpath": [
+      "Cao nguyên Druk Path",
+      "Chuyến đi dọc sườn núi và hồ",
+      "Paro–Thimphu · Tây Bhutan",
+      "Hồ trên núi cao và rặng rừng",
+      "Chuyến đi cắm trại nhiều ngày",
+      "Một chuyến đi bộ trên vùng cao nối Paro và Thimphu qua những khu rừng, rặng núi và hồ trên núi cao. Điểm đánh dấu này đại diện cho khu vực đi bộ xuyên rừng chứ không phải một khu cắm trại cụ thể.",
+      "Mùa xuân và mùa thu thường được lựa chọn; xác nhận tình trạng đường mòn với hướng dẫn viên của bạn."
+    ],
+    "jangothang": [
+      "Jangothang",
+      "Trại căn cứ Jomolhari",
+      "Cao nguyên Soe · Tây Bhutan",
+      "Phong cảnh vùng cao & cắm trại",
+      "Chuyến đi nhiều ngày đầy thử thách",
+      "Trại căn cứ vùng cao trên hành trình trekking Jomolhari. Phong cảnh núi non và xứ sở của loài bò Tây Tạng khiến chuyến tham quan này trở thành một trải nghiệm rất khác so với các chuyến tham quan thung lũng.",
+      "Lập kế hoạch thích nghi với khí hậu và lộ trình phù hợp với trải nghiệm trekking của bạn."
+    ],
+    "trashigang": [
+      "Trashigang Dzong",
+      "Một khám phá phía đông Bhutan",
+      "Trashigang · Đông Bhutan",
+      "Di sản pháo đài phía đông",
+      "Một phần của chuyến tham quan phía đông tùy chỉnh",
+      "Một pháo đài ấn tượng phía trên Trashigang, được thành lập vào năm 1659. Khám phá một khía cạnh khác của Bhutan bằng cách nhường chỗ cho các thị trấn và truyền thống của phương đông.",
+      "Yêu cầu chúng tôi tạo một hành trình dài hơn bao gồm cả miền đông Bhutan."
+    ]
+  },
+  "gallery": [
+    [
+      "Sân tu viện Bhutan",
+      "Những cửa sổ sơn màu truyền thống và những bức tường quét vôi trắng tạo khung cho sân tu viện yên bình."
+    ],
+    [
+      "Phong cảnh Bhutan Himalaya",
+      "Các thung lũng xanh của Bhutan trải dài bên dưới những rặng núi rộng lớn ở phía đông dãy Himalaya."
+    ],
+    [
+      "Di sản văn hóa Bhutan",
+      "Truyền thống hàng thế kỷ vẫn là một phần của cuộc sống hàng ngày trên khắp các thị trấn và làng mạc của Bhutan."
+    ],
+    [
+      "Thung lũng Bhutan",
+      "Thung lũng Bhutan yên tĩnh cho thấy mối quan hệ chặt chẽ giữa khu định cư, rừng và núi."
+    ],
+    [
+      "Toàn cảnh núi non Bhutan",
+      "Những đỉnh núi Himalaya nhiều lớp vươn lên vượt ra ngoài cảnh quan hoang sơ và xa xôi của vương quốc."
+    ],
+    [
+      "ngôi đền Bhutan",
+      "Một ngôi chùa linh thiêng là nơi cầu nguyện, hành hương và di sản Phật giáo sống động."
+    ],
+    [
+      "dzong của người Bhutan",
+      "Dzong của Bhutan kết hợp kiến trúc pháo đài với các trung tâm năng động của đời sống tinh thần và dân sự."
+    ],
+    [
+      "Tu viện Tiger’s Nest trên vách đá ở Paro",
+      "Paro Taktsang, còn được gọi là Tiger's Nest, bám chặt vào một vách đá có rừng phía trên Thung lũng Paro."
+    ],
+    [
+      "Sếu cổ đen ở Bhutan",
+      "Những con sếu cổ đen quý hiếm tập trung tại các thung lũng được bảo vệ của Bhutan trong chuyến di cư mùa đông của chúng."
+    ],
+    [
+      "Thung lũng Thimphu được bao quanh bởi những lá cờ cầu nguyện",
+      "Những lá cờ cầu nguyện tung bay trên Thimphu, thủ phủ miền núi và trung tâm văn hóa của Bhutan."
+    ],
+    [
+      "Nhà sư Bhutan đi qua cây cầu cờ cầu nguyện",
+      "Một nhà sư đi qua cây cầu treo có những lá cờ cầu nguyện phía trên dòng sông chảy xiết."
+    ],
+    [
+      "Lễ hội múa mặt nạ Tsechu ở Bhutan",
+      "Một vũ công đeo mặt nạ sôi động biểu diễn điệu múa Cham linh thiêng trong một trong những lễ hội Tsechu của Bhutan."
+    ],
+    [
+      "Punakha Dzong nơi hai dòng sông gặp nhau",
+      "Punakha Dzong sừng sững nơi sông Pho Chhu và Mo Chhu hợp lưu, là tu viện pháo đài duyên dáng nhất Bhutan."
+    ],
+    [
+      "108 bảo tháp trên đèo Dochula",
+      "Trên đèo Dochula, 108 bảo tháp tưởng niệm nằm trên đỉnh núi, trên đường từ Thimphu đến Punakha, phía xa là dãy Himalaya."
+    ],
+    [
+      "Tượng Phật Dordenma trên Thimphu",
+      "Tượng Phật Dordenma bằng vàng khổng lồ ngự trên đồi cao, dõi theo thung lũng thủ đô Thimphu."
+    ],
+    [
+      "Kyichu Lhakhang ở Paro",
+      "Kyichu Lhakhang, một trong những ngôi đền cổ nhất Bhutan, đã đứng trong thung lũng Paro từ thế kỷ thứ bảy."
+    ],
+    [
+      "Cờ cầu nguyện trên đèo Chele La",
+      "Cờ cầu nguyện bay phấp phới trên Chele La, con đèo cao nối thung lũng Paro và Haa."
+    ],
+    [
+      "Thung lũng Paro",
+      "Những ngôi nhà nông trại, ruộng bậc thang và dòng Paro Chhu trải khắp thung lũng Paro rộng lớn, cửa ngõ vào vương quốc."
+    ],
+    [
+      "Làng Ura ở Bumthang",
+      "Những ngôi nhà đá và lối đi lát đá của làng Ura nằm cao trong một thung lũng yên bình ở Bumthang, miền trung Bhutan."
+    ],
+    [
+      "Bảo tháp Tưởng niệm ở Thimphu",
+      "Tại Bảo tháp Tưởng niệm ở Thimphu, người dân đi vòng quanh bảo tháp trắng cầu nguyện từ sáng sớm đến chiều tối."
+    ]
+  ],
+  "page": {
+    "aboutMore": ["Bhutan không phải là nơi để đánh dấu vào danh sách. Đó là một vương quốc chào đón bạn — và suốt hơn mười lăm năm, chúng tôi luôn giữ cho sự chào đón ấy thật ấm áp và gần gũi.","Dẫn đường bởi người bản xứ","Hướng dẫn viên của bạn là người Bhutan có giấy phép, coi những thung lũng này là nhà. Họ biết khi nào chuông tu viện ngân lúc bình minh, căn bếp nông trại nào đón khách, và khi nào nên dừng lại để lắng nghe.","Thiết kế riêng cho bạn","Không có lịch khởi hành cố định, không có xe khách đông đúc. Lộ trình, nhịp độ và nơi lưu trú được thiết kế quanh những gì khiến bạn rung động, từ hàng ghế đầu lễ hội đến những kỳ tĩnh tâm giữa rừng.","Du lịch biết sẻ chia","Chúng tôi do người địa phương sở hữu và vận hành, trung hòa carbon từ năm 2018, để những gì bạn chi tiêu ở lại với người Bhutan và núi non vẫn trong lành như lúc bạn đến.","Bắt đầu hành trình cùng chúng tôi"],
+    "aboutGnh": ["Vì sao là Tổng Hạnh phúc Quốc gia","La bàn của vương quốc, và của chúng tôi","Bhutan đo lường sự phát triển bằng Tổng Hạnh phúc Quốc gia chứ không chỉ bằng tăng trưởng kinh tế. Bốn trụ cột dưới đây định hình cách vương quốc đón khách — giá trị cao, lượng khách thấp — và định hướng mọi hành trình chúng tôi thiết kế: tôn trọng văn hóa, nhẹ nhàng với thiên nhiên và mang lại lợi ích cho cộng đồng bạn gặp."],
+    "aboutTeam": {"label":"Đội ngũ của chúng tôi","title":"Những con người đứng sau <em>hành trình của bạn</em>","lede":"Mỗi hành trình của Druk Voyages đều được lên kế hoạch, dẫn đường và cầm lái bởi những người Bhutan sinh ra ở các thung lũng này. Hãy gặp một vài người trong số họ.","speaks":"Ngôn ngữ","roles":{"founder":"Nhà sáng lập","owner":"Chủ sở hữu kiêm Giám đốc điều hành","manager":"Quản lý điều hành","planner":"Chuyên viên lên kế hoạch","guide":"Hướng dẫn viên văn hóa","trekGuide":"Hướng dẫn viên trekking","driver":"Tài xế"}},
+    "lang": "vi",
+    "meta": "Druk Voyages - Du lịch Vương quốc Bhutan",
+    "description": "Công ty du lịch địa phương tại Bhutan với hành trình chọn lọc, lễ hội, trekking và nghỉ dưỡng.",
+    "tagline": "Bhutan đích thực, những hành trình phi thường",
+    "heroMottos": [
+      "Gần hơn một chút<br> với <em>điều kỳ diệu.</em>",
+      "Giữa núi cao,<br> tìm thấy <em>ý nghĩa.</em>",
+      "Chuyện xưa.<br> Truyền thống <em>sống động.</em>",
+      "Chọn con đường<br> không <em>vội vã.</em>",
+      "Một vương quốc<br> ở lại trong <em>tim bạn.</em>"
+    ],
+    "gnhPillars": [
+      "Phát triển kinh tế xã hội<br>bền vững và công bằng",
+      "Bảo tồn<br>môi trường",
+      "Bảo tồn và phát huy<br>văn hóa",
+      "Quản trị<br>tốt"
+    ],
+    "menu": [
+      "Về chúng tôi",
+      "Hành trình",
+      "Trải nghiệm",
+      "Thư viện ảnh",
+      "Lên kế hoạch"
+    ],
+    "hero": [
+      "Bhutan, vượt khỏi thường ngày",
+      "Gần hơn một chút<br> với <em>điều kỳ diệu.</em>",
+      "Thung lũng yên bình. Truyền thống sống động. Những con người đáng nhớ. Khám phá Bhutan qua các hành trình do người dân địa phương vun đắp.",
+      "Khám phá hành trình",
+      "Gặp hướng dẫn viên địa phương",
+      "Cuộn xuống"
+    ],
+    "stats": [
+      "Năm tại Bhutan",
+      "Du khách đã đón",
+      "Hành trình chọn lọc",
+      "Mức hài lòng"
+    ],
+    "marquee": [
+      "Tu viện Tiger's Nest",
+      "Lễ hội Paro Tsechu",
+      "Punakha Dzong",
+      "Sếu cổ đen",
+      "Đèo Dochula",
+      "Thung lũng Bumthang",
+      "Hoa đỗ quyên",
+      "Khóa thiền"
+    ],
+    "about": [
+      "Tổng Hạnh phúc<br>Quốc gia",
+      "Chúng tôi là ai",
+      "Chuyên gia hành trình <em>đáng tin cậy</em> tại Bhutan",
+      "Druk Voyages được thành lập bởi người Bhutan với niềm tin rằng du lịch đích thực làm thay đổi cả du khách và cộng đồng địa phương.",
+      "Phí phát triển bền vững của Bhutan hỗ trợ y tế và giáo dục. Đồng hành cùng chúng tôi cũng là góp phần bảo vệ di sản sống.",
+      "Được Hội đồng Du lịch Bhutan cấp phép",
+      "Trung hòa carbon từ năm 2018",
+      "100% sở hữu và vận hành địa phương",
+      "Trải nghiệm nhóm nhỏ theo yêu cầu"
+    ],
+    "journeys": [
+      "Hành trình với cảm giác về địa điểm",
+      "Chương tiếp theo của bạn,<br><em>ở một nơi nào đó phi thường.</em>",
+      "Tất cả hành trình",
+      "văn hóa",
+      "Lễ hội",
+      "Đi bộ xuyên rừng",
+      "Sức khỏe"
+    ],
+    "gallery": [
+      "Một cái nhìn thoáng qua về vương quốc",
+      "Một nơi không giống <em>không nơi nào khác.</em>",
+      "Một vài khoảnh khắc đang chờ bạn: khoảng sân yên tĩnh, không khí miền núi, truyền thống sống và một kiểu đời thường khác."
+    ],
+    "experience": [
+      "Khoảnh khắc đặc biệt",
+      "Trải nghiệm <em>khó quên</em>",
+      [
+        "Hành hương Tiger's Nest",
+        "Leo núi có hướng dẫn đến Paro Taktsang, ngôi đền nằm trên vách đá cao 900 mét."
+      ],
+      [
+        "Khám phá kiến trúc Dzong",
+        "Tham quan riêng Punakha Dzong vào hoàng hôn, nơi các nghi lễ cổ vẫn được duy trì."
+      ],
+      [
+        "Đắm mình trong lễ hội Tsechu",
+        "Thưởng thức điệu múa mặt nạ Cham và giao lưu chân thật với gia đình địa phương."
+      ],
+      [
+        "Cuộc sống nông trại",
+        "Dành một ngày cùng nông dân Phobjikha, trồng lúa đỏ và học món ema datshi."
+      ],
+      [
+        "Nghỉ dưỡng Himalaya",
+        "Ba ngày tĩnh lặng với y học Sowa Rigpa, tắm đá nóng và thiền định."
+      ],
+      [
+        "Ngắm sếu cổ đen",
+        "Ngắm sếu di cư tại Phobjikha vào bình minh cùng hướng dẫn viên thiên nhiên."
+      ]
+    ],
+    "planning": [
+      "Lên kế hoạch",
+      "Thời điểm đẹp nhất để <em>thăm Bhutan</em>",
+      "Bhutan đẹp quanh năm, nhưng mỗi mùa mở ra một diện mạo hoàn toàn khác.",
+      [
+        "Mùa xuân",
+        "Tháng 3 - Tháng 5",
+        "Hoa đỗ quyên nở rộ, trời trong và lễ hội Paro Tsechu."
+      ],
+      [
+        "Mùa mưa",
+        "Tháng 6 - Tháng 8",
+        "Thung lũng xanh mướt, ít khách và thác nước ngoạn mục."
+      ],
+      [
+        "Mùa thu",
+        "Tháng 9 - Tháng 11",
+        "Tầm nhìn Himalaya trong trẻo, thung lũng vàng và lễ hội Thimphu Tsechu."
+      ],
+      [
+        "Mùa đông",
+        "Tháng 12 - Tháng 2",
+        "Dzong phủ tuyết, mùa sếu cổ đen và không khí thanh bình."
+      ]
+    ],
+    "enquiry": [
+      "Bắt đầu lên kế hoạch",
+      "Kể chúng tôi về<br><em>hành trình mơ ước</em>",
+      "Chúng tôi sẽ thiết kế hành trình theo sở thích, ngày đi và số lượng khách của bạn, không ràng buộc.",
+      "Thứ 2-Thứ 7 - 9:00-18:00 giờ Bhutan",
+      "Tên *",
+      "Họ *",
+      "Email *",
+      "Điện thoại",
+      "Quan tâm đến",
+      "Số khách",
+      "Ngày dự kiến đến",
+      "Thời lượng (ngày)",
+      "Hành trình mơ ước *",
+      "Chọn loại hành trình...",
+      [
+        "Điểm nổi bật cổ điển",
+        "Hành trình lễ hội",
+        "Trekking Himalaya",
+        "Nghỉ dưỡng",
+        "Tour nhiếp ảnh",
+        "Trăng mật",
+        "Theo yêu cầu / Khác"
+      ],
+      "Hãy chia sẻ phong cách du lịch, sở thích và yêu cầu đặc biệt...",
+      "Gửi yêu cầu"
+    ],
+    "testimonials": [
+      "Câu chuyện du khách",
+      "Chia sẻ từ <em>du khách</em>",
+      "Druk Voyages chăm chút từng khoảnh khắc. Đứng tại Tiger's Nest lúc bình minh là trải nghiệm tâm linh sâu sắc nhất của tôi.",
+      "Trải nghiệm lễ hội vượt xa mong đợi. Hướng dẫn viên đã sắp xếp bữa tối riêng cùng một nhà sư.",
+      "Kỳ nghỉ dưỡng đã giúp tâm trí tôi hoàn toàn thư thái. Tôi vẫn nhớ bồn tắm đá nóng dưới trời sao.",
+      "New York, Hoa Kỳ - Thu 2025",
+      "London, Anh - Xuân 2025",
+      "Tokyo, Nhật Bản - Đông 2025"
+    ],
+    "cta": [
+      "Bắt đầu hành trình",
+      "Sẵn sàng bước vào <em>Shangri-La</em> cuối cùng?",
+      "Hãy kể về giấc mơ của bạn và chuyên gia Bhutan của chúng tôi sẽ thiết kế hành trình riêng.",
+      "Lên kế hoạch",
+      "Gọi văn phòng Thimphu"
+    ],
+    "footer": [
+      "Được Hội đồng Du lịch Bhutan cấp phép. Công ty 100% Bhutan, cam kết du lịch bền vững.",
+      "Hành trình",
+      "Điểm đến",
+      "Liên hệ",
+      [
+        "Điểm nổi bật",
+        "Hành trình lễ hội",
+        "Trekking Himalaya",
+        "Nghỉ dưỡng",
+        "Tour nhiếp ảnh",
+        "Trăng mật"
+      ],
+      "Thứ 2-Thứ 7 9:00-18:00",
+      "© 2026 Druk Voyages. Bảo lưu mọi quyền. Giấy phép #TCB-2009-142.",
+      "Riêng tư",
+      "Điều khoản",
+      "Sơ đồ trang"
+    ],
+    "ui": {
+      "language": "Ngôn ngữ",
+      "menu": "Menu",
+      "view": "Xem hành trình",
+      "from": "Từ",
+      "perPerson": "mỗi người",
+      "close": "Đóng hành trình",
+      "dayByDay": "Hành trình từng ngày",
+      "pp": "mỗi người",
+      "days": "ngày",
+      "max": "Tối đa",
+      "couple": "Chỉ dành cho cặp đôi",
+      "difficulties": {
+        "Easy": "Dễ",
+        "Moderate": "Trung bình",
+        "Challenging": "Thử thách"
+      },
+      "required": "Vui lòng điền các trường bắt buộc.",
+      "sending": "Đang gửi...",
+      "success": "Cảm ơn bạn. Chúng tôi sẽ liên hệ trong 24 giờ.",
+      "toast": "Đã gửi yêu cầu!",
+      "fail": "Không thể gửi. Vui lòng email hello@drukvoyages.bt.",
+      "slide": "Trang"
+    },
+    "itineraries": [
+      [
+        "Cổ điển",
+        "Điểm nổi bật Bhutan - Con đường Hoàng gia",
+        "Khám phá Tiger's Nest, Punakha và Thimphu."
+      ],
+      [
+        "Lễ hội",
+        "Paro Tsechu - Vũ điệu linh thiêng",
+        "Múa Cham, thangka lớn và nghi lễ cổ."
+      ],
+      [
+        "Trekking",
+        "Druk Path Trek - Con đường Hoàng gia",
+        "Hồ trên cao, rừng hoa và cảnh Himalaya."
+      ],
+      [
+        "Nghỉ dưỡng",
+        "Tái tạo tâm hồn Bhutan",
+        "Y học truyền thống, thiền và tắm đá nóng."
+      ],
+      [
+        "Nhiếp ảnh",
+        "Bhutan qua ống kính",
+        "Săn ánh sáng đẹp cùng nhiếp ảnh gia địa phương."
+      ],
+      [
+        "Trăng mật",
+        "Trăng mật Hoàng gia Bhutan",
+        "Bữa tối riêng, lodge trên núi và trải nghiệm độc quyền."
+      ],
+      [
+        "Văn hóa và thủ công",
+        "Bumthang — Thung lũng chuyện linh thiêng",
+        "Thong thả khám phá tu viện, làng dệt, vườn táo và các thung lũng Bumthang."
+      ],
+      [
+        "Du lịch chậm",
+        "Haa và Paro — Ngày tháng ở thung lũng ẩn",
+        "Hành trình nhẹ nhàng qua miền tây Bhutan, theo đường núi cũ, đền trắng và nếp sống nông thôn."
+      ],
+      [
+        "Trekking núi cao",
+        "Trekking Jomolhari — Núi và đồng cỏ yak",
+        "Đi dưới chân núi thiêng Jomolhari, nghỉ tại trại xa và dành thời gian thích nghi độ cao."
+      ],
+      [
+        "Lễ hội và thủ công",
+        "Thimphu Tsechu — Nghi lễ nơi thủ đô",
+        "Kết hợp lễ hội thủ đô với Paro, Punakha và nghề thủ công truyền thống."
+      ],
+      [
+        "Nghỉ dưỡng",
+        "Rừng, nhà nông và tắm đá nóng",
+        "Thư giãn với đi bộ ngắn, không khí núi rừng, món ăn địa phương và buổi tối thong thả."
+      ],
+      [
+        "Thiên nhiên và văn hóa",
+        "Phobjikha — Sếu, thung lũng và đời sống làng",
+        "Quan sát sếu theo mùa, khám phá di sản Punakha và thánh tích Paro."
+      ]
+    ],
+    "itineraryLabels": {
+      "route": "Lộ trình",
+      "bestFor": "Thời điểm phù hợp",
+      "planner": "Gợi ý từ người lên lịch địa phương",
+      "duration": "ngày",
+      "days": "ngày"
+    },
+    "extraUi": {
+      "disclaimerTitle": "Lưu ý về bản dịch",
+      "disclaimerText": "Bản dịch chỉ mang tính tham khảo. Để xác nhận chi tiết hành trình hoặc thông tin quan trọng, vui lòng xem bản tiếng Anh hoặc liên hệ với chúng tôi.",
+      "cancel": "Hủy",
+      "agree": "Tiếp tục",
+      "privacy": "Quyền riêng tư",
+      "terms": "Điều khoản",
+      "compass": "La bàn hành trình",
+      "compassTitle": "Tìm nhịp điệu Bhutan của bạn",
+      "preferences": "Sở thích chuyến đi",
+      "live": "Gợi ý phù hợp",
+      "drawn": "Bạn quan tâm điều gì?",
+      "culture": "Văn hóa sống động",
+      "nature": "Thiên nhiên hoang sơ",
+      "trekking": "Trekking",
+      "wellness": "Thư thái và chăm sóc sức khỏe",
+      "wildlife": "Động vật hoang dã",
+      "photography": "Nhiếp ảnh",
+      "travelDays": "Số ngày đi",
+      "season": "Mùa dự kiến",
+      "flexible": "Linh hoạt thời gian",
+      "routeCustom": "Tạo hành trình riêng cho tôi",
+      "routeResults": "Hành trình gợi ý",
+      "routeView": "Xem hành trình",
+      "mapTitle": "Bản đồ Bhutan",
+      "chatInput": "Hỏi bất kỳ điều gì về du lịch Bhutan…",
+      "chatSend": "Gửi",
+      "chatSettings": "Cài đặt",
+      "chatClear": "Xóa hội thoại",
+      "chatClose": "Đóng",
+      "mapZoom": "Thu phóng bản đồ",
+      "mapPlaces": "Địa điểm",
+      "mapGuide": "Thông tin địa điểm"
+    },
+    "finderUi": {
+      "suggested": "Lộ trình gợi ý",
+      "matches": "Phù hợp sở thích",
+      "timing": "Phù hợp số ngày",
+      "seasonMatch": "Phù hợp mùa này",
+      "flexReason": "Lựa chọn linh hoạt",
+      "custom": "Theo yêu cầu",
+      "tour": "Tour",
+      "trek": "Trekking",
+      "days": "ngày",
+      "results": "Ba hành trình phù hợp nhất"
+    },
+    "chatUi": {
+      "provider": "Nhà cung cấp AI",
+      "key": "Khóa API Groq",
+      "save": "Lưu và bật AI",
+      "quick": [
+        "Hành trình nổi bật",
+        "Thời điểm đẹp nhất",
+        "Chi phí chuyến đi",
+        "Tiger’s Nest",
+        "Thông tin thị thực"
+      ],
+      "online": "Trực tuyến · Hướng dẫn du lịch AI Druk Voyages",
+      "name": "Pema · Hướng dẫn viên",
+      "powered": "Hướng dẫn du lịch AI Druk Voyages"
+    },
+    "errorPage": [
+      "Bạn bị lạc giữa dãy Himalaya?",
+      "Trang bạn tìm không tồn tại, nhưng Bhutan có rất nhiều điều thú vị. Hãy để chúng tôi đưa bạn quay lại.",
+      "Trở về Druk Voyages",
+      "hoặc",
+      "Lên kế hoạch chuyến đi"
+    ],
+    "mapUi": {
+      "categories": [
+        "Tất cả địa điểm",
+        "Tu viện",
+        "Dzong",
+        "Văn hóa",
+        "Thung lũng và đèo",
+        "Trekking"
+      ],
+      "come": "Trải nghiệm",
+      "time": "Thời gian nên dành",
+      "source": "Tìm hiểu địa điểm ↗",
+      "journey": "Xem hành trình liên quan ↗",
+      "custom": "Lên kế hoạch đến miền đông Bhutan ↗",
+      "count": "địa điểm"
+    },
+    "heroDescriptions": [
+      "Thung lũng yên bình. Truyền thống sống động. Những con người đáng nhớ. Khám phá Bhutan qua các hành trình do người dân địa phương vun đắp.",
+      "Theo lối mòn xuyên rừng đến tu viện bên vách đá và những chân trời Himalaya rộng mở. Ở Bhutan, hành trình mời bạn dừng lại, ngắm kỹ hơn và hít thở sâu.",
+      "Bước vào sân dzong, khám phá nghệ thuật của những lễ hội linh thiêng và gặp các nghệ nhân đang gìn giữ di sản Bhutan.",
+      "Dạo qua thung lũng yên bình, chia sẻ bữa ăn tại một nông trại và dành thời gian cho những điều bất ngờ. Khám phá Bhutan theo nhịp đi của riêng bạn.",
+      "Từ cờ cầu nguyện trên đèo núi đến sự đón tiếp ấm áp trong những ngôi nhà ở làng, tìm những khoảnh khắc khiến hành trình Bhutan trở thành ký ức dài lâu."
+    ]
+  },
+  "places": {
+    "Paro": "Paro",
+    "Thimphu": "Thimphu",
+    "Punakha": "Punakha",
+    "Haa": "Haa",
+    "Gangtey": "Gangtey",
+    "Trongsa": "Trongsa",
+    "Jakar": "Jakar",
+    "Gasa": "Gasa",
+    "Lhuentse": "Lhuentse",
+    "Mongar": "Mongar",
+    "Trashigang": "Trashigang",
+    "Trashiyangtse": "Trashiyangtse",
+    "Phuentsholing": "Phuentsholing",
+    "Gelephu": "Gelephu",
+    "Samdrup Jongkhar": "Samdrup Jongkhar",
+    "Bumthang": "Bumthang",
+    "Phobjikha": "Phobjikha",
+    "Chele La": "Chele La",
+    "Jangchulakha": "Jangchulakha",
+    "Jimilangtsho": "Jimilangtsho",
+    "Phajoding": "Phajoding",
+    "Shana": "Shana",
+    "Jangothang": "Jangothang",
+    "Lingshi": "Lingshi",
+    "Bhutan": "Bhutan",
+    "Paro Valley": "Paro Valley",
+    "Haa Valley": "Haa Valley"
+  },
+  "shareStory": {
+    "pageTitle": "Chia sẻ khoảnh khắc đẹp nhất — Druk Voyages",
+    "label": "Câu chuyện của du khách",
+    "title": "Chia sẻ khoảnh khắc <em>đẹp nhất</em>",
+    "lede": "Một bức ảnh và vài dòng về chuyến đi của bạn. Câu chuyện sẽ xuất hiện trong mục câu chuyện du khách trên trang web của chúng tôi.",
+    "greeting": "Xin chào, {label}",
+    "checking": "Đang kiểm tra liên kết…",
+    "invalid": "Liên kết này không hợp lệ. Vui lòng quét lại mã QR trên thẻ Druk Voyages hoặc hỏi hướng dẫn viên của bạn.",
+    "expired": "Liên kết này đã hết hạn hoặc đã được dùng hết. Vui lòng liên hệ để nhận liên kết mới.",
+    "offline": "Không thể kết nối tới máy chủ. Vui lòng kiểm tra kết nối và thử lại.",
+    "photo": "Ảnh của bạn",
+    "photoHint": "Chạm để chọn ảnh",
+    "photoChange": "Chọn ảnh khác",
+    "photoError": "Không đọc được ảnh này. Vui lòng chọn ảnh khác.",
+    "photoSmall": "Vui lòng chọn ảnh có mỗi cạnh ít nhất 400 điểm ảnh.",
+    "name": "Tên của bạn",
+    "from": "Bạn đến từ đâu",
+    "fromPlaceholder": "VD: Hà Nội, Việt Nam",
+    "story": "Khoảnh khắc đẹp nhất",
+    "storyPlaceholder": "Điều gì khiến khoảnh khắc này đặc biệt?",
+    "storyShort": "Vui lòng viết ít nhất 20 ký tự.",
+    "rating": "Đánh giá của bạn",
+    "star": "{n} trên 5 sao",
+    "consent": "Tôi đồng ý để Druk Voyages hiển thị ảnh, tên, nơi ở và câu chuyện của tôi trên trang web.",
+    "required": "Vui lòng điền mục này.",
+    "submit": "Chia sẻ khoảnh khắc",
+    "sending": "Đang gửi…",
+    "error": "Không gửi được câu chuyện. Vui lòng thử lại.",
+    "doneTitle": "Cảm ơn bạn!",
+    "doneText": "Khoảnh khắc của bạn đã có trong câu chuyện của du khách.",
+    "donePending": "Chúng tôi sẽ sớm đăng câu chuyện của bạn lên trang web.",
+    "another": "Chia sẻ khoảnh khắc khác",
+    "viewSite": "Xem trang web",
+    "language": "Ngôn ngữ"
+  }
+}

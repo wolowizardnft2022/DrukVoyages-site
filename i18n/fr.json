@@ -1,0 +1,1517 @@
+{
+  "language": "fr",
+  "ui": {
+    "map2d": "Carte 2D",
+    "map3d": "Satellite 3D",
+    "mapOrbit": "↻ Vue orbitale",
+    "mapOrbitStop": "Ⅱ Arrêter l’orbite",
+    "map3dLoading": "Chargement du relief 3D…",
+    "map3dUnavailable": "La 3D est indisponible sur cet appareil. Explorez la carte 2D.",
+    "map3dCaption": "Paysage satellite · hauteurs à l’échelle 2,5×",
+    "map3dDescription": "Carte 3D du Bhoutan. Faites glisser pour tourner. Utilisez les flèches pour tourner et incliner, plus et moins pour zoomer. Sélectionnez un lieu pour son guide.",
+    "map3dHint": "Glisser pour tourner · flèches pour incliner · + / − pour zoomer",
+    "mapRotateLeft": "Tourner à gauche",
+    "mapRotateRight": "Tourner à droite",
+    "mapTiltUp": "Incliner vers le haut",
+    "mapTiltDown": "Incliner vers le bas",
+    "mapGoogle": "Ouvrir dans Google Maps ↗",
+    "mapCluster": "{count} lieux proches : {names}. Sélectionnez pour zoomer.",
+    "mapPreviewPlay": "▶ Aperçu du voyage",
+    "mapPreviewPause": "Ⅱ Mettre en pause",
+    "mapMotionPause": "Suspendre les animations",
+    "mapMotionResume": "Reprendre les animations",
+    "mapPrevious": "Lieu précédent",
+    "mapNext": "Lieu suivant",
+    "mapStop": "Étape {current} sur {total}",
+    "storyPrevious": "Témoignage précédent",
+    "storyNext": "Témoignage suivant",
+    "storyN": "Témoignage {current} sur {total}",
+    "backToTop": "Retour en haut",
+    "mapGuideTip": "Le conseil de votre guide",
+    "mapGmcKicker": "Région administrative spéciale · Dzongkhag de Sarpang",
+    "mapGmcLatest": "Actualités de Gelephu Mindfulness City",
+    "mapGmcUpdate1": "Nov. 2026 · Projet 108 : 108 chortens bordent désormais 11,7 km des rives de la Mau Chhu.",
+    "mapGmcUpdate2": "Nov. 2026 · Aman a signé un accord avec des partenaires pour soutenir le développement à long terme de la ville.",
+    "mapGmcUpdate3": "Oct. 2026 · Un nouveau terminal d’immigration doté de portiques automatiques a ouvert à Gelephu.",
+    "mapGmcUpdate4": "L’aéroport international de Gelephu est en construction : sa première phase vise environ 1,3 million de passagers par an, avec une ouverture attendue vers 2029.",
+    "mapGmcAsOf": "Informations à novembre 2026. Les projets et les dates peuvent évoluer.",
+    "mapGmcMore": "Site officiel : gmc.bt ↗",
+    "mapPlanGuide": "Planifier avec un guide local ↗",
+    "mapAirport": "Aéroport de {name} ({code})",
+    "mapPhotoIllustrative": "Photo d’illustration",
+    "mapEntry": "Entrée depuis l’Inde",
+    "mapFlightsPause": "Suspendre les vols",
+    "mapFlightsPlay": "Lancer les vols",
+    "mapDzongkhag": "Dzongkhag (district)",
+    "mapDzongkhags": "Dzongkhags (districts)",
+    "mapDzongkhagCount": "{count} lieux à visiter",
+    "mapEnlarge": "Agrandir la carte",
+    "mapEnlargeClose": "Fermer la grande carte",
+    "mapZoomIn": "Zoom avant",
+    "mapZoomOut": "Zoom arrière",
+    "mapLegendHighway": "Route nationale",
+    "mapLegendRoad": "Route",
+    "mapLegendTown": "Ville",
+    "mapLegendVillage": "Village",
+    "skip": "Passer au contenu",
+    "language": "Langue",
+    "discover": "Découvrez le Bhoutan",
+    "glimpse": "Un aperçu du Bhoutan",
+    "photos": "Photographies d'arrière-plan",
+    "pause": "Suspendre le diaporama",
+    "resume": "Reprendre le diaporama",
+    "postcardAlt": "Monastère du Nid du Tigre parmi les montagnes de Paro",
+    "postcardPlace": "PARO TAKTSANG · BHOUTAN",
+    "heroLocation": "BHOUTAN · 27,5° N, 90,4° E",
+    "valleyAlt": "Paysage de la vallée du Bhoutan",
+    "finderLink": "Vous ne savez pas par où commencer ?",
+    "finderLinkAction": "Trouvez votre rythme ↗",
+    "finderIntro": "Le Bhoutan récompense un voyage lent. Utilisez la boussole pour trouver un point de départ, puis laissez nos planificateurs locaux adapter le rythme en fonction de vos intérêts et de vos dates.",
+    "finderHow": "Comment nous planifions un voyage au Bhoutan",
+    "finderFact1": "Commencez par ce que vous voulez ressentir, pas par une liste de contrôle.",
+    "finderFact2": "Construisez un espace pour les routes de montagne, la météo et les rencontres fortuites.",
+    "finderFact3": "Un itinéraire à votre rythme : moins de changements d’hébergement, des journées plus riches.",
+    "finderView": "Afficher l'itinéraire",
+    "customMessage": "Je suis intéressé par un voyage de {days} jours au Bhoutan axé sur {focus}. S'il vous plaît, aidez-moi à tracer le bon itinéraire.",
+    "ccSearch": "Rechercher un pays ou un indicatif",
+    "ccNone": "Aucun résultat",
+    "mapKey": "Légende",
+    "mapSources": "Sources et notes",
+    "planThisJourney": "Planifier ce voyage",
+    "downloadBrochure": "Télécharger la brochure (PDF, en anglais)",
+    "itineraryMessage": "J’aimerais planifier « {title} » ({days} jours). Aidez-moi à l’adapter à mes dates et à mes envies.",
+    "prefilled": "Vos choix ont été ajoutés au formulaire.",
+    "planning": "Planification",
+    "customQuote": "Devis personnalisé",
+    "customPriceDetail": "Dates, taille du groupe et itinéraire",
+    "routeLabel": "Itinéraire : {route}",
+    "route": "Itinéraire",
+    "continueLanguage": "Continuer avec {name} ?",
+    "notice": "Avis de traduction",
+    "noticeTitle": "Veuillez noter",
+    "noticeText": "Les traductions sont fournies pour des raisons de commodité et peuvent ne pas être entièrement exactes. Veuillez vous référer à la version anglaise ou contactez-nous si vous avez besoin de précisions.",
+    "cancel": "Annuler",
+    "agree": "D'accord",
+    "mapEyebrow": "Le royaume, sous un autre angle",
+    "mapTitle": "Un regard plus attentif sur le Bhoutan.",
+    "mapIntro": "Des monastères accrochés aux falaises aux hauts sentiers himalayens, voici les lieux qui rendent le Bhoutan inoubliable. Touchez un lieu pour vous en approcher, ou parcourez le voyage d’ouest en est.",
+    "followJourney": "Suivre un voyage",
+    "mapAll": "Tout le Bhoutan · explorez librement",
+    "mapFilters": "Filtrer les lieux par type",
+    "mapKicker": "BHOUTAN / Atlas de relief et de voyage",
+    "mapSummary": "Lieux sacrés, culture vivante et paysages sauvages",
+    "mapChooseRegion": "Choisissez une région cartographique",
+    "wholeKingdom": "Royaume entier",
+    "west": "Ouest",
+    "central": "Centrale",
+    "east": "Est",
+    "mapSvgTitle": "Carte en relief animée du Bhoutan avec les lieux à visiter",
+    "mapSvgDesc": "Carte en relief avec la frontière nationale, les rivières, les limites des districts et les noms des villes. Sélectionnez un repère pour vous en approcher et lire son guide. La liste des lieux ci-dessous offre une autre façon d’explorer.",
+    "mapZoom": "Zoom sur la carte",
+    "zoomIn": "Zoomer",
+    "zoomOut": "Zoom arrière",
+    "mapReset": "Afficher tout le Bhoutan",
+    "mapPan": "Déplacer la carte zoomée",
+    "panWest": "Panoramique vers l'ouest",
+    "panNorth": "Panoramique vers le nord",
+    "panSouth": "Panoramique vers le sud",
+    "panEast": "Panoramique vers l'est",
+    "north": "N",
+    "dragonLand": "Terre du Dragon Tonnerre",
+    "roads": "Routes cartographiées",
+    "rivers": "Rivières",
+    "borders": "Frontières des districts",
+    "tourConnections": "Liaisons touristiques",
+    "trekCorridor": "Couloir de randonnée",
+    "placePin": "Placer la goupille",
+    "lowlands": "Vallées de plaine",
+    "highlands": "Haut Himalaya",
+    "mapHint": "Zoomez · faites glisser pour explorer",
+    "mapGuide": "Guide des lieux",
+    "mapPlaces": "Lieux à découvrir",
+    "mapChoosePlace": "Choisissez un endroit",
+    "mapOpenPlace": "Ouvrir le guide de {name}",
+    "mapMarker": "{name}, {category}, {region}",
+    "mapCount": "{count} lieux",
+    "mapCountOne": "{count} lieu",
+    "tour": "Visite",
+    "trek": "Randonnée",
+    "culturalTour": "Visite culturelle",
+    "trekkingJourney": "Voyage de randonnée",
+    "fullItinerary": "Itinéraire complet de {days} jours",
+    "viewItinerary": "Voir cet itinéraire ↗",
+    "mapAllHeading": "Le royaume tout entier, en perspective.",
+    "mapAllDescription": "Les montagnes s’élèvent des contreforts du sud jusqu’au haut Himalaya au nord. Choisissez un lieu pour vous en approcher, ou parcourez le voyage d’ouest en est.",
+    "mapEmptyEyebrow": "Une autre sorte de découverte",
+    "mapEmptyTitle": "Aucun endroit dans ce filtre",
+    "mapEmptyDescription": "Essayez une autre catégorie ou choisissez « Tout le Bhoutan » pour explorer plus de lieux.",
+    "mapFootnote": "Relief ombré issu de mesures du terrain. Les frontières et la position des lieux sont approximatives ; cette carte sert à choisir des lieux, pas à naviguer.",
+    "geographyCredit": "Géographie :",
+    "riversCredit": ". Rivières : ©",
+    "osmContributors": "Contributeurs d'OpenStreetMap",
+    "terrainCredit": ", ODbL. Terrain : SRTM/GMTED2010, gracieuseté de l'USGS ; ETOPO1, gracieuseté de la NOAA, traité par",
+    "visualCredit": ". Référence visuelle :",
+    "guideNote": "Une note de votre guide local",
+    "culturalNote": "Les dzongs sont des monastères-forteresses et les lhakhangs sont des temples. Ce sont des lieux sacrés vivants : habillez-vous avec respect, enlevez votre chapeau et renseignez-vous avant de photographier. Laissez les sentiers et les cours aussi beaux que vous les avez trouvés.",
+    "thoughtfulVisit": "Une visite réfléchie ↗",
+    "tibet": "TIBET · CHINE",
+    "india": "INDE",
+    "galleryView": "Voir {name}",
+    "galleryClose": "Fermer la description de l'image",
+    "countryCode": "Code pays",
+    "code": "🌍Code",
+    "bhutanAddress": "Norzin Lam, Thimphu, Bhoutan",
+    "thimphuAddress": "Norzin Lam, Thimphou",
+    "chatFab": "Discutez avec Péma",
+    "chatDialog": "Péma, votre guide",
+    "chatMessage": "Message",
+    "chatEnabled": "IA activée",
+    "chatPoweredBy": "Propulsé par {provider} · {model} · Druk Voyages",
+    "ollamaModel": "Modèle Ollama",
+    "groqHint": "Gratuit à",
+    "groqStorage": "— stocké dans votre navigateur uniquement.",
+    "ollamaHint": "Les demandes de modèles Ollama sont envoyées via le backend de Druk Voyages, donc aucune clé API de visiteur n'est requise ici.",
+    "invalidKey": "Clé invalide — Les clés Groq commencent par gsk_",
+    "invalidGroq": "Votre clé API Groq semble invalide. Cliquez sur ⚙ pour le mettre à jour, ou je répondrai à partir du guide de voyage.",
+    "offlineOllama": "Le service AI est temporairement indisponible. Je répondrai à partir du guide de voyage.",
+    "formEmail": "Veuillez saisir une adresse e-mail valide.",
+    "formShort": "Veuillez saisir au moins {count} caractères.",
+    "formRequired": "Veuillez remplir ce champ obligatoire.",
+    "slide": "Diapositive {count}",
+    "mobileOpen": "Ouvrir le menu",
+    "mobileClose": "Fermer le menu",
+    "modalClose": "Fermer l'itinéraire",
+    "welcome": "Tashi Delek ! 🙏 Je m'appelle Pema, votre guide du Bhoutan. Renseignez-vous sur les treks, les dzongs, les saisons ou la planification de votre voyage. Comment puis-je aider ?",
+    "chatGeneric": "Veuillez contacter **hello@drukvoyages.bt** ou appeler le **+975 17 000 000** pour obtenir de l'aide pour planifier votre voyage au Bhoutan.",
+    "chatIntro": "Parlez-moi de vos intérêts, de vos dates de voyage et de votre rythme préféré, et je pourrai vous aider à explorer nos voyages.",
+    "chatPricing": "Les prix des itinéraires publiés commencent à **3 290 $** pour le voyage Classique de 8 jours. Certains itinéraires nécessitent un devis personnalisé. Contactez **hello@drukvoyages.bt** pour confirmer les inclusions et les tarifs pour vos dates.",
+    "chatVisa": "Pour connaître les modalités de visa et d'entrée en fonction de votre nationalité et de vos dates de voyage, contactez **hello@drukvoyages.bt**. Notre équipe locale peut vous aider à planifier les prochaines étapes.",
+    "chatSeasons": "Le printemps (mars-mai) et l'automne (septembre-novembre) sont populaires pour les voyages culturels et les randonnées. L'hiver offre des vallées plus calmes et une observation saisonnière des grues. Les conditions météorologiques et montagneuses varient ; notre équipe peut vous aider avec vos dates.",
+    "chatTreks": "Explorez le voyage **12 jours Druk Path** ou l'itinéraire **13 jours du camp de base Jomolhari**. Les deux incluent du temps au Bhoutan au-delà des étapes de trekking. Parlez-nous de votre expérience et de votre forme physique afin que nous puissions vous proposer un rythme adapté.",
+    "chatNest": "Paro Taktsang, connu sous le nom de **Tiger's Nest**, se trouve sur les falaises au-dessus de Paro. Prévoyez une journée de randonnée dédiée et montez lentement. Votre guide vous aidera à choisir un rythme adapté à la météo et à l'altitude.",
+    "chatFestivals": "Nos voyages de festival incluent les célébrations de Paro et Thimphu Tshechu. Les dates et les programmes du festival changent chaque année ; nous façonnons votre itinéraire autour du calendrier confirmé.",
+    "chatContact": "Contactez-nous à **hello@drukvoyages.bt** ou **+975 17 000 000**, ou utilisez le formulaire de demande sur cette page.",
+    "quickItineraries": "Quels itinéraires recommanderiez-vous ?",
+    "quickSeasons": "Quelle est la meilleure période pour visiter le Bhoutan ?",
+    "quickPricing": "Combien coûte un voyage au Bhoutan ?",
+    "quickNest": "Parlez-moi du Nid du Tigre.",
+    "quickVisa": "Comment pouvez-vous aider avec les démarches de visa ?",
+    "translationError": "La langue n'a pas pu être chargée. Veuillez réessayer.",
+    "formSending": "Envoi…",
+    "formSuccess": "Merci! Votre demande a été envoyée. Nous vous contacterons bientôt.",
+    "formFailure": "Nous n'avons pas pu envoyer votre demande. Veuillez réessayer ou envoyer un e-mail à hello@drukvoyages.bt.",
+    "flightDomesticNote": "De Paro vers Bumthang, Gelephu et Yonphula. Choisissez un aéroport ou regardez les trois départs.",
+    "flightControls": "Vols intérieurs",
+    "flightFlyTo": "Voler vers",
+    "flightIllustrated": "Vols illustrés · sans suivi en direct",
+    "flightSource": "Informations et horaires des vols ↗",
+    "flightDomesticPlay": "▶ Lancer les vols intérieurs",
+    "flightDomesticPause": "Ⅱ Suspendre les vols intérieurs",
+    "flightDomesticAll": "Tous les aéroports intérieurs",
+    "flightDomesticKicker": "Vols intérieurs depuis Paro"
+  },
+  "days": {
+    "1": [
+      [
+        "Arrivée à Paro et promenade dans la vallée",
+        "Cérémonie de bienvenue, après-midi promenade dans les fermes et le vieux marché de Paro."
+      ],
+      [
+        "Randonnée au Nid du Tigre",
+        "Ascension d'une journée jusqu'au Paro Taktsang (3 120 m). Déjeuner à emporter au café de la falaise."
+      ],
+      [
+        "Exploration de Thimphou",
+        "Tashichho Dzong, Bouddha Dordenma, Musée du patrimoine populaire, tir à l'arc traditionnel."
+      ],
+      [
+        "Col de Dochula et route vers Punakha",
+        "108 chortens commémoratifs dans la brume matinale ; panorama himalayen à couper le souffle."
+      ],
+      [
+        "Punakha Dzong et pont suspendu",
+        "Le plus beau dzong au confluent de deux rivières, construit en 1637."
+      ],
+      [
+        "Détour de la vallée de Haa",
+        "Vallée isolée ouverte aux touristes en 2002. Visitez Lhakhang Karpo et Nagpo."
+      ],
+      [
+        "Marché de Paro et dîner à la ferme",
+        "Shopping artisanal, vin de riz rouge, ema datshi authentique avec une famille locale."
+      ],
+      [
+        "Adieu et départ",
+        "Promenade méditative matinale, transfert aéroport avec foulards de bénédiction (khata)."
+      ]
+    ],
+    "2": [
+      [
+        "Arrivée et briefing du festival",
+        "Dîner de bienvenue avec notre expert culturel. Orientation sur l'étiquette du festival."
+      ],
+      [
+        "Promenades dans les villages avant le festival",
+        "Explorez la ville de Paro pendant que les habitants préparent des costumes et des offrandes traditionnelles."
+      ],
+      [
+        "Tsechu Jour 1 — Cérémonies d'ouverture",
+        "Visionnement au premier rang des danses de masques d'ouverture, organisées par la Cour royale."
+      ],
+      [
+        "Tsechu Jour 2 — Danses Cham",
+        "Black Hat Drubchen et la danse des cerfs. Accès aux coulisses pour rencontrer les artistes."
+      ],
+      [
+        "Tsechu Jour 3 — Dévoilement de Thongdrel",
+        "Rassemblement avant l'aube pour le déploiement sacré du thangka géant appliqué."
+      ],
+      [
+        "Punakha après le festival",
+        "Traversez Dochula Pass – 108 chortens dans un esprit de festival persistant."
+      ],
+      [
+        "Punakha Dzong et Chimi Lhakhang",
+        "Temple de la fertilité du Divin Fou Drukpa Kunley."
+      ],
+      [
+        "Voyage à Bumthang",
+        "Conduisez vers l’est jusqu’au cœur spirituel du Bhoutan. Jakar Dzong et Jambay Lhakhang."
+      ],
+      [
+        "Randonnées dans la vallée de Bumthang",
+        "Kurjey Lhakhang, vergers de pommiers, ateliers de tissage noir traditionnel."
+      ],
+      [
+        "Retour à Paro et départ",
+        "Vol en montagne, cérémonie de bénédiction, cadeaux d'adieu."
+      ]
+    ],
+    "3": [
+      [
+        "Arrivée à Paro et acclimatation",
+        "Randonnée douce en vallée, coucher tôt pour se préparer à l'altitude."
+      ],
+      [
+        "Randonnée d'échauffement au Nid du Tigre",
+        "Acclimatation à l'altitude et préparation spirituelle au trek."
+      ],
+      [
+        "Trek Jour 1 — De Paro à Jangchhulakha (4 100 m)",
+        "Première ascension à travers des forêts de pins. Campez avec vue sur Jomolhari."
+      ],
+      [
+        "Trek Jour 2 — au lac Jimilangtso",
+        "Plateau d'altitude, premier lac d'altitude, observations de yaks sauvages."
+      ],
+      [
+        "Trek Jour 3 — au lac Simkotha",
+        "Trois lacs sacrés utilisés par les moines pour la méditation rituelle."
+      ],
+      [
+        "Trek Jour 4 — au monastère de Phajoding",
+        "Ancien ermitage accroché à flanc de colline au-dessus de Thimphu."
+      ],
+      [
+        "Journée de repos à Phajoding",
+        "Séance de méditation avec les moines résidents."
+      ],
+      [
+        "Descente vers Thimphou",
+        "Dernière descente forestière vers la seule capitale du monde sans feux tricolores."
+      ],
+      [
+        "Journée culturelle de Thimphu",
+        "Bouddha Dordenma, institut de médecine, galerie d'art contemporain."
+      ],
+      [
+        "Récompenses de la rivière Punakha",
+        "Pique-nique fluvial au dzong après les journées de trail."
+      ],
+      [
+        "Journée de récupération et de spa",
+        "Bain traditionnel aux pierres chaudes, soins Sowa Rigpa."
+      ],
+      [
+        "Départ de Paro",
+        "Vol en montagne (si le temps le permet), cérémonie d'adieu."
+      ]
+    ],
+    "4": [
+      [
+        "Arrivée à Paro — Début de la désintoxication numérique",
+        "Téléphones stockés. Recevez du gho/kira traditionnel. Exercices de respiration du soir."
+      ],
+      [
+        "Consultation Sowa Rigpa",
+        "Évaluation de la médecine traditionnelle bhoutanaise et plan personnalisé à base de plantes."
+      ],
+      [
+        "Pèlerinage conscient au Nid du Tigre",
+        "Ascension lente et contemplative. Asseyez-vous en silence. Pas d'horaire, pas de précipitation."
+      ],
+      [
+        "Punakha — Méditation au bord de la rivière",
+        "Yoga à l'aube sur la rivière Mo Chhu, thérapie par les bols chantants tibétains."
+      ],
+      [
+        "Retraite silencieuse de Bumthang, jour 1",
+        "Retraite à la ferme. Premier de deux jours silencieux."
+      ],
+      [
+        "Retraite silencieuse de Bumthang, jour 2",
+        "Baignade en forêt, promenades dans la nature en silence, journalisation."
+      ],
+      [
+        "Dotsho — Cérémonie du bain aux pierres chaudes",
+        "Bain traditionnel chauffé avec des pierres de rivière bénies par le feu. Profondément guérissant."
+      ],
+      [
+        "Réintégration de la vallée de Paro",
+        "Partagez votre expérience avec notre guide. Cours final de peinture thangka."
+      ],
+      [
+        "Départ avec intention",
+        "Prescription de bien-être personnalisée et remèdes à base de plantes bhoutanaises."
+      ]
+    ],
+    "5": [
+      [
+        "Arrivée et contrôle du matériel",
+        "Rencontrez votre guide photographique. Le pont périphérique emblématique de Scout Paro."
+      ],
+      [
+        "Nid de tigre avant l'aube",
+        "Départ à 4h du matin — brume se levant sur le monastère aux premières lueurs du jour."
+      ],
+      [
+        "La vie à la ferme de la vallée de Paro",
+        "Agriculteurs, enfants, moines sous la lumière d’un documentaire matinal."
+      ],
+      [
+        "Architecture de Thimphou",
+        "Dzongs, chortens, le Bouddha géant en bronze."
+      ],
+      [
+        "Lever du soleil sur le col de Dochula",
+        "108 chortens émergeant des nuages à 3 100 m."
+      ],
+      [
+        "Portraits de la rivière Punakha",
+        "Pêcheurs, moines, dzong aux reflets du crépuscule."
+      ],
+      [
+        "Joyaux cachés de la vallée de Haa",
+        "Éleveurs de yaks, temples anciens, vie de village inchangée."
+      ],
+      [
+        "Zones humides de Phobjikha",
+        "Grues à cou noir à l'aube, panoramas à l'heure d'or."
+      ],
+      [
+        "Dzong de Trongsa",
+        "Forteresse ancestrale perchée sur une colline de la famille royale."
+      ],
+      [
+        "Sites sacrés de Bumthang",
+        "Huit siècles d'art sacré photographiés."
+      ],
+      [
+        "Village chez l'habitant Jour 1",
+        "Intégré à une famille locale – essai photographique intime."
+      ],
+      [
+        "Village chez l'habitant Jour 2",
+        "Rituels communautaires, cuisine, élevage."
+      ],
+      [
+        "Atelier de post-traitement",
+        "Session Lightroom retouchant vos meilleurs clichés."
+      ],
+      [
+        "Exposition finale et départ",
+        "Imprimez vos 5 meilleures photos pour le visionnage d'adieu."
+      ]
+    ],
+    "6": [
+      [
+        "Accueil Royal",
+        "Pétales de fleurs, majordome privé, champagne sur votre balcon de montagne."
+      ],
+      [
+        "Ballon lever du soleil sur Paro",
+        "Vol privé en montgolfière à l'aube au-dessus de la vallée de Paro."
+      ],
+      [
+        "Pèlerinage d'amour au Nid du Tigre",
+        "Ascension guidée avec un moine qui bénit votre union."
+      ],
+      [
+        "Coucher de soleil privé sur Punakha Dzong",
+        "Après les heures normales, dîner aux chandelles dans la cour du dzong."
+      ],
+      [
+        "Journée Spa à Amankora",
+        "Soins Sowa Rigpa en couple, bain aux pierres chaudes, massage aux herbes."
+      ],
+      [
+        "Pique-nique romantique Phobjikha",
+        "Champagne et produits montagnards locaux."
+      ],
+      [
+        "Évasion de la vallée de Haa",
+        "Éloigné et rarement visité - votre histoire d'amour privée dans l'Himalaya."
+      ],
+      [
+        "Soirée du patrimoine de Bumthang",
+        "Dîner privé avec cérémonie de la lampe à beurre et musique folklorique."
+      ],
+      [
+        "Thimphou Art et culture",
+        "Commandez un thangka personnalisé comme souvenir de mariage."
+      ],
+      [
+        "Soirée d'adieu de luxe",
+        "Dîner sur le toit sous les étoiles himalayennes, cérémonie de bénédiction."
+      ],
+      [
+        "Départ avec des souvenirs",
+        "Carnet de voyage personnalisé et cadeaux bhoutanais à l'aéroport."
+      ]
+    ],
+    "7": [
+      [
+        "Arrivée à Paro",
+        "Installez-vous dans la vallée et rencontrez votre guide local pour un briefing pratique sur l'altitude, les routes et l'étiquette culturelle."
+      ],
+      [
+        "Les sites sacrés de Paro",
+        "Visitez Kyichu Lhakhang et explorez les rues traditionnelles de Paro avant une facile promenade d'acclimatation."
+      ],
+      [
+        "Dochula vers Punakha",
+        "Traversez le col Dochula, avec ses 108 chortens, et descendez vers la vallée plus chaude de Punakha."
+      ],
+      [
+        "Punakha et Chimi Lhakhang",
+        "Découvrez Punakha Dzong au bord des rivières Pho Chhu et Mo Chhu, puis traversez les rizières jusqu'à Chimi Lhakhang."
+      ],
+      [
+        "Sur le Pele La jusqu'à Trongsa",
+        "Voyagez vers l’est à travers des paysages changeants de forêts et de montagnes ; visitez le commandant Trongsa Dzong si le temps le permet."
+      ],
+      [
+        "Dans Bumthang",
+        "Traversez Yotong La et arrivez à Bumthang, le cœur culturel du Bhoutan, avec du temps pour une douce promenade dans le village."
+      ],
+      [
+        "Jakar, Jambay et Kurjey",
+        "Explorez Jakar Dzong, Jambay Lhakhang et Kurjey Lhakhang avec le contexte de votre guide bhoutanais."
+      ],
+      [
+        "Histoires de la vallée Tang",
+        "Passez la journée dans la paisible vallée de Tang, en visitant des fermes, des sites patrimoniaux et de petits ateliers d'artisanat, le cas échéant."
+      ],
+      [
+        "Village d'Ura et routes de montagne",
+        "Suivez la route de la haute vallée jusqu'à Ura, connue pour ses maisons en pierre distinctives et son paysage pastoral ouvert."
+      ],
+      [
+        "Transfert retour ou départ",
+        "Continuez par route ou par liaison intérieure selon le plan de transport définitif, avec des horaires volontairement flexibles."
+      ]
+    ],
+    "8": [
+      [
+        "Arrivée à Paro et orientation dans la vallée",
+        "Entrez facilement au Bhoutan avec une courte promenade à travers la vallée et une introduction guidée aux coutumes locales."
+      ],
+      [
+        "Promenade du patrimoine de Paro",
+        "Visitez Kyichu Lhakhang, le quartier du musée national et les vitrines traditionnelles de la ville de Paro."
+      ],
+      [
+        "Chele La vers Haa",
+        "Traversez Chele La, l’un des cols routiers les plus élevés du Bhoutan, jusqu’à la vallée compacte et paisible de Haa."
+      ],
+      [
+        "Temples de la vallée de Haa et vie du village",
+        "Visitez Lhakhang Karpo et Lhakhang Nagpo, puis passez du temps avec un hôte local où des arrangements sont possibles."
+      ],
+      [
+        "Retour à Paro",
+        "Retournez à travers la forêt de montagne et savourez un repas détendu à la ferme ou une séance de cuisine dans la vallée de Paro."
+      ],
+      [
+        "Point de vue ou départ de Taktsang",
+        "Choisissez une douce promenade au point de vue ou une matinée libre avant le transfert à l'aéroport."
+      ]
+    ],
+    "9": [
+      [
+        "Arrivée à Paro",
+        "Rencontrez l'équipe de trekking et reposez-vous après votre arrivée. l'hydratation et une première journée lente donnent le ton."
+      ],
+      [
+        "Marche d'acclimatation de Paro",
+        "Une promenade guidée, une vérification du matériel et une discussion sur le profil d'élévation de la randonnée et l'approche sans laisser de trace."
+      ],
+      [
+        "Conduisez jusqu'à Shana et commencez",
+        "Remontez la vallée de Paro et commencez à marcher à travers la forêt de pins bleus au bord de la rivière."
+      ],
+      [
+        "Sentier vers Thangthangka",
+        "Suivez progressivement la vallée vers le haut ; les routines et le rythme du camp sont introduits par l’équipe de soutien."
+      ],
+      [
+        "Arrivée à Jangothang",
+        "Atteignez le camp d'altitude sous Jomolhari après une ascension régulière à travers les pâturages de yaks et le terrain alpin."
+      ],
+      [
+        "Journée d'acclimatation",
+        "Faites une courte randonnée facultative ou une journée de repos à Jangothang, permettant au groupe de s'adapter avant les cols plus élevés."
+      ],
+      [
+        "Traverser vers Lingshi",
+        "Traversez un col élevé lorsque les conditions le permettent, puis descendez dans une large vallée de maisons en pierre et de pâturages."
+      ],
+      [
+        "Lingshi vers Shodu",
+        "Continuez à travers des régions montagneuses isolées avec un itinéraire sélectionné en fonction de la condition du groupe et de la météo."
+      ],
+      [
+        "Shodu vers Barshong",
+        "Promenez-vous dans les zones boisées et campez à proximité des vestiges d'un ancien site de dzong."
+      ],
+      [
+        "Descente en forêt",
+        "Descendre progressivement à travers la forêt de rhododendrons et de conifères en direction du début de la route."
+      ],
+      [
+        "Retour à Thimphou",
+        "Rejoignez la route, rendez-vous à Thimphu et profitez d'un bain réparateur aux pierres chaudes si vous le souhaitez."
+      ],
+      [
+        "Journée culturelle de Thimphu",
+        "Une journée capitale détendue avec du temps pour l'artisanat, le quartier de Bouddha Dordenma ou des arrêts de café tranquilles."
+      ],
+      [
+        "Départ de Paro",
+        "Transfert à Paro pour le départ, avec une nuit tampon supplémentaire ajoutée lorsque les horaires de vol ou la météo l'exigent."
+      ]
+    ],
+    "10": [
+      [
+        "Arrivée à Paro",
+        "Installez-vous, rencontrez votre guide et révisez l'étiquette du festival, les limites de la photographie et le programme final de l'événement."
+      ],
+      [
+        "Paro à Thimphou",
+        "Voyagez vers la capitale avec des arrêts sur des ponts traditionnels, des chortens et un déjeuner local en cours de route."
+      ],
+      [
+        "Traditions artisanales de Thimphu",
+        "Visitez des ateliers d’artisanat et, lorsqu’ils sont ouverts, l’Institut national de Zorig Chusum pour comprendre les treize arts traditionnels du Bhoutan."
+      ],
+      [
+        "Tsechu, premier jour",
+        "Assistez aux cérémonies publiques et aux danses masquées de la journée, avec le contexte de votre guide sur les histoires et les symboles interprétés."
+      ],
+      [
+        "Tsechu, deuxième jour",
+        "Revenez pour un programme différent de danses et du temps pour explorer l'atmosphère du marché autour de l'événement."
+      ],
+      [
+        "Dochula et Punakha",
+        "Quittez la capitale pour les 108 chortens à Dochula et continuez dans les vallées fluviales de Punakha."
+      ],
+      [
+        "Punakha Dzong et Paro",
+        "Visitez le dzong depuis son approche au bord de la rivière avant de retourner à Paro pour une dernière soirée."
+      ],
+      [
+        "Départ",
+        "Transfert aéroport ou journée supplémentaire facultative à Paro, en fonction du festival confirmé et de l'horaire des vols."
+      ]
+    ],
+    "11": [
+      [
+        "Arrivez et déballez lentement",
+        "Installez-vous à Paro avec une première soirée calme et une orientation simple vers la semaine à venir."
+      ],
+      [
+        "Promenade consciente dans la vallée de Paro",
+        "Choisissez une douce promenade au bord d'une rivière ou à flanc de colline, avec le temps de visiter un temple ou simplement de faire une pause autour d'un thé."
+      ],
+      [
+        "Vallée de la rivière Punakha",
+        "Traversez Dochula et installez-vous près de Punakha ; l'après-midi est volontairement laissé ouvert au repos."
+      ],
+      [
+        "Cuisine de ferme et champs",
+        "Apprenez les bases d'un repas bhoutanais avec un hôte local et promenez-vous sans hâte dans les champs voisins."
+      ],
+      [
+        "Gangtey et Phobjikha",
+        "Suivez la route jusqu'à la large vallée glaciaire de Phobjikha, un endroit connu pour ses sentiers tranquilles et ses vues dégagées."
+      ],
+      [
+        "Sentier naturel de Gangtey",
+        "Parcourez une section appropriée du sentier naturel de Gangtey, puis prenez le temps de lire, de tenir un journal ou de prendre un bain aux pierres chaudes local."
+      ],
+      [
+        "Retour à Paro",
+        "Revenez à travers les montagnes, en vous arrêtant uniquement lorsque le groupe en a envie – le but est de quitter un espace blanc."
+      ],
+      [
+        "Départ à un rythme plus léger",
+        "Un dernier petit-déjeuner et un transfert à l'aéroport, ou prolongez-le avec des nuits supplémentaires si un retour plus lent vous convient."
+      ]
+    ],
+    "12": [
+      [
+        "Arrivée à Paro",
+        "Retrouvez votre guide et préparez-vous pour une première journée en douceur dans la vallée."
+      ],
+      [
+        "Paro vers Punakha",
+        "Traversez Dochula et visitez Punakha Dzong, où se rencontrent Pho Chhu et Mo Chhu."
+      ],
+      [
+        "Dans la vallée de Phobjikha",
+        "Conduisez jusqu'à la vaste vallée glaciaire et visitez le centre d'information sur les grues lorsqu'il est ouvert."
+      ],
+      [
+        "Grues et promenades Gangtey",
+        "Observez les grues à cou noir dans les zones désignées pendant leur saison, puis parcourez une section douce du sentier naturel de Gangtey."
+      ],
+      [
+        "Journée du village et du monastère",
+        "Explorez le village de Gangtey et les environs du monastère, avec une visite au rythme local des fermes ou des artisans lorsque cela est possible."
+      ],
+      [
+        "Retour à Paro",
+        "Voyagez vers l'ouest à travers les montagnes, en faisant une pause pour admirer les paysages, le thé et les chortens en bord de route."
+      ],
+      [
+        "Point de vue ou départ de Taktsang",
+        "Choisissez une promenade au point de vue de Tiger's Nest, une randonnée complète si cela vous convient, ou dirigez-vous directement vers l'aéroport."
+      ]
+    ]
+  },
+  "signals": {
+    "1": [
+      "De mars à mai · de septembre à novembre",
+      "Une première visite équilibrée avec plusieurs transferts montagne-route. Tiger's Nest implique une marche soutenue en montée; l'itinéraire est adapté aux conditions météorologiques et à l'acclimatation."
+    ],
+    "2": [
+      "Les dates du festival varient chaque année",
+      "Les programmes du festival et les modalités de projection sont confirmés après la publication du calendrier officiel. Attendez-vous à des départs matinaux, à des foules et à de longues journées joyeusement cérémoniales."
+    ],
+    "3": [
+      "Avril-mai · Octobre-novembre",
+      "Cette randonnée en haute altitude nécessite un plan d'acclimatation conservateur, des chaussures adaptées et une flexibilité pour les conditions météorologiques en montagne. Les distances de marche quotidiennes sont adaptées au groupe."
+    ],
+    "4": [
+      "De mars à mai · de septembre à novembre",
+      "Conçu pour un rythme tranquille. La méditation, les soins de bien-être traditionnels et les bains aux pierres chaudes sont organisés en fonction de la disponibilité locale plutôt que d'un horaire quotidien rigide."
+    ],
+    "5": [
+      "D'octobre à novembre pour une lumière claire",
+      "Un format en petit groupe laisse place aux lumières changeantes et aux événements locaux. Des conseils photographiques respectueux sont inclus pour les monastères, les personnes et les festivals."
+    ],
+    "6": [
+      "De mars à mai · de septembre à novembre",
+      "Un itinéraire privé au rythme plus lent avec de la place pour les temps d'arrêt du lodge et des promenades douces en option. Les expériences sont façonnées autour de l’accès confirmé et des intérêts du couple."
+    ],
+    "7": [
+      "De mars à mai · de septembre à novembre",
+      "Le centre du Bhoutan est accessible par de longues routes de montagne pittoresques. Cet itinéraire permet de conserver du temps libre dans le plan afin que le voyage donne l'impression de faire partie de l'expérience."
+    ],
+    "8": [
+      "De mars à mai · de septembre à novembre",
+      "Un itinéraire facile vers l'ouest du Bhoutan avec de courtes options de marche. La haute altitude de Chele La peut être froide même lorsque la vallée en contrebas est chaude."
+    ],
+    "9": [
+      "Avril-mai · Octobre-novembre",
+      "Une randonnée exigeante en haute altitude nécessitant des permis, des randonneurs en forme et une fenêtre météo flexible. L'équipe de soutien gère la logistique du camping et un rythme sûr et délibéré."
+    ],
+    "10": [
+      "Programmé aux dates officielles de Tsechu",
+      "Les dates et les programmes du Tsechu changent chaque année. Attendez-vous à des lieux publics, à des départs matinaux et à une tenue vestimentaire respectueuse ; toute participation est basée sur le calendrier confirmé du festival."
+    ],
+    "11": [
+      "De mars à mai · de septembre à novembre",
+      "Un itinéraire de faible intensité pour les clients qui préfèrent les courtes promenades et les soirées non structurées. Les soins locaux et les visites de fermes sont soumis à disponibilité."
+    ],
+    "12": [
+      "Fin de l'automne à la fin de l'hiver",
+      "Les grues à cou noir sont observées de façon saisonnière et à des distances respectueuses. Le moment exact varie selon les années, de sorte que l'itinéraire est confirmé autour de la période de migration."
+    ]
+  },
+  "highlights": {
+    "Tiger's Nest": "Le Nid du Tigre",
+    "Punakha Dzong": "Dzong de Punakha",
+    "Dochula Pass": "Col Dochula",
+    "National Museum": "Musée national",
+    "Cham Mask Dances": "Danses des masques Cham",
+    "Thongdrel Unveiling": "Dévoilement de Thongdrel",
+    "Backstage Access": "Accès aux coulisses",
+    "Cultural Workshops": "Ateliers culturels",
+    "High-Altitude Lakes": "Lacs de haute altitude",
+    "Himalayan Views": "Vues himalayennes",
+    "Yak Herding": "Élevage de yaks",
+    "Forest Camping": "Camping en forêt",
+    "Sowa Rigpa": "Sowa Rigpa",
+    "Silent Meditation": "Méditation silencieuse",
+    "Hot Stone Baths": "Bains aux pierres chaudes",
+    "Monastic Stays": "Séjours monastiques",
+    "Golden Hour Shoots": "Séances de l'heure d'or",
+    "Festival Access": "Accès aux festivals",
+    "Remote Villages": "Villages éloignés",
+    "Landscape Photography": "Photographie de paysage",
+    "Private Dzong Dinner": "Dîner privé au Dzong",
+    "Luxury Lodges": "Lodges de luxe",
+    "Couples' Spa": "Spa en couple",
+    "Sunrise Balloon": "Ballon lever du soleil",
+    "Jakar Dzong": "Jakar Dzong",
+    "Jambay Lhakhang": "Jambay Lhakhang",
+    "Tang Valley": "Vallée Tang",
+    "Traditional Crafts": "Artisanat traditionnel",
+    "Chele La Pass": "Chele La Pass",
+    "Haa Valley": "Vallée de Haa",
+    "Lhakhang Karpo": "Lhakhang Karpo",
+    "Paro Farmhouse": "Ferme Paro",
+    "Jangothang Camp": "Camp de Jangothang",
+    "Yak Pastures": "Pâturages de yaks",
+    "High Passes": "Passes Hauts",
+    "Paro Valley": "Vallée de Paro",
+    "Tsechu Ceremonies": "Cérémonies Tsechu",
+    "Zorig Chusum Crafts": "Artisanat Zorig Chusum",
+    "Paro Heritage": "Patrimoine de Paro",
+    "Forest Walks": "Promenades en forêt",
+    "Dotsho Bath": "Bain Dotsho",
+    "Gangtey Valley": "Vallée du Gangtey",
+    "Farmhouse Cooking": "Cuisine de ferme",
+    "Black-Necked Cranes": "Grues à cou noir",
+    "Punakha Rivers": "Rivières Punakha",
+    "Paro Taktsang": "Paro Taktsang",
+    "Gangtey Nature Trail": "Sentier naturel de Gangtey"
+  },
+  "sites": {
+    "gmc": [
+      "Gelephu Mindfulness City",
+      "Région administrative spéciale du Bhoutan",
+      "Gelephu · Bhoutan méridional",
+      "Une ville nouvelle en devenir",
+      "Une étape d’un voyage dans le sud",
+      "Annoncée par Sa Majesté le Roi en décembre 2023, Gelephu Mindfulness City est une région administrative spéciale d’environ 2 500 km² à la frontière de l’Assam. Elle est pensée autour de la pleine conscience, des énergies vertes et du bien-être, avec des quartiers reliés par des corridors de forêts et de rivières.",
+      "Gelephu est un point d’entrée routier depuis l’Inde et dispose d’un aéroport intérieur ; associez la visite aux sources chaudes de Gelephu ou au parc national Royal Manas."
+    ],
+    "buddha": [
+      "Buddha Dordenma",
+      "Au-dessus de la vallée de Thimphou",
+      "Thimphou · Bhoutan occidental",
+      "Art bouddhiste et vues sur la vallée",
+      "Une visite culturelle guidée",
+      "Un Bouddha monumental surplombe Thimphou depuis Kuenselphodrang. Explorez le belvédère et son symbolisme bouddhiste avec un guide local.",
+      "Vérifiez l’accès avec votre guide avant la visite ; les travaux de restauration peuvent limiter l’entrée."
+    ],
+    "memorial": [
+      "Chorten commémoratif",
+      "Un lieu de prière à Thimphou",
+      "Thimphou · Bhoutan occidental",
+      "Traditions bouddhistes vivantes",
+      "Une visite culturelle paisible",
+      "Un chorten blanc à la flèche dorée au cœur de Thimphou. Observez les prières et les circumambulations quotidiennes avec votre guide.",
+      "Marchez dans le sens horaire et demandez avant de photographier les fidèles."
+    ],
+    "museum": [
+      "Musée national",
+      "La tour historique de Paro",
+      "Paro · Bhoutan occidental",
+      "Art et patrimoine du Bhoutan",
+      "Une visite au musée",
+      "Découvrez l’art et le patrimoine du Bhoutan à Ta Dzong, la tour historique au-dessus de Rinpung Dzong à Paro.",
+      "Vérifiez les horaires et les règles de photographie avec votre guide."
+    ],
+    "taktsang": [
+      "Le Nid du Tigre",
+      "Paro Taktsang",
+      "Paro · Bhoutan occidental",
+      "Pèlerinage à flanc de falaise",
+      "Une randonnée guidée d'une journée",
+      "Un monastère accroché aux falaises au-dessus de Paro. Montez lentement, faites une pause sous les drapeaux de prière et laissez la vallée s'ouvrir sous vous.",
+      "Prévoir une journée dédiée à la randonnée ; la montée est raide par endroits."
+    ],
+    "rinpung": [
+      "Rinpung Dzong",
+      "Le monastère-forteresse de Paro",
+      "Paro · Bhoutan occidental",
+      "Cours et architecture",
+      "Une halte culturelle",
+      "Murs de forteresse blancs, galeries en bois et communauté monastique dans la vallée de Paro. Une introduction enrichissante à l’architecture dzong du Bhoutan.",
+      "Explorez avec un guide et vérifiez quelles cours sont ouvertes."
+    ],
+    "tashichho": [
+      "Tashichho Dzong",
+      "Le patrimoine vivant de la capitale",
+      "Thimphou · Bhoutan occidental",
+      "Patrimoine monastique et civique",
+      "Une halte culturelle",
+      "La forteresse-monastère de Thimphu rassemble les traditions monastiques et gouvernementales du Bhoutan. Regardez attentivement les détails sculptés et les toits en couches.",
+      "Les horaires de visite dépendent de l'usage officiel et religieux."
+    ],
+    "crafts": [
+      "Artisanat de Thimphou",
+      "Fils de culture vivante",
+      "Thimphou · Bhoutan occidental",
+      "Tissage et arts traditionnels",
+      "Il est temps de rencontrer les créateurs",
+      "Découvrez les textiles, la peinture et l'artisanat qui façonnent la vie quotidienne des Bhoutanais. Ce marqueur de la ville représente les expériences culturelles de Thimphu, plutôt qu’un seul atelier.",
+      "Demandez à votre guide d'inclure une visite de tissage ou d'artisanat."
+    ],
+    "dochula": [
+      "Col Dochula",
+      "Chortens sur la crête",
+      "Thimphu–Punakha · Bhoutan occidental",
+      "108 chortens commémoratifs",
+      "Un arrêt ou une randonnée au bord du col",
+      "Un groupe de 108 chortens marque le passage entre Thimphu et Punakha. Le temps clair ouvre la vue sur l'Himalaya ; les sentiers forestiers offrent un moyen plus calme de s'attarder.",
+      "Les vues sur les montagnes dépendent des nuages et de la météo."
+    ],
+    "punakha": [
+      "Dzong de Punakha",
+      "Palais du Grand Bonheur",
+      "Punakha · Bhoutan occidental",
+      "Architecture de forteresse sacrée",
+      "Une halte culturelle",
+      "Fondé en 1637, ce monument allie des murs en pierre massifs à des intérieurs richement décorés. Elle reste un lieu important de la vie religieuse et civique bhoutanaise.",
+      "Accordez-vous du temps pour l'approche et les cours."
+    ],
+    "chimi": [
+      "Chimi Lhakhang",
+      "Un temple au dessus des champs",
+      "Lobesa, Punakha · Bhoutan occidental",
+      "Promenade dans le village et temple",
+      "Une visite culturelle en toute simplicité",
+      "Un temple perché près de Lobesa dans la vallée de Punakha. Combinez la visite avec une promenade à travers le village et le paysage agricole environnants.",
+      "Suivez les conseils de votre guide sur les coutumes locales."
+    ],
+    "gangtey": [
+      "Monastère de Gangtey",
+      "Au dessus de la vallée des grues",
+      "Gangtey · Centre du Bhoutan",
+      "Héritage bouddhiste Nyingma",
+      "Une halte culturelle",
+      "Le monastère de Gangtey est le pilier de la vie spirituelle de la vallée. Ses cours et son architecture traditionnelle accompagnent naturellement une promenade à travers Phobjikha.",
+      "Associez le monastère au sentier naturel à proximité."
+    ],
+    "phobjikha": [
+      "Vallée de Phobjikha",
+      "Prairies, sentiers et grues d'hiver",
+      "Phobjikha · Centre du Bhoutan",
+      "Zones humides et grues à cou noir",
+      "Promenades douces dans la vallée",
+      "Une vaste vallée glaciaire avec des fermes, des forêts de pins et des zones humides. Les grues à cou noir hivernent ici, tandis que la promenade naturelle de Gangtey offre une douce introduction au paysage.",
+      "L'hiver est la saison des grues ; observer à distance respectueuse."
+    ],
+    "trongsa": [
+      "Dzong de Trongsa",
+      "Une forteresse au-dessus des gorges",
+      "Trongsa · Centre du Bhoutan",
+      "Histoire et architecture royales",
+      "Une halte culturelle",
+      "Une vaste forteresse-monastère surplombant les gorges de Mangde Chhu. Ses cours superposées racontent l'histoire de la dynastie Wangchuck et des routes traversant le centre du Bhoutan.",
+      "Prévoyez du temps dans le voyage pour une visite guidée du patrimoine."
+    ],
+    "jakar": [
+      "Jakar Dzong",
+      "Surplombant la vallée de Bumthang",
+      "Bumthang · Centre du Bhoutan",
+      "L'héritage de la forteresse de Bumthang",
+      "Une halte culturelle",
+      "Un dzong au sommet d’une colline au-dessus de Jakar, un point de départ mémorable pour explorer les temples, les établissements ruraux et les paysages sacrés de Bumthang.",
+      "Combinez la visite avec une exploration plus lente de la vallée."
+    ],
+    "kurjey": [
+      "Kurjey Lhakhang",
+      "Histoires sacrées de Bumthang",
+      "Bumthang · Centre du Bhoutan",
+      "Patrimoine du temple",
+      "Une visite culturelle tranquille",
+      "Un complexe de temples sacrés à Bumthang. Visitez avec un guide local qui pourra vous expliquer les traditions et les histoires associées à cet important lieu de culte.",
+      "Gardez la voix basse et suivez les instructions de photographie."
+    ],
+    "haa": [
+      "Lhakhang Karpo",
+      "Le Temple Blanc de Haa",
+      "Haa · Bhoutan occidental",
+      "Patrimoine des temples de la vallée de Haa",
+      "Une halte culturelle",
+      "Le Temple Blanc est un monument de la vallée plus calme de Haa. Faites de la place pour la vie du village local ainsi que pour la visite du temple.",
+      "Un bon compagnon pour un voyage au-dessus de Chele La."
+    ],
+    "chelela": [
+      "Chele La",
+      "Entre Paro et Haa",
+      "Paro–Haa · Bhoutan occidental",
+      "Drapeaux de prière et vue sur montagnes",
+      "Un col haut ou une randonnée guidée",
+      "Un col de haute montagne reliant les vallées de Paro et de Haa. Drapeaux de prières, air frais et balades en forêt donnent à cette traversée un caractère qui lui est propre.",
+      "Choisissez des balades en fonction de la météo du jour et de votre confort en altitude."
+    ],
+    "drukpath": [
+      "Hauts plateaux du chemin Druk",
+      "Une randonnée entre crêtes et lacs",
+      "Paro–Thimphu · Bhoutan occidental",
+      "Lacs alpins et crêtes forestières",
+      "Une randonnée en camping de plusieurs jours",
+      "Un trek dans les hautes terres reliant Paro et Thimphu à travers forêts, crêtes et lacs alpins. Ce marqueur représente la zone de trekking, pas un camping particulier.",
+      "Le printemps et l'automne sont généralement choisis ; confirmez les conditions du sentier avec votre guide."
+    ],
+    "jangothang": [
+      "Jangothang",
+      "Camp de base de Jomolhari",
+      "Plateaux de Soe · Bhoutan occidental",
+      "Paysages des Highlands et camping",
+      "Une randonnée exigeante de plusieurs jours",
+      "Un camp de base dans les hautes terres pour le trekking de Jomolhari. Les paysages de montagne et le pays des yaks en font une expérience très différente des visites de la vallée.",
+      "Prévoyez une acclimatation et un itinéraire adapté à votre expérience de trekking."
+    ],
+    "trashigang": [
+      "Trashigang Dzong",
+      "Une découverte de l'est du Bhoutan",
+      "Trashigang · Bhoutan oriental",
+      "Patrimoine des forteresses orientales",
+      "Fait partie d'une tournée orientale personnalisée",
+      "Une forteresse impressionnante au-dessus de Trashigang, fondée en 1659. Découvrez une autre facette du Bhoutan en faisant place aux villes et aux traditions de l'Est.",
+      "Demandez-nous de créer un voyage plus long incluant l’est du Bhoutan."
+    ]
+  },
+  "gallery": [
+    [
+      "Cour du monastère bhoutanais",
+      "Les fenêtres peintes traditionnelles et les murs blanchis à la chaux encadrent une cour paisible du monastère."
+    ],
+    [
+      "Paysage himalayen du Bhoutan",
+      "Les vallées verdoyantes du Bhoutan s'étendent sous les vastes crêtes de l'Himalaya oriental."
+    ],
+    [
+      "Patrimoine culturel bhoutanais",
+      "Des traditions séculaires font toujours partie de la vie quotidienne des villes et villages du Bhoutan."
+    ],
+    [
+      "Vallée du Bhoutan",
+      "Une paisible vallée bhoutanaise révèle la relation étroite entre peuplement, forêt et montagne."
+    ],
+    [
+      "Panorama des montagnes du Bhoutan",
+      "Les sommets superposés de l'Himalaya s'élèvent au-delà des paysages reculés et vierges du royaume."
+    ],
+    [
+      "Temple bhoutanais",
+      "Un temple sacré est un lieu de prière, de pèlerinage et d’héritage bouddhiste vivant."
+    ],
+    [
+      "Dzong bhoutanais",
+      "Les dzongs du Bhoutan combinent une architecture de forteresse avec des centres actifs de vie spirituelle et civique."
+    ],
+    [
+      "Monastère du Nid du Tigre sur une falaise à Paro",
+      "Paro Taktsang, connu sous le nom de Nid du Tigre, s'accroche de façon spectaculaire à une falaise boisée au-dessus de la vallée de Paro."
+    ],
+    [
+      "Grues à cou noir au Bhoutan",
+      "De rares grues à cou noir se rassemblent dans les vallées protégées du Bhoutan pendant leur migration hivernale."
+    ],
+    [
+      "Vallée de Thimphu encadrée de drapeaux de prières",
+      "Des drapeaux de prière flottent au-dessus de Thimphu, la capitale montagneuse et le cœur culturel du Bhoutan."
+    ],
+    [
+      "Moine bhoutanais traversant un pont de drapeau de prière",
+      "Un moine traverse un pont suspendu bordé de drapeaux de prière au-dessus d'une rivière au courant rapide."
+    ],
+    [
+      "Danseuse de masques du festival Tsechu au Bhoutan",
+      "Un danseur masqué vibrant exécute une danse sacrée Cham lors de l'un des festivals Tsechu au Bhoutan."
+    ],
+    [
+      "Le Punakha Dzong au confluent de deux rivières",
+      "Le Punakha Dzong s’élève au confluent du Pho Chhu et du Mo Chhu ; c’est le plus gracieux des monastères-forteresses du Bhoutan."
+    ],
+    [
+      "Les 108 chortens du col de Dochula",
+      "Au col de Dochula, 108 chortens commémoratifs couronnent la crête sur la route de Thimphou à Punakha, face aux sommets himalayens."
+    ],
+    [
+      "Le Bouddha Dordenma au-dessus de Thimphou",
+      "Le grand Bouddha Dordenma doré trône sur une colline au-dessus de Thimphou et veille sur la vallée de la capitale."
+    ],
+    [
+      "Le Kyichu Lhakhang à Paro",
+      "Le Kyichu Lhakhang, l’un des plus anciens temples du Bhoutan, se dresse dans la vallée de Paro depuis le VIIe siècle."
+    ],
+    [
+      "Drapeaux de prière au Chele La",
+      "Les drapeaux de prière claquent au vent au Chele La, le haut col entre les vallées de Paro et de Haa."
+    ],
+    [
+      "La vallée de Paro",
+      "Fermes, rizières en terrasses et la rivière Paro Chhu emplissent la large vallée de Paro, porte d’entrée du royaume."
+    ],
+    [
+      "Le village d’Ura dans le Bumthang",
+      "Les maisons de pierre et les ruelles pavées d’Ura se nichent haut dans une paisible vallée du Bumthang, au centre du Bhoutan."
+    ],
+    [
+      "Le Memorial Chorten de Thimphou",
+      "Au Memorial Chorten de Thimphou, les habitants font le tour du stupa blanc en priant, de l’aube au crépuscule."
+    ]
+  ],
+  "page": {
+    "aboutMore": ["Le Bhoutan n’est pas une case à cocher. C’est un royaume qui vous accueille — et depuis plus de quinze ans, nous veillons à ce que cet accueil soit personnel.","Guidé par ceux qui y vivent","Vos guides sont des Bhoutanais agréés pour qui ces vallées sont chez eux. Ils savent quand sonnent les cloches du monastère à l’aube, quelle cuisine de ferme reçoit les visiteurs et quand il est temps de s’arrêter pour écouter.","Pensé pour vous","Pas de départs fixes ni d’autocars bondés. Votre itinéraire, votre rythme et vos hébergements sont conçus autour de ce qui vous touche, du premier rang d’un festival aux retraites silencieuses en forêt.","Un voyage qui rend","Détenus et animés par des Bhoutanais, neutres en carbone depuis 2018 : ce que vous dépensez reste entre des mains bhoutanaises, et les montagnes restent aussi pures que vous les avez trouvées.","Commencez votre voyage avec nous"],
+    "aboutGnh": ["Pourquoi le Bonheur National Brut","La boussole du royaume, et la nôtre","Le Bhoutan mesure son progrès au Bonheur National Brut, et pas seulement à la croissance économique. Ses quatre piliers, ci-dessous, façonnent la manière dont le royaume accueille ses visiteurs — haute valeur, faible volume — et guident chaque voyage que nous concevons : respectueux de la culture, doux pour la terre et bénéfique pour les communautés que vous rencontrez."],
+    "aboutTeam": {"label":"Notre équipe","title":"Les personnes derrière <em>votre voyage</em>","lede":"Chaque voyage Druk Voyages est préparé, guidé et conduit par des Bhoutanais qui vivent dans ces vallées. En voici quelques-uns.","speaks":"Parle","roles":{"founder":"Fondateur","owner":"Propriétaire et directeur général","manager":"Responsable des opérations","planner":"Conseiller voyage","guide":"Guide culturel","trekGuide":"Guide de trek","driver":"Chauffeur"}},
+    "lang": "fr",
+    "meta": "Druk Voyages - Voyages au Royaume du Bhoutan",
+    "description": "Agence locale au Bhoutan : circuits, festivals, randonnées et retraites bien-être.",
+    "tagline": "Bhoutan authentique, voyages extraordinaires",
+    "heroMottos": [
+      "Un peu plus près<br> de <em>l’émerveillement.</em>",
+      "Des montagnes<br> pleines de <em>sens.</em>",
+      "Récits anciens.<br> Traditions <em>vivantes.</em>",
+      "Prenez le chemin<br> sans <em>hâte.</em>",
+      "Un royaume qui<br> reste <em>en vous.</em>"
+    ],
+    "gnhPillars": [
+      "Développement socio-économique<br>durable et équitable",
+      "Préservation de<br>l'environnement",
+      "Préservation et promotion<br>de la culture",
+      "Bonne<br>gouvernance"
+    ],
+    "menu": [
+      "À propos",
+      "Itinéraires",
+      "Expériences",
+      "Galerie",
+      "Planifier mon voyage"
+    ],
+    "hero": [
+      "Le Bhoutan, au-delà du quotidien",
+      "Un peu plus près<br> de <em>l’émerveillement.</em>",
+      "Des vallées paisibles. Des traditions vivantes. Des personnes extraordinaires. Découvrez le Bhoutan à travers des voyages conçus par ceux qui y vivent.",
+      "Explorer les voyages",
+      "Rencontrer vos guides locaux",
+      "Faire défiler"
+    ],
+    "stats": [
+      "Années au Bhoutan",
+      "Voyageurs accueillis",
+      "Itinéraires sélectionnés",
+      "Satisfaction"
+    ],
+    "marquee": [
+      "Monastère de la Tanière du Tigre",
+      "Festival de Paro Tsechu",
+      "Dzong de Punakha",
+      "Grues à cou noir",
+      "Col de Dochula",
+      "Vallée de Bumthang",
+      "Rhododendrons en fleurs",
+      "Retraites de méditation"
+    ],
+    "about": [
+      "Bonheur National<br>Brut",
+      "Qui sommes-nous",
+      "Des créateurs de voyages <em>de confiance</em>",
+      "Druk Voyages a été fondée par des Bhoutanais convaincus que le voyage transforme les visiteurs et les communautés d'accueil. Notre agence est détenue et gérée localement.",
+      "La taxe de développement durable du Bhoutan finance la santé et l'éducation. Voyager avec nous contribue à préserver ce patrimoine vivant.",
+      "Licence du Conseil du tourisme du Bhoutan",
+      "Activités neutres en carbone depuis 2018",
+      "100% détenu et géré localement",
+      "Expériences sur mesure en petits groupes"
+    ],
+    "journeys": [
+      "Des voyages avec un sentiment d'appartenance",
+      "Votre prochain chapitre,<br><em>quelque part d'extraordinaire.</em>",
+      "Tous les voyages",
+      "Culturel",
+      "Fêtes",
+      "Randonnée",
+      "Bien-être"
+    ],
+    "gallery": [
+      "Un aperçu du royaume",
+      "Un endroit pas comme les autres.</em>",
+      "Quelques instants qui vous attendent : des cours tranquilles, l'air de la montagne, des traditions vivantes et un quotidien différent."
+    ],
+    "experience": [
+      "Moments uniques",
+      "Des expériences <em>inoubliables</em>",
+      [
+        "Pèlerinage à la Tanière du Tigre",
+        "Une ascension guidée jusqu'à Paro Taktsang, perché sur une falaise à 900 mètres au-dessus de la vallée."
+      ],
+      [
+        "Architecture des dzongs",
+        "Accès privé au dzong de Punakha au crépuscule, quand les moines pratiquent encore des rituels anciens."
+      ],
+      [
+        "Immersion au festival Tsechu",
+        "Assistez aux danses sacrées Cham et partagez un moment authentique avec des familles locales."
+      ],
+      [
+        "Vie agricole de la ferme à la table",
+        "Passez la journée avec une famille de la vallée de Phobjikha et découvrez le riz rouge et l'ema datshi."
+      ],
+      [
+        "Retraite bien-être himalayenne",
+        "Retraite silencieuse avec médecine Sowa Rigpa, bains de pierres chaudes et méditation."
+      ],
+      [
+        "Safari des grues à cou noir",
+        "Observez les grues migratrices de Phobjikha à l'aube avec des guides naturalistes."
+      ]
+    ],
+    "planning": [
+      "Planifier son voyage",
+      "La meilleure saison pour <em>visiter le Bhoutan</em>",
+      "Le Bhoutan est magique toute l'année, mais chaque saison dévoile un royaume différent.",
+      [
+        "Printemps",
+        "Mars - Mai",
+        "Rhododendrons en fleurs, ciel clair et festival de Paro Tsechu."
+      ],
+      [
+        "Mousson",
+        "Juin - Août",
+        "Vallées luxuriantes, peu de visiteurs et cascades spectaculaires."
+      ],
+      [
+        "Automne",
+        "Septembre - Novembre",
+        "Panoramas limpides, vallées dorées et festival de Thimphou."
+      ],
+      [
+        "Hiver",
+        "Décembre - Février",
+        "Dzongs enneigés, grues à cou noir et atmosphère profondément paisible."
+      ]
+    ],
+    "enquiry": [
+      "Commencer à planifier",
+      "Racontez-nous votre<br><em>voyage de rêve</em>",
+      "Nous créerons un itinéraire sur mesure selon vos envies, vos dates et la taille de votre groupe, sans engagement.",
+      "Lun-Sam - 9h-18h heure du Bhoutan",
+      "Prénom *",
+      "Nom *",
+      "E-mail *",
+      "Téléphone",
+      "Type de voyage",
+      "Nombre de voyageurs",
+      "Arrivée prévue",
+      "Durée (jours)",
+      "Votre voyage de rêve *",
+      "Sélectionnez un type de voyage...",
+      [
+        "Incontournables",
+        "Voyage festival",
+        "Randonnée himalayenne",
+        "Retraite bien-être",
+        "Circuit photo",
+        "Voyage de noces",
+        "Sur mesure / Autre"
+      ],
+      "Parlez-nous de vos envies, de votre style de voyage et de vos besoins...",
+      "Envoyer la demande"
+    ],
+    "testimonials": [
+      "Récits de voyageurs",
+      "Les mots de nos <em>voyageurs</em>",
+      "Druk Voyages a préparé chaque moment avec un soin extraordinaire. Le lever du soleil à la Tanière du Tigre restera l'expérience la plus spirituelle de ma vie.",
+      "L'immersion dans le festival a dépassé tout ce que j'imaginais. Notre guide a organisé un dîner privé avec un moine.",
+      "La retraite bien-être a entièrement apaisé mon esprit. Je pense encore au bain de pierres chaudes sous les étoiles.",
+      "New York, États-Unis - Automne 2025",
+      "Londres, Royaume-Uni - Printemps 2025",
+      "Tokyo, Japon - Hiver 2025"
+    ],
+    "cta": [
+      "Commencez votre voyage",
+      "Prêt à entrer dans le dernier <em>Shangri-La ?</em>",
+      "Confiez-nous votre rêve et nos spécialistes bhoutanais créeront un itinéraire exclusivement pour vous.",
+      "Planifier mon voyage",
+      "Appeler le bureau de Thimphou"
+    ],
+    "footer": [
+      "Licence du Conseil du tourisme du Bhoutan. Agence 100% bhoutanaise engagée pour un tourisme durable.",
+      "Itinéraires",
+      "Destinations",
+      "Contact",
+      [
+        "Incontournables",
+        "Voyages festivals",
+        "Randonnée himalayenne",
+        "Retraites bien-être",
+        "Circuits photo",
+        "Voyages de noces"
+      ],
+      "Lun-Sam 9h-18h",
+      "© 2026 Druk Voyages. Tous droits réservés. Licence #TCB-2009-142.",
+      "Confidentialité",
+      "Conditions",
+      "Plan du site"
+    ],
+    "ui": {
+      "language": "Langue",
+      "menu": "Menu",
+      "view": "Voir l'itinéraire",
+      "from": "À partir de",
+      "perPerson": "par personne",
+      "close": "Fermer l'itinéraire",
+      "dayByDay": "Itinéraire jour par jour",
+      "pp": "p.p.",
+      "days": "jours",
+      "max": "Max.",
+      "couple": "Couple uniquement",
+      "difficulties": {
+        "Easy": "Facile",
+        "Moderate": "Modéré",
+        "Challenging": "Exigeant"
+      },
+      "required": "Veuillez remplir tous les champs obligatoires.",
+      "sending": "Envoi...",
+      "success": "Merci. Notre équipe vous contactera sous 24 heures.",
+      "toast": "Demande envoyée !",
+      "fail": "Échec de l'envoi. Écrivez-nous à hello@drukvoyages.bt.",
+      "slide": "Diapositive"
+    },
+    "itineraries": [
+      [
+        "Classique",
+        "Les incontournables du Bhoutan - La route royale",
+        "Une introduction idéale entre culture, monastères et vallées."
+      ],
+      [
+        "Festival",
+        "Paro Tsechu - Danses sacrées",
+        "Danses Cham, thangkas monumentaux et rituels ancestraux."
+      ],
+      [
+        "Randonnée",
+        "Druk Path Trek - La voie royale",
+        "Lacs d'altitude, forêts et panoramas himalayens."
+      ],
+      [
+        "Bien-être",
+        "Renaissance de l'âme au Bhoutan",
+        "Médecine traditionnelle, méditation et bains de pierres chaudes."
+      ],
+      [
+        "Photo",
+        "Le Bhoutan à travers l'objectif",
+        "Photographiez les meilleures lumières avec un guide local."
+      ],
+      [
+        "Voyage de noces",
+        "Lune de miel royale au Bhoutan",
+        "Dîners privés, lodges de montagne et expériences exclusives."
+      ],
+      [
+        "Culture et artisanat",
+        "Bumthang — Vallées aux récits sacrés",
+        "Un rythme doux entre monastères, villages de tisserands, vergers et vallées de Bumthang."
+      ],
+      [
+        "Voyage au ralenti",
+        "Haa et Paro — Jours dans les vallées secrètes",
+        "Une découverte paisible de l’ouest du Bhoutan, entre anciennes routes, temples et vie rurale."
+      ],
+      [
+        "Haute montagne",
+        "Trek du Jomolhari — Montagnes et pâturages de yaks",
+        "Un itinéraire sous le mont sacré Jomolhari, avec camps isolés et temps d’acclimatation."
+      ],
+      [
+        "Festival et artisanat",
+        "Thimphu Tsechu — Rituels dans la capitale",
+        "Le festival de la capitale s’associe à Paro, Punakha et aux traditions artisanales."
+      ],
+      [
+        "Bien-être",
+        "Forêt, ferme et bain de pierres chaudes",
+        "Balades courtes, air de montagne, cuisine locale et soirées paisibles pour se ressourcer."
+      ],
+      [
+        "Faune et culture",
+        "Phobjikha — Grues, vallées et vie villageoise",
+        "Observation saisonnière des grues, patrimoine de Punakha et sites sacrés de Paro."
+      ]
+    ],
+    "itineraryLabels": {
+      "route": "Itinéraire",
+      "bestFor": "Période conseillée",
+      "planner": "Conseil de votre organisateur local",
+      "duration": "jours",
+      "days": "jours"
+    },
+    "extraUi": {
+      "disclaimerTitle": "Avis sur la traduction",
+      "disclaimerText": "Les traductions sont fournies à titre indicatif. Pour vérifier les détails d’un itinéraire ou une information importante, consultez la version anglaise ou contactez-nous.",
+      "cancel": "Annuler",
+      "agree": "Continuer",
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "compass": "Boussole du voyage",
+      "compassTitle": "Trouvez votre rythme au Bhoutan",
+      "preferences": "Préférences de voyage",
+      "live": "Suggestion en direct",
+      "drawn": "Qu’est-ce qui vous attire ?",
+      "culture": "Culture vivante",
+      "nature": "Paysages sauvages",
+      "trekking": "Trek",
+      "wellness": "Calme et bien-être",
+      "wildlife": "Faune",
+      "photography": "Photographie",
+      "travelDays": "Durée du voyage",
+      "season": "Saison envisagée",
+      "flexible": "Dates flexibles",
+      "routeCustom": "Créer un itinéraire sur mesure",
+      "routeResults": "Itinéraires suggérés",
+      "routeView": "Voir l’itinéraire",
+      "mapTitle": "Carte du Bhoutan",
+      "chatInput": "Posez vos questions sur le Bhoutan…",
+      "chatSend": "Envoyer",
+      "chatSettings": "Paramètres",
+      "chatClear": "Effacer la conversation",
+      "chatClose": "Fermer",
+      "mapZoom": "Zoom de la carte",
+      "mapPlaces": "Lieux",
+      "mapGuide": "Guide du lieu"
+    },
+    "finderUi": {
+      "suggested": "Itinéraire suggéré",
+      "matches": "Correspond à vos envies",
+      "timing": "Adapté à la durée choisie",
+      "seasonMatch": "Adapté à cette saison",
+      "flexReason": "Une option flexible",
+      "custom": "Sur mesure",
+      "tour": "Circuit",
+      "trek": "Trek",
+      "days": "jours",
+      "results": "Vos trois itinéraires les plus adaptés"
+    },
+    "chatUi": {
+      "provider": "Fournisseur d’IA",
+      "key": "Clé API Groq",
+      "save": "Enregistrer et activer l’IA",
+      "quick": [
+        "Meilleurs itinéraires",
+        "Meilleure période",
+        "Tarifs",
+        "Nid du Tigre",
+        "Visa"
+      ],
+      "online": "En ligne · Guide de voyage IA Druk Voyages",
+      "name": "Pema · Votre guide",
+      "powered": "Guide de voyage IA Druk Voyages"
+    },
+    "errorPage": [
+      "Perdu dans l’Himalaya ?",
+      "La page demandée n’existe pas, mais le Bhoutan regorge de trésors cachés. Laissez-nous vous guider.",
+      "Retourner sur Druk Voyages",
+      "ou",
+      "Préparer mon voyage"
+    ],
+    "mapUi": {
+      "categories": [
+        "Tous les lieux",
+        "Monastères",
+        "Dzongs",
+        "Culture",
+        "Vallées et cols",
+        "Trek"
+      ],
+      "come": "À découvrir",
+      "time": "Temps à prévoir",
+      "source": "En savoir plus ↗",
+      "journey": "Voir un voyage associé ↗",
+      "custom": "Préparer un voyage à l’est ↗",
+      "count": "lieux"
+    },
+    "heroDescriptions": [
+      "Des vallées paisibles. Des traditions vivantes. Des personnes extraordinaires. Découvrez le Bhoutan à travers des voyages conçus par ceux qui y vivent.",
+      "Suivez les sentiers forestiers vers les monastères à flanc de falaise et les horizons de l’Himalaya. Au Bhoutan, le voyage invite à s’arrêter, observer et respirer.",
+      "Entrez dans les cours des dzongs, découvrez l’art des fêtes sacrées et rencontrez les artisans qui font vivre le patrimoine du Bhoutan.",
+      "Parcourez des vallées paisibles, partagez un repas dans une ferme et gardez du temps pour l’inattendu. Découvrez le Bhoutan à votre rythme.",
+      "Des drapeaux de prière sur les cols à l’accueil chaleureux des villages, découvrez les instants qui font d’un voyage au Bhoutan un souvenir durable."
+    ]
+  },
+  "places": {
+    "Paro": "Paro",
+    "Thimphu": "Thimphu",
+    "Punakha": "Punakha",
+    "Haa": "Haa",
+    "Gangtey": "Gangtey",
+    "Trongsa": "Trongsa",
+    "Jakar": "Jakar",
+    "Gasa": "Gasa",
+    "Lhuentse": "Lhuentse",
+    "Mongar": "Mongar",
+    "Trashigang": "Trashigang",
+    "Trashiyangtse": "Trashiyangtse",
+    "Phuentsholing": "Phuentsholing",
+    "Gelephu": "Gelephu",
+    "Samdrup Jongkhar": "Samdrup Jongkhar",
+    "Bumthang": "Bumthang",
+    "Phobjikha": "Phobjikha",
+    "Chele La": "Chele La",
+    "Jangchulakha": "Jangchulakha",
+    "Jimilangtsho": "Jimilangtsho",
+    "Phajoding": "Phajoding",
+    "Shana": "Shana",
+    "Jangothang": "Jangothang",
+    "Lingshi": "Lingshi",
+    "Bhutan": "Bhutan",
+    "Paro Valley": "Paro Valley",
+    "Haa Valley": "Haa Valley"
+  },
+  "shareStory": {
+    "pageTitle": "Partagez votre plus beau moment — Druk Voyages",
+    "label": "Récits de voyageurs",
+    "title": "Partagez votre plus beau <em>moment</em>",
+    "lede": "Une photo et quelques mots de votre voyage. Votre récit apparaîtra parmi les récits de voyageurs sur notre site.",
+    "greeting": "Bienvenue, {label}",
+    "checking": "Vérification de votre lien…",
+    "invalid": "Ce lien n’est pas valide. Scannez à nouveau le QR code de votre carte Druk Voyages ou demandez à votre guide.",
+    "expired": "Ce lien a expiré ou a déjà servi pour tous ses récits. Demandez-nous-en un nouveau.",
+    "offline": "Impossible de joindre notre serveur. Vérifiez votre connexion et réessayez.",
+    "photo": "Votre photo",
+    "photoHint": "Touchez pour choisir une photo",
+    "photoChange": "Choisir une autre photo",
+    "photoError": "Impossible de lire cette photo. Choisissez-en une autre.",
+    "photoSmall": "Choisissez une photo d’au moins 400 pixels de côté.",
+    "name": "Votre prénom",
+    "from": "D’où venez-vous",
+    "fromPlaceholder": "ex. Lyon, France",
+    "story": "Votre plus beau moment",
+    "storyPlaceholder": "Qu’est-ce qui a rendu ce moment unique ?",
+    "storyShort": "Écrivez au moins 20 caractères.",
+    "rating": "Votre note",
+    "star": "{n} étoiles sur 5",
+    "consent": "J’accepte que Druk Voyages affiche sur son site ma photo, mon prénom, ma ville et mon récit.",
+    "required": "Veuillez remplir ce champ.",
+    "submit": "Partager mon moment",
+    "sending": "Envoi…",
+    "error": "Votre récit n’a pas pu être envoyé. Veuillez réessayer.",
+    "doneTitle": "Merci !",
+    "doneText": "Votre moment fait désormais partie de nos récits de voyageurs.",
+    "donePending": "Nous ajouterons bientôt votre récit à notre site.",
+    "another": "Partager un autre moment",
+    "viewSite": "Visiter notre site",
+    "language": "Langue"
+  }
+}

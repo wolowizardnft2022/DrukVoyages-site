@@ -1,0 +1,16 @@
+{
+  "bounds": [
+    88.6,
+    26.55,
+    92.25,
+    28.45
+  ],
+  "width": 3072,
+  "height": 1792,
+  "layer": "s2cloudless",
+  "imageryYear": 2016,
+  "source": "https://tiles.maps.eox.at/wms?service=WMS&version=1.1.1&request=GetMap&layers=s2cloudless&styles=&srs=EPSG%3A4326&bbox=88.6%2C26.55%2C92.25%2C28.45&width=3072&height=1792&format=image%2Fjpeg",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016)",
+  "processing": "Geographic WMS export; re-encoded as WebP, no generated landscape details."
+}

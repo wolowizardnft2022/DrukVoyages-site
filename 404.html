@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20261002-mainlogo"/>
+  <title id="errorTitle">Page Not Found — Druk Voyages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="404.css?v=20261109-maison"/>
+</head>
+<body>
+  <!-- 404 ERROR PAGE CONTENT
+    Lightweight fallback page for broken/missing links. Edit the headline,
+    message, and return links here; visual styles are in 404.css.
+  -->
+  <img class="brand-mark" src="img/druk-voyages-mark.svg?v=20261002-mainlogo" width="56" height="56" alt="Druk Voyages"/>
+  <div class="num">404</div>
+  <h1 id="errorHeading">Lost in the Himalayas?</h1>
+  <p id="errorMessage">The page you're looking for doesn't exist — but Bhutan is full of hidden gems. Let us guide you back.</p>
+  <a href="index.html" id="errorHome">Return to Druk Voyages</a>
+  <div class="divider" id="errorOr">or</div>
+  <a class="back" href="index.html#enquiry" id="errorPlan">Plan My Trip</a>
+  <script src="translations.js?v=20261002-error-i18n"></script>
+  <script>
+    try {
+      const language = localStorage.getItem('druk-language') || 'en';
+      const copy = window.DRUK_I18N[language]?.errorPage;
+      if (copy) {
+        document.documentElement.lang = language;
+        document.getElementById('errorTitle').textContent = `${copy[0]} — Druk Voyages`;
+        document.getElementById('errorHeading').textContent = copy[0];
+        document.getElementById('errorMessage').textContent = copy[1];
+        document.getElementById('errorHome').textContent = copy[2];
+        document.getElementById('errorOr').textContent = copy[3];
+        document.getElementById('errorPlan').textContent = copy[4];
+      }
+    } catch (_) {}
+  </script>
+</body>
+</html>

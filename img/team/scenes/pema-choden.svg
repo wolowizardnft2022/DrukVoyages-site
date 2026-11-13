@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <style>
+    .bg-bar { transform-origin: 0 118px; animation: grow 2.4s ease-in-out infinite alternate; }
+    .bg-trend { stroke-dasharray: 60; animation: draw 2.4s ease-in-out infinite alternate; }
+    .bg-spark { transform-box: fill-box; transform-origin: center; animation: twinkle 1.6s ease-in-out infinite alternate; }
+    @keyframes grow { from { transform: scaleY(.45); } to { transform: scaleY(1); } }
+    @keyframes draw { from { stroke-dashoffset: 60; } to { stroke-dashoffset: 0; } }
+    @keyframes twinkle { from { transform: scale(.3); opacity: .2; } to { transform: scale(1); opacity: .9; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="160" height="160" fill="#1f3436"/>
+  <path d="M0 132 L34 96 L52 112 L82 78 L112 108 L128 94 L160 124 L160 160 L0 160 Z" fill="#000" opacity=".18"/><g fill="#e3b85c" opacity=".6"><rect class="bg-bar" x="10" y="98" width="8" height="20" rx="1.5" style="animation-delay:-0s"/><rect class="bg-bar" x="21" y="88" width="8" height="30" rx="1.5" style="animation-delay:-0.4s"/><rect class="bg-bar" x="32" y="76" width="8" height="42" rx="1.5" style="animation-delay:-0.8s"/></g>
+  <g fill="none" stroke="#f5f0e6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".7"><path class="bg-trend" d="M8 70 L20 62 L30 66 L44 48"/><path d="M38 48 L44 48 L44 54"/></g>
+  <path class="bg-spark" d="M128 19 L129.4 22.6 L133 24 L129.4 25.4 L128 29 L126.6 25.4 L123 24 L126.6 22.6 Z" fill="#f0c66a" style="animation-delay:-0s"/><path class="bg-spark" d="M146 41 L147.4 44.6 L151 46 L147.4 47.4 L146 51 L144.6 47.4 L141 46 L144.6 44.6 Z" fill="#f0c66a" style="animation-delay:-0.5s"/><path class="bg-spark" d="M118 39 L119.4 42.6 L123 44 L119.4 45.4 L118 49 L116.6 45.4 L113 44 L116.6 42.6 Z" fill="#f0c66a" style="animation-delay:-1s"/>
+</svg>

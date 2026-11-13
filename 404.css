@@ -1,0 +1,16 @@
+:root { --paper: #f7f3ed; --ink: #1a1a1a; --muted: #6b6259; --line: #ddd3c6; --gold: #a6431b; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 24px; color: var(--ink); background: var(--paper); font-family: 'Jost', 'Futura', system-ui, sans-serif; font-weight: 300; }
+.num { width: 220px; height: 220px; display: grid; place-items: center; border: 1px solid var(--gold); border-radius: 50%; font: italic 300 96px/1 'Cormorant Garamond', Georgia, serif; color: var(--gold); margin-bottom: 32px; }
+h1 { font: 300 clamp(38px,6vw,58px)/1.1 'Cormorant Garamond', Georgia, serif; letter-spacing: -.01em; margin-bottom: 18px; }
+p { max-width: 420px; font-size: 16px; line-height: 1.9; color: var(--muted); margin-bottom: 32px; }
+a { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 14px 32px; background: var(--ink); color: var(--paper); font-size: 12px; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; transition: background .2s; }
+a:hover { background: var(--gold); }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.divider { color: var(--muted); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; margin: 16px 0; }
+.back { border: 1px solid var(--ink); background: transparent; color: var(--ink); }
+.back:hover { background: var(--ink); color: var(--paper); }
+@media (max-width: 480px) { .num { width: 180px; height: 180px; font-size: 80px; } }
+@media (prefers-reduced-motion: reduce) { a { transition: none; } }
+
+.brand-mark { width: 48px; height: 48px; margin-bottom: 28px; }

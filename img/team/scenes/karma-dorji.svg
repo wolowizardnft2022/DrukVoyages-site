@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <style>
+    .bg-rays { transform-origin: 36px 46px; animation: spin 16s linear infinite; }
+    .bg-sun { transform-origin: 36px 46px; animation: pulse 2.4s ease-in-out infinite alternate; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes pulse { from { transform: scale(.9); } to { transform: scale(1.1); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="160" height="160" fill="#3b2a24"/>
+  <g class="bg-rays" stroke="#f6b183" stroke-width="2.4" stroke-linecap="round" opacity=".55"><path d="M52.0 46.0 L59.0 46.0"/><path d="M49.9 54.0 L55.9 57.5"/><path d="M44.0 59.9 L47.5 65.9"/><path d="M36.0 62.0 L36.0 69.0"/><path d="M28.0 59.9 L24.5 65.9"/><path d="M22.1 54.0 L16.1 57.5"/><path d="M20.0 46.0 L13.0 46.0"/><path d="M22.1 38.0 L16.1 34.5"/><path d="M28.0 32.1 L24.5 26.1"/><path d="M36.0 30.0 L36.0 23.0"/><path d="M44.0 32.1 L47.5 26.1"/><path d="M49.9 38.0 L55.9 34.5"/></g><circle class="bg-sun" cx="36" cy="46" r="11" fill="#f6b183" opacity=".8"/><path d="M0 132 L34 96 L52 112 L82 78 L112 108 L128 94 L160 124 L160 160 L0 160 Z" fill="#000" opacity=".18"/>
+</svg>

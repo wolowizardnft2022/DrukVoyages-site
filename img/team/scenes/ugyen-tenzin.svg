@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <style>
+    .bg-snow { animation: fall 4.5s linear infinite; }
+    .bg-cloud { animation: drift 12s linear infinite; }
+    @keyframes fall { from { transform: translate(0, -20px); } to { transform: translate(-12px, 170px); } }
+    @keyframes drift { from { transform: translateX(-40px); } to { transform: translateX(200px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="160" height="160" fill="#1f2f26"/>
+  <path d="M0 124 L30 70 L46 90 L74 44 L104 92 L124 66 L160 118 L160 160 L0 160 Z" fill="#6f8c7c" opacity=".35"/>
+  <path d="M30 70 L38 80 L33 78 L27 84 L22 84 Z M74 44 L86 64 L79 60 L72 66 L66 60 L62 64 Z M124 66 L133 79 L127 76 L120 80 Z" fill="#f5f0e6" opacity=".7"/>
+  <g class="bg-cloud" fill="#f5f0e6" opacity=".2"><ellipse cx="0" cy="36" rx="16" ry="5"/><ellipse cx="8" cy="31" rx="9" ry="6"/></g>
+  <g fill="#f5f0e6" opacity=".85"><circle class="bg-snow" cx="12" cy="0" r="1.6" style="animation-delay:-0s"/><circle class="bg-snow" cx="30" cy="0" r="1.6" style="animation-delay:-1.6s"/><circle class="bg-snow" cx="46" cy="0" r="1.6" style="animation-delay:-3.1s"/><circle class="bg-snow" cx="62" cy="0" r="1.6" style="animation-delay:-0.8s"/><circle class="bg-snow" cx="100" cy="0" r="1.6" style="animation-delay:-2.2s"/><circle class="bg-snow" cx="118" cy="0" r="1.6" style="animation-delay:-0.3s"/><circle class="bg-snow" cx="134" cy="0" r="1.6" style="animation-delay:-1.2s"/><circle class="bg-snow" cx="148" cy="0" r="1.6" style="animation-delay:-2.7s"/><circle class="bg-snow" cx="22" cy="0" r="1.6" style="animation-delay:-3.6s"/><circle class="bg-snow" cx="140" cy="0" r="1.6" style="animation-delay:-4s"/></g>
+</svg>

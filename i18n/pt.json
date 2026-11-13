@@ -1,0 +1,1517 @@
+{
+  "language": "pt",
+  "ui": {
+    "map2d": "Mapa 2D",
+    "map3d": "Satélite 3D",
+    "mapOrbit": "↻ Vista orbital",
+    "mapOrbitStop": "Ⅱ Parar órbita",
+    "map3dLoading": "Carregando relevo 3D…",
+    "map3dUnavailable": "O 3D não está disponível neste dispositivo. Explore o mapa 2D.",
+    "map3dCaption": "Paisagem por satélite · alturas em escala 2,5×",
+    "map3dDescription": "Mapa 3D do Butão. Arraste para girar. Use as setas para girar e inclinar, mais e menos para ampliar. Selecione um local para ver o guia.",
+    "map3dHint": "Arraste para girar · setas para inclinar · + / − para ampliar",
+    "mapRotateLeft": "Girar à esquerda",
+    "mapRotateRight": "Girar à direita",
+    "mapTiltUp": "Inclinar para cima",
+    "mapTiltDown": "Inclinar para baixo",
+    "mapGoogle": "Abrir no Google Maps ↗",
+    "mapCluster": "{count} locais próximos: {names}. Selecione para ampliar.",
+    "mapPreviewPlay": "▶ Prévia da viagem",
+    "mapPreviewPause": "Ⅱ Pausar prévia",
+    "mapMotionPause": "Pausar animações",
+    "mapMotionResume": "Retomar animações",
+    "mapPrevious": "Local anterior",
+    "mapNext": "Próximo local",
+    "mapStop": "Parada {current} de {total}",
+    "storyPrevious": "História anterior",
+    "storyNext": "Próxima história",
+    "storyN": "História {current} de {total}",
+    "backToTop": "Voltar ao topo",
+    "mapGuideTip": "Dica do seu guia",
+    "mapGmcKicker": "Região Administrativa Especial · Dzongkhag de Sarpang",
+    "mapGmcLatest": "Novidades da Gelephu Mindfulness City",
+    "mapGmcUpdate1": "Nov. 2026 · Projeto 108: 108 chortens já ladeiam 11,7 km da margem do Mau Chhu.",
+    "mapGmcUpdate2": "Nov. 2026 · A Aman assinou um acordo com parceiros para apoiar o desenvolvimento de longo prazo da cidade.",
+    "mapGmcUpdate3": "Out. 2026 · Um novo terminal de imigração com portões automáticos foi aberto em Gelephu.",
+    "mapGmcUpdate4": "O Aeroporto Internacional de Gelephu está em construção; a primeira fase prevê cerca de 1,3 milhão de passageiros por ano, com abertura esperada por volta de 2029.",
+    "mapGmcAsOf": "Informações de novembro de 2026. Planos e datas podem mudar.",
+    "mapGmcMore": "Site oficial: gmc.bt ↗",
+    "mapPlanGuide": "Planeje com um guia local ↗",
+    "mapAirport": "Aeroporto de {name} ({code})",
+    "mapPhotoIllustrative": "Foto ilustrativa",
+    "mapEntry": "Entrada a partir da Índia",
+    "mapFlightsPause": "Pausar voos",
+    "mapFlightsPlay": "Ver voos",
+    "mapDzongkhag": "Dzongkhag (distrito)",
+    "mapDzongkhags": "Dzongkhags (distritos)",
+    "mapDzongkhagCount": "{count} lugares para visitar",
+    "mapEnlarge": "Ampliar mapa",
+    "mapEnlargeClose": "Fechar mapa grande",
+    "mapZoomIn": "Aproximar",
+    "mapZoomOut": "Afastar",
+    "mapLegendHighway": "Rodovia nacional",
+    "mapLegendRoad": "Estrada",
+    "mapLegendTown": "Cidade",
+    "mapLegendVillage": "Aldeia",
+    "skip": "Pular para o conteúdo",
+    "language": "Idioma",
+    "discover": "Descubra o Butão",
+    "glimpse": "Um vislumbre do Butão",
+    "photos": "Fotografias de fundo",
+    "pause": "Pausar apresentação de slides",
+    "resume": "Retomar apresentação de slides",
+    "postcardAlt": "Mosteiro Ninho do Tigre entre as montanhas de Paro",
+    "postcardPlace": "PARO TAKTSANG · BUTÃO",
+    "heroLocation": "BUTÃO · 27,5° N, 90,4° E",
+    "valleyAlt": "Paisagem do Vale do Butão",
+    "finderLink": "Não sabe por onde começar?",
+    "finderLinkAction": "Encontre o seu ritmo ↗",
+    "finderIntro": "O Butão recompensa viajar devagar. Use a bússola para encontrar um ponto de partida e deixe que nossos planejadores locais ajustem o ritmo de acordo com seus interesses e datas.",
+    "finderHow": "Como planejamos uma viagem ao Butão",
+    "finderFact1": "Comece com o que você quer sentir, não com uma lista de verificação.",
+    "finderFact2": "Construa espaço para estradas de montanha, clima e encontros casuais.",
+    "finderFact3": "Uma rota no seu ritmo: menos trocas de hospedagem e mais tempo para aproveitar cada dia.",
+    "finderView": "Ver rota",
+    "customMessage": "Estou interessado em uma viagem de {days} dias ao Butão com foco em {focus}. Por favor, ajude-me a definir o caminho certo.",
+    "ccSearch": "Buscar país ou código",
+    "ccNone": "Nenhum resultado",
+    "mapKey": "Legenda do mapa",
+    "mapSources": "Fontes e notas",
+    "planThisJourney": "Planejar esta viagem",
+    "downloadBrochure": "Baixar folheto (PDF, em inglês)",
+    "itineraryMessage": "Gostaria de planejar “{title}” ({days} dias). Ajudem-me a adaptá-lo às minhas datas e interesses.",
+    "prefilled": "Adicionamos suas escolhas ao formulário.",
+    "planning": "Planejamento",
+    "customQuote": "Orçamento personalizado",
+    "customPriceDetail": "Datas, tamanho do grupo e rota",
+    "routeLabel": "Rota: {route}",
+    "route": "Rota",
+    "continueLanguage": "Continuar com {name}?",
+    "notice": "Aviso de tradução",
+    "noticeTitle": "Por favor, note",
+    "noticeText": "As traduções são fornecidas por conveniência e podem não ser totalmente precisas. Consulte a versão em inglês ou entre em contato conosco se precisar de esclarecimentos.",
+    "cancel": "Cancelar",
+    "agree": "Concordo",
+    "mapEyebrow": "O reino, de uma perspectiva diferente",
+    "mapTitle": "Um olhar mais atento ao Butão.",
+    "mapIntro": "De mosteiros agarrados às falésias a altas trilhas do Himalaia, estes são os lugares que tornam o Butão inesquecível. Toque num lugar para se aproximar ou percorra a viagem de oeste para leste.",
+    "followJourney": "Siga uma jornada",
+    "mapAll": "Todo o Butão · explore livremente",
+    "mapFilters": "Filtrar lugares por tipo",
+    "mapKicker": "BHUTAN / Atlas de terreno e viagens",
+    "mapSummary": "Lugares sagrados, cultura viva e paisagens selvagens",
+    "mapChooseRegion": "Escolha uma região do mapa",
+    "wholeKingdom": "Reino inteiro",
+    "west": "Oeste",
+    "central": "Centro",
+    "east": "Leste",
+    "mapSvgTitle": "Mapa de relevo animado do Butão com lugares para visitar",
+    "mapSvgDesc": "Mapa de relevo com a fronteira nacional, os rios, os limites dos distritos e os nomes das cidades. Selecione um marcador para se aproximar e ler o seu guia. A lista de lugares abaixo é outra forma de explorar.",
+    "mapZoom": "Zoom do mapa",
+    "zoomIn": "Ampliar",
+    "zoomOut": "Diminuir zoom",
+    "mapReset": "Mostrar todo o Butão",
+    "mapPan": "Deslocar o mapa ampliado",
+    "panWest": "Panoeste",
+    "panNorth": "Pan norte",
+    "panSouth": "Panorama sul",
+    "panEast": "Pan leste",
+    "north": "N",
+    "dragonLand": "Terra do Dragão do Trovão",
+    "roads": "Estradas mapeadas",
+    "rivers": "Rios",
+    "borders": "Fronteiras distritais",
+    "tourConnections": "Conexões turísticas",
+    "trekCorridor": "Corredor de caminhada",
+    "placePin": "Coloque o alfinete",
+    "lowlands": "Vales de terras baixas",
+    "highlands": "Alto Himalaia",
+    "mapHint": "Amplie · arraste para explorar",
+    "mapGuide": "Guia de lugares",
+    "mapPlaces": "Lugares para descobrir",
+    "mapChoosePlace": "Escolha um lugar",
+    "mapOpenPlace": "Abrir o guia de {name}",
+    "mapMarker": "{name}, {category}, {region}",
+    "mapCount": "{count} lugares",
+    "mapCountOne": "{count} lugar",
+    "tour": "Passeio",
+    "trek": "Caminhada",
+    "culturalTour": "Passeio cultural",
+    "trekkingJourney": "Jornada de caminhada",
+    "fullItinerary": "Itinerário completo de {days} dias",
+    "viewItinerary": "Veja este itinerário ↗",
+    "mapAllHeading": "Todo o reino, em perspectiva.",
+    "mapAllDescription": "As montanhas erguem-se do sopé, a sul, até ao alto Himalaia, a norte. Escolha um lugar para se aproximar ou percorra a viagem de oeste para leste.",
+    "mapEmptyEyebrow": "Um tipo diferente de descoberta",
+    "mapEmptyTitle": "Não há lugares neste filtro",
+    "mapEmptyDescription": "Experimente outra categoria ou escolha “Todo o Butão” para explorar mais lugares.",
+    "mapFootnote": "Relevo sombreado a partir de medições do terreno. As fronteiras e as posições dos lugares são aproximadas; este mapa serve para escolher lugares, não para navegar.",
+    "geographyCredit": "Geografia:",
+    "riversCredit": ". Rios: ©",
+    "osmContributors": "Colaboradores do OpenStreetMap",
+    "terrainCredit": ", ODbL. Terreno: SRTM/GMTED2010 cortesia do USGS; ETOPO1 cortesia da NOAA, processado por",
+    "visualCredit": ". Referência visual:",
+    "guideNote": "Uma nota do seu guia local",
+    "culturalNote": "Dzongs são mosteiros-fortalezas e lhakhangs são templos. São lugares sagrados vivos: vista-se com respeito, tire o chapéu e pergunte antes de fotografar. Deixe as trilhas e pátios tão bonitos quanto os encontrou.",
+    "thoughtfulVisit": "Uma visita atenciosa ↗",
+    "tibet": "TIBET · CHINA",
+    "india": "ÍNDIA",
+    "galleryView": "Ver {name}",
+    "galleryClose": "Fechar descrição da imagem",
+    "countryCode": "Código do país",
+    "code": "🌍 Código",
+    "bhutanAddress": "Norzin Lam, Thimphu, Butão",
+    "thimphuAddress": "Norzin Lam, Thimphu",
+    "chatFab": "Conversar com Pema",
+    "chatDialog": "Pema, seu guia",
+    "chatMessage": "Mensagem",
+    "chatEnabled": "IA habilitada",
+    "chatPoweredBy": "Desenvolvido por {provider} · {model} · Druk Voyages",
+    "ollamaModel": "Modelo do Ollama",
+    "groqHint": "Gratuito em",
+    "groqStorage": "— armazenado apenas no seu navegador.",
+    "ollamaHint": "As solicitações do modelo Ollama são enviadas por meio do back-end do Druk Voyages, portanto, nenhuma chave de API do visitante é necessária aqui.",
+    "invalidKey": "Chave inválida — As chaves Groq começam com gsk_",
+    "invalidGroq": "Sua chave API Groq parece inválida. Clique em ⚙ para atualizá-lo ou responderei no guia de viagem.",
+    "offlineOllama": "O serviço AI está temporariamente indisponível. Responderei no guia de viagem.",
+    "formEmail": "Insira um endereço de e-mail válido.",
+    "formShort": "Insira pelo menos {count} caracteres.",
+    "formRequired": "Por favor preencha este campo obrigatório.",
+    "slide": "Slide {count}",
+    "mobileOpen": "Abrir menu",
+    "mobileClose": "Fechar menu",
+    "modalClose": "Fechar itinerário",
+    "welcome": "Tashi Delek! 🙏 Sou Pema, seu guia para o Butão. Pergunte-me sobre caminhadas, dzongs, estações ou como planejar sua viagem. Como posso ajudar?",
+    "chatGeneric": "Entre em contato com **hello@drukvoyages.bt** ou ligue para **+975 17 000 000** para obter ajuda no planejamento de sua viagem ao Butão.",
+    "chatIntro": "Conte-me sobre seus interesses, datas de viagem e ritmo preferido, e posso ajudá-lo a explorar nossas jornadas.",
+    "chatPricing": "Os preços dos itinerários publicados começam em **US$ 3.290** para a viagem Classic de 8 dias. Algumas rotas exigem um orçamento personalizado. Contate **hello@drukvoyages.bt** para confirmar inclusões e preços para suas datas.",
+    "chatVisa": "Para obter vistos e providências de entrada para sua nacionalidade e datas de viagem, entre em contato com **hello@drukvoyages.bt**. Nossa equipe local pode ajudá-lo a planejar os próximos passos.",
+    "chatSeasons": "A primavera (março a maio) e o outono (setembro a novembro) são populares para viagens culturais e caminhadas. O inverno oferece vales mais tranquilos e observação sazonal de grous. As condições climáticas e de montanha variam; nossa equipe pode ajudar com suas datas.",
+    "chatTreks": "Explore a viagem de **12 dias Druk Path** ou o itinerário de **13 dias do acampamento base Jomolhari**. Ambos incluem tempo no Butão além das etapas do trekking. Conte-nos sobre sua experiência e condicionamento físico para que possamos sugerir um ritmo adequado.",
+    "chatNest": "Paro Taktsang, conhecido como **Ninho do Tigre**, fica em penhascos acima de Paro. Reserve um dia dedicado à caminhada e suba lentamente. Seu guia o ajudará a escolher um ritmo adequado ao clima e à altitude.",
+    "chatFestivals": "Nossas jornadas festivas incluem celebrações de Paro e Thimphu Tshechu. As datas e programas dos festivais mudam a cada ano; moldamos a sua rota em torno do calendário confirmado.",
+    "chatContact": "Contate-nos em **hello@drukvoyages.bt** ou **+975 17 000 000**, ou use o formulário de consulta nesta página.",
+    "quickItineraries": "Quais roteiros você recomendaria?",
+    "quickSeasons": "Qual é a melhor época para visitar o Butão?",
+    "quickPricing": "Quanto custa uma viagem ao Butão?",
+    "quickNest": "Conte-me sobre o Ninho do Tigre.",
+    "quickVisa": "Como você pode ajudar com a preparação do visto?",
+    "translationError": "Não foi possível carregar o idioma. Por favor, tente novamente.",
+    "formSending": "Enviando…",
+    "formSuccess": "Obrigado! Sua consulta foi enviada. Entraremos em contato em breve.",
+    "formFailure": "Não foi possível enviar sua consulta. Por favor, tente novamente ou envie um e-mail para hello@drukvoyages.bt.",
+    "flightDomesticNote": "De Paro para Bumthang, Gelephu e Yonphula. Escolha um aeroporto ou reproduza as três partidas.",
+    "flightControls": "Voos domésticos",
+    "flightFlyTo": "Voar para",
+    "flightIllustrated": "Voos ilustrados · sem acompanhamento ao vivo",
+    "flightSource": "Informações e horários de voos ↗",
+    "flightDomesticPlay": "▶ Reproduzir voos domésticos",
+    "flightDomesticPause": "Ⅱ Pausar voos domésticos",
+    "flightDomesticAll": "Todos os aeroportos domésticos",
+    "flightDomesticKicker": "Voos domésticos de Paro"
+  },
+  "days": {
+    "1": [
+      [
+        "Chegada a Paro e caminhada pelo vale",
+        "Cerimônia de boas-vindas, passeio à tarde pelas fazendas e mercado antigo de Paro."
+      ],
+      [
+        "Caminhada no Ninho do Tigre",
+        "Subida de dia inteiro até Paro Taktsang (3.120m). Almoço embalado no café Cliff."
+      ],
+      [
+        "Exploração de Thimphu",
+        "Tashichho Dzong, Buda Dordenma, Museu do Patrimônio Folclórico, tiro com arco tradicional."
+      ],
+      [
+        "Passe Dochula e dirija para Punakha",
+        "108 chortens memoriais na neblina matinal; panorama deslumbrante do Himalaia."
+      ],
+      [
+        "Punakha Dzong e ponte suspensa",
+        "O mais belo dzong na confluência de dois rios, construído em 1637."
+      ],
+      [
+        "Desvio do Vale Haa",
+        "Vale remoto aberto aos turistas em 2002. Visite Lhakhang Karpo e Nagpo."
+      ],
+      [
+        "Mercado de Paro e jantar na fazenda",
+        "Compras de artesanato, vinho de arroz tinto, autêntica ema datshi com uma família local."
+      ],
+      [
+        "Despedida e Partida",
+        "Caminhada matinal de meditação, traslado ao aeroporto com lenços de bênção (khata)."
+      ]
+    ],
+    "2": [
+      [
+        "Briefing de chegada e festival",
+        "Jantar de boas-vindas com nosso especialista cultural. Orientação de etiqueta do festival."
+      ],
+      [
+        "Passeios pela Vila Pré-Festival",
+        "Explore a cidade de Paro enquanto os habitantes locais preparam trajes e oferendas tradicionais."
+      ],
+      [
+        "Tsechu Dia 1 – Cerimônias de Abertura",
+        "Visualização na primeira fila dos bailes de abertura com máscaras, organizados pela Corte Real."
+      ],
+      [
+        "Tsechu Dia 2 – Danças Cham",
+        "Black Hat Drubchen e dança de veado. Acesso aos bastidores para conhecer artistas."
+      ],
+      [
+        "Dia 3 de Tsechu – Revelação de Thongdrel",
+        "Reunião antes do amanhecer para o desenrolar sagrado do aplique gigante thangka."
+      ],
+      [
+        "Pós-Festival de Punakha",
+        "Dirija pelo Dochula Pass – 108 chortens em um persistente espírito festivo."
+      ],
+      [
+        "Punakha Dzong e Chimi Lhakhang",
+        "Templo da fertilidade do Divino Louco Drukpa Kunley."
+      ],
+      [
+        "Jornada Bumthang",
+        "Dirija para o leste até o coração espiritual do Butão. Jakar Dzong e Jambay Lhakhang."
+      ],
+      [
+        "Caminhadas no Vale Bumthang",
+        "Kurjey Lhakhang, pomares de macieiras, oficinas tradicionais de tecelagem preta."
+      ],
+      [
+        "Retorno a Paro e partida",
+        "Vôo na montanha, cerimônia de bênção, presentes de despedida."
+      ]
+    ],
+    "3": [
+      [
+        "Chegada e aclimatação em Paro",
+        "Caminhada suave pelo vale, hora de dormir cedo para se preparar para a altitude."
+      ],
+      [
+        "Caminhada de aquecimento no Ninho do Tigre",
+        "Aclimatação à altitude e preparação espiritual para a caminhada."
+      ],
+      [
+        "Dia 1 da caminhada - Paro até Jangchhulakha (4.100m)",
+        "Primeira subida por pinhais. Acampamento com vista para Jomolhari."
+      ],
+      [
+        "Dia 2 da caminhada - até o Lago Jimilangtso",
+        "Planalto montanhoso, primeiro lago de grande altitude, avistamentos de iaques selvagens."
+      ],
+      [
+        "Dia de caminhada 3 - até o Lago Simkotha",
+        "Três lagos sagrados usados pelos monges para meditação ritual."
+      ],
+      [
+        "Dia 4 da jornada - para o Mosteiro Phajoding",
+        "Antigo eremitério agarrado à encosta acima de Thimphu."
+      ],
+      [
+        "Dia de descanso em Phajoding",
+        "Sessão de meditação com monges residentes."
+      ],
+      [
+        "Descida para Thimphu",
+        "Descida final pela floresta até a única capital do mundo sem semáforos."
+      ],
+      [
+        "Dia da Cultura de Thimphu",
+        "Buddha Dordenma, instituto de medicina, galeria de arte contemporânea."
+      ],
+      [
+        "Recompensas do Rio Punakha",
+        "Piquenique no rio no dzong após dias de trilha."
+      ],
+      [
+        "Dia de Recuperação e Spa",
+        "Banho tradicional de pedras quentes, tratamentos Sowa Rigpa."
+      ],
+      [
+        "Partida de Paro",
+        "Voo de montanha (se o tempo permitir), cerimônia de despedida."
+      ]
+    ],
+    "4": [
+      [
+        "Chegada de Paro - começa a desintoxicação digital",
+        "Telefones armazenados. Receba gho/kira tradicional. Exercícios respiratórios noturnos."
+      ],
+      [
+        "Consulta Sowa Rigpa",
+        "Avaliação da medicina tradicional do Butão e plano de ervas personalizado."
+      ],
+      [
+        "Peregrinação Consciente do Ninho do Tigre",
+        "Subida lenta e contemplativa. Sente-se em silêncio. Sem horário, sem pressa."
+      ],
+      [
+        "Punakha – Meditação à Beira do Rio",
+        "Ioga do amanhecer no rio Mo Chhu, terapia com taças tibetanas."
+      ],
+      [
+        "Retiro Silencioso de Bumthang, Dia 1",
+        "Retiro de fazenda. Primeiro de dois dias de silêncio."
+      ],
+      [
+        "Retiro Silencioso de Bumthang, Dia 2",
+        "Banhos de floresta, passeios pela natureza em silêncio, diários."
+      ],
+      [
+        "Dotsho – Cerimônia do Banho de Pedras Quentes",
+        "Banho tradicional aquecido com pedras de rio abençoadas pelo fogo. Cura profundamente."
+      ],
+      [
+        "Reintegração do Vale do Paro",
+        "Compartilhe sua experiência com nosso guia. Aula final de pintura thangka."
+      ],
+      [
+        "Partida com intenção",
+        "Prescrição personalizada de bem-estar e remédios fitoterápicos do Butão."
+      ]
+    ],
+    "5": [
+      [
+        "Chegada e verificação de equipamento",
+        "Conheça o seu guia de fotografia. A icônica ponte rodoviária de Scout Paro."
+      ],
+      [
+        "Ninho do Tigre Antes do Amanhecer",
+        "Partida às 4h – névoa subindo sobre o mosteiro à primeira luz."
+      ],
+      [
+        "Vida na Fazenda do Vale Paro",
+        "Agricultores, crianças, monges à luz do documentário matinal."
+      ],
+      [
+        "Arquitetura Thimphu",
+        "Dzongs, chortens, o gigante Buda de bronze."
+      ],
+      [
+        "Dochula Pass Nascer do Sol",
+        "108 chortens emergindo da nuvem a 3.100m."
+      ],
+      [
+        "Retratos do Rio Punakha",
+        "Pescadores, monges, dzong em reflexões ao anoitecer."
+      ],
+      [
+        "Joias escondidas do Vale Haa",
+        "Pastores de iaques, templos antigos, vida inalterada na aldeia."
+      ],
+      [
+        "Zonas Húmidas de Phobjikha",
+        "Grous de pescoço preto ao amanhecer, panoramas da hora dourada."
+      ],
+      [
+        "Trongsa Dzong",
+        "Fortaleza ancestral da Família Real no topo de uma colina."
+      ],
+      [
+        "Locais Sagrados de Bumthang",
+        "Oito séculos de arte sacra fotografados."
+      ],
+      [
+        "Casa de família na vila, dia 1",
+        "Incorporado com uma família local — ensaio fotográfico íntimo."
+      ],
+      [
+        "Casa de família na vila, dia 2",
+        "Rituais comunitários, culinária, pecuária."
+      ],
+      [
+        "Workshop de pós-processamento",
+        "Sessão do Lightroom editando suas melhores fotos."
+      ],
+      [
+        "Exposição Final e Partida",
+        "Imprima suas 5 melhores fotos para a despedida."
+      ]
+    ],
+    "6": [
+      [
+        "Boas-vindas reais",
+        "Pétalas de flores, mordomo particular, champanhe na varanda da montanha."
+      ],
+      [
+        "Balão do nascer do sol sobre Paro",
+        "Voo privado de balão de ar quente ao amanhecer sobre o Vale do Paro."
+      ],
+      [
+        "Peregrinação de Amor ao Ninho do Tigre",
+        "Subida guiada com um monge que abençoa a sua união."
+      ],
+      [
+        "Pôr do sol privado em Punakha Dzong",
+        "Jantar à luz de velas após o expediente no pátio dzong."
+      ],
+      [
+        "Dia de spa em Amankora",
+        "Tratamentos Sowa Rigpa para casais, banho de pedras quentes, massagem com ervas."
+      ],
+      [
+        "Piquenique romântico Phobjikha",
+        "Champanhe e pratos de montanha de origem local."
+      ],
+      [
+        "Fuga do Vale Haa",
+        "Remota e raramente visitada – sua história de amor particular no Himalaia."
+      ],
+      [
+        "Noite da Herança de Bumthang",
+        "Jantar privado com cerimônia de lamparina e música folclórica."
+      ],
+      [
+        "Arte e Cultura de Thimphu",
+        "Encomende uma thangka personalizada como lembrança de casamento."
+      ],
+      [
+        "Noite de luxo de despedida",
+        "Jantar na cobertura sob as estrelas do Himalaia, cerimônia de bênção."
+      ],
+      [
+        "Partida com Memórias",
+        "Livro de viagem personalizado e presentes butaneses no aeroporto."
+      ]
+    ],
+    "7": [
+      [
+        "Chegando em Paro",
+        "Acomode-se no vale e encontre seu guia local para instruções práticas sobre altitude, estradas e etiqueta cultural."
+      ],
+      [
+        "Locais Sagrados de Paro",
+        "Visite Kyichu Lhakhang e explore as ruas tradicionais de Paro antes de uma caminhada fácil de aclimatação."
+      ],
+      [
+        "Dochula para Punakha",
+        "Atravesse o Passo Dochula, com seus 108 chortens, e desça em direção ao vale mais quente de Punakha."
+      ],
+      [
+        "Punakha e Chimi Lhakhang",
+        "Veja Punakha Dzong nos rios Pho Chhu e Mo Chhu e depois caminhe pelos campos de arroz até Chimi Lhakhang."
+      ],
+      [
+        "Sobre o Pelé La até Trongsa",
+        "Viaje para o leste através de paisagens florestais e montanhosas em constante mudança; visite o comandante Trongsa Dzong se o tempo permitir."
+      ],
+      [
+        "Em Bumthang",
+        "Atravesse Yotong La e chegue a Bumthang, o coração cultural do Butão, com tempo para uma caminhada suave pela vila."
+      ],
+      [
+        "Jakar, Jambay e Kurjey",
+        "Explore Jakar Dzong, Jambay Lhakhang e Kurjey Lhakhang com o contexto do seu guia butanês."
+      ],
+      [
+        "Histórias do Vale Tang",
+        "Passe o dia no tranquilo Vale Tang, visitando fazendas, locais históricos e pequenas oficinas de artesanato, quando disponíveis."
+      ],
+      [
+        "Aldeia de Ura e estradas de montanha",
+        "Siga a estrada do vale alto até Ura, conhecida por suas distintas casas de pedra e paisagem pastoril aberta."
+      ],
+      [
+        "Transferência de retorno ou partida",
+        "Continue por estrada ou ligação doméstica de acordo com o plano de transporte final, com horários deliberadamente flexíveis."
+      ]
+    ],
+    "8": [
+      [
+        "Chegada em Paro e orientação no vale",
+        "Entre no Butão com uma curta caminhada pelo vale e uma introdução guiada aos costumes locais."
+      ],
+      [
+        "Caminhada Patrimonial de Paro",
+        "Visite Kyichu Lhakhang, a área do Museu Nacional e as lojas tradicionais da cidade de Paro."
+      ],
+      [
+        "Chele La para Haa",
+        "Dirija por Chele La, uma das passagens rodoviárias mais altas do Butão, até o compacto e tranquilo Vale Haa."
+      ],
+      [
+        "Templos do Vale Haa e vida na aldeia",
+        "Visite Lhakhang Karpo e Lhakhang Nagpo e, em seguida, passe um tempo com um anfitrião local, onde for possível combinar."
+      ],
+      [
+        "Voltar para Paro",
+        "Viaje de volta pela floresta montanhosa e desfrute de uma refeição descontraída em uma fazenda ou de uma sessão de culinária no Vale do Paro."
+      ],
+      [
+        "Mirante ou Partida de Taktsang",
+        "Escolha uma caminhada suave pelo mirante ou uma manhã livre antes do traslado ao aeroporto."
+      ]
+    ],
+    "9": [
+      [
+        "Chegando em Paro",
+        "Conheça a equipe de trekking e descanse após a chegada; hidratação e um primeiro dia lento dão o tom."
+      ],
+      [
+        "Caminhada de Aclimatação Paro",
+        "Uma caminhada guiada, verificação de equipamento e discussão sobre o perfil de elevação da caminhada e abordagem sem deixar rastros."
+      ],
+      [
+        "Dirija até Shana e comece",
+        "Suba o Vale do Paro e comece a caminhar pela floresta de pinheiros azuis ao lado do rio."
+      ],
+      [
+        "Trilha para Thangthangka",
+        "Siga o vale gradualmente para cima; as rotinas e o ritmo do acampamento são introduzidos pela equipe de suporte."
+      ],
+      [
+        "Chegada em Jangothang",
+        "Chegue ao acampamento elevado abaixo de Jomolhari após uma subida constante através de pastagens de iaques e terreno alpino."
+      ],
+      [
+        "Dia de Aclimatação",
+        "Faça uma curta caminhada opcional ou um dia de descanso em Jangothang, permitindo que o grupo se adapte antes de passagens mais altas."
+      ],
+      [
+        "Atravesse em direção a Lingshi",
+        "Caminhe por uma passagem alta quando as condições permitirem e depois desça até um amplo vale de casas de pedra e pastagens."
+      ],
+      [
+        "Lingshi para Shodu",
+        "Continue por uma região montanhosa remota com uma rota selecionada de acordo com as condições do grupo e o clima."
+      ],
+      [
+        "Shodu para Barshong",
+        "Caminhe pelas seções florestais e acampe perto dos restos de um antigo local dzong."
+      ],
+      [
+        "Descida da Floresta",
+        "Desça gradualmente através da floresta de rododendros e coníferas em direção ao início da estrada."
+      ],
+      [
+        "Retorno para Thimbu",
+        "Volte à estrada, viaje para Thimphu e desfrute de um banho restaurador de pedras quentes, se desejar."
+      ],
+      [
+        "Dia da Cultura de Thimphu",
+        "Um dia descontraído na capital com tempo para artesanato, a área de Buddha Dordenma ou paradas tranquilas em cafés."
+      ],
+      [
+        "Partida de Paro",
+        "Traslado para Paro para partida, com uma noite extra extra adicionada quando os horários dos voos ou o clima exigirem."
+      ]
+    ],
+    "10": [
+      [
+        "Chegando em Paro",
+        "Acomode-se, encontre seu guia e revise a etiqueta do festival, os limites da fotografia e o programa final do evento."
+      ],
+      [
+        "Paro para Thimbu",
+        "Viaje para a capital com paradas em pontes tradicionais, chortens e almoço local no caminho."
+      ],
+      [
+        "Tradições artesanais de Thimphu",
+        "Visite estúdios de artesanato e, quando aberto, o Instituto Nacional de Zorig Chusum para entender as treze artes tradicionais do Butão."
+      ],
+      [
+        "Primeiro dia de Tsechu",
+        "Participe das cerimônias públicas e das danças mascaradas do dia, com o contexto do seu guia sobre as histórias e símbolos apresentados."
+      ],
+      [
+        "Segundo dia de Tsechu",
+        "Regresse para um programa diferente de danças e tempo para explorar a atmosfera de mercado em torno do evento."
+      ],
+      [
+        "Dóchula e Punakha",
+        "Deixe a capital pelos 108 chortens em Dochula e continue pelos vales dos rios de Punakha."
+      ],
+      [
+        "Punakha Dzong e Paro",
+        "Visite o dzong a partir de sua abordagem ribeirinha antes de retornar a Paro para uma última noite."
+      ],
+      [
+        "Partida",
+        "Transfer do aeroporto ou dia extra opcional em Paro, dependendo do festival confirmado e horário do voo."
+      ]
+    ],
+    "11": [
+      [
+        "Chegue e desembale lentamente",
+        "Acomode-se em Paro com uma primeira noite calma e uma orientação simples para a semana seguinte."
+      ],
+      [
+        "Caminhada consciente no vale de Paro",
+        "Escolha uma caminhada suave à beira do rio ou na encosta, com tempo para visitar um templo ou simplesmente fazer uma pausa para tomar um chá."
+      ],
+      [
+        "Vale do Rio Punakha",
+        "Viaje por Dochula e estabeleça-se perto de Punakha; a tarde é intencionalmente deixada aberta para descanso."
+      ],
+      [
+        "Culinária e campos de fazenda",
+        "Aprenda o básico de uma refeição butanesa com um anfitrião local e caminhe pelos campos próximos sem pressa."
+      ],
+      [
+        "Gangtey e Phobjikha",
+        "Siga a estrada até o amplo vale glacial de Phobjikha, um lugar conhecido por trilhas tranquilas e vistas panorâmicas."
+      ],
+      [
+        "Trilha Natural Gangtey",
+        "Caminhe por uma seção adequada da Trilha Natural de Gangtey e depois reserve um tempo para ler, registrar um diário ou tomar um banho de pedras quentes local."
+      ],
+      [
+        "Voltar para Paro",
+        "Viaje de volta pelas montanhas, parando apenas quando o grupo quiser - o objetivo é deixar um espaço em branco."
+      ],
+      [
+        "Partida com ritmo mais leve",
+        "Um café da manhã final e traslado ao aeroporto, ou estender com noites extras se um retorno mais lento parecer adequado."
+      ]
+    ],
+    "12": [
+      [
+        "Chegando em Paro",
+        "Encontre seu guia e prepare-se para um primeiro dia tranquilo no vale."
+      ],
+      [
+        "Paro para Punakha",
+        "Atravesse Dochula e visite Punakha Dzong, local onde Pho Chhu e Mo Chhu se encontram."
+      ],
+      [
+        "No Vale Phobjikha",
+        "Dirija até o amplo vale glacial e visite o centro de informações sobre grous quando ele estiver aberto."
+      ],
+      [
+        "Grous e passeios Gangtey",
+        "Observe os grous de pescoço preto em áreas designadas durante a temporada e depois caminhe por um trecho suave da Trilha Natural de Gangtey."
+      ],
+      [
+        "Dia da Aldeia e Mosteiro",
+        "Explore a vila de Gangtey e os arredores do mosteiro, com uma visita local a fazendas ou artesãos, sempre que possível."
+      ],
+      [
+        "Voltar para Paro",
+        "Viaje para o oeste através das montanhas, parando para apreciar paisagens, chá e chortens à beira da estrada."
+      ],
+      [
+        "Mirante ou Partida de Taktsang",
+        "Escolha uma caminhada pelo mirante do Tiger's Nest, uma caminhada completa, se for adequado, ou vá diretamente para o aeroporto."
+      ]
+    ]
+  },
+  "signals": {
+    "1": [
+      "Março a maio · Setembro a novembro",
+      "Uma primeira visita equilibrada com vários transferes montanha-estrada. O Ninho do Tigre envolve uma caminhada sustentada em subida; o percurso é ajustado de acordo com o clima e a aclimatação."
+    ],
+    "2": [
+      "As datas do festival variam anualmente",
+      "Os programas do festival e os preparativos para exibição serão confirmados após a divulgação do calendário oficial. Espere inícios cedo, multidões e dias cerimoniais longos e alegres."
+    ],
+    "3": [
+      "Abril a maio · Outubro a novembro",
+      "Esta caminhada em grandes altitudes necessita de um plano de aclimatação conservador, calçado adequado e flexibilidade para o clima de montanha. As distâncias diárias a pé são adaptadas ao grupo."
+    ],
+    "4": [
+      "Março a maio · Setembro a novembro",
+      "Projetado para um ritmo tranquilo. Meditação, tratamentos tradicionais de bem-estar e banhos de pedras quentes são organizados de acordo com a disponibilidade local, em vez de um horário diário rígido."
+    ],
+    "5": [
+      "Outubro a novembro para luz clara",
+      "Um formato de grupo pequeno deixa espaço para mudança de luz e eventos locais. Orientações fotográficas respeitosas estão incluídas para mosteiros, pessoas e ambientes de festivais."
+    ],
+    "6": [
+      "Março a maio · Setembro a novembro",
+      "Uma rota privada e de ritmo mais lento, com espaço para descanso no alojamento e caminhadas suaves opcionais. As experiências são moldadas em torno do acesso confirmado e dos interesses do casal."
+    ],
+    "7": [
+      "Março a maio · Setembro a novembro",
+      "O centro do Butão é alcançado por estradas montanhosas pitorescas, mas longas. Este itinerário mantém o tempo livre no plano para que a viagem pareça parte da experiência."
+    ],
+    "8": [
+      "Março a maio · Setembro a novembro",
+      "Uma rota fácil pelo oeste do Butão, com opções de caminhada curta. A altitude elevada de Chele La pode ser fria mesmo quando o vale abaixo está quente."
+    ],
+    "9": [
+      "Abril a maio · Outubro a novembro",
+      "Uma caminhada exigente em grandes altitudes que exige licenças, trekkers adequados e uma janela climática flexível. A equipe de apoio cuida da logística do acampamento e de um ritmo seguro e deliberado."
+    ],
+    "10": [
+      "Cronometrado para datas oficiais de Tsechu",
+      "As datas e programas do Tsechu mudam de ano para ano. Espere ambientes públicos, começos cedo e vestimentas respeitosas; toda a participação é baseada no calendário confirmado do festival."
+    ],
+    "11": [
+      "Março a maio · Setembro a novembro",
+      "Um percurso de baixa intensidade para hóspedes que preferem caminhadas curtas e noites não estruturadas. Os tratamentos locais e visitas às quintas estão sujeitos à disponibilidade."
+    ],
+    "12": [
+      "Final do outono até final do inverno",
+      "Os grous de pescoço preto são observados sazonalmente e a distâncias respeitosas. O tempo exato varia de acordo com o ano, portanto a rota é confirmada próximo ao período de migração."
+    ]
+  },
+  "highlights": {
+    "Tiger's Nest": "Ninho do Tigre",
+    "Punakha Dzong": "Punakha Dzong",
+    "Dochula Pass": "Passe Dochula",
+    "National Museum": "Museu Nacional",
+    "Cham Mask Dances": "Danças de Máscara Cham",
+    "Thongdrel Unveiling": "Revelação do Thongdrel",
+    "Backstage Access": "Acesso aos bastidores",
+    "Cultural Workshops": "Oficinas Culturais",
+    "High-Altitude Lakes": "Lagos de alta altitude",
+    "Himalayan Views": "Vistas do Himalaia",
+    "Yak Herding": "Pastoreio de Iaques",
+    "Forest Camping": "Acampamento Florestal",
+    "Sowa Rigpa": "Sowa Rigpa",
+    "Silent Meditation": "Meditação Silenciosa",
+    "Hot Stone Baths": "Banhos de pedras quentes",
+    "Monastic Stays": "Estadias Monásticas",
+    "Golden Hour Shoots": "Fotos da Hora Dourada",
+    "Festival Access": "Acesso ao Festival",
+    "Remote Villages": "Aldeias Remotas",
+    "Landscape Photography": "Fotografia de paisagem",
+    "Private Dzong Dinner": "Jantar Privado Dzong",
+    "Luxury Lodges": "Alojamentos de luxo",
+    "Couples' Spa": "Spa para casais",
+    "Sunrise Balloon": "Balão do nascer do sol",
+    "Jakar Dzong": "Jakar Dzong",
+    "Jambay Lhakhang": "Jambay Lhakhang",
+    "Tang Valley": "Vale Tang",
+    "Traditional Crafts": "Artesanato Tradicional",
+    "Chele La Pass": "Chele La Pass",
+    "Haa Valley": "Vale Haa",
+    "Lhakhang Karpo": "Lhakhang Karpo",
+    "Paro Farmhouse": "Fazenda Paro",
+    "Jangothang Camp": "Acampamento Jangothang",
+    "Yak Pastures": "Pastagens de Iaque",
+    "High Passes": "Passes altos",
+    "Paro Valley": "Vale do Paro",
+    "Tsechu Ceremonies": "Cerimônias de Tsechu",
+    "Zorig Chusum Crafts": "Artesanato Zorig Chusum",
+    "Paro Heritage": "Património Paro",
+    "Forest Walks": "Caminhadas na Floresta",
+    "Dotsho Bath": "Banho Dotsho",
+    "Gangtey Valley": "Vale Gangtey",
+    "Farmhouse Cooking": "Culinária de fazenda",
+    "Black-Necked Cranes": "Grous de pescoço preto",
+    "Punakha Rivers": "Rios Punakha",
+    "Paro Taktsang": "Paro Taktsang",
+    "Gangtey Nature Trail": "Trilha Natural Gangtey"
+  },
+  "sites": {
+    "gmc": [
+      "Gelephu Mindfulness City",
+      "Região Administrativa Especial do Butão",
+      "Gelephu · Sul do Butão",
+      "Uma nova cidade em formação",
+      "Uma parada numa viagem pelo sul",
+      "Anunciada por Sua Majestade o Rei em dezembro de 2023, a Gelephu Mindfulness City é uma Região Administrativa Especial de cerca de 2.500 km² na fronteira com Assam. É planejada em torno da atenção plena, da energia verde e do bem-estar, com bairros ligados por corredores de floresta e rio.",
+      "Gelephu é uma entrada rodoviária a partir da Índia e tem aeroporto doméstico; combine a visita com as fontes termais de Gelephu ou o Parque Nacional Royal Manas."
+    ],
+    "buddha": [
+      "Buddha Dordenma",
+      "Acima do vale de Thimphu",
+      "Thimphu · Butão ocidental",
+      "Arte budista e vistas do vale",
+      "Uma visita cultural guiada",
+      "Um Buda monumental domina Thimphu a partir de Kuenselphodrang. Explore o mirante e seu simbolismo budista com um guia local.",
+      "Confira o acesso com seu guia antes de visitar; obras de restauração podem afetar a entrada."
+    ],
+    "memorial": [
+      "Chorten Memorial",
+      "Um lugar de oração em Thimphu",
+      "Thimphu · Butão ocidental",
+      "Tradições budistas vivas",
+      "Uma visita cultural tranquila",
+      "Um chorten branco com uma torre dourada no coração de Thimphu. Observe as orações e voltas rituais diárias com seu guia.",
+      "Caminhe no sentido horário e peça permissão antes de fotografar os fiéis."
+    ],
+    "museum": [
+      "Museu Nacional",
+      "A torre histórica de Paro",
+      "Paro · Butão ocidental",
+      "Arte e patrimônio do Butão",
+      "Uma visita ao museu",
+      "Explore a arte e o patrimônio do Butão em Ta Dzong, a torre histórica acima de Rinpung Dzong em Paro.",
+      "Confira os horários e as regras de fotografia com seu guia."
+    ],
+    "taktsang": [
+      "Ninho do Tigre",
+      "Paro Taktsang",
+      "Paro · Butão Ocidental",
+      "Peregrinação no penhasco",
+      "Uma caminhada guiada de um dia",
+      "Um mosteiro agarrado às falésias acima de Paro. Suba lentamente, faça uma pausa sob as bandeiras de oração e deixe o vale se abrir abaixo de você.",
+      "Permita um dia dedicado à caminhada; a subida é íngreme em alguns lugares."
+    ],
+    "rinpung": [
+      "Rinpung Dzong",
+      "Mosteiro-fortaleza de Paro",
+      "Paro · Butão Ocidental",
+      "Pátios e arquitetura",
+      "Uma parada cultural",
+      "Muralhas brancas, galerias de madeira e uma comunidade monástica no vale do Paro. Uma introdução gratificante à arquitetura dzong do Butão.",
+      "Explore com um guia e verifique quais pátios estão abertos."
+    ],
+    "tashichho": [
+      "Tashichho Dzong",
+      "O património vivo da capital",
+      "Thimphu · Butão Ocidental",
+      "Herança monástica e cívica",
+      "Uma parada cultural",
+      "O mosteiro-fortaleza de Thimphu reúne as tradições monásticas e governamentais do Butão. Observe atentamente os detalhes esculpidos e os telhados em camadas.",
+      "Os horários de visita dependem do uso oficial e religioso."
+    ],
+    "crafts": [
+      "Artesanato em Thimphu",
+      "Fios de cultura viva",
+      "Thimphu · Butão Ocidental",
+      "Tecelagem e artes tradicionais",
+      "Hora de conhecer os criadores",
+      "Descubra os têxteis, a pintura e o artesanato que moldam a vida cotidiana do Butão. Este marco da cidade representa as experiências culturais de Thimphu, em vez de um único workshop.",
+      "Peça ao seu guia para incluir uma visita de tecelagem ou artesão."
+    ],
+    "dochula": [
+      "Passe Dochula",
+      "Chortens no cume",
+      "Thimphu–Punakha · Butão Ocidental",
+      "108 igrejas memoriais",
+      "Uma parada ou caminhada na passagem",
+      "Um aglomerado de 108 chortens marca a passagem entre Thimphu e Punakha. O tempo claro abre as vistas do Himalaia; caminhos na floresta oferecem uma maneira mais tranquila de relaxar.",
+      "As vistas da montanha dependem das nuvens e do clima."
+    ],
+    "punakha": [
+      "Punakha Dzong",
+      "Palácio da Grande Felicidade",
+      "Punakha · Butão Ocidental",
+      "Arquitetura sagrada da fortaleza",
+      "Uma parada cultural",
+      "Fundado em 1637, este marco combina enormes paredes de pedra com interiores ricamente decorados. Continua a ser um lugar importante da vida religiosa e cívica do Butão.",
+      "Reserve um tempo para a abordagem e os pátios."
+    ],
+    "chimi": [
+      "Chimi Lhakhang",
+      "Um templo acima dos campos",
+      "Lobesa, Punakha · Butão Ocidental",
+      "Caminhada pela vila e templo",
+      "Uma visita cultural tranquila",
+      "Um templo no topo de uma colina perto de Lobesa, no vale de Punakha. Combine a visita com um passeio pela povoação envolvente e pela paisagem agrícola.",
+      "Siga os conselhos do seu guia sobre os costumes locais."
+    ],
+    "gangtey": [
+      "Mosteiro Gangtey",
+      "Acima do vale dos grous",
+      "Gangtey · Butão Central",
+      "Herança Budista Nyingma",
+      "Uma parada cultural",
+      "O mosteiro de Gangtey ancora a vida espiritual do vale. Seus pátios e arquitetura tradicional são um companheiro natural para um passeio por Phobjikha.",
+      "Combine o mosteiro com a trilha natural próxima."
+    ],
+    "phobjikha": [
+      "Vale Phobjikha",
+      "Prados, trilhas e grous de inverno",
+      "Phobjikha · Butão Central",
+      "Pântanos e grous de pescoço preto",
+      "Caminhadas suaves pelo vale",
+      "Um amplo vale glaciar com quintas, pinhais e zonas húmidas. Os grous de pescoço preto passam o inverno aqui, enquanto a caminhada pela natureza de Gangtey oferece uma introdução suave à paisagem.",
+      "O inverno é a estação dos grous; observar a uma distância respeitosa."
+    ],
+    "trongsa": [
+      "Trongsa Dzong",
+      "Uma fortaleza acima do desfiladeiro",
+      "Trongsa · Butão Central",
+      "História e arquitetura real",
+      "Uma parada cultural",
+      "Um vasto mosteiro-fortaleza com vista para o desfiladeiro de Mangde Chhu. Seus pátios em camadas contam histórias da dinastia Wangchuck e das rotas pelo centro do Butão.",
+      "Reserve tempo na jornada para uma visita guiada ao patrimônio."
+    ],
+    "jakar": [
+      "Jakar Dzong",
+      "Com vista para o vale Bumthang",
+      "Bumthang · Butão Central",
+      "Herança da fortaleza de Bumthang",
+      "Uma parada cultural",
+      "Um dzong no topo de uma colina acima de Jakar, um ponto de partida memorável para explorar os templos, assentamentos rurais e paisagens sagradas de Bumthang.",
+      "Combine a visita com uma exploração mais lenta do vale."
+    ],
+    "kurjey": [
+      "Kurjey Lhakhang",
+      "Histórias sagradas de Bumthang",
+      "Bumthang · Butão Central",
+      "Herança do templo",
+      "Uma visita cultural tranquila",
+      "Um complexo de templos sagrados em Bumthang. Visite com um guia local que poderá explicar as tradições e histórias associadas a este importante local de culto.",
+      "Mantenha a voz baixa e siga as instruções de fotografia."
+    ],
+    "haa": [
+      "Lhakhang Karpo",
+      "Templo Branco de Haa",
+      "Haa · Butão Ocidental",
+      "Herança do templo do vale de Haa",
+      "Uma parada cultural",
+      "O Templo Branco é um marco do vale mais tranquilo de Haa. Abra espaço para a vida na aldeia local, bem como para a visita ao templo.",
+      "Um bom companheiro para uma viagem por Chele La."
+    ],
+    "chelela": [
+      "Chele La",
+      "Entre Paro e Haa",
+      "Paro–Haa · Butão Ocidental",
+      "Bandeiras de oração e vistas da montanha",
+      "Um passe alto ou caminhada guiada",
+      "Uma passagem de alta montanha que liga os vales Paro e Haa. Bandeiras de oração, ar fresco e caminhadas pela floresta dão a esta travessia um caráter próprio.",
+      "Escolha os passeios de acordo com o clima do dia e o seu conforto em altitude."
+    ],
+    "drukpath": [
+      "Planalto do Caminho Druk",
+      "Uma caminhada pela cordilheira e pelo lago",
+      "Paro–Thimphu · Butão Ocidental",
+      "Lagos alpinos e cordilheiras florestais",
+      "Uma caminhada de acampamento de vários dias",
+      "Uma caminhada nas terras altas conectando Paro e Thimphu através de florestas, cordilheiras e lagos alpinos. Este marcador representa a área de trekking, não um acampamento específico.",
+      "A primavera e o outono são comumente escolhidos; confirme as condições da trilha com seu guia."
+    ],
+    "jangothang": [
+      "Jangothang",
+      "Acampamento base de Jomolhari",
+      "Terras Altas de Soe · Butão Ocidental",
+      "Cenário montanhoso e camping",
+      "Uma jornada exigente de vários dias",
+      "Um acampamento base nas terras altas na jornada de trekking em Jomolhari. As paisagens montanhosas e a região dos iaques tornam esta experiência muito diferente dos passeios pelo vale.",
+      "Planeje a aclimatação e uma rota adequada à sua experiência de trekking."
+    ],
+    "trashigang": [
+      "Trashigang Dzong",
+      "Uma descoberta no leste do Butão",
+      "Trashigang · Leste do Butão",
+      "Herança da fortaleza oriental",
+      "Parte de um passeio oriental personalizado",
+      "Uma impressionante fortaleza acima de Trashigang, fundada em 1659. Explore um lado diferente do Butão abrindo espaço para as cidades e tradições do leste.",
+      "Peça-nos para criar uma viagem mais longa incluindo o leste do Butão."
+    ]
+  },
+  "gallery": [
+    [
+      "Pátio do mosteiro butanês",
+      "Janelas pintadas tradicionais e paredes caiadas emolduram um tranquilo pátio do mosteiro."
+    ],
+    [
+      "Paisagem do Himalaia do Butão",
+      "Os vales verdes do Butão desdobram-se sob as vastas cordilheiras do leste do Himalaia."
+    ],
+    [
+      "Herança cultural do Butão",
+      "Tradições centenárias continuam a fazer parte da vida cotidiana nas cidades e vilarejos do Butão."
+    ],
+    [
+      "Vale do Butão",
+      "Um vale tranquilo do Butão revela a estreita relação entre povoamento, floresta e montanha."
+    ],
+    [
+      "Panorama da montanha do Butão",
+      "Os picos em camadas do Himalaia elevam-se além das paisagens remotas e imaculadas do reino."
+    ],
+    [
+      "Templo butanês",
+      "Um templo sagrado é um local de oração, peregrinação e herança budista viva."
+    ],
+    [
+      "Dzong butanês",
+      "Os dzongs do Butão combinam arquitetura de fortaleza com centros ativos de vida espiritual e cívica."
+    ],
+    [
+      "Mosteiro Ninho do Tigre em um penhasco em Paro",
+      "Paro Taktsang, conhecido como Ninho do Tigre, está dramaticamente pendurado em um penhasco arborizado acima do Vale do Paro."
+    ],
+    [
+      "Grous de pescoço preto no Butão",
+      "Raros grous-de-pescoço-preto reúnem-se nos vales protegidos do Butão durante a sua migração de inverno."
+    ],
+    [
+      "Vale de Thimphu emoldurado por bandeiras de oração",
+      "Bandeiras de oração tremulam sobre Thimphu, a capital montanhosa e o coração cultural do Butão."
+    ],
+    [
+      "Monge butanês atravessando uma ponte com bandeira de oração",
+      "Um monge atravessa uma ponte suspensa ladeada por bandeiras de oração acima de um rio de correnteza rápida."
+    ],
+    [
+      "Dançarina da máscara do festival Tsechu no Butão",
+      "Uma vibrante dançarina mascarada executa uma dança sagrada Cham durante um dos festivais Tsechu do Butão."
+    ],
+    [
+      "Punakha Dzong no encontro de dois rios",
+      "Punakha Dzong ergue-se onde os rios Pho Chhu e Mo Chhu se encontram, o mais gracioso dos mosteiros-fortaleza do Butão."
+    ],
+    [
+      "Os 108 chortens do passo de Dochula",
+      "No passo de Dochula, 108 chortens memoriais coroam a crista na estrada de Timphu para Punakha, com os picos do Himalaia ao fundo."
+    ],
+    [
+      "Buda Dordenma sobre Timphu",
+      "O grande Buda Dordenma dourado repousa numa colina sobre Timphu, velando pelo vale da capital."
+    ],
+    [
+      "Kyichu Lhakhang em Paro",
+      "Kyichu Lhakhang, um dos templos mais antigos do Butão, ergue-se no vale de Paro desde o século VII."
+    ],
+    [
+      "Bandeiras de oração em Chele La",
+      "Bandeiras de oração tremulam ao vento em Chele La, o alto passo entre os vales de Paro e Haa."
+    ],
+    [
+      "O vale de Paro",
+      "Casas de fazenda, terraços de arroz e o rio Paro Chhu preenchem o amplo vale de Paro, a porta de entrada do reino."
+    ],
+    [
+      "A aldeia de Ura em Bumthang",
+      "As casas de pedra e as ruelas de calçada de Ura ficam no alto de um tranquilo vale de Bumthang, no centro do Butão."
+    ],
+    [
+      "Chorten Memorial em Timphu",
+      "No Chorten Memorial de Timphu, os moradores circundam a estupa branca em oração do amanhecer ao anoitecer."
+    ]
+  ],
+  "page": {
+    "aboutMore": ["O Butão não é um lugar para riscar de uma lista. É um reino que recebe você — e há mais de quinze anos garantimos que essa acolhida seja pessoal.","Guiado por quem vive aqui","Seus guias são butaneses credenciados que chamam estes vales de lar. Eles sabem quando os sinos do mosteiro tocam ao amanhecer, qual cozinha de fazenda recebe visitantes e quando é hora de simplesmente parar e ouvir.","Pensado para você","Sem datas fixas de partida e sem ônibus lotados. Roteiro, ritmo e hospedagem são desenhados em torno do que emociona você, da primeira fila de um festival a retiros silenciosos na floresta.","Viagens que retribuem","Somos de propriedade e equipe locais e neutros em carbono desde 2018: o que você gasta fica em mãos butanesas, e as montanhas continuam tão limpas quanto você as encontrou.","Comece sua jornada conosco"],
+    "aboutGnh": ["Por que a Felicidade Nacional Bruta","A bússola do reino, e a nossa","O Butão mede seu progresso pela Felicidade Nacional Bruta, e não apenas pelo crescimento econômico. Seus quatro pilares, abaixo, definem como o reino recebe os visitantes — alto valor, baixo volume — e orientam cada viagem que planejamos: respeitosa com a cultura, gentil com a terra e boa para as comunidades que você conhece."],
+    "aboutTeam": {"label":"Nossa equipe","title":"As pessoas por trás da <em>sua viagem</em>","lede":"Cada viagem da Druk Voyages é planejada, guiada e conduzida por butaneses que chamam estes vales de lar. Conheça alguns deles.","speaks":"Fala","roles":{"founder":"Fundador","owner":"Proprietário e diretor-geral","manager":"Gerente de operações","planner":"Planejador de viagens","guide":"Guia cultural","trekGuide":"Guia de trekking","driver":"Motorista"}},
+    "lang": "pt",
+    "meta": "Druk Voyages - Viagens ao Reino do Butão",
+    "description": "Agência local no Butão com roteiros selecionados, festivais, trekking e retiros de bem-estar.",
+    "tagline": "Butão autêntico, viagens extraordinárias",
+    "heroMottos": [
+      "Um pouco mais perto<br> do <em>encanto.</em>",
+      "Onde as montanhas<br> ganham <em>sentido.</em>",
+      "Raízes antigas.<br> Tradições <em>vivas.</em>",
+      "Siga um caminho<br> sem <em>pressa.</em>",
+      "Um reino que<br> fica <em>com você.</em>"
+    ],
+    "gnhPillars": [
+      "Desenvolvimento socioeconômico<br>sustentável e equitativo",
+      "Conservação do<br>meio ambiente",
+      "Preservação e promoção<br>da cultura",
+      "Boa<br>governança"
+    ],
+    "menu": [
+      "Sobre nós",
+      "Roteiros",
+      "Experiências",
+      "Galeria",
+      "Planejar viagem"
+    ],
+    "hero": [
+      "Butão, além do comum",
+      "Um pouco mais perto<br> do <em>encanto.</em>",
+      "Vales tranquilos. Tradições vivas. Pessoas extraordinárias. Descubra o Butão em viagens criadas por quem chama este lugar de lar.",
+      "Explorar viagens",
+      "Conhecer os guias locais",
+      "Rolar"
+    ],
+    "stats": [
+      "Anos no Butão",
+      "Viajantes recebidos",
+      "Roteiros selecionados",
+      "Satisfação"
+    ],
+    "marquee": [
+      "Mosteiro Ninho do Tigre",
+      "Festival Paro Tsechu",
+      "Dzong de Punakha",
+      "Grous-de-pescoço-preto",
+      "Passo Dochula",
+      "Vale de Bumthang",
+      "Rododendros floridos",
+      "Retiros de meditação"
+    ],
+    "about": [
+      "Felicidade Nacional<br>Bruta",
+      "Quem somos",
+      "Especialistas em viagens <em>confiáveis</em> no Butão",
+      "A Druk Voyages foi fundada por butaneses que acreditam que viagens genuínas transformam visitantes e comunidades locais. Somos uma agência operada dentro do Reino.",
+      "A taxa de desenvolvimento sustentável do Butão financia saúde e educação. Viajar conosco também ajuda a proteger esse patrimônio vivo.",
+      "Licenciada pelo Conselho de Turismo do Butão",
+      "Operação neutra em carbono desde 2018",
+      "100% local em propriedade e equipe",
+      "Experiências personalizadas em pequenos grupos"
+    ],
+    "journeys": [
+      "Viagens com senso de lugar",
+      "Seu próximo capítulo,<br><em>algum lugar extraordinário.</em>",
+      "Todas as viagens",
+      "Cultura",
+      "Festivais",
+      "Caminhada",
+      "Bem-estar"
+    ],
+    "gallery": [
+      "Um vislumbre do reino",
+      "Um lugar como <em>nenhum outro.</em>",
+      "Alguns dos momentos que esperam por você: pátios tranquilos, ar de montanha, tradições vivas e um cotidiano diferente."
+    ],
+    "experience": [
+      "Momentos únicos",
+      "Experiências que <em>ficam para sempre</em>",
+      [
+        "Peregrinação ao Ninho do Tigre",
+        "Subida guiada ao Paro Taktsang, localizado em um penhasco 900 metros acima do vale."
+      ],
+      [
+        "Arquitetura dos dzongs",
+        "Acesso privado ao dzong de Punakha ao entardecer, onde rituais antigos continuam vivos."
+      ],
+      [
+        "Imersão no festival Tsechu",
+        "Assista às danças sagradas Cham e compartilhe momentos autênticos com famílias locais."
+      ],
+      [
+        "Vida rural da fazenda à mesa",
+        "Passe o dia com agricultores de Phobjikha, cultivando arroz vermelho e aprendendo ema datshi."
+      ],
+      [
+        "Retiro de bem-estar no Himalaia",
+        "Retiro silencioso com medicina Sowa Rigpa, banho de pedras quentes e meditação."
+      ],
+      [
+        "Safári dos grous-de-pescoço-preto",
+        "Observe ao amanhecer os grous migratórios de Phobjikha com guias naturalistas."
+      ]
+    ],
+    "planning": [
+      "Planejamento",
+      "Melhor época para <em>visitar o Butão</em>",
+      "O Butão é mágico o ano todo, mas cada estação revela um reino diferente.",
+      [
+        "Primavera",
+        "Março - Maio",
+        "Rododendros floridos, céu limpo e festival Paro Tsechu."
+      ],
+      [
+        "Monções",
+        "Junho - Agosto",
+        "Vales verdes, menos visitantes e cachoeiras espetaculares."
+      ],
+      [
+        "Outono",
+        "Setembro - Novembro",
+        "Vista cristalina do Himalaia, vales dourados e festival de Thimphu."
+      ],
+      [
+        "Inverno",
+        "Dezembro - Fevereiro",
+        "Dzongs nevados, temporada dos grous e uma atmosfera serena."
+      ]
+    ],
+    "enquiry": [
+      "Comece a planejar",
+      "Conte seu<br><em>sonho de viagem</em>",
+      "Criaremos um roteiro personalizado conforme seus interesses, datas e tamanho do grupo, sem compromisso.",
+      "Seg-Sáb - 9h-18h horário do Butão",
+      "Nome *",
+      "Sobrenome *",
+      "E-mail *",
+      "Telefone",
+      "Interesse principal",
+      "Número de viajantes",
+      "Chegada prevista",
+      "Duração (dias)",
+      "Sua viagem dos sonhos *",
+      "Selecione o tipo de viagem...",
+      [
+        "Destaques clássicos",
+        "Viagem de festivais",
+        "Trekking no Himalaia",
+        "Retiro de bem-estar",
+        "Tour fotográfico",
+        "Lua de mel",
+        "Personalizado / Outro"
+      ],
+      "Conte seus interesses, estilo de viagem e necessidades especiais...",
+      "Enviar consulta"
+    ],
+    "testimonials": [
+      "Histórias de viajantes",
+      "Palavras dos nossos <em>viajantes</em>",
+      "A Druk Voyages cuidou de cada momento com atenção extraordinária. O nascer do sol no Ninho do Tigre foi a experiência mais espiritual da minha vida.",
+      "A imersão no festival superou tudo que imaginei. Nosso guia organizou um jantar privado com um monge.",
+      "O retiro de bem-estar renovou minha mente. Ainda penso no banho de pedras quentes sob as estrelas.",
+      "Nova York, EUA - Outono 2025",
+      "Londres, Reino Unido - Primavera 2025",
+      "Tóquio, Japão - Inverno 2025"
+    ],
+    "cta": [
+      "Comece sua viagem",
+      "Pronto para entrar no último <em>Shangri-La?</em>",
+      "Conte seu sonho e nossos especialistas butaneses criarão um roteiro exclusivo para você.",
+      "Planejar viagem",
+      "Ligar para o escritório de Thimphu"
+    ],
+    "footer": [
+      "Licenciada pelo Conselho de Turismo do Butão. Agência 100% butanesa comprometida com turismo sustentável.",
+      "Roteiros",
+      "Destinos",
+      "Contato",
+      [
+        "Destaques clássicos",
+        "Viagens de festivais",
+        "Trekking no Himalaia",
+        "Retiros de bem-estar",
+        "Tours fotográficos",
+        "Lua de mel"
+      ],
+      "Seg-Sáb 9h-18h",
+      "© 2026 Druk Voyages. Todos os direitos reservados. Licença #TCB-2009-142.",
+      "Privacidade",
+      "Termos",
+      "Mapa do site"
+    ],
+    "ui": {
+      "language": "Idioma",
+      "menu": "Menu",
+      "view": "Ver roteiro",
+      "from": "A partir de",
+      "perPerson": "por pessoa",
+      "close": "Fechar roteiro",
+      "dayByDay": "Roteiro dia a dia",
+      "pp": "p.p.",
+      "days": "dias",
+      "max": "Máx.",
+      "couple": "Somente casal",
+      "difficulties": {
+        "Easy": "Fácil",
+        "Moderate": "Moderado",
+        "Challenging": "Desafiador"
+      },
+      "required": "Preencha todos os campos obrigatórios.",
+      "sending": "Enviando...",
+      "success": "Obrigado. Nossa equipe entrará em contato em até 24 horas.",
+      "toast": "Consulta enviada!",
+      "fail": "Não foi possível enviar. Escreva para hello@drukvoyages.bt.",
+      "slide": "Slide"
+    },
+    "itineraries": [
+      [
+        "Clássico",
+        "Destaques do Butão - A rota real",
+        "Uma introdução perfeita ao Ninho do Tigre, Punakha e Thimphu."
+      ],
+      [
+        "Festival",
+        "Paro Tsechu - Danças sagradas",
+        "Danças Cham, grandes thangkas e rituais milenares."
+      ],
+      [
+        "Trekking",
+        "Druk Path Trek - O caminho real",
+        "Lagos de altitude, florestas e vistas do Himalaia."
+      ],
+      [
+        "Bem-estar",
+        "Renovação da alma no Butão",
+        "Medicina tradicional, meditação e banhos de pedras quentes."
+      ],
+      [
+        "Fotografia",
+        "Butão através da lente",
+        "Registre as melhores luzes com um fotógrafo local."
+      ],
+      [
+        "Lua de mel",
+        "Lua de mel real no Butão",
+        "Jantares privados, lodges de montanha e experiências exclusivas."
+      ],
+      [
+        "Cultura e artesanato",
+        "Bumthang — Vales de histórias sagradas",
+        "Um passeio tranquilo por mosteiros, aldeias de tecelões, pomares e vales de Bumthang."
+      ],
+      [
+        "Viagem sem pressa",
+        "Haa e Paro — Dias em vales escondidos",
+        "Uma descoberta serena do oeste do Butão, entre caminhos antigos, templos e vida rural."
+      ],
+      [
+        "Alta montanha",
+        "Trekking Jomolhari — Montanhas e pastagens de iaques",
+        "Trilha aos pés da sagrada Jomolhari, com acampamentos remotos e tempo para aclimatação."
+      ],
+      [
+        "Festival e artesanato",
+        "Thimphu Tsechu — Rituais na capital",
+        "O festival da capital se une a Paro, Punakha e às tradições artesanais."
+      ],
+      [
+        "Bem-estar",
+        "Floresta, fazenda e banho de pedras quentes",
+        "Caminhadas curtas, ar da montanha, comida local e noites tranquilas para renovar as energias."
+      ],
+      [
+        "Vida selvagem e cultura",
+        "Phobjikha — Grous, vales e vida de aldeia",
+        "Observação sazonal de grous, patrimônio de Punakha e locais sagrados de Paro."
+      ]
+    ],
+    "itineraryLabels": {
+      "route": "Roteiro",
+      "bestFor": "Melhor época",
+      "planner": "Dica do planejador local",
+      "duration": "dias",
+      "days": "dias"
+    },
+    "extraUi": {
+      "disclaimerTitle": "Aviso sobre a tradução",
+      "disclaimerText": "As traduções são orientativas. Para confirmar detalhes do roteiro ou informações importantes, consulte a versão em inglês ou fale conosco.",
+      "cancel": "Cancelar",
+      "agree": "Continuar",
+      "privacy": "Privacidade",
+      "terms": "Termos",
+      "compass": "Bússola da viagem",
+      "compassTitle": "Encontre seu ritmo no Butão",
+      "preferences": "Preferências da viagem",
+      "live": "Sugestão em tempo real",
+      "drawn": "O que desperta seu interesse?",
+      "culture": "Cultura viva",
+      "nature": "Paisagens naturais",
+      "trekking": "Trekking",
+      "wellness": "Bem-estar e tranquilidade",
+      "wildlife": "Vida selvagem",
+      "photography": "Fotografia",
+      "travelDays": "Dias de viagem",
+      "season": "Época provável",
+      "flexible": "Tenho flexibilidade",
+      "routeCustom": "Criar um roteiro personalizado",
+      "routeResults": "Roteiros sugeridos",
+      "routeView": "Ver roteiro",
+      "mapTitle": "Mapa do Butão",
+      "chatInput": "Pergunte qualquer coisa sobre o Butão…",
+      "chatSend": "Enviar",
+      "chatSettings": "Configurações",
+      "chatClear": "Limpar conversa",
+      "chatClose": "Fechar",
+      "mapZoom": "Zoom do mapa",
+      "mapPlaces": "Lugares",
+      "mapGuide": "Guia do local"
+    },
+    "finderUi": {
+      "suggested": "Roteiro sugerido",
+      "matches": "Combina com seus interesses",
+      "timing": "Cabe nos dias disponíveis",
+      "seasonMatch": "Ideal para essa estação",
+      "flexReason": "Uma opção flexível",
+      "custom": "Personalizado",
+      "tour": "Viagem",
+      "trek": "Trekking",
+      "days": "dias",
+      "results": "Seus três roteiros mais adequados"
+    },
+    "chatUi": {
+      "provider": "Provedor de IA",
+      "key": "Chave de API Groq",
+      "save": "Salvar e ativar IA",
+      "quick": [
+        "Melhores roteiros",
+        "Melhor época",
+        "Preços",
+        "Ninho do Tigre",
+        "Visto"
+      ],
+      "online": "Online · Guia de viagem com IA Druk Voyages",
+      "name": "Pema · Sua guia",
+      "powered": "Guia de viagem com IA Druk Voyages"
+    },
+    "errorPage": [
+      "Perdido no Himalaia?",
+      "A página que você procura não existe, mas o Butão está cheio de lugares especiais. Vamos ajudar você a voltar.",
+      "Voltar para Druk Voyages",
+      "ou",
+      "Planejar minha viagem"
+    ],
+    "mapUi": {
+      "categories": [
+        "Todos os lugares",
+        "Mosteiros",
+        "Dzongs",
+        "Cultura",
+        "Vales e passos",
+        "Trekking"
+      ],
+      "come": "O que conhecer",
+      "time": "Tempo recomendado",
+      "source": "Saiba mais ↗",
+      "journey": "Ver viagem relacionada ↗",
+      "custom": "Planejar viagem ao leste ↗",
+      "count": "lugares"
+    },
+    "heroDescriptions": [
+      "Vales tranquilos. Tradições vivas. Pessoas extraordinárias. Descubra o Butão em viagens criadas por quem chama este lugar de lar.",
+      "Siga trilhas na floresta até mosteiros nos penhascos e horizontes abertos do Himalaia. No Butão, a viagem convida você a parar, observar e respirar.",
+      "Entre nos pátios dos dzongs, descubra a arte dos festivais sagrados e conheça os artesãos que mantêm vivo o patrimônio do Butão.",
+      "Caminhe por vales tranquilos, compartilhe uma refeição numa casa rural e reserve tempo para o inesperado. Descubra o Butão no seu próprio ritmo.",
+      "Das bandeiras de oração nas montanhas à acolhida calorosa nas aldeias, encontre os momentos que transformam uma viagem ao Butão em uma lembrança duradoura."
+    ]
+  },
+  "places": {
+    "Paro": "Paro",
+    "Thimphu": "Thimphu",
+    "Punakha": "Punakha",
+    "Haa": "Haa",
+    "Gangtey": "Gangtey",
+    "Trongsa": "Trongsa",
+    "Jakar": "Jakar",
+    "Gasa": "Gasa",
+    "Lhuentse": "Lhuentse",
+    "Mongar": "Mongar",
+    "Trashigang": "Trashigang",
+    "Trashiyangtse": "Trashiyangtse",
+    "Phuentsholing": "Phuentsholing",
+    "Gelephu": "Gelephu",
+    "Samdrup Jongkhar": "Samdrup Jongkhar",
+    "Bumthang": "Bumthang",
+    "Phobjikha": "Phobjikha",
+    "Chele La": "Chele La",
+    "Jangchulakha": "Jangchulakha",
+    "Jimilangtsho": "Jimilangtsho",
+    "Phajoding": "Phajoding",
+    "Shana": "Shana",
+    "Jangothang": "Jangothang",
+    "Lingshi": "Lingshi",
+    "Bhutan": "Bhutan",
+    "Paro Valley": "Paro Valley",
+    "Haa Valley": "Haa Valley"
+  },
+  "shareStory": {
+    "pageTitle": "Partilhe o seu melhor momento — Druk Voyages",
+    "label": "Histórias de viajantes",
+    "title": "Partilhe o seu melhor <em>momento</em>",
+    "lede": "Uma foto e algumas palavras da sua viagem. A sua história aparecerá entre as histórias de viajantes do nosso site.",
+    "greeting": "Bem-vindos, {label}",
+    "checking": "A verificar o seu link…",
+    "invalid": "Este link não é válido. Volte a ler o código QR do seu cartão Druk Voyages ou pergunte ao seu guia.",
+    "expired": "Este link expirou ou já foi usado para todas as histórias. Peça-nos um novo.",
+    "offline": "Não conseguimos ligar ao nosso servidor. Verifique a sua ligação e tente novamente.",
+    "photo": "A sua foto",
+    "photoHint": "Toque para escolher uma foto",
+    "photoChange": "Escolher outra foto",
+    "photoError": "Não foi possível ler esta foto. Escolha outra.",
+    "photoSmall": "Escolha uma foto com pelo menos 400 píxeis de cada lado.",
+    "name": "O seu nome",
+    "from": "De onde é",
+    "fromPlaceholder": "ex.: Porto, Portugal",
+    "story": "O seu melhor momento",
+    "storyPlaceholder": "O que tornou este momento especial?",
+    "storyShort": "Escreva pelo menos 20 caracteres.",
+    "rating": "A sua avaliação",
+    "star": "{n} de 5 estrelas",
+    "consent": "Aceito que a Druk Voyages mostre no seu site a minha foto, o meu nome, a minha cidade e a minha história.",
+    "required": "Preencha este campo.",
+    "submit": "Partilhar o meu momento",
+    "sending": "A enviar…",
+    "error": "Não foi possível enviar a sua história. Tente novamente.",
+    "doneTitle": "Obrigado!",
+    "doneText": "O seu momento já faz parte das nossas histórias de viajantes.",
+    "donePending": "Vamos adicionar a sua história ao site em breve.",
+    "another": "Partilhar outro momento",
+    "viewSite": "Visitar o nosso site",
+    "language": "Idioma"
+  }
+}

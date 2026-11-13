@@ -1,0 +1,1397 @@
+{
+  "language": "en",
+  "ui": {
+    "map2d": "2D map",
+    "map3d": "3D satellite",
+    "mapOrbit": "↻ Orbit view",
+    "mapOrbitStop": "Ⅱ Stop orbit",
+    "map3dLoading": "Loading 3D terrain…",
+    "map3dUnavailable": "3D is unavailable on this device. Explore the 2D map.",
+    "map3dCaption": "Satellite landscape · 2.5× height scale",
+    "map3dDescription": "3D terrain map of Bhutan. Drag to rotate. Use arrow keys to rotate and tilt, plus and minus to zoom. Select a landmark for its guide.",
+    "map3dHint": "Drag to rotate · arrows to tilt · + / − to zoom",
+    "mapRotateLeft": "Rotate left",
+    "mapRotateRight": "Rotate right",
+    "mapTiltUp": "Tilt up",
+    "mapTiltDown": "Tilt down",
+    "mapGoogle": "Open in Google Maps ↗",
+    "mapCluster": "{count} nearby places: {names}. Select to zoom in.",
+    "mapPreviewPlay": "▶ Preview journey",
+    "mapPreviewPause": "Ⅱ Pause preview",
+    "mapMotionPause": "Pause animations",
+    "mapMotionResume": "Resume animations",
+    "mapPrevious": "Previous place",
+    "mapNext": "Next place",
+    "mapStop": "Stop {current} of {total}",
+    "storyPrevious": "Previous story",
+    "storyNext": "Next story",
+    "storyN": "Story {current} of {total}",
+    "backToTop": "Back to top",
+    "mapGuideTip": "Your guide’s tip",
+    "mapGmcKicker": "Special Administrative Region · Sarpang Dzongkhag",
+    "mapGmcLatest": "Latest from Gelephu Mindfulness City",
+    "mapGmcUpdate1": "Nov 2026 · Project 108: 108 chortens now line an 11.7 km stretch of the Mau Chhu riverside.",
+    "mapGmcUpdate2": "Nov 2026 · Aman signed an agreement with partners to support the city’s long-term development.",
+    "mapGmcUpdate3": "Oct 2026 · A new immigration terminal with automated gates opened in Gelephu.",
+    "mapGmcUpdate4": "Gelephu International Airport is under construction: its first phase is planned for about 1.3 million passengers a year and is expected around 2029.",
+    "mapGmcAsOf": "Updates as of November 2026. Plans and dates can change.",
+    "mapGmcMore": "Official site: gmc.bt ↗",
+    "mapPlanGuide": "Plan with a local guide ↗",
+    "mapAirport": "{name} Airport ({code})",
+    "mapPhotoIllustrative": "Illustrative photo",
+    "mapEntry": "Entry from India",
+    "mapFlightsPause": "Pause flights",
+    "mapFlightsPlay": "Play flights",
+    "mapDzongkhag": "Dzongkhag",
+    "mapDzongkhags": "Dzongkhags",
+    "mapDzongkhagCount": "{count} places to visit",
+    "mapEnlarge": "Enlarge map",
+    "mapEnlargeClose": "Close large map",
+    "mapZoomIn": "Zoom in",
+    "mapZoomOut": "Zoom out",
+    "mapLegendHighway": "Highway",
+    "mapLegendRoad": "Road",
+    "mapLegendTown": "Town",
+    "mapLegendVillage": "Village",
+    "skip": "Skip to content",
+    "language": "Language",
+    "discover": "Discover Bhutan",
+    "glimpse": "A glimpse of Bhutan",
+    "photos": "Background photographs",
+    "pause": "Pause slideshow",
+    "resume": "Resume slideshow",
+    "postcardAlt": "Tiger's Nest monastery among the mountains of Paro",
+    "postcardPlace": "PARO TAKTSANG · BHUTAN",
+    "heroLocation": "BHUTAN · 27.5° N, 90.4° E",
+    "valleyAlt": "Bhutan Valley Landscape",
+    "finderLink": "Not sure where to begin?",
+    "finderLinkAction": "Find your rhythm ↗",
+    "finderIntro": "Bhutan rewards travelling slowly. Use the compass to find a starting point, then let our local planners tune the pacing around your interests and dates.",
+    "finderHow": "How we plan a Bhutan journey",
+    "finderFact1": "Start with what you want to feel, not a checklist.",
+    "finderFact2": "Build in space for mountain roads, weather and chance encounters.",
+    "finderFact3": "Keep the route human-scale: fewer beds, deeper days.",
+    "finderView": "View route",
+    "customMessage": "I’m interested in a {days}-day Bhutan journey focused on {focus}. Please help me shape the right route.",
+    "ccSearch": "Search country or code",
+    "ccNone": "No matches",
+    "mapKey": "Map key",
+    "mapSources": "Sources & notes",
+    "planThisJourney": "Plan this journey",
+    "downloadBrochure": "Download brochure (PDF)",
+    "itineraryMessage": "I’d like to plan “{title}” ({days} days). Please help me adapt it to my dates and interests.",
+    "prefilled": "We’ve added your choices to the form.",
+    "planning": "Planning",
+    "customQuote": "Custom quote",
+    "customPriceDetail": "Dates, group size & route",
+    "routeLabel": "Route: {route}",
+    "route": "Route",
+    "continueLanguage": "Continue with {name}?",
+    "notice": "Translation Notice",
+    "noticeTitle": "Please Note",
+    "noticeText": "Translations are provided for convenience and may not be fully accurate. Please refer to the English version or contact us if you need clarification.",
+    "cancel": "Cancel",
+    "agree": "Agree",
+    "mapEyebrow": "The kingdom, from a different perspective",
+    "mapTitle": "A closer look at Bhutan.",
+    "mapIntro": "From cliffside monasteries to high Himalayan trails, these are the places that make Bhutan unforgettable. Tap a place to fly in, or preview the journey from west to east.",
+    "followJourney": "Follow a journey",
+    "mapAll": "All of Bhutan · explore freely",
+    "mapFilters": "Filter places by type",
+    "mapKicker": "BHUTAN / Terrain & travel atlas",
+    "mapSummary": "Sacred places, living culture & wild landscapes",
+    "mapChooseRegion": "Choose a map region",
+    "wholeKingdom": "Whole kingdom",
+    "west": "West",
+    "central": "Central",
+    "east": "East",
+    "mapSvgTitle": "Animated relief map of Bhutan with places to visit",
+    "mapSvgDesc": "Relief map with the national border, rivers, district lines and town names. Select a place pin to fly in and read its guide. The place list below is another way to explore.",
+    "mapZoom": "Map zoom",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "mapReset": "Show all of Bhutan",
+    "mapPan": "Pan the zoomed map",
+    "panWest": "Pan west",
+    "panNorth": "Pan north",
+    "panSouth": "Pan south",
+    "panEast": "Pan east",
+    "north": "N",
+    "dragonLand": "Land of the Thunder Dragon",
+    "roads": "Mapped roads",
+    "rivers": "Rivers",
+    "borders": "District borders",
+    "tourConnections": "Tour connections",
+    "trekCorridor": "Trek corridor",
+    "placePin": "Place pin",
+    "lowlands": "Lowland valleys",
+    "highlands": "High Himalaya",
+    "mapHint": "Zoom in · drag to explore",
+    "mapGuide": "Place guide",
+    "mapPlaces": "Places to discover",
+    "mapChoosePlace": "Choose a place",
+    "mapOpenPlace": "{name}, open place guide",
+    "mapMarker": "{name}, {category}, {region}",
+    "mapCount": "{count} places",
+    "mapCountOne": "{count} place",
+    "tour": "Tour",
+    "trek": "Trek",
+    "culturalTour": "Cultural tour",
+    "trekkingJourney": "Trekking journey",
+    "fullItinerary": "{days}-day full itinerary",
+    "viewItinerary": "View this itinerary ↗",
+    "mapAllHeading": "The whole kingdom, in perspective.",
+    "mapAllDescription": "Mountains rise from the southern foothills to the high Himalaya in the north. Choose a place to fly in, or preview the journey from west to east.",
+    "mapEmptyEyebrow": "A different kind of discovery",
+    "mapEmptyTitle": "No places in this filter",
+    "mapEmptyDescription": "Try another category, or choose “All of Bhutan” to explore more places.",
+    "mapFootnote": "Shaded relief from measured terrain. Borders and place positions are approximate; this map is for choosing places, not navigation.",
+    "geographyCredit": "Geography:",
+    "riversCredit": ". Rivers: ©",
+    "osmContributors": "OpenStreetMap contributors",
+    "terrainCredit": ", ODbL. Terrain: SRTM/GMTED2010 courtesy of USGS; ETOPO1 courtesy of NOAA, processed by",
+    "visualCredit": ". Visual reference:",
+    "guideNote": "A note from your local guide",
+    "culturalNote": "Dzongs are fortress-monasteries, and lhakhangs are temples. These are living sacred places: dress respectfully, remove your hat, and ask before photographing. Leave the trails and courtyards as beautiful as you found them.",
+    "thoughtfulVisit": "A thoughtful visit ↗",
+    "tibet": "TIBET · CHINA",
+    "india": "INDIA",
+    "galleryView": "View {name}",
+    "galleryClose": "Close picture description",
+    "countryCode": "Country code",
+    "code": "🌍 Code",
+    "bhutanAddress": "Norzin Lam, Thimphu, Bhutan",
+    "thimphuAddress": "Norzin Lam, Thimphu",
+    "chatFab": "Chat with Pema",
+    "chatDialog": "Pema, Your Guide",
+    "chatMessage": "Message",
+    "chatEnabled": "AI enabled",
+    "chatPoweredBy": "Powered by {provider} · {model} · Druk Voyages",
+    "ollamaModel": "Ollama model",
+    "groqHint": "Free at",
+    "groqStorage": "— stored in your browser only.",
+    "ollamaHint": "Ollama model requests are sent through the Druk Voyages backend, so no visitor API key is required here.",
+    "invalidKey": "Invalid key — Groq keys start with gsk_",
+    "invalidGroq": "Your Groq API key seems invalid. Click ⚙ to update it, or I’ll answer from the travel guide.",
+    "offlineOllama": "The AI service is temporarily unavailable. I’ll answer from the travel guide.",
+    "formEmail": "Please enter a valid email address.",
+    "formShort": "Please enter at least {count} characters.",
+    "formRequired": "Please fill in this required field.",
+    "slide": "Slide {count}",
+    "mobileOpen": "Open menu",
+    "mobileClose": "Close menu",
+    "modalClose": "Close itinerary",
+    "welcome": "Tashi Delek! 🙏 I’m Pema, your guide to Bhutan. Ask me about treks, dzongs, seasons, or planning your journey. How can I help?",
+    "chatGeneric": "Please contact **hello@drukvoyages.bt** or call **+975 17 000 000** for help planning your Bhutan journey.",
+    "chatIntro": "Tell me about your interests, travel dates and preferred pace, and I can help you explore our journeys.",
+    "chatPricing": "Published itinerary prices start at **$3,290** for the 8-day Classic journey. Some routes require a custom quote. Contact **hello@drukvoyages.bt** to confirm inclusions and pricing for your dates.",
+    "chatVisa": "For visa and entry arrangements for your nationality and travel dates, contact **hello@drukvoyages.bt**. Our local team can help you plan the next steps.",
+    "chatSeasons": "Spring (March–May) and autumn (September–November) are popular for cultural journeys and trekking. Winter offers quieter valleys and seasonal crane watching. Weather and mountain conditions vary; our team can help with your dates.",
+    "chatTreks": "Explore the **12-day Druk Path** journey or **13-day Jomolhari Base Camp** itinerary. Both include time in Bhutan beyond the trekking stages. Tell us about your experience and fitness so we can suggest a suitable pace.",
+    "chatNest": "Paro Taktsang, known as **Tiger’s Nest**, sits on cliffs above Paro. Set aside a dedicated hiking day and take the ascent slowly. Your guide will help you choose a pace suited to the weather and altitude.",
+    "chatFestivals": "Our festival journeys include Paro and Thimphu Tshechu celebrations. Festival dates and programmes change each year; we shape your route around the confirmed calendar.",
+    "chatContact": "Reach us at **hello@drukvoyages.bt** or **+975 17 000 000**, or use the enquiry form on this page.",
+    "quickItineraries": "Which itineraries would you recommend?",
+    "quickSeasons": "When is the best time to visit Bhutan?",
+    "quickPricing": "How much does a Bhutan trip cost?",
+    "quickNest": "Tell me about Tiger’s Nest.",
+    "quickVisa": "How can you help with visa arrangements?",
+    "translationError": "The language could not be loaded. Please try again.",
+    "formSending": "Sending…",
+    "formSuccess": "Thank you! Your enquiry has been sent. We’ll be in touch soon.",
+    "formFailure": "We couldn’t send your enquiry. Please try again or email hello@drukvoyages.bt.",
+    "flightDomesticNote": "From Paro to Bumthang, Gelephu and Yonphula. Choose an airport or play all three departures.",
+    "flightControls": "Domestic flights",
+    "flightFlyTo": "Fly to",
+    "flightIllustrated": "Illustrated flights · not live tracking",
+    "flightSource": "Flight information & schedules ↗",
+    "flightDomesticPlay": "▶ Play domestic flights",
+    "flightDomesticPause": "Ⅱ Pause domestic flights",
+    "flightDomesticAll": "All domestic airports",
+    "flightDomesticKicker": "Domestic flights from Paro"
+  },
+  "places": {},
+  "days": {
+    "1": [
+      [
+        "Paro Arrival & Valley Walk",
+        "Welcome ceremony, afternoon stroll through Paro's farmhouses and old market."
+      ],
+      [
+        "Tiger's Nest Hike",
+        "Full-day ascent to Paro Taktsang (3,120m). Packed lunch at the cliff café."
+      ],
+      [
+        "Thimphu Exploration",
+        "Tashichho Dzong, Buddha Dordenma, Folk Heritage Museum, traditional archery."
+      ],
+      [
+        "Dochula Pass & Drive to Punakha",
+        "108 memorial chortens in morning mist; breathtaking Himalayan panorama."
+      ],
+      [
+        "Punakha Dzong & Suspension Bridge",
+        "Most beautiful dzong at the confluence of two rivers, built in 1637."
+      ],
+      [
+        "Haa Valley Detour",
+        "Remote valley opened to tourists in 2002. Visit Lhakhang Karpo and Nagpo."
+      ],
+      [
+        "Paro Market & Farmhouse Dinner",
+        "Handicraft shopping, red rice wine, authentic ema datshi with a local family."
+      ],
+      [
+        "Farewell & Departure",
+        "Morning meditation walk, airport transfer with blessing scarves (khata)."
+      ]
+    ],
+    "2": [
+      [
+        "Arrival & Festival Briefing",
+        "Welcome dinner with our cultural expert. Festival etiquette orientation."
+      ],
+      [
+        "Pre-Festival Village Walks",
+        "Explore Paro town as locals prepare traditional costumes and offerings."
+      ],
+      [
+        "Tsechu Day 1 — Opening Ceremonies",
+        "Front-row viewing of opening mask dances, hosted by the Royal Court."
+      ],
+      [
+        "Tsechu Day 2 — Cham Dances",
+        "Black Hat Drubchen and deer dance. Backstage access to meet performers."
+      ],
+      [
+        "Tsechu Day 3 — Thongdrel Unveiling",
+        "Pre-dawn gathering for the sacred unfurling of the giant appliqué thangka."
+      ],
+      [
+        "Punakha Post-Festival",
+        "Drive through Dochula Pass — 108 chortens in lingering festival spirit."
+      ],
+      [
+        "Punakha Dzong & Chimi Lhakhang",
+        "Fertility temple of the Divine Madman Drukpa Kunley."
+      ],
+      [
+        "Bumthang Journey",
+        "Drive east to Bhutan's spiritual heartland. Jakar Dzong and Jambay Lhakhang."
+      ],
+      [
+        "Bumthang Valley Hikes",
+        "Kurjey Lhakhang, apple orchards, traditional black-weaving workshops."
+      ],
+      [
+        "Return to Paro & Departure",
+        "Mountain flight, blessing ceremony, farewell gifts."
+      ]
+    ],
+    "3": [
+      [
+        "Paro Arrival & Acclimatisation",
+        "Gentle valley walk, early bedtime to prepare for altitude."
+      ],
+      [
+        "Tiger's Nest Warm-Up Hike",
+        "Altitude acclimatisation and spiritual preparation for the trek."
+      ],
+      [
+        "Trek Day 1 — Paro to Jangchhulakha (4,100m)",
+        "First ascent through pine forests. Camp with views of Jomolhari."
+      ],
+      [
+        "Trek Day 2 — to Jimilangtso Lake",
+        "Highland plateau, first high-altitude lake, wild yak sightings."
+      ],
+      [
+        "Trek Day 3 — to Simkotha Lake",
+        "Three sacred lakes used by monks for ritual meditation."
+      ],
+      [
+        "Trek Day 4 — to Phajoding Monastery",
+        "Ancient hermitage clinging to the hillside above Thimphu."
+      ],
+      [
+        "Rest Day at Phajoding",
+        "Meditation session with resident monks."
+      ],
+      [
+        "Descent to Thimphu",
+        "Final forest descent into the world's only capital without traffic lights."
+      ],
+      [
+        "Thimphu Culture Day",
+        "Buddha Dordenma, medicine institute, contemporary art gallery."
+      ],
+      [
+        "Punakha River Rewards",
+        "River picnic at the dzong after trail days."
+      ],
+      [
+        "Recovery & Spa Day",
+        "Traditional hot stone bath, Sowa Rigpa treatments."
+      ],
+      [
+        "Paro Departure",
+        "Mountain flight (weather permitting), farewell ceremony."
+      ]
+    ],
+    "4": [
+      [
+        "Paro Arrival — Digital Detox Begins",
+        "Phones stored. Receive traditional gho/kira. Evening breathing exercises."
+      ],
+      [
+        "Sowa Rigpa Consultation",
+        "Traditional Bhutanese medicine assessment and personalised herbal plan."
+      ],
+      [
+        "Tiger's Nest Mindful Pilgrimage",
+        "Slow, contemplative ascent. Sit in silence. No schedule, no rush."
+      ],
+      [
+        "Punakha — Riverside Meditation",
+        "Dawn yoga at Mo Chhu river, Tibetan singing bowl therapy."
+      ],
+      [
+        "Bumthang Silent Retreat Day 1",
+        "Farmhouse retreat. First of two silent days."
+      ],
+      [
+        "Bumthang Silent Retreat Day 2",
+        "Forest bathing, nature walks in silence, journalling."
+      ],
+      [
+        "Dotsho — Hot Stone Bath Ceremony",
+        "Traditional bath heated with fire-blessed river stones. Deeply healing."
+      ],
+      [
+        "Paro Valley Reintegration",
+        "Share your experience with our guide. Final thangka painting class."
+      ],
+      [
+        "Departure with Intention",
+        "Personalised wellness prescription and Bhutanese herbal remedies."
+      ]
+    ],
+    "5": [
+      [
+        "Arrival & Gear Check",
+        "Meet your photography guide. Scout Paro's iconic ring road bridge."
+      ],
+      [
+        "Pre-Dawn Tiger's Nest",
+        "4am departure — mist rising over the monastery in first light."
+      ],
+      [
+        "Paro Valley Farm Life",
+        "Farmers, children, monks in morning documentary light."
+      ],
+      [
+        "Thimphu Architecture",
+        "Dzongs, chortens, the giant bronze Buddha."
+      ],
+      [
+        "Dochula Pass Sunrise",
+        "108 chortens emerging from cloud at 3,100m."
+      ],
+      [
+        "Punakha River Portraits",
+        "Fishermen, monks, dzong at dusk reflections."
+      ],
+      [
+        "Haa Valley Hidden Gems",
+        "Yak herders, ancient temples, unchanged village life."
+      ],
+      [
+        "Phobjikha Wetlands",
+        "Black-necked cranes at dawn, golden hour panoramas."
+      ],
+      [
+        "Trongsa Dzong",
+        "Royal Family's ancestral hilltop fortress."
+      ],
+      [
+        "Bumthang Sacred Sites",
+        "Eight centuries of sacred art photographed."
+      ],
+      [
+        "Village Homestay Day 1",
+        "Embedded with a local family — intimate photographic essay."
+      ],
+      [
+        "Village Homestay Day 2",
+        "Community rituals, cooking, livestock."
+      ],
+      [
+        "Post-Processing Workshop",
+        "Lightroom session editing your best shots."
+      ],
+      [
+        "Final Exhibition & Departure",
+        "Print your top 5 shots for the farewell viewing."
+      ]
+    ],
+    "6": [
+      [
+        "Royal Welcome",
+        "Flower petals, private butler, champagne on your mountain balcony."
+      ],
+      [
+        "Sunrise Balloon Over Paro",
+        "Private hot air balloon flight at dawn over the Paro Valley."
+      ],
+      [
+        "Tiger's Nest Love Pilgrimage",
+        "Guided ascent with a monk who blesses your union."
+      ],
+      [
+        "Private Punakha Dzong Sunset",
+        "After-hours candlelit dinner in the dzong courtyard."
+      ],
+      [
+        "Spa Day at Amankora",
+        "Couples' Sowa Rigpa treatments, hot stone bath, herbal massage."
+      ],
+      [
+        "Phobjikha Romantic Picnic",
+        "Champagne and locally sourced mountain fare."
+      ],
+      [
+        "Haa Valley Escape",
+        "Remote and rarely visited — your private Himalayan love story."
+      ],
+      [
+        "Bumthang Heritage Night",
+        "Private dinner with butter lamp ceremony and folk music."
+      ],
+      [
+        "Thimphu Art & Culture",
+        "Commission a personalised thangka as a wedding keepsake."
+      ],
+      [
+        "Farewell Luxury Evening",
+        "Rooftop dining under Himalayan stars, blessing ceremony."
+      ],
+      [
+        "Departure with Memories",
+        "Personalised journey book and Bhutanese gifts at the airport."
+      ]
+    ],
+    "7": [
+      [
+        "Arrive in Paro",
+        "Settle into the valley and meet your local guide for a practical briefing on altitude, roads and cultural etiquette."
+      ],
+      [
+        "Paro’s Sacred Sites",
+        "Visit Kyichu Lhakhang and explore Paro’s traditional streets before an easy acclimatisation walk."
+      ],
+      [
+        "Dochula to Punakha",
+        "Cross Dochula Pass, with its 108 chortens, and descend toward the warmer Punakha Valley."
+      ],
+      [
+        "Punakha and Chimi Lhakhang",
+        "See Punakha Dzong at the Pho Chhu and Mo Chhu rivers, then walk through rice fields to Chimi Lhakhang."
+      ],
+      [
+        "Over the Pele La to Trongsa",
+        "Travel east through changing forest and mountain scenery; visit the commanding Trongsa Dzong if timing allows."
+      ],
+      [
+        "Into Bumthang",
+        "Cross Yotong La and arrive in Bumthang, Bhutan’s cultural heartland, with time for a gentle village walk."
+      ],
+      [
+        "Jakar, Jambay and Kurjey",
+        "Explore Jakar Dzong, Jambay Lhakhang and Kurjey Lhakhang with context from your Bhutanese guide."
+      ],
+      [
+        "Tang Valley Stories",
+        "Spend the day in the quieter Tang Valley, visiting farms, heritage sites and small craft workshops where available."
+      ],
+      [
+        "Ura Village and Mountain Roads",
+        "Follow the high valley road to Ura, known for its distinctive stone houses and open pastoral landscape."
+      ],
+      [
+        "Return Transfer or Departure",
+        "Continue by road or domestic connection according to the final transport plan, with timings kept deliberately flexible."
+      ]
+    ],
+    "8": [
+      [
+        "Paro Arrival and Valley Orientation",
+        "Ease into Bhutan with a short walk through the valley and a guide-led introduction to local customs."
+      ],
+      [
+        "Paro Heritage Walk",
+        "Visit Kyichu Lhakhang, the National Museum area and Paro town’s traditional shopfronts."
+      ],
+      [
+        "Chele La to Haa",
+        "Drive over Chele La, one of Bhutan’s highest road passes, to the compact and peaceful Haa Valley."
+      ],
+      [
+        "Haa Valley Temples and Village Life",
+        "Visit Lhakhang Karpo and Lhakhang Nagpo, then spend time with a local host where arrangements are possible."
+      ],
+      [
+        "Return to Paro",
+        "Travel back through mountain forest and enjoy a relaxed farmhouse meal or cooking session in the Paro Valley."
+      ],
+      [
+        "Taktsang Viewpoint or Departure",
+        "Choose a gentle viewpoint walk or a morning at leisure before airport transfer."
+      ]
+    ],
+    "9": [
+      [
+        "Arrive in Paro",
+        "Meet the trekking team and rest after arrival; hydration and a slow first day set the tone."
+      ],
+      [
+        "Paro Acclimatisation Walk",
+        "A guided walk, gear check and discussion of the trek’s elevation profile and leave-no-trace approach."
+      ],
+      [
+        "Drive to Shana and Begin",
+        "Travel up the Paro Valley and start walking through blue pine forest beside the river."
+      ],
+      [
+        "Trail to Thangthangka",
+        "Follow the valley gradually upward; camp routines and pacing are introduced by the support team."
+      ],
+      [
+        "Arrive at Jangothang",
+        "Reach the high camp beneath Jomolhari after a steady ascent through yak pasture and alpine terrain."
+      ],
+      [
+        "Acclimatisation Day",
+        "Take an optional short hike or rest day at Jangothang, allowing the group to adapt before higher passes."
+      ],
+      [
+        "Cross toward Lingshi",
+        "Trek over a high pass when conditions allow, then descend into a broad valley of stone houses and pasture."
+      ],
+      [
+        "Lingshi to Shodu",
+        "Continue through remote mountain country with a route selected for the group’s condition and the weather."
+      ],
+      [
+        "Shodu to Barshong",
+        "Walk through forested sections and camp near the remnants of an old dzong site."
+      ],
+      [
+        "Forest Descent",
+        "Descend gradually through rhododendron and conifer forest toward the roadhead."
+      ],
+      [
+        "Return to Thimphu",
+        "Rejoin the road, travel to Thimphu and enjoy a restorative hot-stone bath if desired."
+      ],
+      [
+        "Thimphu Culture Day",
+        "A relaxed capital day with time for handicrafts, the Buddha Dordenma area or quiet café stops."
+      ],
+      [
+        "Paro Departure",
+        "Transfer to Paro for departure, with an extra buffer night added when flight schedules or weather call for it."
+      ]
+    ],
+    "10": [
+      [
+        "Arrive in Paro",
+        "Settle in, meet your guide and review festival etiquette, photography boundaries and the final event programme."
+      ],
+      [
+        "Paro to Thimphu",
+        "Travel to the capital with stops at traditional bridges, chortens and a local lunch en route."
+      ],
+      [
+        "Thimphu Craft Traditions",
+        "Visit craft studios and, where open, the National Institute for Zorig Chusum to understand Bhutan’s thirteen traditional arts."
+      ],
+      [
+        "Tsechu Day One",
+        "Attend the day’s public ceremonies and masked dances, with context from your guide on the stories and symbols being performed."
+      ],
+      [
+        "Tsechu Day Two",
+        "Return for a different programme of dances and time to explore the market atmosphere around the event."
+      ],
+      [
+        "Dochula and Punakha",
+        "Leave the capital for the 108 chortens at Dochula and continue into the river valleys of Punakha."
+      ],
+      [
+        "Punakha Dzong and Paro",
+        "Visit the dzong from its riverside approach before returning to Paro for a final evening."
+      ],
+      [
+        "Departure",
+        "Airport transfer or an optional extra day in Paro, depending on the confirmed festival and flight schedule."
+      ]
+    ],
+    "11": [
+      [
+        "Arrive and Unpack Slowly",
+        "Settle into Paro with a calm first evening and a simple orientation to the week ahead."
+      ],
+      [
+        "Paro Valley Mindful Walk",
+        "Choose a gentle riverside or hillside walk, with time to visit a temple or simply pause over tea."
+      ],
+      [
+        "Punakha River Valley",
+        "Travel over Dochula and settle near Punakha; the afternoon is intentionally left open for rest."
+      ],
+      [
+        "Farmhouse Cooking and Fields",
+        "Learn the basics of a Bhutanese meal with a local host and walk through nearby fields at an unhurried pace."
+      ],
+      [
+        "Gangtey and Phobjikha",
+        "Follow the road to the broad glacial valley of Phobjikha, a place known for quiet trails and open views."
+      ],
+      [
+        "Gangtey Nature Trail",
+        "Walk a suitable section of the Gangtey Nature Trail, then take time for reading, journalling or a local hot-stone bath."
+      ],
+      [
+        "Return to Paro",
+        "Travel back through the mountains, stopping only when the group feels like it — the point is to leave white space."
+      ],
+      [
+        "Departure with a Lighter Pace",
+        "A final breakfast and airport transfer, or extend with extra nights if a slower return feels right."
+      ]
+    ],
+    "12": [
+      [
+        "Arrive in Paro",
+        "Meet your guide and prepare for a gentle first day in the valley."
+      ],
+      [
+        "Paro to Punakha",
+        "Cross Dochula and visit Punakha Dzong, set where the Pho Chhu and Mo Chhu meet."
+      ],
+      [
+        "Into Phobjikha Valley",
+        "Drive to the broad glacial valley and visit the crane information centre when it is open."
+      ],
+      [
+        "Cranes and Gangtey Walks",
+        "Observe black-necked cranes from designated areas during their season, then walk a gentle section of the Gangtey Nature Trail."
+      ],
+      [
+        "Village and Monastery Day",
+        "Explore Gangtey village and monastery surroundings, with a locally paced visit to farms or craft makers where possible."
+      ],
+      [
+        "Return to Paro",
+        "Travel west through the mountains, pausing for landscapes, tea and road-side chortens."
+      ],
+      [
+        "Taktsang Viewpoint or Departure",
+        "Choose a Tiger’s Nest viewpoint walk, a full hike if suitable, or head directly to the airport."
+      ]
+    ]
+  },
+  "signals": {
+    "1": [
+      "Mar–May · Sep–Nov",
+      "A balanced first visit with several mountain-road transfers. Tiger’s Nest involves a sustained uphill walk; the route is adjusted for weather and acclimatisation."
+    ],
+    "2": [
+      "Festival dates vary annually",
+      "Festival programmes and viewing arrangements are confirmed after the official calendar is released. Expect early starts, crowds and long, joyfully ceremonial days."
+    ],
+    "3": [
+      "Apr–May · Oct–Nov",
+      "This high-altitude trek needs a conservative acclimatisation plan, suitable footwear and flexibility for mountain weather. Daily walking distances are adapted to the group."
+    ],
+    "4": [
+      "Mar–May · Sep–Nov",
+      "Designed for a quiet pace. Meditation, traditional wellness treatments and hot-stone baths are arranged around local availability rather than a rigid daily timetable."
+    ],
+    "5": [
+      "Oct–Nov for clear light",
+      "A small group format leaves room for changing light and local events. Respectful photography guidance is included for monasteries, people and festival settings."
+    ],
+    "6": [
+      "Mar–May · Sep–Nov",
+      "A private, slower-paced route with room for lodge downtime and optional gentle walks. Experiences are shaped around confirmed access and the couple’s interests."
+    ],
+    "7": [
+      "Mar–May · Sep–Nov",
+      "Central Bhutan is reached by scenic but long mountain roads. This itinerary keeps spare time in the plan so the journey feels like part of the experience."
+    ],
+    "8": [
+      "Mar–May · Sep–Nov",
+      "An easy western Bhutan route with short walking options. Chele La’s high elevation can be cold even when the valley below is warm."
+    ],
+    "9": [
+      "Apr–May · Oct–Nov",
+      "A demanding high-altitude trek requiring permits, fit trekkers and a flexible weather window. The support crew handles camping logistics and a safe, deliberate pace."
+    ],
+    "10": [
+      "Timed to official Tsechu dates",
+      "Tsechu dates and programmes change by year. Expect public settings, early starts and respectful dress; all attendance is based on the confirmed festival calendar."
+    ],
+    "11": [
+      "Mar–May · Sep–Nov",
+      "A low-intensity route for guests who prefer short walks and unstructured evenings. Local treatments and farmhouse visits are subject to availability."
+    ],
+    "12": [
+      "Late autumn to late winter",
+      "Black-necked cranes are observed seasonally and from respectful distances. Exact timing varies by year, so the route is confirmed around the migration period."
+    ]
+  },
+  "highlights": {
+    "Tiger's Nest": "Tiger's Nest",
+    "Punakha Dzong": "Punakha Dzong",
+    "Dochula Pass": "Dochula Pass",
+    "National Museum": "National Museum",
+    "Cham Mask Dances": "Cham Mask Dances",
+    "Thongdrel Unveiling": "Thongdrel Unveiling",
+    "Backstage Access": "Backstage Access",
+    "Cultural Workshops": "Cultural Workshops",
+    "High-Altitude Lakes": "High-Altitude Lakes",
+    "Himalayan Views": "Himalayan Views",
+    "Yak Herding": "Yak Herding",
+    "Forest Camping": "Forest Camping",
+    "Sowa Rigpa": "Sowa Rigpa",
+    "Silent Meditation": "Silent Meditation",
+    "Hot Stone Baths": "Hot Stone Baths",
+    "Monastic Stays": "Monastic Stays",
+    "Golden Hour Shoots": "Golden Hour Shoots",
+    "Festival Access": "Festival Access",
+    "Remote Villages": "Remote Villages",
+    "Landscape Photography": "Landscape Photography",
+    "Private Dzong Dinner": "Private Dzong Dinner",
+    "Luxury Lodges": "Luxury Lodges",
+    "Couples' Spa": "Couples' Spa",
+    "Sunrise Balloon": "Sunrise Balloon",
+    "Jakar Dzong": "Jakar Dzong",
+    "Jambay Lhakhang": "Jambay Lhakhang",
+    "Tang Valley": "Tang Valley",
+    "Traditional Crafts": "Traditional Crafts",
+    "Chele La Pass": "Chele La Pass",
+    "Haa Valley": "Haa Valley",
+    "Lhakhang Karpo": "Lhakhang Karpo",
+    "Paro Farmhouse": "Paro Farmhouse",
+    "Jangothang Camp": "Jangothang Camp",
+    "Yak Pastures": "Yak Pastures",
+    "High Passes": "High Passes",
+    "Paro Valley": "Paro Valley",
+    "Tsechu Ceremonies": "Tsechu Ceremonies",
+    "Zorig Chusum Crafts": "Zorig Chusum Crafts",
+    "Paro Heritage": "Paro Heritage",
+    "Forest Walks": "Forest Walks",
+    "Dotsho Bath": "Dotsho Bath",
+    "Gangtey Valley": "Gangtey Valley",
+    "Farmhouse Cooking": "Farmhouse Cooking",
+    "Black-Necked Cranes": "Black-Necked Cranes",
+    "Gangtey Nature Trail": "Gangtey Nature Trail",
+    "Punakha Rivers": "Punakha Rivers",
+    "Paro Taktsang": "Paro Taktsang"
+  },
+  "sites": {
+    "gmc": [
+      "Gelephu Mindfulness City",
+      "Bhutan’s Special Administrative Region",
+      "Gelephu · Southern Bhutan",
+      "A new city in the making",
+      "A stop on a southern journey",
+      "Announced by His Majesty the King in December 2023, Gelephu Mindfulness City is a Special Administrative Region of about 2,500 km² on the border with Assam. It is planned around mindfulness, green energy and well-being, with neighbourhoods linked by forest and river corridors.",
+      "Gelephu is a road entry from India and has a domestic airport; pair a visit with the Gelephu hot springs or Royal Manas National Park."
+    ],
+    "buddha": [
+      "Buddha Dordenma",
+      "Above the Thimphu valley",
+      "Thimphu · Western Bhutan",
+      "Buddhist art & valley views",
+      "A guided cultural stop",
+      "A monumental Buddha overlooking Thimphu from Kuenselphodrang. Explore the surrounding viewpoint and discover its Buddhist symbolism with a local guide.",
+      "Ask your guide about current access before visiting; restoration work may affect entry."
+    ],
+    "memorial": [
+      "Memorial Chorten",
+      "Thimphu’s place of prayer",
+      "Thimphu · Western Bhutan",
+      "Living Buddhist traditions",
+      "A quiet cultural visit",
+      "A white chorten with a golden spire in the heart of Thimphu. Observe daily prayer and circumambulation with your guide.",
+      "Walk clockwise and ask before photographing worshippers."
+    ],
+    "museum": [
+      "National Museum",
+      "Paro’s historic watchtower",
+      "Paro · Western Bhutan",
+      "Bhutanese art & heritage",
+      "A museum visit",
+      "Explore Bhutanese art and cultural heritage at Ta Dzong, the historic watchtower above Rinpung Dzong in Paro.",
+      "Check opening times and photography rules with your guide."
+    ],
+    "taktsang": [
+      "Tiger’s Nest",
+      "Paro Taktsang",
+      "Paro · Western Bhutan",
+      "Cliffside pilgrimage",
+      "A guided day hike",
+      "A monastery clinging to the cliffs above Paro. Take the ascent slowly, pause beneath the prayer flags, and let the valley open up below you.",
+      "Allow a dedicated hiking day; the climb is steep in places."
+    ],
+    "rinpung": [
+      "Rinpung Dzong",
+      "Paro’s fortress-monastery",
+      "Paro · Western Bhutan",
+      "Courtyards & architecture",
+      "A cultural stop",
+      "White fortress walls, timber galleries and a monastic community in the Paro valley. A rewarding introduction to Bhutan’s dzong architecture.",
+      "Explore with a guide and check which courtyards are open."
+    ],
+    "tashichho": [
+      "Tashichho Dzong",
+      "The capital’s living heritage",
+      "Thimphu · Western Bhutan",
+      "Monastic & civic heritage",
+      "A cultural stop",
+      "Thimphu’s fortress-monastery brings Bhutan’s monastic and government traditions together. Look closely at the carved details and layered roofs.",
+      "Visit times depend on official and religious use."
+    ],
+    "crafts": [
+      "Thimphu crafts",
+      "Threads of living culture",
+      "Thimphu · Western Bhutan",
+      "Weaving & traditional arts",
+      "Time to meet the makers",
+      "Discover the textiles, painting and craftsmanship that shape Bhutanese daily life. This city marker represents Thimphu’s cultural experiences, rather than a single workshop.",
+      "Ask your guide to include a weaving or artisan visit."
+    ],
+    "dochula": [
+      "Dochula Pass",
+      "Chortens on the ridge",
+      "Thimphu–Punakha · Western Bhutan",
+      "108 memorial chortens",
+      "A pass-side stop or hike",
+      "A cluster of 108 chortens marks the pass between Thimphu and Punakha. Clear weather opens Himalayan views; forest paths offer a quieter way to linger.",
+      "Mountain views depend on cloud and weather."
+    ],
+    "punakha": [
+      "Punakha Dzong",
+      "Palace of Great Happiness",
+      "Punakha · Western Bhutan",
+      "Sacred fortress architecture",
+      "A cultural stop",
+      "Founded in 1637, this landmark combines massive stone walls with richly decorated interiors. It remains an important place of Bhutanese religious and civic life.",
+      "Give yourself time for the approach and the courtyards."
+    ],
+    "chimi": [
+      "Chimi Lhakhang",
+      "A temple above the fields",
+      "Lobesa, Punakha · Western Bhutan",
+      "Village walk & temple",
+      "An easy-paced cultural visit",
+      "A hilltop temple near Lobesa in the Punakha valley. Combine the visit with a walk through the surrounding settlement and agricultural landscape.",
+      "Follow your guide’s advice on local customs."
+    ],
+    "gangtey": [
+      "Gangtey Monastery",
+      "Above the valley of cranes",
+      "Gangtey · Central Bhutan",
+      "Nyingma Buddhist heritage",
+      "A cultural stop",
+      "Gangtey’s monastery anchors the spiritual life of the valley. Its courtyards and traditional architecture make a natural companion to a walk through Phobjikha.",
+      "Pair the monastery with the nearby nature trail."
+    ],
+    "phobjikha": [
+      "Phobjikha Valley",
+      "Meadows, trails & winter cranes",
+      "Phobjikha · Central Bhutan",
+      "Wetlands & black-necked cranes",
+      "Gentle valley walks",
+      "A broad glacial valley with farms, pine forests and wetlands. Black-necked cranes winter here, while the Gangtey nature walk offers a gentle introduction to the landscape.",
+      "Winter is the crane season; observe from a respectful distance."
+    ],
+    "trongsa": [
+      "Trongsa Dzong",
+      "A fortress above the gorge",
+      "Trongsa · Central Bhutan",
+      "Royal history & architecture",
+      "A cultural stop",
+      "A vast fortress-monastery overlooking the Mangde Chhu gorge. Its layered courtyards tell stories of the Wangchuck dynasty and the routes across central Bhutan.",
+      "Build time into the journey for a guided heritage visit."
+    ],
+    "jakar": [
+      "Jakar Dzong",
+      "Overlooking the Bumthang valley",
+      "Bumthang · Central Bhutan",
+      "Bumthang’s fortress heritage",
+      "A cultural stop",
+      "A hilltop dzong above Jakar, a memorable starting point for exploring Bumthang’s temples, rural settlements and sacred landscapes.",
+      "Combine the visit with a slower exploration of the valley."
+    ],
+    "kurjey": [
+      "Kurjey Lhakhang",
+      "Sacred stories of Bumthang",
+      "Bumthang · Central Bhutan",
+      "Temple heritage",
+      "A quiet cultural visit",
+      "A sacred temple complex in Bumthang. Visit with a local guide who can explain the traditions and stories associated with this important place of worship.",
+      "Keep voices low and follow photography instructions."
+    ],
+    "haa": [
+      "Lhakhang Karpo",
+      "Haa’s White Temple",
+      "Haa · Western Bhutan",
+      "Haa valley temple heritage",
+      "A cultural stop",
+      "The White Temple is a landmark of Haa’s quieter valley. Make space for local village life as well as the temple visit.",
+      "A good companion to a journey over Chele La."
+    ],
+    "chelela": [
+      "Chele La",
+      "Between Paro and Haa",
+      "Paro–Haa · Western Bhutan",
+      "Prayer flags & mountain views",
+      "A high pass or guided hike",
+      "A high mountain pass linking the Paro and Haa valleys. Prayer flags, cool air and forest walks give this crossing a character of its own.",
+      "Choose walks according to the day’s weather and your comfort at altitude."
+    ],
+    "drukpath": [
+      "Druk Path highlands",
+      "A ridge-and-lake trek",
+      "Paro–Thimphu · Western Bhutan",
+      "Alpine lakes & forest ridges",
+      "A multi-day camping trek",
+      "A highland trek connecting Paro and Thimphu through forests, ridges and alpine lakes. This marker represents the trekking area, not a particular campsite.",
+      "Spring and autumn are commonly chosen; confirm trail conditions with your guide."
+    ],
+    "jangothang": [
+      "Jangothang",
+      "Jomolhari base camp",
+      "Soe highlands · Western Bhutan",
+      "Highland scenery & camping",
+      "A demanding multi-day trek",
+      "A highland base camp on the Jomolhari trekking journey. Mountain scenery and yak country make this a very different experience from the valley tours.",
+      "Plan acclimatisation and a route matched to your trekking experience."
+    ],
+    "trashigang": [
+      "Trashigang Dzong",
+      "An eastern Bhutan discovery",
+      "Trashigang · Eastern Bhutan",
+      "Eastern fortress heritage",
+      "Part of a custom eastern tour",
+      "An impressive fortress above Trashigang, founded in 1659. Explore a different side of Bhutan by making room for the towns and traditions of the east.",
+      "Ask us to create a longer journey with eastern Bhutan included."
+    ]
+  },
+  "gallery": [
+    [
+      "Bhutanese monastery courtyard",
+      "Traditional painted windows and whitewashed walls frame a peaceful monastery courtyard."
+    ],
+    [
+      "Bhutan Himalayan landscape",
+      "Bhutan's green valleys unfold beneath the vast ridgelines of the eastern Himalayas."
+    ],
+    [
+      "Bhutanese cultural heritage",
+      "Centuries-old traditions remain part of everyday life across Bhutan's towns and villages."
+    ],
+    [
+      "Bhutan valley",
+      "A quiet Bhutanese valley reveals the close relationship between settlement, forest, and mountain."
+    ],
+    [
+      "Bhutan mountain panorama",
+      "Layered Himalayan peaks rise beyond the kingdom's remote and pristine landscapes."
+    ],
+    [
+      "Bhutanese temple",
+      "A sacred temple stands as a place of prayer, pilgrimage, and living Buddhist heritage."
+    ],
+    [
+      "Bhutanese dzong",
+      "Bhutan's dzongs combine fortress architecture with active centers of spiritual and civic life."
+    ],
+    [
+      "Tiger's Nest Monastery on a cliff in Paro",
+      "Paro Taktsang, known as Tiger's Nest, clings dramatically to a forested cliff above the Paro Valley."
+    ],
+    [
+      "Black-necked cranes in Bhutan",
+      "Rare black-necked cranes gather in Bhutan's protected valleys during their winter migration."
+    ],
+    [
+      "Thimphu valley framed by prayer flags",
+      "Prayer flags flutter above Thimphu, Bhutan's mountain capital and cultural heart."
+    ],
+    [
+      "Bhutanese monk crossing a prayer-flag bridge",
+      "A monk crosses a suspension bridge lined with prayer flags above a fast-flowing river."
+    ],
+    [
+      "Tsechu festival mask dancer in Bhutan",
+      "A vibrant masked dancer performs a sacred Cham dance during one of Bhutan's Tsechu festivals."
+    ],
+    [
+      "Punakha Dzong at the meeting of two rivers",
+      "Punakha Dzong rises where the Pho Chhu and Mo Chhu rivers meet, the most graceful of Bhutan’s fortress monasteries."
+    ],
+    [
+      "The 108 chortens of Dochula Pass",
+      "At Dochula Pass, 108 memorial chortens crown the ridge on the road from Thimphu to Punakha, with Himalayan peaks beyond."
+    ],
+    [
+      "Buddha Dordenma above Thimphu",
+      "The great golden Buddha Dordenma sits on a hilltop above Thimphu, watching over the capital valley."
+    ],
+    [
+      "Kyichu Lhakhang in Paro",
+      "Kyichu Lhakhang, one of Bhutan’s oldest temples, has stood in the Paro valley since the seventh century."
+    ],
+    [
+      "Prayer flags at Chele La",
+      "Prayer flags stream in the wind at Chele La, the high pass between the Paro and Haa valleys."
+    ],
+    [
+      "The Paro valley",
+      "Farmhouses, rice terraces and the Paro Chhu river fill the broad Paro valley, the gateway to the kingdom."
+    ],
+    [
+      "Ura village in Bumthang",
+      "Ura’s stone houses and cobbled lanes sit high in a quiet Bumthang valley in central Bhutan."
+    ],
+    [
+      "Memorial Chorten in Thimphu",
+      "At the Memorial Chorten in Thimphu, residents walk prayer circuits around the white stupa from dawn to dusk."
+    ]
+  ],
+  "page": {
+    "aboutMore": ["Bhutan is not a place you tick off a list. It is a kingdom you are welcomed into — and for more than fifteen years we have made sure that welcome feels personal.","Guided by those who call it home","Your guides are licensed Bhutanese who call these valleys home. They know when the monastery bells ring at dawn, which farmhouse kitchen welcomes guests, and when it is time simply to stop and listen.","Shaped around you","No fixed departures and no crowded coaches. Your route, pace and stays are designed around what moves you, from front-row festival days to silent forest retreats.","Travel that gives back","We are locally owned and staffed, and carbon-neutral since 2018, so what you spend stays in Bhutanese hands and the mountains stay as clear as you found them.","Begin your journey with us"],
+    "aboutGnh": ["Why Gross National Happiness","The kingdom’s compass, and ours","Bhutan measures its progress by Gross National Happiness rather than by economic growth alone. Its four pillars below shape how the kingdom welcomes visitors — high value, low volume — and they shape every journey we plan: respectful of culture, gentle on the land, and good for the communities you meet."],
+    "aboutTeam": {"label":"Our People","title":"The people behind <em>your journey</em>","lede":"Every Druk Voyages journey is planned, guided and driven by Bhutanese who call these valleys home. Meet a few of them.","speaks":"Speaks","roles":{"founder":"Founder","owner":"Owner & Managing Director","manager":"Operations Manager","planner":"Travel Planner","guide":"Cultural Guide","trekGuide":"Trekking Guide","driver":"Driver"}},
+    "meta": "Druk Voyages - Kingdom of Bhutan Travel",
+    "description": "Druk Voyages - Bhutan's trusted travel agency. Curated itineraries, festival journeys, trekking, and wellness retreats in the Kingdom of Happiness.",
+    "tagline": "Authentic Bhutan, Extraordinary Journeys",
+    "heroMottos": [
+      "A little closer<br> to <em>wonder.</em>",
+      "Where mountains<br> meet <em>meaning.</em>",
+      "Ancient stories.<br> Living <em>traditions.</em>",
+      "Take the path<br> less <em>hurried.</em>",
+      "A kingdom that<br> stays <em>with you.</em>"
+    ],
+    "gnhPillars": [
+      "Sustainable &amp; Equitable<br>Socio-Economic Development",
+      "Conservation of<br>Environment",
+      "Preservation &amp; Promotion<br>of Culture",
+      "Good<br>Governance"
+    ],
+    "menu": [
+      "About",
+      "Itineraries",
+      "Experiences",
+      "Gallery",
+      "Plan My Trip"
+    ],
+    "hero": [
+      "Bhutan, beyond the ordinary",
+      "A little closer<br> to <em>wonder.</em>",
+      "Quiet valleys. Living traditions. Extraordinary people. Discover Bhutan through journeys shaped by the locals who call it home.",
+      "Explore Journeys",
+      "Meet Your Local Guides",
+      "Scroll"
+    ],
+    "stats": [
+      "Years in Bhutan",
+      "Guests Welcomed",
+      "Curated Itineraries",
+      "Satisfaction Rate"
+    ],
+    "marquee": [
+      "Tiger's Nest Monastery",
+      "Paro Tsechu Festival",
+      "Punakha Dzong",
+      "Black-Necked Cranes",
+      "Dochula Pass",
+      "Bumthang Valley",
+      "Rhododendron Blooms",
+      "Meditation Retreats"
+    ],
+    "about": [
+      "Gross National<br>Happiness",
+      "Who We Are",
+      "Bhutan's Most <em>Trusted</em> Journey Architects",
+      "Druk Voyages was founded by Bhutanese locals who believe genuine travel transforms both visitor and visited. We are one of the few agencies fully owned and operated within the Kingdom - every dollar spent directly uplifts local communities.",
+      "The Bhutanese government's Sustainable Development Fee funds free healthcare and education for every citizen. With us, you are not just a tourist - you are a guardian of this living heritage.",
+      "Licensed by the Tourism Council of Bhutan",
+      "Carbon-neutral operations since 2018",
+      "100% locally owned & staffed",
+      "Bespoke small-group experiences"
+    ],
+    "journeys": [
+      "Journeys with a sense of place",
+      "Your next chapter,<br><em>somewhere extraordinary.</em>",
+      "All journeys",
+      "Culture",
+      "Festivals",
+      "Trekking",
+      "Wellness"
+    ],
+    "gallery": [
+      "A glimpse of the kingdom",
+      "A place like <em>no other.</em>",
+      "A few of the moments waiting for you: quiet courtyards, mountain air, living traditions, and a different kind of everyday."
+    ],
+    "experience": [
+      "Signature Moments",
+      "Experiences That <em>Stay Forever</em>",
+      [
+        "Tiger's Nest Pilgrimage",
+        "A 4-hour guided ascent to Paro Taktsang, where Guru Rinpoche meditated for 3 months, perched 900m above the valley floor on sheer cliffs."
+      ],
+      [
+        "Dzong Architecture Tours",
+        "Private after-hours access to Punakha Dzong - the Palace of Great Happiness - where monks still practice 17th-century rituals at dusk."
+      ],
+      [
+        "Tsechu Festival Immersion",
+        "Witness masked Cham dances performed only during sacred festivals. Front-row viewing and authentic cultural exchange with local families."
+      ],
+      [
+        "Farm-to-Table Farming Life",
+        "Spend dawn to dusk with a Phobjikha Valley farmer - planting red rice, milking yaks, and learning the art of ema datshi."
+      ],
+      [
+        "Himalayan Wellness Retreat",
+        "Three-day silent retreat with traditional Sowa Rigpa medicine, hot stone baths, and meditation guided by a certified Buddhist master."
+      ],
+      [
+        "Black-Necked Crane Safari",
+        "Every November, endangered cranes migrate to Phobjikha Valley. Dawn wildlife watches in pristine wetlands with ornithologist guides."
+      ]
+    ],
+    "planning": [
+      "Travel Planning",
+      "Best Time to <em>Visit Bhutan</em>",
+      "Bhutan is magical year-round but each season unlocks a completely different kingdom.",
+      [
+        "Spring",
+        "March - May",
+        "Rhododendrons explode in colour. Clear skies reveal Himalayan peaks. Paro Tsechu festival draws thousands."
+      ],
+      [
+        "Monsoon",
+        "June - August",
+        "Lush emerald valleys, minimal crowds, lower rates. Rain makes forests and waterfalls spectacular."
+      ],
+      [
+        "Autumn",
+        "Sep - November",
+        "Crystal-clear Himalayan views, golden valleys, and the spectacular Thimphu Tsechu. Peak season."
+      ],
+      [
+        "Winter",
+        "Dec - February",
+        "Snow-dusted dzongs, black-necked crane season, crisp air for lower altitude treks. Deeply peaceful."
+      ]
+    ],
+    "enquiry": [
+      "Start Planning",
+      "Tell Us Your<br><em>Dream Journey</em>",
+      "Every Bhutan journey is unique. Our travel architects will craft a bespoke itinerary based on your interests, travel dates, and group size - at no obligation.",
+      "Mon-Sat - 9am-6pm Bhutan Time",
+      "First Name *",
+      "Last Name *",
+      "Email *",
+      "Phone",
+      "Interested In",
+      "Number of Guests",
+      "Planned Arrival",
+      "Duration (Days)",
+      "Your Dream Journey *",
+      "Select a journey type...",
+      [
+        "Classic Highlights",
+        "Festival Journey",
+        "Himalayan Trekking",
+        "Wellness Retreat",
+        "Photography Tour",
+        "Honeymoon Package",
+        "Custom / Other"
+      ],
+      "Tell us about your travel style, interests, and any special requirements...",
+      "Send Enquiry"
+    ],
+    "testimonials": [
+      "Guest Stories",
+      "Words From Our <em>Travellers</em>",
+      "Druk Voyages curated every moment with extraordinary care. Standing at Tiger's Nest at sunrise with no other visitors was the most spiritual experience of my life.",
+      "The festival immersion was beyond anything I imagined. Our guide arranged a private dinner with a monk who taught us about Buddhist philosophy over butter tea. Transformative.",
+      "The wellness retreat completely reset my mind. The hot stone bath under the stars in Bumthang Valley - I still think about it every single day.",
+      "New York, USA - Autumn 2025",
+      "London, UK - Spring 2025",
+      "Tokyo, Japan - Winter 2025"
+    ],
+    "cta": [
+      "Begin Your Journey",
+      "Ready to Enter the Last <em>Shangri-La?</em>",
+      "Every journey to Bhutan is unique. Tell us your dream and our Bhutanese travel architects will design the perfect itinerary - exclusively for you.",
+      "Plan My Trip",
+      "Call Thimphu Office"
+    ],
+    "footer": [
+      "Licensed by the Tourism Council of Bhutan. 100% Bhutanese-owned, committed to sustainable travel that protects the Kingdom's living heritage.",
+      "Itineraries",
+      "Destinations",
+      "Contact",
+      [
+        "Classic Highlights",
+        "Festival Journeys",
+        "Himalayan Trekking",
+        "Wellness Retreats",
+        "Photography Tours",
+        "Honeymoon Packages"
+      ],
+      "Mon-Sat 9am-6pm",
+      "© 2026 Druk Voyages. All rights reserved. Tourism Council of Bhutan Lic. #TCB-2009-142.",
+      "Privacy",
+      "Terms",
+      "Sitemap"
+    ],
+    "ui": {
+      "language": "Language",
+      "menu": "Menu",
+      "view": "View Itinerary",
+      "from": "From",
+      "perPerson": "per person",
+      "close": "Close Itinerary",
+      "dayByDay": "Day-by-Day Itinerary",
+      "pp": "pp",
+      "days": "Days",
+      "max": "Max",
+      "couple": "Couple Only",
+      "difficulties": {
+        "Easy": "Easy",
+        "Moderate": "Moderate",
+        "Challenging": "Challenging"
+      },
+      "required": "Please fill in all required fields.",
+      "sending": "Sending...",
+      "success": "Thank you! Our team will be in touch within 24 hours.",
+      "toast": "Enquiry sent successfully!",
+      "fail": "Could not send your enquiry. Please email us directly at hello@drukvoyages.bt",
+      "slide": "Slide"
+    },
+    "itineraries": [
+      [
+        "Classic",
+        "Bhutan Highlights — The Royal Trail",
+        "Perfect introduction covering Tiger's Nest, Punakha Dzong and Thimphu — balancing cultural immersion with stunning landscapes."
+      ],
+      [
+        "Festival",
+        "Paro Tsechu — Sacred Mask Dances",
+        "Sacred Cham mask dances, giant thangka unveilings, and thousand-year-old rituals at Bhutan's most vibrant festival."
+      ],
+      [
+        "Trekking",
+        "Druk Path Trek — The Royal Way",
+        "Walk the ancient trail from Paro to Thimphu through high-altitude lakes, rhododendron forests, and yak herding grounds."
+      ],
+      [
+        "Wellness",
+        "The Bhutan Soul Reset",
+        "Sowa Rigpa healing, silent meditation retreats, hot stone baths, and mindful monastic living."
+      ],
+      [
+        "Photography",
+        "Bhutan Through the Lens",
+        "Golden hour and blue hour locations guided by a professional Bhutanese photographer."
+      ],
+      [
+        "Honeymoon",
+        "Royal Bhutan Honeymoon",
+        "Private dzong dinners, luxury mountain lodges, hot spring bathing, and exclusive sacred site access."
+      ],
+      [
+        "Culture & Craft",
+        "Bumthang — Valleys of Sacred Stories",
+        "A slower passage through central Bhutan: monastery courtyards, weaving villages, apple orchards and the four valleys that make up Bumthang."
+      ],
+      [
+        "Slow Travel",
+        "Haa & Paro — Hidden Valley Days",
+        "A soft-paced introduction to western Bhutan, following old valley roads, white temples and everyday farm life between Paro and Haa."
+      ],
+      [
+        "High Himalaya",
+        "Jomolhari Trek — Mountains & Yak Pastures",
+        "A classic high-Himalayan route below sacred Jomolhari, combining remote camps, yak-herding country and several days to adjust to altitude."
+      ],
+      [
+        "Festival & Craft",
+        "Thimphu Tsechu — Rituals in the Capital",
+        "Built around Bhutan’s best-known capital festival, this journey pairs public Tsechu days with Paro, Punakha and a close look at living craft traditions."
+      ],
+      [
+        "Wellbeing",
+        "Forest, Farmhouse & Hot-Stone Bath",
+        "A practical reset built from short walks, mountain air, warm local food and slow evenings in Paro, Punakha and Phobjikha."
+      ],
+      [
+        "Wildlife & Culture",
+        "Phobjikha — Cranes, Valleys & Village Life",
+        "A seasonal journey into the wide Phobjikha Valley, combining responsible crane observation with Punakha’s river heritage and Paro’s sacred landscape."
+      ]
+    ],
+    "heroDescriptions": [
+      "Quiet valleys. Living traditions. Extraordinary people. Discover Bhutan through journeys shaped by the locals who call it home.",
+      "Follow forest trails to cliffside monasteries and open Himalayan horizons. In Bhutan, the journey invites you to pause, look closer, and breathe.",
+      "Step into dzong courtyards, discover the artistry of sacred festivals, and meet the craftspeople who keep Bhutan’s heritage alive.",
+      "Wander through peaceful valleys, share a farmhouse meal, and leave room for unexpected moments. Discover Bhutan at a pace that feels like your own.",
+      "From prayer flags on mountain passes to warm welcomes in village homes, find the moments that turn a Bhutan journey into a lasting memory."
+    ]
+  },
+  "shareStory": {
+    "pageTitle": "Share your best moment — Druk Voyages",
+    "label": "Guest Stories",
+    "title": "Share your best <em>moment</em>",
+    "lede": "One photo and a few words from your journey. Your story will appear among the guest stories on our website.",
+    "greeting": "Welcome, {label}",
+    "checking": "Checking your link…",
+    "invalid": "This link isn’t valid. Please scan the QR code on your Druk Voyages card again, or ask your guide.",
+    "expired": "This link has expired or has already been used for all its stories. Please ask us for a new one.",
+    "offline": "We couldn’t reach our server. Please check your connection and try again.",
+    "photo": "Your photo",
+    "photoHint": "Tap to choose a photo",
+    "photoChange": "Choose another photo",
+    "photoError": "This photo couldn’t be read. Please choose another one.",
+    "photoSmall": "Please choose a photo at least 400 pixels on each side.",
+    "name": "Your first name",
+    "from": "Where you’re from",
+    "fromPlaceholder": "e.g. Melbourne, Australia",
+    "story": "Your best moment",
+    "storyPlaceholder": "What made this moment special?",
+    "storyShort": "Please write at least 20 characters.",
+    "rating": "Your rating",
+    "star": "{n} of 5 stars",
+    "consent": "I agree that Druk Voyages may show my photo, first name, home town and story on its website.",
+    "required": "Please complete this field.",
+    "submit": "Share my moment",
+    "sending": "Sending…",
+    "error": "Your story couldn’t be sent. Please try again.",
+    "doneTitle": "Thank you!",
+    "doneText": "Your moment is now part of our guest stories.",
+    "donePending": "We’ll add your story to the website shortly.",
+    "another": "Share another moment",
+    "viewSite": "Visit our website",
+    "language": "Language"
+  }
+}
