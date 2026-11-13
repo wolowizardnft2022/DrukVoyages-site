@@ -1598,3 +1598,18 @@ main > section[id]:not(.hero):not(.about-section) { scroll-margin-top: calc(28px
 .geo-photo-credit { position: absolute; left: 8px; bottom: 8px; max-width: calc(100% - 16px); overflow: hidden; padding: 2px 7px; background: rgba(10,10,12,.62); color: var(--on-dark); font-size: 0.6875rem; letter-spacing: .02em; line-height: 1.5; text-overflow: ellipsis; white-space: nowrap; text-decoration: none; }
 .geo-photo-credit:hover, .geo-photo-credit:focus-visible { background: rgba(10,10,12,.85); text-decoration: underline; }
 .geo-card-figure .geo-photo-credit { bottom: auto; top: 8px; }
+
+/* Town and village names (open dzongkhag). Names that do not fit are hidden by the label layout; pointing at a marker,
+   tapping it, or choosing it in the card's "Towns & villages" list shows it (.is-peek), highlighted in saffron. */
+.has-detail .geo-detail { pointer-events: none; }
+.has-detail .geo-detail .geo-hit { fill: transparent; pointer-events: all; cursor: pointer; }
+.geo-detail g:hover text, .geo-detail g.is-peek text { visibility: visible; }
+.geo-detail g:hover, .geo-detail g.is-peek { isolation: isolate; }
+.geo-detail g.is-peek text { fill: var(--gold-light); fill-opacity: 1; font-weight: 600; }
+.geo-detail g.is-peek circle:not(.geo-hit) { fill: var(--gold); fill-opacity: 1; }
+.geo-dz-villages details { margin-top: 14px; border-top: 1px solid var(--line); }
+.geo-dz-villages summary { display: flex; align-items: center; min-height: 44px; color: var(--ink); font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+.geo-dz-villages summary:hover { color: var(--gold-light); }
+.geo-village-list { display: flex; flex-wrap: wrap; gap: 0 14px; margin: 0; padding: 0 0 8px; list-style: none; }
+.geo-village-list button { min-height: 40px; padding: 0; border: 0; background: none; color: var(--on-dark); font: 400 var(--fs-sm)/1.3 var(--body); cursor: pointer; }
+.geo-village-list button:hover, .geo-village-list button[aria-pressed="true"] { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }

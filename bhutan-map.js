@@ -239,7 +239,7 @@
   const dzClip=el('clipPath',{id:'geoDzClip'}),dzClipPath=el('path');dzClip.appendChild(dzClipPath);
   defs.append(clip,dzClip,tone,glow,vignette);
   svg.appendChild(defs);
-  const relief='img/web/maps/bhutan-relief.webp',SATELLITE='img/web/maps/bhutan-satellite.webp',DETAIL_SCRIPT='bhutan-detail.js?v=20261111-detail';
+  const relief='img/web/maps/bhutan-relief.webp',SATELLITE='img/web/maps/bhutan-satellite.webp',DETAIL_SCRIPT='bhutan-detail.js?v=20261114-villages';
   svg.appendChild(el('rect',{x:-W,y:-H,width:W*3,height:H*3,fill:'#0a0a0c'}));
   svg.appendChild(el('image',{href:relief,x:0,y:0,width:W,height:H,filter:'url(#geoTone)',class:'geo-relief-out',preserveAspectRatio:'none'}));
   const land=el('g',{'clip-path':'url(#geoClip)',class:'geo-land'});
@@ -453,6 +453,26 @@
     photoLine.style.width=`${Math.max(0,lineWidth).toFixed(0)}px`;
   }
 
+  // Highlight one town or village on the map (its name always shown); null clears it.
+  function peekPlace(name) {
+    detailNodes.forEach(n=>n.g.classList.toggle('is-peek',Boolean(name)&&n.label?.textContent===name));
+    card.querySelectorAll('.geo-dz-villages button').forEach(b=>b.setAttribute('aria-pressed',String(b.textContent===name)));
+  }
+  // The open dzongkhag's towns and villages, A–Z, in the card. Filled once the detail data has loaded.
+  function renderVillageList() {
+    const box=card.querySelector('.geo-dz-villages');
+    if(!box)return;
+    box.replaceChildren();
+    if(!detailData||openDz===null)return;
+    const {towns,villages}=detailIn(openDz,detailData);
+    const names=[...new Set([...towns,...villages].map(p=>p[0]))].sort((a,b)=>a.localeCompare(b));
+    if(!names.length)return;
+    const details=make('details');
+    details.appendChild(make('summary','',tr('mapVillages',{count:names.length})));
+    const list=make('ul','geo-village-list');
+    names.forEach(name=>{const li=make('li');const b=make('button','',name);b.type='button';b.setAttribute('aria-pressed','false');b.addEventListener('click',()=>{const on=b.getAttribute('aria-pressed')!=='true';peekPlace(on?name:null);});li.appendChild(b);list.appendChild(li);});
+    details.appendChild(list);box.appendChild(details);
+  }
   function renderCard() {
     card.replaceChildren();
     const site=localSite(byId[selected]);
@@ -466,6 +486,8 @@
       inside.forEach(raw=>{const s=localSite(raw);const li=make('li','is-place');const b=make('button','',s.name);b.type='button';b.addEventListener('click',()=>{stopTour();select(s.id);});li.append(b,make('span','geo-dz-note',s.subtitle));items.appendChild(li);});
       extra.forEach(spot=>{const li=make('li','is-spot');if(spot.photo){const b=make('button','',placeName(spot.name));b.type='button';b.setAttribute('aria-pressed',String(spot===selectedSpot));b.addEventListener('click',()=>{stopTour();selectSpot(spot);});li.appendChild(b);}else li.textContent=placeName(spot.name);items.appendChild(li);});
       card.appendChild(items);
+      card.appendChild(make('div','geo-dz-villages'));
+      renderVillageList();
       return;
     }
     if(!site){
@@ -589,7 +611,12 @@
       const [x,y]=project(lon,lat),g=el('g',{class:`geo-${kind}`,'data-x':x.toFixed(2),'data-y':y.toFixed(2)});
       g.append(...shapes);
       let label=null;
-      if(name){label=el('text',{x:6,y:3});label.textContent=name;g.appendChild(label);}
+      if(name){
+        label=el('text',{x:6,y:3});label.textContent=name;g.appendChild(label);
+        // Names that do not fit are hidden by layoutLabels; pointing at (or tapping) the marker shows them.
+        g.prepend(el('circle',{class:'geo-hit',r:kind==='town'?7:6}));
+        g.addEventListener('click',event=>{event.stopPropagation();peekPlace(g.classList.contains('is-peek')?null:name);});
+      }
       detailLayer.appendChild(g);detailNodes.push({g,label,x,y,kind:kind.split(' ')[0]});
     };
     villages.forEach(([name,lon,lat])=>add('village',lon,lat,[el('circle',{r:1.9})],name));
@@ -597,6 +624,7 @@
     detailLayer.setAttribute('data-dz',index);
     root.classList.add('has-detail');
     placeOverlays();layoutLabels(index,settled);
+    renderVillageList();
   }
   function clearDetail() {detailLayer.replaceChildren();detailLayer.removeAttribute('data-dz');detailNodes=[];root.classList.remove('has-detail');}
   // Keep the names inside an open dzongkhag from overlapping: going top to bottom, each label tries its
@@ -631,7 +659,7 @@
         return null;
       };
       const far=[0,-11,11,-22,22,-33,33,-44,44,-55,55];
-      const chosen=optional(item)?search(placed,[0,-(s+1),s+1],true):search(placed,far.slice(0,9),true)||search(labels,far,true)||search(labels,far,false);
+      const chosen=optional(item)?search(placed,[0,-(s+1)/2,(s+1)/2,-(s+1),s+1,-1.5*(s+1),1.5*(s+1)],true):search(placed,far.slice(0,9),true)||search(labels,far,true)||search(labels,far,false);
       item.text.toggleAttribute('visibility',false);
       if(!chosen&&optional(item)){item.text.setAttribute('visibility','hidden');return;}
       const final=chosen||{dy:0,side:1,box:[item.x,item.y,item.x,item.y]};

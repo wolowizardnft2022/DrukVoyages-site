@@ -42,6 +42,7 @@
   "mapPhotoIllustrative": "Illustrative photo",
   "mapPhotoRendering": "Artist’s impression",
   "mapGmcAirportCaption": "Gelephu International Airport (artist’s impression)",
+  "mapVillages": "Towns & villages ({count})",
   "mapEntry": "Entry from India",
   "mapFlightsPause": "Pause flights",
   "mapFlightsPlay": "Play flights",

@@ -41,6 +41,7 @@
     "mapPhotoIllustrative": "イメージ写真",
     "mapPhotoRendering": "完成予想図",
     "mapGmcAirportCaption": "ゲレフ国際空港（完成予想図）",
+    "mapVillages": "町と村（{count}）",
     "mapEntry": "インドからの入国地点",
     "mapFlightsPause": "フライトを一時停止",
     "mapFlightsPlay": "フライトを再生",
