@@ -1480,8 +1480,9 @@ const SAMPLE_STORIES=[
   {photo:'season-winter.jpg',initials:'HT',name:'Hiroshi T.',from:'Osaka, Japan — Winter 2025',text:'Clear winter skies gave us views of the Himalaya from almost every pass. Warm hospitality in every town made the cold mornings easy to love.'},
   {photo:'exp-tigers-nest.jpg',initials:'AN',name:'Anna N.',from:'Berlin, Germany — Autumn 2025',text:'Our guide paced the Tiger\'s Nest hike perfectly for my parents, who are in their seventies. Reaching the top together is a memory our family will treasure.'}
 ];
-// Local previews: this computer, a phone on the same Wi-Fi (private network address or .local name), or ?samples.
-const showSampleStories=['localhost','127.0.0.1',''].includes(location.hostname)||/^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)|\.local$/.test(location.hostname)||new URLSearchParams(location.search).has('samples');
+// Static GitHub Pages build: show the sample guest stories here too, so the live site matches the local preview.
+// The cards stay tagged "(sample)"; replace them with real guests' words before launch.
+const showSampleStories=true||['localhost','127.0.0.1',''].includes(location.hostname)||/^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)|\.local$/.test(location.hostname)||new URLSearchParams(location.search).has('samples');
 if(showSampleStories){
   const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const stars='<svg><use href="#s-star"/></svg>'.repeat(5);
@@ -1509,7 +1510,6 @@ const SAMPLE_TEAM=[
 window.renderTeam=function(){
   const block=document.getElementById('team'),grid=document.getElementById('teamGrid');if(!block||!grid)return;
   // Static GitHub Pages build: show the placeholder team carousel (cards stay tagged "(sample)").
-  // Guest-story samples remain local-only or behind ?samples=1, as in the source.
   const showSampleTeam=true;
   const members=[...TEAM,...((showSampleTeam||showSampleStories)?SAMPLE_TEAM.map(person=>({...person,sample:true})):[])];
   block.hidden=!members.length;if(!members.length)return;
