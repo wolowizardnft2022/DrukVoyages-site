@@ -804,7 +804,7 @@ let activeLanguage='en';
 let activeCategory='all';
 let pendingLanguage=null;
 try{activeLanguage=localStorage.getItem('druk-language')||'en';}catch(_err){}
-if(!window.DRUK_I18N[activeLanguage])activeLanguage='en';
+if(!Object.hasOwn(window.DRUK_I18N,activeLanguage))activeLanguage='en';
 
 function locale(){return window.DRUK_L10N.catalog(activeLanguage)?.page||window.DRUK_I18N[activeLanguage]||window.DRUK_I18N.en;}
 function tr(key,vars={}){return window.DRUK_L10N.text(key,vars,activeLanguage);}
@@ -1502,7 +1502,10 @@ const SAMPLE_TEAM=[
 // Rebuilt on language change; names, bios and languages are shown exactly as written, as text.
 window.renderTeam=function(){
   const block=document.getElementById('team'),grid=document.getElementById('teamGrid');if(!block||!grid)return;
-  const members=[...TEAM,...(showSampleStories?SAMPLE_TEAM.map(person=>({...person,sample:true})):[])];
+  // Static GitHub Pages build: show the placeholder team carousel (cards stay tagged "(sample)").
+  // Guest-story samples remain local-only or behind ?samples=1, as in the source.
+  const showSampleTeam=true;
+  const members=[...TEAM,...((showSampleTeam||showSampleStories)?SAMPLE_TEAM.map(person=>({...person,sample:true})):[])];
   block.hidden=!members.length;if(!members.length)return;
   const copy=window.DRUK_L10N?.catalog?.(activeLanguage)?.page?.aboutTeam||{};
   const make=(tag,className,text)=>{const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;};
@@ -1769,7 +1772,7 @@ document.addEventListener('DOMContentLoaded',()=>{window.DRUK_L10N.capture();app
 */
 (function(){
   const section=document.getElementById('bhutan-map');
-  const files=['bhutan-geography.js?v=20261113-dzongkhags','bhutan-map.js?v=20261113-flightsoff'];
+  const files=['bhutan-geography.js?v=20261113-dzongkhags','bhutan-map.js?v=20261113-security'];
   let started=false;
   function loadAtlas(){
     if(started)return;started=true;
@@ -1821,7 +1824,7 @@ document.addEventListener('DOMContentLoaded',()=>{window.DRUK_L10N.capture();app
 
     <div id="groqSetupPanel">
       <label for="groqKeyInput">Groq API Key</label>
-      <small>Free at <a href="https://console.groq.com" target="_blank" class="chat-link">console.groq.com</a> — stored in your browser only.</small>
+      <small>Free at <a href="https://console.groq.com" target="_blank" rel="noopener noreferrer" class="chat-link">console.groq.com</a> — stored in your browser only.</small>
       <input type="password" id="groqKeyInput" placeholder="gsk_..." autocomplete="off"/>
     </div>
 

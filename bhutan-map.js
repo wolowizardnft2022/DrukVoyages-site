@@ -11,6 +11,8 @@
   const geography=typeof module!=='undefined'&&module.exports?require('./bhutan-geography'):window.DRUK_GEOGRAPHY;
   if(!geography)return;
   let atlasLanguage='en';try{atlasLanguage=localStorage.getItem('druk-language')||'en';}catch(_err){}
+  // Only a real language code (a stored "constructor" or "__proto__" would otherwise look up Object's own properties).
+  if(!/^[a-z]{2}$/.test(atlasLanguage))atlasLanguage='en';
   const englishMapUi={categories:['All places','Monasteries','Dzongs','Culture','Valleys & passes','Treks'],come:'Come for',time:'Make time for',source:'Read about this place ↗',journey:'Explore a related journey ↗',custom:'Plan an eastern Bhutan tour ↗',count:'places',routeTour:'Cultural tour',routeTrek:'Trekking journey',all:'The whole kingdom, in perspective.'};
   let atlasText=typeof window!=='undefined'?(window.DRUK_I18N?.[atlasLanguage]?.mapUi||englishMapUi):englishMapUi;
   const categories = { all:'All places', monastery:'Monasteries', dzong:'Dzongs', culture:'Culture', nature:'Valleys & passes', trek:'Treks' };
