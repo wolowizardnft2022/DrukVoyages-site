@@ -44,7 +44,7 @@
     "sameAs": ["https://instagram.com/drukvoyages","https://facebook.com/drukvoyages"]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261114-plan2"/>
+  <link rel="stylesheet" href="styles.css?v=20261114-plan3"/>
   <!-- Intro splash: decided before first paint so the home page never flashes first. Shown on every load
     and refresh, never with reduced motion, and never without JavaScript (the class is set here). Without a
     #section link, the page opens at the top (the home page) instead of the browser's restored scroll. -->
@@ -172,6 +172,7 @@
   <option value="pt">Português</option>
 </select>
   </div>
+  <a href="#journey-finder" class="nav-plan-btn">Plan My Trip</a>
   <button class="hamburger" id="hamburger" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
 <span></span><span></span><span></span>
   </button>
@@ -1120,7 +1121,7 @@ async function applyLanguage(language){
   setTextList('.mobile-nav>a:not([data-map-nav]):not([data-nav-i18n])',l.menu);
   document.querySelectorAll('[data-nav-i18n]').forEach(link=>{link.textContent=tr(link.dataset.navI18n);});
   document.querySelectorAll('[data-ui-text]').forEach(node=>{node.textContent=tr(node.dataset.uiText);});
-  document.getElementById('mobilePlanBar').textContent=document.querySelector('.nav-links .nav-cta').textContent;
+  const planLabel=document.querySelector('.nav-links .nav-cta').textContent;document.getElementById('mobilePlanBar').textContent=planLabel;document.querySelectorAll('.nav-plan-btn').forEach(link=>link.textContent=planLabel);
   const mapNavLabels={en:'Explore Bhutan',ja:'ブータン地図',zh:'探索不丹',ko:'부탄 지도',es:'Explora Bután',fr:'Explorer le Bhoutan',vi:'Khám phá Bhutan',pt:'Explore o Butão'};
   document.querySelectorAll('[data-map-nav]').forEach(link=>{link.textContent=mapNavLabels[activeLanguage]||mapNavLabels.en;});
   setText('.hero-eyebrow',l.hero[0]);renderHeroMotto();setTextList('.hero .hero-btns a',[l.hero[3],l.hero[4]]);setText('.scroll-hint span',l.hero[5]);
