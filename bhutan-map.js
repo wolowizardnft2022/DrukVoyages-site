@@ -123,8 +123,32 @@
     gmc:['maps-image/Gelephu Mindfulness City.jpg','render']
   };
   // Tourist spots with their own photo (img/maps-image): these open a photo card inside their dzongkhag.
-  const spotPhotos={'Drukgyel Dzong':'Drukgyel_Dzong.jpg','Khamsum Yulley Namgyal':'Khamsum-yulley-namgyel.jpg','Simtokha Dzong':'dzongs_of_bhutan/SIMTOKHA_DZONG.jpg','Wangdue Phodrang Dzong':'dzongs_of_bhutan/WANGDUEPHODRANG_DZONG.jpg','Gasa Dzong':'dzongs_of_bhutan/GASA_DZONG.jpg','Lhuentse Dzong':'dzongs_of_bhutan/LHUNTSE_DZONG.webp','Pemagatshel Dzong':'dzongs_of_bhutan/PEMAGATSHEL_DZONG.jpg','Daga Trashiyangtse Dzong':'dzongs_of_bhutan/DAGA_DZONG.avif','Ura village':'ura-valley.jpg','Kyichu Lhakhang':'kyichu lhakhang.webp','Rangjung Woesel Choeling':'Rangjung Woesel Choeling.jpg','Merak and Sakteng':'Merak Sakteng Brokpa dance.jpg'};
-  spots.forEach(spot=>{if(spotPhotos[spot.name])spot.photo=`img/web/maps-image/${spotPhotos[spot.name]}`;});
+  const spotPhotos={'Drukgyel Dzong':'Drukgyel_Dzong.jpg','Khamsum Yulley Namgyal':'Khamsum-yulley-namgyel.jpg','Simtokha Dzong':'dzongs_of_bhutan/SIMTOKHA_DZONG.jpg','Wangdue Phodrang Dzong':'dzongs_of_bhutan/WANGDUEPHODRANG_DZONG.jpg','Gasa Dzong':'dzongs_of_bhutan/GASA_DZONG.jpg','Lhuentse Dzong':'dzongs_of_bhutan/LHUNTSE_DZONG.webp','Pemagatshel Dzong':'dzongs_of_bhutan/PEMAGATSHEL_DZONG.jpg','Daga Trashiyangtse Dzong':'dzongs_of_bhutan/DAGA_DZONG.avif','Ura village':'ura-valley.jpg','Kyichu Lhakhang':'kyichu lhakhang.webp','Rangjung Woesel Choeling':'Rangjung Woesel Choeling.jpg','Merak and Sakteng':'Merak Sakteng Brokpa dance.jpg',
+    'Haa Dzong':'Haa Dzong.jpg','Tango Monastery':'Tango Monastery.jpg','Cheri Monastery':'Cheri Monastery.jpg','Punakha suspension bridge':'Punakha suspension bridge.jpg','Trongsa Ta Dzong':'Trongsa Ta Dzong.jpg','Chendebji Chorten':'Chendebji Chorten.jpg','Jambay Lhakhang':'Jambay Lhakhang.jpg','Membar Tsho (Burning Lake)':'Membar Tsho Burning Lake.jpg','Khoma weaving village':'Khoma weaving village.jpg','Chorten Kora':'Chorten Kora.jpg','Bumdeling Wildlife Sanctuary':'Bumdeling Wildlife Sanctuary.jpg','Royal Manas National Park':'Royal Manas National Park.jpg','Tsirang Dzong':'Tsirang Dzong.jpg','Kharbandi Goenpa':'Kharbandi Goenpa.jpg','Chukha Dzong':'Chukha Dzong.jpg'};
+  // Photos from Wikimedia Commons: photographer, licence and file page, shown as a credit on the photo (their licences
+  // require attribution). Photos the owner supplied have no entry.
+  const photoCredits={
+    'Haa Dzong.jpg':{"by": "Christopher J. Fynn", "licence": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Haa-Dzong_Bhutan.jpg"},
+    'Tango Monastery.jpg':{"by": "Jean-Marie Hullot", "licence": "CC BY 3.0", "page": "https://commons.wikimedia.org/wiki/File:TangoMonastery.jpg"},
+    'Cheri Monastery.jpg':{"by": "Christopher J. Fynn", "licence": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Cheri_Monastery_Bhutan-070317.JPG"},
+    'Punakha suspension bridge.jpg':{"by": "Doug Knuth", "licence": "CC BY-SA 2.0", "page": "https://commons.wikimedia.org/wiki/File:Punakha_3-70,_suspension_bridge.jpg"},
+    'Trongsa Ta Dzong.jpg':{"by": "Christopher J. Fynn", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Trongtsa_Ta_Dzong.jpg"},
+    'Chendebji Chorten.jpg':{"by": "Arian Zwegers", "licence": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Chendebji_Chorten_(15221785034).jpg"},
+    'Jambay Lhakhang.jpg':{"by": "Gerd Eichmann", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Bumthang-Jambay_Lhakhang-06-2015-gje.jpg"},
+    'Membar Tsho Burning Lake.jpg':{"by": "Doctor 17", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Membartsho,_the_Burning_Lake,_in_Tang_Valley,_central_Bhutan.jpg"},
+    'Khoma weaving village.jpg':{"by": "Ugyenlhendup", "licence": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Khoma_village,_Lhuntse_Dzongkha.jpg"},
+    'Chorten Kora.jpg':{"by": "Arian Zwegers", "licence": "CC BY 2.0", "page": "https://commons.wikimedia.org/wiki/File:Tashi_Yangtse,_Chorten_Kora_(15846038265).jpg"},
+    'Bumdeling Wildlife Sanctuary.jpg':{"by": "Christopher J. Fynn", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Bridge_to_Bumdeling_Sanctuary.jpg"},
+    'Royal Manas National Park.jpg':{"by": "DEBANUTOSH", "licence": "CC0", "page": "https://commons.wikimedia.org/wiki/File:Manas_River_flowing_in_Bhutan.jpg"},
+    'Tsirang Dzong.jpg':{"by": "Christopher J. Fynn", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Dzong_at_Damphu_Tsirang_Bhutan.jpg"},
+    'Kharbandi Goenpa.jpg':{"by": "Bernard Gagnon", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Kharbandi_Gompa,_Phuentsholing_01.jpg"},
+    'Chukha Dzong.jpg':{"by": "Christopher J. Fynn", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Chukha_Dzong.jpg"},
+    'Rangjung Woesel Choeling.jpg':{"by": "Christopher J. Fynn", "licence": "CC BY 3.0", "page": "https://commons.wikimedia.org/wiki/File:Zangdog-Pelri-Temple_Rangjung_Trashigang_Bhutan.JPG"},
+    'Merak Sakteng Brokpa dance.jpg':{"by": "Tridivadurjoy", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Brokpa_Cultural_Dance.jpg"}
+  };;
+  spots.forEach(spot=>{if(spotPhotos[spot.name]){spot.photo=`img/web/maps-image/${spotPhotos[spot.name]}`;spot.credit=photoCredits[spotPhotos[spot.name]]||null;}});
+  // "© Photographer · CC BY-SA 4.0", linked to the photo's Commons page.
+  const photoCredit=credit=>{if(!credit)return null;const a=make('a','geo-photo-credit',`© ${credit.by} · ${credit.licence}`);a.href=credit.page;a.target='_blank';a.rel='noopener noreferrer';return a;};
   const photoFor=id=>photos[id]?{src:`img/web/${photos[id][0]}`,illustrative:photos[id][1]===true,rendering:photos[id][1]==='render'}:null;
   // The label on a borrowed photo or a rendering; null for a photo of the place itself.
   const photoLabel=picture=>picture.rendering?tr('mapPhotoRendering'):picture.illustrative?tr('mapPhotoIllustrative'):null;
@@ -388,7 +412,7 @@
     if(!site&&selectedSpot){
       const figure=make('figure','geo-photo-figure');
       const img=make('img');img.src=selectedSpot.photo;img.alt='';img.width=560;img.height=315;img.decoding='async';
-      figure.appendChild(img);photoCard.appendChild(figure);
+      figure.appendChild(img);if(selectedSpot.credit)figure.appendChild(photoCredit(selectedSpot.credit));photoCard.appendChild(figure);
       const text=make('div','geo-photo-text');
       text.append(make('span','geo-kicker',`${tr('mapDzongkhag')} · ${dzName(dzongkhags[selectedSpot.dz])}`),make('strong','geo-photo-name',placeName(selectedSpot.name)));
       photoCard.appendChild(text);
@@ -435,7 +459,7 @@
     if(!site&&openDz!==null){
       // Dzongkhag guide: its name, how many places, then the places (main places open their guide).
       const {sites:inside,spots:extra}=placesIn(openDz);
-      if(selectedSpot){const figure=make('figure','geo-card-figure');const photo=make('img','geo-card-photo');photo.src=selectedSpot.photo;photo.alt=placeName(selectedSpot.name);photo.width=640;photo.height=360;photo.decoding='async';figure.append(photo,make('figcaption','geo-card-caption',placeName(selectedSpot.name)));card.appendChild(figure);}
+      if(selectedSpot){const figure=make('figure','geo-card-figure');const photo=make('img','geo-card-photo');photo.src=selectedSpot.photo;photo.alt=placeName(selectedSpot.name);photo.width=640;photo.height=360;photo.decoding='async';figure.append(photo,make('figcaption','geo-card-caption',placeName(selectedSpot.name)));if(selectedSpot.credit)figure.appendChild(photoCredit(selectedSpot.credit));card.appendChild(figure);}
       card.append(make('span','geo-kicker',dzongkhags[openDz].label?tr('mapGmcKicker'):tr('mapDzongkhag')),make('h3','',dzName(dzongkhags[openDz])),make('p','geo-card-sub',tr('mapDzongkhagCount',{count:inside.length+extra.length})));
       if(dzongkhags[openDz].label)card.appendChild(gmcUpdates(true));
       const items=make('ul','geo-dz-items');

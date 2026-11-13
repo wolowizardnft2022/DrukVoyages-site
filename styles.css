@@ -1592,3 +1592,9 @@ main > section[id]:not(.hero):not(.about-section) { scroll-margin-top: calc(28px
 .geo-gmc-figure { margin: 4px 0 12px; }
 .geo-gmc-figure img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
 .geo-gmc-figure figcaption { margin-top: 6px; color: var(--muted); font-size: var(--fs-xs); line-height: 1.4; }
+
+/* Credit on a Wikimedia Commons place photo (photographer · licence, linked to the file page). */
+.geo-photo-figure, .geo-card-figure { position: relative; }
+.geo-photo-credit { position: absolute; left: 8px; bottom: 8px; max-width: calc(100% - 16px); overflow: hidden; padding: 2px 7px; background: rgba(10,10,12,.62); color: var(--on-dark); font-size: 0.6875rem; letter-spacing: .02em; line-height: 1.5; text-overflow: ellipsis; white-space: nowrap; text-decoration: none; }
+.geo-photo-credit:hover, .geo-photo-credit:focus-visible { background: rgba(10,10,12,.85); text-decoration: underline; }
+.geo-card-figure .geo-photo-credit { bottom: auto; top: 8px; }
