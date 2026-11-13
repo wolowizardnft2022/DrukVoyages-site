@@ -102,8 +102,6 @@ img { display: block; max-width: 100%; }
 .nav-links a[aria-current=true]::after, .nav-links a:hover::after { transform: scaleX(1); }
 .mobile-nav > a[aria-current=true] { color: var(--gold); }
 .nav-links .nav-cta { color: var(--gold); }
-/* On phones and tablets the desktop link row is hidden (T151): keep Plan My Trip visible in the masthead, in the otherwise empty left column, so it does not live only inside the menu. */
-.nav-plan-btn { display: none; grid-area: plan; justify-self: start; align-items: center; min-height: 44px; max-width: 100%; padding: 0 8px 0 0; color: var(--gold); font-size: var(--fs-xs); font-weight: 400; letter-spacing: .08em; line-height: 1.25; text-transform: uppercase; text-decoration: none; text-wrap: balance; }
 .language-switcher { display: flex; align-items: center; }
 .desktop-language { grid-area: lang; justify-self: end; }
 .language-select { min-height: 44px; max-width: 140px; padding: 8px 4px; border: 0; background: transparent; font-size: var(--fs-xs); letter-spacing: var(--track); text-transform: uppercase; color: var(--ink); cursor: pointer; }
@@ -553,8 +551,7 @@ footer .logo-text .tagline { color: var(--muted); }
 }
 @media (max-width: 1000px) {
   :root { --nav-h: 72px; }
-  #navbar { grid-template-areas: "plan logo burger"; padding: 12px var(--gutter); }
-  .nav-plan-btn { display: inline-flex; }
+  #navbar { grid-template-areas: "lang logo burger"; padding: 12px var(--gutter); }
   #navbar.scrolled { padding-top: 12px; }
   .nav-links, .desktop-language { display: none; }
   .hamburger, .mobile-language { display: flex; }
