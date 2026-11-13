@@ -39,6 +39,8 @@
     "mapPlanGuide": "Lên kế hoạch cùng hướng dẫn viên địa phương ↗",
     "mapAirport": "Sân bay {name} ({code})",
     "mapPhotoIllustrative": "Ảnh minh họa",
+    "mapPhotoRendering": "Hình phối cảnh",
+    "mapGmcAirportCaption": "Sân bay quốc tế Gelephu (hình phối cảnh)",
     "mapEntry": "Cửa khẩu từ Ấn Độ",
     "mapFlightsPause": "Tạm dừng chuyến bay",
     "mapFlightsPlay": "Phát chuyến bay",

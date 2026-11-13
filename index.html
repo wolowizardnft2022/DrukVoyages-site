@@ -44,7 +44,7 @@
     "sameAs": ["https://instagram.com/drukvoyages","https://facebook.com/drukvoyages"]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261113-flightsoff"/>
+  <link rel="stylesheet" href="styles.css?v=20261113-gmcimage"/>
   <!-- Intro splash: decided before first paint so the home page never flashes first. Shown on every load
     and refresh, never with reduced motion, and never without JavaScript (the class is set here). Without a
     #section link, the page opens at the top (the home page) instead of the browser's restored scroll. -->
@@ -429,7 +429,7 @@
       </div>
       <details class="geo-sources">
         <summary>Sources &amp; notes</summary>
-        <p>Shaded relief from measured terrain. Borders and place positions are approximate; this map is for choosing places, not navigation.</p><span>Geography: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth</a>. Dzongkhag borders: UN OCHA ROAP gewog boundaries via <a href="https://www.geoboundaries.org" target="_blank" rel="noopener noreferrer">geoBoundaries</a>, CC BY 3.0 IGO, grouped into the 20 dzongkhags (Nganglam in Pemagatshel). Rivers, roads, towns and villages: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>, ODbL. Terrain: SRTM/GMTED2010 courtesy of USGS; ETOPO1 courtesy of NOAA, processed by <a href="https://registry.opendata.aws/terrain-tiles/" target="_blank" rel="noopener noreferrer">Mapzen</a>. Satellite imagery inside a dzongkhag: <a href="https://s2maps.eu" target="_blank" rel="noopener noreferrer">Sentinel-2 cloudless</a> by EOX IT Services GmbH (contains modified Copernicus Sentinel data 2016), CC BY 4.0.</span>
+        <p>Shaded relief from measured terrain. Borders and place positions are approximate; this map is for choosing places, not navigation.</p><span>Geography: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth</a>. Dzongkhag borders: UN OCHA ROAP gewog boundaries via <a href="https://www.geoboundaries.org" target="_blank" rel="noopener noreferrer">geoBoundaries</a>, CC BY 3.0 IGO, grouped into the 20 dzongkhags (Nganglam in Pemagatshel). Rivers, roads, towns and villages: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>, ODbL. Terrain: SRTM/GMTED2010 courtesy of USGS; ETOPO1 courtesy of NOAA, processed by <a href="https://registry.opendata.aws/terrain-tiles/" target="_blank" rel="noopener noreferrer">Mapzen</a>. Satellite imagery inside a dzongkhag: <a href="https://s2maps.eu" target="_blank" rel="noopener noreferrer">Sentinel-2 cloudless</a> by EOX IT Services GmbH (contains modified Copernicus Sentinel data 2016), CC BY 4.0. Trashigang photos via Wikimedia Commons: Rangjung Woesel Choeling by Christopher J. Fynn, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a>; Brokpa dancers of Merak by Tridivadurjoy, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.</span>
       </details>
     </div>
     <noscript><p class="atlas-noscript">Explore <a href="https://bhutan.travel/experiences-culture">Bhutan’s cultural landmarks</a> and <a href="https://bhutan.travel/adventure-experiences">trekking experiences</a>, or <a href="#itineraries">browse our itineraries</a>. Enable JavaScript to use the illustrated map.</p></noscript>
@@ -1480,7 +1480,7 @@ const SAMPLE_STORIES=[
   {photo:'season-winter.jpg',initials:'HT',name:'Hiroshi T.',from:'Osaka, Japan — Winter 2025',text:'Clear winter skies gave us views of the Himalaya from almost every pass. Warm hospitality in every town made the cold mornings easy to love.'},
   {photo:'exp-tigers-nest.jpg',initials:'AN',name:'Anna N.',from:'Berlin, Germany — Autumn 2025',text:'Our guide paced the Tiger\'s Nest hike perfectly for my parents, who are in their seventies. Reaching the top together is a memory our family will treasure.'}
 ];
-// Static GitHub Pages build: show the sample guest stories here too, so the live site matches the local preview.
+// Local previews: this computer, a phone on the same Wi-Fi (private network address or .local name), or ?samples.
 // The cards stay tagged "(sample)"; replace them with real guests' words before launch.
 const showSampleStories=true||['localhost','127.0.0.1',''].includes(location.hostname)||/^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)|\.local$/.test(location.hostname)||new URLSearchParams(location.search).has('samples');
 if(showSampleStories){
@@ -1778,7 +1778,7 @@ document.addEventListener('DOMContentLoaded',()=>{window.DRUK_L10N.capture();app
 */
 (function(){
   const section=document.getElementById('bhutan-map');
-  const files=['bhutan-geography.js?v=20261113-dzongkhags','bhutan-map.js?v=20261113-security'];
+  const files=['bhutan-geography.js?v=20261113-dzongkhags','bhutan-map.js?v=20261113-trashigang'];
   let started=false;
   function loadAtlas(){
     if(started)return;started=true;
@@ -1878,29 +1878,25 @@ document.addEventListener('DOMContentLoaded',()=>{window.DRUK_L10N.capture();app
   the UI. retrieve() searches these records by keyword.
 */
 const KB=[
-  {id:'i1',t:'Classic Royal Trail (8 days)',c:"Classic Bhutan Highlights 8-day itinerary from $3,290/person max 8 guests moderate difficulty. Tiger's Nest monastery Paro Taktsang 3120m, Punakha Dzong built 1637 confluence of Mo Chhu Pho Chhu rivers, Dochula Pass 108 memorial chortens, National Museum. Includes Thimphu Buddha Dordenma, Haa Valley, Paro farmhouse dinner ema datshi. Best for first-time Bhutan visitors."},
-  {id:'i2',t:'Paro Tsechu Festival (10 days)',c:'Festival journey 10 days $4,150/person max 6 guests easy difficulty. Sacred Cham mask dances by monks, Thongdrel giant thangka applique unveiling at pre-dawn, backstage performer access, cultural workshops. Punakha Dzong, Chimi Lhakhang Divine Madman Drukpa Kunley fertility temple, Bumthang Kurjey Lhakhang Jambay Lhakhang.'},
-  {id:'i3',t:'Druk Path Trek (12 days)',c:'Trekking itinerary 12 days $5,200/person max 8 guests challenging difficulty. Ancient trail Paro to Thimphu high altitude 4100m. Jimilangtso Simkotha sacred lakes, wild yak sightings, Phajoding Monastery hermitage, forest camping. Acclimatisation days included. Traditional hot stone bath dotsho recovery.'},
-  {id:'i4',t:'Bhutan Soul Reset Wellness (9 days)',c:"Wellness retreat 9 days $4,800/person max 4 guests easy. Digital detox phones stored. Sowa Rigpa traditional medicine consultation personalised herbal plan. Tiger's Nest mindful pilgrimage. Mo Chhu riverside dawn yoga Punakha. Two silent retreat days Bumthang farmhouse forest bathing shinrin-yoku journalling. Dotsho hot stone bath ceremony. Thangka painting. Personalised wellness prescription herbal remedies."},
-  {id:'i5',t:'Photography Tour (14 days)',c:"Photography tour 14 days $5,900/person max 5 guests moderate. Professional Bhutanese photographer guide. Pre-dawn Tiger's Nest 4am mist first light. Dochula Pass 108 chortens sunrise. Punakha Dzong sunset reflections. Phobjikha black-necked crane dawn. Two-day village homestay documentary. Lightroom post-processing workshop. Farewell print exhibition."},
-  {id:'i6',t:'Royal Honeymoon (11 days)',c:"Honeymoon couples only 11 days $6,500 easy. Private hot air balloon sunrise Paro Valley. Tiger's Nest monastic blessing union. After-hours candlelit dinner Punakha Dzong courtyard. Couples Sowa Rigpa spa hot stone bath. Champagne picnic Phobjikha. Haa Valley escape. Bumthang butter lamp ceremony folk music. Personalised thangka painting wedding keepsake. Rooftop Himalayan stars dinner."},
   {id:'d1',t:"Tiger's Nest — Paro Taktsang",c:"Tiger's Nest Paro Taktsang most iconic landmark Bhutan. Cliff face 900m above Paro Valley 3120m elevation. Guru Padmasambhava Guru Rinpoche flew on tigress 8th century meditated 3 months body imprint in rock. Monastery built 1694 rebuilt after fire 1998. Hike 4 hours return. Cliff-side cafe halfway. Photography allowed on trails not inside monastery. Modest dress required shoulders knees covered."},
   {id:'d2',t:'Punakha Dzong',c:'Punakha Dzong most beautiful dzong fortress monastery Bhutan built 1637 Zhabdrung Ngawang Namgyal. Confluence Mo Chhu Mother River Pho Chhu Father River. Winter residence Je Khenpo senior monk. Punakha Tsechu festival. Punakha Suspension Bridge 160m longest Bhutan leads to Chimi Lhakhang. Elevation 1200m warmest lowest valley ideal winter. King Jigme Khesar Royal Wedding 2011.'},
   {id:'d3',t:'Thimphu Capital',c:"Thimphu capital world's only capital without traffic lights traffic policeman decorated booth. Buddha Dordenma 51.5m bronze Buddha. Tashichho Dzong government throne room. National Folk Heritage Museum. Changangkha Lhakhang 15th century. Takin preserve national animal. Traditional archery. Royal Textile Academy. Norzin Lam main shopping. Weekend market. Elevation 2334m."},
   {id:'d4',t:'Bumthang Spiritual Heartland',c:'Bumthang four valleys Chhumey Tang Ura Choekhor spiritual heartland Bhutan. Kurjey Lhakhang Guru Rinpoche body imprint 8th century. Jambay Lhakhang 659 AD Tibetan King Songtsen Gampo. Jakar Dzong largest dzong Bhutan. Tamzhing Lhakhang. Apple orchards buckwheat pancakes yak cheese Bumthang weaving. Elevation 2800m+.'},
   {id:'d5',t:'Phobjikha Valley Crane Sanctuary',c:'Phobjikha Valley glacial wildlife sanctuary. Endangered black-necked crane Grus nigricollis Trung Trung sacred bird longevity. 600 cranes winter October to February migrate Tibet. Gangtey Monastery Nyingmapa. Black-Necked Crane Information Centre. Crane Festival November traditional dances. Electric lines buried underground conservation. Elevation 2900m.'},
   {id:'d6',t:'Haa Valley',c:'Haa Valley remote least visited opened tourists 2002. Pristine forests traditional villages slow pace life. Lhakhang Karpo White Temple Lhakhang Nagpo Black Temple 7th century. Yak herders. Haa Festival nomadic culture annually. Very few tourists authentic experience.'},
-  {id:'p1',t:'Visa Requirements',c:'Bhutan no independent tourist visas. All international visitors except Indian Bangladeshi Maldivian must book through licensed Bhutanese tour operator like Druk Voyages. We handle entire visa process. Visa processed online stamped on arrival Paro Airport. Requirements: passport 6+ months validity, passport photo, confirmed itinerary payment. Indian nationals voter ID card or passport. Visa fee included Sustainable Development Fee SDF.'},
-  {id:'p2',t:'Sustainable Development Fee SDF Cost',c:'Bhutan Sustainable Development Fee SDF $100 USD per person per night international tourists. Funds free healthcare free education all citizens environmental conservation. Mandatory all non-Indian visitors included Druk Voyages packages. Indian Bangladeshi Maldivian different rate. Children under 5 exempt. High Value Low Impact tourism philosophy.'},
-  {id:'p3',t:'Flights to Bhutan',c:'Paro International Airport only international airport Bhutan. Only two airlines: Drukair Royal Bhutan Airlines and Bhutan Airlines. Connections from Delhi Kolkata Mumbai Kathmandu Bangkok Singapore Dhaka. Only 8 certified pilots worldwide allowed land Paro scenic challenging approach weaves Himalayan peaks. Delhi flight ~2 hours. Connect through Delhi or Kathmandu.'},
+  {id:'p1',t:"Visa, Entry & Licensed Guides",c:"Visa: every visitor except Indian nationals needs a visa applied for online before travel; Druk Voyages arranges it once your trip is confirmed. Passport valid 6+ months, photo, travel insurance, confirmed stay. One-time visa fee (USD 40 at the time of writing), separate from the nightly SDF. Indian nationals enter with passport or voter ID and receive an entry permit. Tourists must be accompanied by a licensed Bhutanese guide when touring, including monuments and travel between districts; every Druk Voyages journey includes a licensed guide and private driver. Rules can change; the team confirms current requirements for your nationality."},
+  {id:'p2',t:"Sustainable Development Fee SDF Cost",c:"Sustainable Development Fee (SDF), set by the Royal Government of Bhutan: USD 100 per person per night for international visitors (since September 2023). Children 6 to 12 pay half (USD 50), under 6 free. Indian nationals INR 1,200 per person per night. Funds free healthcare, education and conservation (High Value, Low Impact tourism). Included in Druk Voyages package prices. Government fees can change; the team confirms the current rate when you book."},
+  {id:'p3',t:"Flights to Bhutan",c:"Paro International Airport is Bhutan's only international airport. Two Bhutanese airlines fly there: Drukair (Royal Bhutan Airlines) and Bhutan Airlines, connecting cities such as Delhi, Kolkata, Bagdogra, Kathmandu, Bangkok, Singapore and Dhaka (routes vary by season). Only specially certified pilots fly the mountain approach; flights operate in daylight and weather can delay them. Overland entry from India at Phuentsholing, Gelephu or Samdrup Jongkhar. Flights are not included in packages; we advise on connections."},
   {id:'p4',t:'Best Time to Visit Seasons',c:'Spring March-May 5 stars: rhododendrons bloom Himalayan peaks clear Paro Tsechu festival 10-20°C. Autumn September-November 5 stars: crystal clear views golden valleys Thimphu Tsechu peak season book 6 months ahead. Monsoon June-August 3 stars: lush greenery fewer crowds lower rates 20-30% occasional rain waterfalls spectacular. Winter December-February 4 stars: snow dzongs black-necked cranes Phobjikha uncrowded 0-15°C.'},
   {id:'p5',t:'Currency Money Payments',c:'Bhutanese Ngultrum BTN pegged 1:1 Indian Rupee. Indian Rupees widely accepted. USD EUR exchange banks airport. ATMs Thimphu Paro scarce rural areas. Credit cards larger hotels restaurants Thimphu Paro. Cash essential rural Bhutan. Druk Voyages payments USD bank transfer major credit cards. Tips appreciated guide BTN 500-1000/day driver BTN 300-500/day.'},
   {id:'p6',t:'Altitude Sickness',c:"Bhutan valleys 200m subtropical south to 7000m+ northern peaks. Tourist destinations 1200m Punakha to 3000m upper Paro. Tiger's Nest 3120m. Druk Path Trek 4100m+. Altitude sickness AMS real risk above 3000m. Symptoms headache nausea fatigue dizziness. Prevention ascend slowly hydrated avoid alcohol first 2 days consider Diamox acetazolamide consult doctor. Our itineraries include acclimatisation. Guides trained recognise AMS."},
   {id:'p7',t:'Dotsho Hot Stone Bath Experience',c:'Dotsho traditional hot stone bath river stones heated fire hours until red-hot placed wooden bathtub water. Medicinal herbs artemisia added minerals therapeutic soak. Treats arthritis hypertension stomach disorders stress. Sessions 45-60 minutes meditative deeply relaxing best outdoors under mountain stars. Druk Voyages arranges authentic Dotsho local families Bumthang Paro not commercial spa versions.'},
   {id:'p8',t:'Tsechu Festivals',c:'Tsechu 10th day Dzongkha festivals honour Guru Rinpoche. Famous: Paro Tsechu spring 5 days, Thimphu Tsechu autumn 3 days, Punakha Drubchen Tsechu spring, Bumthang Tsechu autumn. Cham dances sacred masked dances monks deities defeating evil. Atsara clowns comic relief wisdom. Thongdrel massive sacred applique thangka unveiled dawn liberation through sight. Druk Voyages front-row viewing backstage access.'},
-  {id:'a1',t:'About Druk Voyages',c:'Druk Voyages 100% Bhutanese-owned operated travel agency licensed Tourism Council Bhutan License TCB-2009-142. Founded 15+ years ago local Bhutanese. 4800+ guests. 98% satisfaction rate. Carbon-neutral since 2018. All guides drivers staff Bhutanese nationals. 18 curated itineraries classic festival trekking wellness photography honeymoon. Small groups maximum 4-8 guests. Gross National Happiness GNH philosophy.'},
+  {id:'a1',t:"About Druk Voyages",c:"Druk Voyages: 100% Bhutanese-owned and operated travel company on Norzin Lam, Thimphu (licence #TCB-2009-142). Founded 15+ years ago by local Bhutanese; 4,800+ guests; 98% satisfaction; carbon-neutral since 2018. All guides, drivers and staff are Bhutanese. 12 itineraries across culture, festivals, trekking, wellness, photography and honeymoon; small groups (usually 4–8 guests); every itinerary can be customised."},
   {id:'a2',t:'Contact Booking Process',c:'Druk Voyages contact: Email hello@drukvoyages.bt Phone +975 17 000 000 Office Norzin Lam Thimphu Bhutan. Hours Monday-Saturday 9am-6pm Bhutan Standard Time UTC+6. Booking: enquiry form → personalised itinerary 24 hours → confirm → visa docs → 30% deposit → balance 60 days before travel. Payment bank transfer Visa Mastercard USD. Cancellation: full refund 60+ days 50% refund 30-60 days no refund under 30 days. Group 8+ get 10% discount.'},
 ];
+/* Itineraries come from the page's own ITINERARIES / ITINERARY_SIGNALS (R-23), so the offline guide always matches the cards. */
+if(typeof ITINERARIES!=='undefined')KB.push(...ITINERARIES.map(it=>{const s=(typeof ITINERARY_SIGNALS!=='undefined'&&ITINERARY_SIGNALS[it.id])||{};return{id:'i'+it.id,t:`${it.title} (${it.duration})`,c:[`${it.title}: ${it.duration} ${it.tag} itinerary, ${/^\$/.test(it.price)?'from '+it.price+' per person':'custom quote'}, ${it.groupSize}, ${it.difficulty}.`,s.route?'Route: '+s.route.join(' → ')+'.':'',s.bestTime?'Best time: '+s.bestTime+'.':'',it.desc,'Highlights: '+(it.highlights||[]).join(', ')+'.',(it.days||[]).map(d=>`Day ${d.n}: ${d.t}. ${d.d}`).join(' ')].join(' ')};}));
 
 /* ── Keyword retrieval ──
   Lightweight search over KB. It returns the most relevant entries for the
@@ -2067,6 +2063,25 @@ function hideTyping(){const t=document.getElementById('typingRow');if(t)t.remove
   Groq is called directly from the browser with the visitor's key. Ollama Cloud
   requests go through API_URL so no visitor key is required.
 */
+/* The server's grounded prompt (POST /api/chat/context, R-23): the same knowledge base, retrieval and accuracy rules as
+   the server's own model. Falls back to the in-page guide only when the server cannot be reached (static hosting). */
+async function serverGrounding(language){
+  try{
+    const res=await fetch(`${API_URL}/api/chat/context`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({language,messages:history.slice(-8)}),signal:AbortSignal.timeout(20000)});
+    if(!res.ok)return null;
+    const data=await res.json();
+    return typeof data.system==='string'&&data.system.trim()?data.system:null;
+  }catch(_err){return null;}
+}
+/* Without an AI provider: the server's answer, from its model if it is up or from the knowledge base if not. */
+async function serverGuideAnswer(language){
+  try{
+    const res=await fetch(`${API_URL}/api/chat`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({language,messages:history.slice(-8)}),signal:AbortSignal.timeout(12000)});
+    if(!res.ok)return null;
+    const data=await res.json();
+    return typeof data.reply==='string'&&data.reply.trim()?data.reply.trim():null;
+  }catch(_err){return null;}
+}
 async function callGroq(systemPrompt,messages){
   const res=await fetch('https://api.groq.com/openai/v1/chat/completions',{
     method:'POST',
@@ -2076,7 +2091,7 @@ async function callGroq(systemPrompt,messages){
       messages:[{role:'system',content:systemPrompt},...messages],
       max_completion_tokens:1024,
       reasoning_effort:'low',
-      temperature:0.7,
+      temperature:0.3,
     }),
     signal:AbortSignal.timeout(30000),
   });
@@ -2101,7 +2116,8 @@ async function callOllamaCloud(messages,language='en'){
   if(!res.ok){const e=await res.text();throw new Error(`Ollama ${res.status}: ${e}`);}
   const j=await res.json();
   if(typeof j.reply!=='string'||!j.reply.trim())throw new Error('Ollama returned an empty reply');
-  return j.offline?staticFallback(messages.filter(m=>m.role==='user').at(-1)?.content||''):j.reply.trim();
+  // Offline replies are the server's answers from the knowledge base (real prices, days and fees), so show them as is.
+  return j.reply.trim();
 }
 
 /* ── Smart static fallback ──
@@ -2125,7 +2141,7 @@ async function chatSend(override){
   busy=true;snd.disabled=true;showTyping();
 
   try{
-    let reply;
+    let reply,guideKey;
     if(hasAIProviderEnabled()){
       // RAG: retrieve relevant chunks
       const chunks=retrieve(text,4);
@@ -2139,14 +2155,15 @@ CONTEXT:
 ${context}`;
       reply=aiProvider==='ollama'
         ?await callOllamaCloud(history.slice(-8),chatLanguage())
-        :await callGroq(sys,history.slice(-8));
+        :await callGroq(await serverGrounding(chatLanguage())||sys,history.slice(-8));
     }else{
-      // Smart static fallback — no API key
-      await new Promise(r=>setTimeout(r,800));
-      reply=staticFallback(text);
+      // No AI provider: the server still answers from its knowledge base (R-23). Only when there is no server
+      // (static hosting) or it is slow does the built-in topic reply stand in.
+      reply=await serverGuideAnswer(chatLanguage());
+      if(!reply){await new Promise(r=>setTimeout(r,800));reply=staticFallback(text);guideKey=fallbackKey(text);}
     }
     hideTyping();
-    botMsg(reply,hasAIProviderEnabled()?undefined:fallbackKey(text));
+    botMsg(reply,hasAIProviderEnabled()?undefined:guideKey);
     history.push({role:'assistant',content:reply});
     updateChatMeta();
   }catch(err){

@@ -1587,3 +1587,8 @@ main > section[id]:not(.hero):not(.about-section) { scroll-margin-top: calc(28px
 /* Pausing the map's flights hides them: routes and planes fade out, and back in on Play. */
 .geo-flights, .geo-planes { transition: opacity .6s, visibility .6s; }
 .geo-shell.flights-paused .geo-flights, .geo-shell.flights-paused .geo-planes { opacity: 0; visibility: hidden; }
+
+/* GMC updates: the planned international airport (official rendering) above the news list. */
+.geo-gmc-figure { margin: 4px 0 12px; }
+.geo-gmc-figure img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.geo-gmc-figure figcaption { margin-top: 6px; color: var(--muted); font-size: var(--fs-xs); line-height: 1.4; }

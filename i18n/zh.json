@@ -39,6 +39,8 @@
     "mapPlanGuide": "与当地导游规划旅程 ↗",
     "mapAirport": "{name}机场（{code}）",
     "mapPhotoIllustrative": "示意图片",
+    "mapPhotoRendering": "效果图",
+    "mapGmcAirportCaption": "盖莱普国际机场（效果图）",
     "mapEntry": "从印度入境",
     "mapFlightsPause": "暂停航班",
     "mapFlightsPlay": "播放航班",

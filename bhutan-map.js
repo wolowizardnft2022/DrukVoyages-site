@@ -112,19 +112,23 @@
     if(u>=leg+rest&&u<2*leg+rest)return {t:glide((u-leg-rest)/leg),forward:false};
     return null;
   }
-  // Place photos. Thirteen places have their own; the rest borrow a photo of the same kind of
-  // place from the site's gallery and are marked as illustrative.
+  // Place photos. Most places have their own; the rest borrow a photo of the same kind of place from the site's
+  // gallery and are marked as illustrative (true). Gelephu Mindfulness City is still being built, so it shows the
+  // official rendering, marked as an artist's impression ('render').
   const photos={
     taktsang:['maps-image/dzongs_of_bhutan/Paro Tasktsang.jpg'],rinpung:['maps-image/dzongs_of_bhutan/PARO_RINPONG_DZONG.jpg'],tashichho:['maps-image/dzongs_of_bhutan/TASHICHHO_DZONG.jpg'],punakha:['maps-image/dzongs_of_bhutan/PUNAKHA_DZONG.jpg'],trongsa:['maps-image/dzongs_of_bhutan/TRONGSA_DZONG.jpg'],jakar:['maps-image/Jakar Dzong.jpg'],trashigang:['maps-image/dzongs_of_bhutan/TRASHIGANG_DZONG.jpg'],
     phobjikha:['bhutannaturephotography-common-cranes-6922803.jpg',true],gangtey:['raimond-klavins-gi7tWn0F58s-unsplash.jpg',true],chimi:['maps-image/chimi-lhakhang.jpg'],kurjey:['pema-gyamtsho-d5L8nPxssTI-unsplash.jpg',true],haa:['raimond-klavins-gi7tWn0F58s-unsplash.jpg',true],
     dochula:['maps-image/Dochula-pass.jpg'],chelela:['maps-image/Chele-la.jpeg'],jangothang:['nithil-dennis-_dt9MgebRcQ-unsplash.jpg',true],drukpath:['raul-taciu-ZU6Gd12DHbU-unsplash.jpg',true],
     crafts:['daniel-grandfield-Hx-jdJxVHzs-unsplash.jpg',true],museum:['maps-image/national museum.avif'],buddha:['maps-image/buddha-dordenma.jpg'],memorial:['maps-image/Memorial_Chorten,_Thimphu.jpg'],
-    gmc:['passang-tobgay-GFqHZV_ROj0-unsplash.jpg',true]
+    gmc:['maps-image/Gelephu Mindfulness City.jpg','render']
   };
   // Tourist spots with their own photo (img/maps-image): these open a photo card inside their dzongkhag.
-  const spotPhotos={'Drukgyel Dzong':'Drukgyel_Dzong.jpg','Khamsum Yulley Namgyal':'Khamsum-yulley-namgyel.jpg','Simtokha Dzong':'dzongs_of_bhutan/SIMTOKHA_DZONG.jpg','Wangdue Phodrang Dzong':'dzongs_of_bhutan/WANGDUEPHODRANG_DZONG.jpg','Gasa Dzong':'dzongs_of_bhutan/GASA_DZONG.jpg','Lhuentse Dzong':'dzongs_of_bhutan/LHUNTSE_DZONG.webp','Pemagatshel Dzong':'dzongs_of_bhutan/PEMAGATSHEL_DZONG.jpg','Daga Trashiyangtse Dzong':'dzongs_of_bhutan/DAGA_DZONG.avif','Ura village':'ura-valley.jpg','Kyichu Lhakhang':'kyichu lhakhang.webp'};
+  const spotPhotos={'Drukgyel Dzong':'Drukgyel_Dzong.jpg','Khamsum Yulley Namgyal':'Khamsum-yulley-namgyel.jpg','Simtokha Dzong':'dzongs_of_bhutan/SIMTOKHA_DZONG.jpg','Wangdue Phodrang Dzong':'dzongs_of_bhutan/WANGDUEPHODRANG_DZONG.jpg','Gasa Dzong':'dzongs_of_bhutan/GASA_DZONG.jpg','Lhuentse Dzong':'dzongs_of_bhutan/LHUNTSE_DZONG.webp','Pemagatshel Dzong':'dzongs_of_bhutan/PEMAGATSHEL_DZONG.jpg','Daga Trashiyangtse Dzong':'dzongs_of_bhutan/DAGA_DZONG.avif','Ura village':'ura-valley.jpg','Kyichu Lhakhang':'kyichu lhakhang.webp','Rangjung Woesel Choeling':'Rangjung Woesel Choeling.jpg','Merak and Sakteng':'Merak Sakteng Brokpa dance.jpg'};
   spots.forEach(spot=>{if(spotPhotos[spot.name])spot.photo=`img/web/maps-image/${spotPhotos[spot.name]}`;});
-  const photoFor=id=>photos[id]?{src:`img/web/${photos[id][0]}`,illustrative:Boolean(photos[id][1])}:null;
+  const photoFor=id=>photos[id]?{src:`img/web/${photos[id][0]}`,illustrative:photos[id][1]===true,rendering:photos[id][1]==='render'}:null;
+  // The label on a borrowed photo or a rendering; null for a photo of the place itself.
+  const photoLabel=picture=>picture.rendering?tr('mapPhotoRendering'):picture.illustrative?tr('mapPhotoIllustrative'):null;
+  const photoAlt=(picture,name)=>picture.illustrative?'':picture.rendering?`${name} (${tr('mapPhotoRendering')})`:name;
   // The first sentence of a description, for the short text on the map (works for CJK full stops too).
   const shortText=text=>String(text||'').split(/(?<=[.!?。！？])\s*/)[0];
   // The camera tour flies west to east through the signature places.
@@ -398,7 +402,7 @@
       const figure=make('figure','geo-photo-figure');
       const img=make('img');img.src=picture.src;img.alt='';img.width=560;img.height=315;img.decoding='async';
       figure.appendChild(img);
-      if(picture.illustrative)figure.appendChild(make('span','geo-photo-tag',tr('mapPhotoIllustrative')));
+      if(photoLabel(picture))figure.appendChild(make('span','geo-photo-tag',photoLabel(picture)));
       photoCard.appendChild(figure);
     }
     const text=make('div','geo-photo-text');
@@ -445,7 +449,7 @@
       return;
     }
     const picture=photoFor(site.id);
-    if(picture){const figure=make('figure','geo-card-figure');const photo=make('img','geo-card-photo');photo.src=picture.src;photo.alt=picture.illustrative?'':site.name;photo.width=640;photo.height=360;photo.loading='lazy';photo.decoding='async';figure.appendChild(photo);if(picture.illustrative)figure.appendChild(make('span','geo-photo-tag',tr('mapPhotoIllustrative')));card.appendChild(figure);}
+    if(picture){const figure=make('figure','geo-card-figure');const photo=make('img','geo-card-photo');photo.src=picture.src;photo.alt=photoAlt(picture,site.name);photo.width=640;photo.height=360;photo.loading='lazy';photo.decoding='async';figure.appendChild(photo);if(photoLabel(picture))figure.appendChild(make('span','geo-photo-tag',photoLabel(picture)));card.appendChild(figure);}
     card.append(make('span','geo-kicker',`${categoryLabel(site.type)} · ${site.region}`),make('h3','',site.name),make('p','geo-card-sub',site.subtitle),make('p','geo-card-desc',site.desc));
     if(site.tip){const tip=make('p','geo-card-tip');tip.append(make('strong','',tr('mapGuideTip')),document.createTextNode(' '+site.tip));card.appendChild(tip);}
     if(site.id==='gmc')card.appendChild(gmcUpdates(false));
@@ -459,6 +463,11 @@
   function gmcUpdates(withLink) {
     const box=make('div','geo-gmc');
     box.appendChild(make('h4','geo-gmc-title',tr('mapGmcLatest')));
+    // The planned international airport (official rendering), beside the airport news.
+    const figure=make('figure','geo-gmc-figure');
+    const airport=make('img');airport.src='img/web/maps-image/Gelephu Airport.webp';airport.alt=tr('mapGmcAirportCaption');airport.width=780;airport.height=439;airport.loading='lazy';airport.decoding='async';
+    figure.append(airport,make('figcaption','',tr('mapGmcAirportCaption')));
+    box.appendChild(figure);
     const items=make('ul','geo-gmc-list');
     [1,2,3,4].forEach(n=>items.appendChild(make('li','',tr(`mapGmcUpdate${n}`))));
     box.append(items,make('p','geo-gmc-asof',tr('mapGmcAsOf')));

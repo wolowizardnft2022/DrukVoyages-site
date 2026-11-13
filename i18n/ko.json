@@ -39,6 +39,8 @@
     "mapPlanGuide": "현지 가이드와 여행 계획하기 ↗",
     "mapAirport": "{name} 공항({code})",
     "mapPhotoIllustrative": "참고용 사진",
+    "mapPhotoRendering": "완공 예상도",
+    "mapGmcAirportCaption": "겔레푸 국제공항 (완공 예상도)",
     "mapEntry": "인도에서 들어오는 입국 지점",
     "mapFlightsPause": "비행 일시정지",
     "mapFlightsPlay": "비행 재생",

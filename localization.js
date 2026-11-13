@@ -40,6 +40,8 @@
   "mapPlanGuide": "Plan with a local guide ↗",
   "mapAirport": "{name} Airport ({code})",
   "mapPhotoIllustrative": "Illustrative photo",
+  "mapPhotoRendering": "Artist’s impression",
+  "mapGmcAirportCaption": "Gelephu International Airport (artist’s impression)",
   "mapEntry": "Entry from India",
   "mapFlightsPause": "Pause flights",
   "mapFlightsPlay": "Play flights",

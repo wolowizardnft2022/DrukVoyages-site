@@ -39,6 +39,8 @@
     "mapPlanGuide": "現地ガイドと旅を計画 ↗",
     "mapAirport": "{name}空港（{code}）",
     "mapPhotoIllustrative": "イメージ写真",
+    "mapPhotoRendering": "完成予想図",
+    "mapGmcAirportCaption": "ゲレフ国際空港（完成予想図）",
     "mapEntry": "インドからの入国地点",
     "mapFlightsPause": "フライトを一時停止",
     "mapFlightsPlay": "フライトを再生",

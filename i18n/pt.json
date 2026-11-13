@@ -39,6 +39,8 @@
     "mapPlanGuide": "Planeje com um guia local ↗",
     "mapAirport": "Aeroporto de {name} ({code})",
     "mapPhotoIllustrative": "Foto ilustrativa",
+    "mapPhotoRendering": "Ilustração do projeto",
+    "mapGmcAirportCaption": "Aeroporto Internacional de Gelephu (ilustração do projeto)",
     "mapEntry": "Entrada a partir da Índia",
     "mapFlightsPause": "Pausar voos",
     "mapFlightsPlay": "Ver voos",
