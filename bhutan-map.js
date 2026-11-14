@@ -124,7 +124,7 @@
   };
   // Tourist spots with their own photo (img/maps-image): these open a photo card inside their dzongkhag.
   const spotPhotos={'Drukgyel Dzong':'Drukgyel_Dzong.jpg','Khamsum Yulley Namgyal':'Khamsum-yulley-namgyel.jpg','Simtokha Dzong':'dzongs_of_bhutan/SIMTOKHA_DZONG.jpg','Wangdue Phodrang Dzong':'dzongs_of_bhutan/WANGDUEPHODRANG_DZONG.jpg','Gasa Dzong':'dzongs_of_bhutan/GASA_DZONG.jpg','Lhuentse Dzong':'dzongs_of_bhutan/LHUNTSE_DZONG.webp','Pemagatshel Dzong':'dzongs_of_bhutan/PEMAGATSHEL_DZONG.jpg','Daga Trashiyangtse Dzong':'dzongs_of_bhutan/DAGA_DZONG.avif','Ura village':'ura-valley.jpg','Kyichu Lhakhang':'kyichu lhakhang.webp','Rangjung Woesel Choeling':'Rangjung Woesel Choeling.jpg','Merak and Sakteng':'Merak Sakteng Brokpa dance.jpg',
-    'Haa Dzong':'Haa Dzong.jpg','Tango Monastery':'Tango Monastery.jpg','Cheri Monastery':'Cheri Monastery.jpg','Punakha suspension bridge':'Punakha suspension bridge.jpg','Trongsa Ta Dzong':'Trongsa Ta Dzong.jpg','Chendebji Chorten':'Chendebji Chorten.jpg','Jambay Lhakhang':'Jambay Lhakhang.jpg','Membar Tsho (Burning Lake)':'Membar Tsho Burning Lake.jpg','Khoma weaving village':'Khoma weaving village.jpg','Chorten Kora':'Chorten Kora.jpg','Bumdeling Wildlife Sanctuary':'Bumdeling Wildlife Sanctuary.jpg','Royal Manas National Park':'Royal Manas National Park.jpg','Tsirang Dzong':'Tsirang Dzong.jpg','Kharbandi Goenpa':'Kharbandi Goenpa.jpg','Chukha Dzong':'Chukha Dzong.jpg'};
+    'Haa Dzong':'Haa Dzong.jpg','Tango Monastery':'Tango Monastery.jpg','Cheri Monastery':'Cheri Monastery.jpg','Punakha suspension bridge':'Punakha suspension bridge.jpg','Trongsa Ta Dzong':'Trongsa Ta Dzong.jpg','Chendebji Chorten':'Chendebji Chorten.jpg','Jambay Lhakhang':'Jambay Lhakhang.jpg','Membar Tsho (Burning Lake)':'Membar Tsho Burning Lake.jpg','Khoma weaving village':'Khoma weaving village.jpg','Chorten Kora':'Chorten Kora.jpg','Bumdeling Wildlife Sanctuary':'Bumdeling Wildlife Sanctuary.jpg','Royal Manas National Park':'Royal Manas National Park.jpg','Tsirang Dzong':'Tsirang Dzong.jpg','Kharbandi Goenpa':'Kharbandi Goenpa.jpg','Chukha Dzong':'Chukha Dzong.jpg','Kori La pass':'Kori La pass.jpg','Laya village':'Laya village.jpg','Zhemgang Dzong':'Zhemgang Dzong.jpg'};
   // Photos from Wikimedia Commons: photographer, licence and file page, shown as a credit on the photo (their licences
   // require attribution). Photos the owner supplied have no entry.
   const photoCredits={
@@ -144,7 +144,10 @@
     'Kharbandi Goenpa.jpg':{"by": "Bernard Gagnon", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Kharbandi_Gompa,_Phuentsholing_01.jpg"},
     'Chukha Dzong.jpg':{"by": "Christopher J. Fynn", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Chukha_Dzong.jpg"},
     'Rangjung Woesel Choeling.jpg':{"by": "Christopher J. Fynn", "licence": "CC BY 3.0", "page": "https://commons.wikimedia.org/wiki/File:Zangdog-Pelri-Temple_Rangjung_Trashigang_Bhutan.JPG"},
-    'Merak Sakteng Brokpa dance.jpg':{"by": "Tridivadurjoy", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Brokpa_Cultural_Dance.jpg"}
+    'Merak Sakteng Brokpa dance.jpg':{"by": "Tridivadurjoy", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Brokpa_Cultural_Dance.jpg"},
+    'Kori La pass.jpg':{"by": "Franzfoto", "licence": "CC BY-SA 3.0", "page": "https://commons.wikimedia.org/wiki/File:Distrikt_Mongar_-_Korela_Pass_2400_m.%C3%BC.NN..JPG"},
+    'Laya village.jpg':{"by": "Sabine Blankevoort", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Traditional_parade_in_Bhutan.jpg"},
+    'Zhemgang Dzong.jpg':{"by": "Kheng Singye Dorji", "licence": "CC BY-SA 4.0", "page": "https://commons.wikimedia.org/wiki/File:Zhemgang2.jpg"}
   };;
   spots.forEach(spot=>{if(spotPhotos[spot.name]){spot.photo=`img/web/maps-image/${spotPhotos[spot.name]}`;spot.credit=photoCredits[spotPhotos[spot.name]]||null;}});
   // "© Photographer · CC BY-SA 4.0", linked to the photo's Commons page.

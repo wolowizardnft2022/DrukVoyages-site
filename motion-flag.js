@@ -1,0 +1,1 @@
+try{if(matchMedia('(prefers-reduced-motion: no-preference)').matches){document.documentElement.classList.add('splash-on');if(!location.hash&&'scrollRestoration' in history){history.scrollRestoration='manual';scrollTo(0,0);}}}catch(error){}

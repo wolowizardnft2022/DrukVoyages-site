@@ -3,12 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-  <script>/* "Desktop site" on a phone: the browser sends a desktop identity but would still lay the page out at phone width
-     (width=device-width), so the mobile layout showed. A desktop browser identity on a small touch screen means the visitor
-     asked for the desktop site: lay the page out 1280px wide (the full desktop layout) and let the browser zoom out to fit. */
-  (function(){try{var mobile=/Mobi|Android|iPhone|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent)||(navigator.userAgentData&&navigator.userAgentData.mobile);
-  var touch=navigator.maxTouchPoints>0||'ontouchstart' in window;
-  if(!mobile&&touch&&Math.min(screen.width,screen.height)<600){document.documentElement.classList.add('desktop-request');document.querySelector('meta[name="viewport"]').setAttribute('content','width=1280');}}catch(e){}})();</script>
+  <script src="desktop-site.js?v=20261114-csp1"></script>
   <meta name="robots" content="noindex, nofollow"/>
   <meta name="referrer" content="no-referrer"/>
   <title>Share your best moment — Druk Voyages</title>
@@ -139,9 +134,6 @@
   </section>
 </main>
 <script src="share-story.js?v=20261112-stories" defer></script>
-<script>/* Service worker (R-24): faster repeat visits and offline pages. Only on https or this computer; ?nosw switches it off. */
-  (function(){if(!('serviceWorker' in navigator))return;if(/[?&]nosw/.test(location.search)){navigator.serviceWorker.getRegistrations().then(list=>list.forEach(r=>r.unregister())).catch(()=>{});return;}
-  if(location.protocol!=='https:'&&!['localhost','127.0.0.1'].includes(location.hostname))return;
-  addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));})();</script>
+<script src="sw-register.js?v=20261114-csp1"></script>
 </body>
 </html>
