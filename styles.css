@@ -1651,3 +1651,62 @@ main > .journey-finder { padding-bottom: clamp(40px, 5vw, 72px); }
 main > .journey-finder + .enquiry-section { padding-top: clamp(40px, 5vw, 72px); }
 .plan-skip { display: flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 8px; color: var(--muted); font-size: var(--fs-sm); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
 .plan-skip:hover, .plan-skip:focus-visible { color: var(--gold-light); }
+
+/* Best Time fits one screen (owner, 2026-11-14): on laptops and desktops the heading and the four season cards are
+   visible together under the masthead. The section's own --section-y is smaller (padding and the menu-link landing
+   both read it), the heading sits closer to the cards, and the cards shrink with the window height (never below
+   the 340px their text needs, never above the usual 480px). Phones and tall tablets keep the stacked layout. */
+@media (min-width: 1024px) and (min-height: 620px) {
+  .calendar-section { --section-y: clamp(40px, 6svh, 72px); }
+  .calendar-section .calendar-header { margin-bottom: var(--space-6); }
+  .calendar-section .calendar-header::after { margin-top: 18px; }
+  .calendar-section .section-title { margin-bottom: 14px; }
+  .calendar-section .season-card { min-height: clamp(340px, calc(100svh - 440px), 480px); }
+}
+
+/* Experiences fits one screen (owner, 2026-11-14), like Best Time: on laptops and desktops the heading and the two
+   rows of cards are visible together under the masthead. The section's --section-y is smaller, the heading sits
+   closer to the grid, and each card is half the space left in the window (never below 210px, never above 440px). */
+@media (min-width: 1024px) and (min-height: 620px) {
+  .experiences { --section-y: clamp(40px, 6svh, 72px); }
+  .experiences .section-intro { margin-bottom: var(--space-6); }
+  .experiences .section-intro::after { margin-top: 14px; }
+  .experiences .section-title { margin-bottom: 12px; }
+  .experiences .exp-grid { gap: var(--space-4); }
+  .experiences .exp-card { min-height: clamp(210px, calc((100svh - 400px) / 2), 440px); padding: 22px 24px; }
+  .experiences .exp-card h3 { margin: 14px 0 8px; }
+}
+
+/* The gallery fits one screen (owner, 2026-11-14), like Best Time and Experiences: on laptops and desktops the 20
+   photos sit in six columns by four rows (the 2x2 lead photo and the wide fourth tile make exactly 24 cells), and the
+   row height follows the window height (never below 88px, never above 230px). Phones and tall tablets keep their grids. */
+@media (min-width: 1024px) and (min-height: 620px) {
+  .gallery-section { --section-y: clamp(40px, 6svh, 72px); }
+  .gallery-section .gallery-intro { margin-bottom: var(--space-5); }
+  .gallery-section .gallery-intro::after { margin-top: 14px; }
+  .gallery-section .section-title { margin-bottom: 12px; }
+  .gallery-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); grid-auto-rows: clamp(88px, calc((100svh - 400px) / 4), 230px); gap: 8px; }
+}
+
+/* Season branches (season-branches.js): a tree branch hangs into each Best Time card from the top-right corner and
+   sways while the card is on screen. Spring blossoms and summer or autumn leaves flutter on their own timing,
+   rain drips off the monsoon leaves, autumn leaves let go and fall, winter snow clumps drop. Reduced motion keeps the
+   branch still. The branch stays in the top 45% of the card so the text below is untouched. */
+.season-branch { position: absolute; top: -6px; right: -8px; width: 84%; height: auto; overflow: visible; transform-origin: 100% 0; filter: drop-shadow(0 3px 5px rgba(0,0,0,.4)); pointer-events: none; }
+.season-branch .sb-sway { transform-box: fill-box; transform-origin: center; rotate: var(--r, 0deg); }
+.season-branch .sb-drop-leaf, .season-branch .sb-drip, .season-branch .sb-clump { opacity: 0; transform-box: fill-box; transform-origin: center; }
+@media (prefers-reduced-motion: no-preference) {
+  .season-branch { animation: sb-branch 7s ease-in-out infinite; }
+  .season-branch .sb-sway { animation: sb-flutter calc(2.4s + var(--i, 0) * .13s) ease-in-out calc(var(--i, 0) * -.37s) infinite; }
+  .season-branch .sb-drop-leaf { animation: sb-leaf-fall 7.5s ease-in calc(var(--n, 0) * -1.9s) infinite; }
+  .season-branch .sb-drip { animation: sb-drip 2.2s ease-in calc(var(--n, 0) * -.45s) infinite; }
+  .season-branch .sb-clump { animation: sb-clump 3.6s ease-in calc(var(--n, 0) * -.8s) infinite; }
+  .season-branch .sb-ice { animation: sb-ice 3s ease-in-out calc(var(--i, 0) * -.7s) infinite; }
+  .season-card:not(.fx-live) .season-branch, .season-card:not(.fx-live) .season-branch * { animation-play-state: paused; }
+}
+@keyframes sb-branch { 0%, 100% { rotate: -1.2deg; } 50% { rotate: 1.6deg; } }
+@keyframes sb-flutter { 0%, 100% { rotate: var(--r, 0deg); scale: 1; } 50% { rotate: calc(var(--r, 0deg) * -1 - 5deg); scale: 1.08; } }
+@keyframes sb-leaf-fall { 0% { opacity: 0; translate: 0 0; rotate: 0deg; } 8% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; translate: -34px 200px; rotate: 260deg; } }
+@keyframes sb-drip { 0% { opacity: 0; translate: 0 0; } 15% { opacity: .95; } 100% { opacity: 0; translate: 0 34px; } }
+@keyframes sb-clump { 0% { opacity: 0; translate: 0 0; scale: 1; } 12% { opacity: 1; } 70% { opacity: 0; translate: 2px 90px; scale: .45; } 100% { opacity: 0; } }
+@keyframes sb-ice { 0%, 100% { opacity: .6; } 50% { opacity: 1; } }
