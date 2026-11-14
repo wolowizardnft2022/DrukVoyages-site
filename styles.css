@@ -1724,3 +1724,13 @@ main > .journey-finder + .enquiry-section { padding-top: clamp(40px, 5vw, 72px);
 }
 @keyframes sb-sprout { 0% { scale: 0; rotate: -28deg; } 60% { scale: 1.06; } 100% { scale: 1; rotate: 0deg; } }
 @keyframes sb-leaf-sway { from { rotate: -4deg; } to { rotate: 5.5deg; } }
+
+/* Spring flowers that bloom (season-branches.js): when the card scrolls into view every bud opens into a blossom,
+   spinning and swelling a little past full size before settling, nearest the trunk first; then it flutters as before.
+   Off screen the flowers wait closed; reduced motion shows them open and still. */
+.season-branch .sb-bloom { transform-box: fill-box; transform-origin: center; }
+@media (prefers-reduced-motion: no-preference) {
+  .season-card:not(.fx-live) .season-branch .sb-bloom { scale: 0; }
+  .season-card.fx-live .season-branch .sb-bloom { animation: sb-bloom 1.8s cubic-bezier(.22, .8, .3, 1.1) calc(var(--o, 0) * .05s) backwards; }
+}
+@keyframes sb-bloom { 0% { scale: 0; rotate: -60deg; opacity: 0; } 12% { opacity: 1; } 35% { scale: .45; } 72% { scale: 1.16; } 100% { scale: 1; rotate: 0deg; } }

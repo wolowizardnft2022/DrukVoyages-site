@@ -113,9 +113,11 @@
         for (let k = 0; k < count; k++) {
           const px = x + (pick(i * 5 + k, 2) - 0.5) * 30, py = y + (pick(i * 5 + k, 3) - 0.5) * 26;
           const s = 0.8 + pick(i * 5 + k, 4) * 0.7;
-          out += `<g transform="translate(${num(px)} ${num(py)}) scale(${num(s)})"><use class="sb-sway" href="#sb-blossom" style="--i:${i + k};--r:${Math.round((pick(i, k + 6) - 0.5) * 16)}deg"/></g>`;
+          // Outer group places the flower, .sb-bloom opens it from a bud (nearest the trunk first), .sb-sway flutters it.
+          const order = Math.floor(Math.hypot(px - 336, py + 8) / 7);
+          out += `<g transform="translate(${num(px)} ${num(py)}) scale(${num(s)})"><g class="sb-bloom" style="--o:${order}"><use class="sb-sway" href="#sb-blossom" style="--i:${i + k};--r:${Math.round((pick(i, k + 6) - 0.5) * 16)}deg"/></g></g>`;
         }
-        if (pick(i, 9) > 0.55) out += `<circle cx="${num(x + 8)}" cy="${num(y - 9)}" r="2.2" fill="#e79ab1"/>`;
+        if (pick(i, 9) > 0.55) out += `<g transform="translate(${num(x + 8)} ${num(y - 9)})"><circle class="sb-bloom" style="--o:${Math.floor(Math.hypot(x - 328, y + 17) / 7)}" r="2.2" fill="#e79ab1"/></g>`;
       });
       return `<defs>${BLOSSOM}</defs>${out}`;
     }
