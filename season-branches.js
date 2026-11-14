@@ -27,6 +27,84 @@
     [20, 90, 160, 230, 300].map(a => `<path d="M0,0 L${num(Math.cos(a * Math.PI / 180) * 3.4)},${num(Math.sin(a * Math.PI / 180) * 3.4)}"/>`).join('') + '</g></g>';
   const LEAF = id => `<g id="${id}"><path d="M0,0 C4,-6 13,-7 20,0 C13,7 4,6 0,0Z"/><path d="M1,0 L18,0" stroke="rgba(0,0,0,.28)" stroke-width=".6" fill="none"/></g>`;
 
+
+  /* Real leaves for monsoon and autumn: they sprout along the limbs, alternating left and right on short stalks (petioles),
+     pointing towards the tip with a little droop, bigger in the middle of a twig and smaller at its end, with a leaf at
+     every twig tip. Each leaf is an ovate blade with a pointed tip, a darker half, a midrib and side veins, filled with a
+     base-to-tip gradient. Placement walks the limb paths with getPointAtLength, so the limbs themselves are unchanged. */
+  const GRADIENTS = {
+    summer: [['#2c6e37', '#58a84f'], ['#337a3c', '#6dba5c'], ['#255f33', '#4a9a45'], ['#3b8a41', '#7cc263'], ['#2f7336', '#5fae52']],
+    autumn: [['#d9a62f', '#e2562a'], ['#e8b53a', '#d9731f'], ['#c9702a', '#a62f26'], ['#efc54f', '#e48a2a'], ['#8f9a35', '#e1a22e'], ['#d9731f', '#b8341f']],
+  };
+  const BLADE = 'M0,0 C3,-7 11,-8.5 17,-3.5 C19.5,-1.8 21,-.6 24,0 C21,1 19.5,2.2 17,3.8 C11,8 3,6.5 0,0Z';
+  const STALK = 5;
+
+  function leafPlacements() {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', '0'); svg.setAttribute('height', '0'); svg.style.cssText = 'position:absolute;visibility:hidden';
+    document.body.appendChild(svg);
+    const leaves = [];
+    let n = 0;
+    LIMBS.forEach(([d], limb) => {
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', d); svg.appendChild(path);
+      const length = path.getTotalLength();
+      let at = limb === 0 ? length * 0.42 : length * 0.22, side = pick(limb, 31) > 0.5 ? 1 : -1;
+      while (at < length - 5) {
+        const t = at / length, p = path.getPointAtLength(at), q = path.getPointAtLength(Math.min(length, at + 3)), o = path.getPointAtLength(Math.max(0, at - 3));
+        const along = Math.atan2(q.y - o.y, q.x - o.x);
+        // Limbs run from the top-right corner towards the tip, so "along" already points to the tip.
+        const spread = (48 + pick(n, 32) * 26) * Math.PI / 180;
+        let angle = along + side * spread;
+        const droop = 0.3 * (Math.PI / 2 - angle + 2 * Math.PI * Math.round((angle - Math.PI / 2) / (2 * Math.PI)));
+        angle += Math.max(-0.5, Math.min(0.5, droop));
+        const scale = (limb === 0 ? 1.15 : 0.95) * (0.82 + pick(n, 33) * 0.5) * (1 - 0.3 * Math.abs(t - 0.55));
+        leaves.push({ x: p.x, y: p.y, a: angle, s: scale, n: n++ });
+        at += 13 + pick(n, 34) * 8; side = -side;
+      }
+      if (limb > 0) {   // a leaf at the twig tip, continuing the twig
+        const e = path.getPointAtLength(length), f = path.getPointAtLength(length - 3);
+        leaves.push({ x: e.x, y: e.y, a: Math.atan2(e.y - f.y, e.x - f.x) + (pick(limb, 35) - 0.5) * 0.5, s: 0.85 + pick(limb, 36) * 0.3, n: n++ });
+      }
+    });
+    svg.remove();
+    // Keep the foliage clear of the season name under the branch.
+    return leaves.filter(l => l.y + Math.sin(l.a) * (STALK + 24) * l.s <= 178);
+  }
+
+  function leafyBranch(season) {
+    const grads = GRADIENTS[season];
+    const defs = grads.map(([from, to], i) =>
+      `<linearGradient id="sbg-${season}-${i}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${from}"/><stop offset="1" stop-color="${to}"/></linearGradient>`).join('') +
+      `<g id="sb-leaf-${season}"><path d="${BLADE}"/><path d="M0,0 L24,0 C21,1 19.5,2.2 17,3.8 C11,8 3,6.5 0,0Z" fill="rgba(0,0,0,.16)"/>` +
+      '<path d="M0,0 L22,0 M6,0 L11,-4.6 M6,0 L11,4.2 M11.5,0 L16.5,-3.7 M11.5,0 L16.5,3.5" stroke="rgba(0,0,0,.26)" stroke-width=".55" fill="none" stroke-linecap="round"/>' +
+      (season === 'summer' ? '<ellipse cx="9" cy="-3" rx="4.2" ry="1.1" fill="rgba(255,255,255,.28)" transform="rotate(-14 9 -3)"/>' : '') + '</g>';
+    const leaves = leafPlacements();
+    let out = '';
+    leaves.forEach(l => {
+      const grad = Math.floor(pick(l.n, 37) * grads.length);
+      const order = Math.floor(Math.hypot(l.x - 336, l.y + 8) / 7);
+      out += `<g transform="translate(${num(l.x)} ${num(l.y)}) rotate(${num(l.a * 180 / Math.PI)}) scale(${num(l.s)})">` +
+        `<g class="sb-lf" style="--i:${order};--k:${l.n % 7}"><path d="M0,0 L${STALK + 1},0" stroke="${BARK}" stroke-width="1.1" stroke-linecap="round"/>` +
+        `<use href="#sb-leaf-${season}" x="${STALK}" fill="url(#sbg-${season}-${grad})"/></g></g>`;
+    });
+    // Leaves that let go (autumn) or drops that run off the leaf tips (monsoon).
+    const tipOf = l => ({ x: l.x + Math.cos(l.a) * (STALK + 22) * l.s, y: l.y + Math.sin(l.a) * (STALK + 22) * l.s });
+    const spaced = [...leaves].sort((a, b) => tipOf(b).y - tipOf(a).y).filter((_, i) => i % 3 === 0).slice(0, 6);
+    let moving = '';
+    if (season === 'autumn') {
+      spaced.slice(0, 5).forEach((l, n) => {
+        moving += `<g transform="translate(${num(l.x)} ${num(l.y)})"><g class="sb-drop-leaf" style="--n:${n}"><g transform="rotate(${num(l.a * 180 / Math.PI)}) scale(${num(l.s)})"><use href="#sb-leaf-${season}" fill="url(#sbg-${season}-${(n * 2) % grads.length})"/></g></g></g>`;
+      });
+    } else {
+      spaced.forEach((l, n) => {
+        const t = tipOf(l);
+        moving += `<g transform="translate(${num(t.x)} ${num(t.y + 1.5)})"><circle class="sb-drip" style="--n:${n}" r="1.9" fill="#e4f3ff" opacity=".9"/></g>`;
+      });
+    }
+    return `<defs>${defs}</defs>${out}${moving}`;
+  }
+
   function foliage(season) {
     let out = '';
     if (season === 'spring') {
@@ -41,30 +119,7 @@
       });
       return `<defs>${BLOSSOM}</defs>${out}`;
     }
-    if (season === 'summer' || season === 'autumn') {
-      const palette = season === 'summer' ? ['#2f7d3a', '#3f9446', '#58a94f', '#2a6b36', '#4c9a41']
-        : ['#e8a93a', '#d9731f', '#c4452a', '#f0c24c', '#b8571d'];
-      let falling = '';
-      TIPS.forEach(([x, y], i) => {
-        const count = 2 + Math.floor(pick(i, 1) * 2);
-        for (let k = 0; k < count; k++) {
-          const n = i * 5 + k, angle = Math.round(pick(n, 2) * 360), s = 0.75 + pick(n, 3) * 0.75;
-          const fill = palette[Math.floor(pick(n, 4) * palette.length)];
-          const tx = x + (pick(n, 5) - 0.5) * 22, ty = y + (pick(n, 6) - 0.5) * 22;
-          out += `<g transform="translate(${num(tx)} ${num(ty)}) rotate(${angle}) scale(${num(s)})" fill="${fill}"><use class="sb-sway" href="#sb-leaf" style="--i:${n};--r:${Math.round((pick(n, 7) - 0.5) * 14)}deg"/></g>`;
-        }
-      });
-      if (season === 'autumn') {
-        [[120, 10, 0], [34, 68, 1], [206, 92, 2], [50, 170, 3], [224, 146, 4]].forEach(([x, y, n]) => {
-          falling += `<g transform="translate(${x} ${y})"><g class="sb-drop-leaf" style="--n:${n}"><g transform="rotate(${40 + n * 50})" fill="${palette[n % palette.length]}"><use href="#sb-leaf"/></g></g></g>`;
-        });
-      } else {
-        [[120, 10, 0], [34, 68, 1], [50, 170, 2], [224, 146, 3], [114, 172, 4], [96, 140, 5]].forEach(([x, y, n]) => {
-          falling += `<g transform="translate(${x + 8} ${y + 6})"><circle class="sb-drip" style="--n:${n}" r="2" fill="#dcefff" opacity=".9"/></g>`;
-        });
-      }
-      return `<defs>${LEAF('sb-leaf')}</defs>${out}${falling}`;
-    }
+    if (season === 'summer' || season === 'autumn') return leafyBranch(season);
     // winter: snow lies on top of the limbs, clumps drop off now and then
     const snow = LIMBS.map(([d, w]) =>
       `<path d="${d}" fill="none" stroke="#fdfdff" stroke-width="${num(w * 0.5)}" stroke-linecap="round" transform="translate(0 ${num(-w * 0.42)})" stroke-dasharray="${num(w * 7)} ${num(w * 1.6)}"/>`).join('');
