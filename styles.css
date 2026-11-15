@@ -426,7 +426,7 @@ section { padding: var(--section-y) var(--gutter); }
 
 /* Footer: sand paper, hairlines and small capitals. */
 footer { background: var(--mist); color: var(--ink); padding: var(--space-9) var(--gutter) 28px; border-top: 1px solid var(--line); }
-.footer-grid { max-width: var(--container); margin: 0 auto 64px; display: grid; grid-template-columns: 1.7fr 1fr 1fr 1.1fr; gap: 48px; }
+.footer-grid { max-width: var(--container); margin: 0 auto 64px; display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 48px; }
 footer .logo { color: var(--deep); }
 footer .logo-text .tagline { color: var(--muted); }
 .footer-brand > p { color: var(--muted); font-size: var(--fs-sm); font-weight: 300; line-height: 1.9; margin: 22px 0; max-width: 340px; }
@@ -573,7 +573,7 @@ footer .logo-text .tagline { color: var(--muted); }
   .exp-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .season-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--space-7) var(--space-5); }
   .gallery-grid { grid-auto-rows: 180px; gap: 10px; }
-  .footer-grid { grid-template-columns: 1.5fr 1fr; gap: 40px; }
+  .footer-grid { gap: 40px; }
 }
 @media (max-width: 760px) {
   :root { --nav-h: 64px; }
@@ -663,8 +663,7 @@ footer .logo-text .tagline { color: var(--muted); }
   .season-desc { font-size: var(--fs-sm); }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .enquiry-info h2 { font-size: 2.75rem; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
-  .footer-brand, .footer-col:last-child { grid-column: 1/-1; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; }
   .cta-content .hero-btns { flex-direction: column; align-items: stretch; }
   .modal-body { padding: 24px; }
@@ -1392,7 +1391,7 @@ select option:disabled, select option[value=""] { color: var(--muted); }
 @media (prefers-reduced-motion: no-preference) and (prefers-contrast: no-preference) and (forced-colors: none) {
   .sky-drift { display: block; position: fixed; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; contain: strict; }
   /* Content above the clouds. These wrappers are static or relative already, so making them relative changes no layout. */
-  main > section > .container, .hero .scroll-hint, .cta-content, .marquee-section, body > footer > * { position: relative; z-index: 2; }
+  main > section > .container, .hero .scroll-hint, .cta-content, .marquee-section, .finale > footer > * { position: relative; z-index: 2; }
   .sky-cloud { position: absolute; left: 0; display: block; aspect-ratio: 720 / 329; background: url('img/clouds/cloud-drift.webp') center / contain no-repeat; opacity: .12; translate: -110% 0; will-change: translate; animation: sky-cross 90s linear infinite, sky-bob 9s ease-in-out infinite alternate; }
   .sky-cloud.d1 { top: 14%; width: clamp(150px, 20vw, 340px); animation-duration: 80s, 9s; animation-delay: -30s, 0s; }
   .sky-cloud.d2 { top: 62%; width: clamp(110px, 13vw, 230px); animation-duration: 130s, 12s; animation-delay: -95s, -4s; }
@@ -1521,18 +1520,48 @@ main > section:not(.hero):not(.cta-section) { position: relative; }
    drifting sky fades from and to transparent. */
 main > .journey-finder, main > .calendar-section, main > .testimonials {
   background: linear-gradient(180deg, var(--paper) 0%, var(--mist) 18%, var(--mist) 82%, var(--paper) 100%); }
-body > footer { background: linear-gradient(180deg, var(--paper) 0, var(--mist) 140px); }
 @media (prefers-reduced-motion: no-preference) and (prefers-contrast: no-preference) and (forced-colors: none) {
   main > .journey-finder, main > .calendar-section, main > .testimonials {
     background: linear-gradient(180deg, transparent 0%, var(--mist-veil) 18%, var(--mist-veil) 82%, transparent 100%); }
-  body > footer { background: linear-gradient(180deg, transparent 0, var(--mist-veil) 140px); }
 }
 .marquee-section { border-bottom: 0; }
 .experiences { border-top: 0; }
-body > footer { border-top: 0; }
-/* The closing photograph: its base turns dark so the faded edges show the page, not a light panel. */
-main > .cta-section { background: var(--paper); }
-.cta-bg { -webkit-mask: linear-gradient(180deg, transparent 0%, #000 22%, #000 78%, transparent 100%); mask: linear-gradient(180deg, transparent 0%, #000 22%, #000 78%, transparent 100%); }
+/* The finale (owner, 2026-11-15): the closing call to action and the footer are one block on the watercolour photograph.
+   The photograph fades in over the top and runs to the bottom of the page; the footer text turns light to read on it.
+   Best fit (owner, 2026-11-15): the block is at least one screen tall and the two parts share it. The call to action fills
+   the space above a compact footer and centres its text; the headline and gaps scale with the screen height, so it fits one
+   screen from a 720px-tall laptop up. On a phone the content is taller than a screen, so it simply stacks tightly. */
+.finale { position: relative; overflow: hidden; background: var(--paper); color: #f2f2f2; display: flex; flex-direction: column; min-height: 100vh; min-height: 100svh; }
+.finale > .cta-section, .finale > footer { position: relative; background: none; }
+.finale > .cta-section { flex: 1 0 auto; display: flex; align-items: center; justify-content: center; overflow: visible; padding: calc(var(--nav-space) + clamp(12px, 3vh, 48px)) var(--gutter) clamp(28px, 5vh, 56px); }
+.finale .cta-content { width: 100%; }
+.finale .cta-content h2 { font-size: clamp(2.25rem, min(5vw, 8.5vh), 4.5rem); margin-bottom: clamp(12px, 2.4vh, 22px); }
+.finale .cta-content p { margin-bottom: clamp(20px, 4vh, 36px); }
+.cta-bg { -webkit-mask: linear-gradient(180deg, transparent 0%, #000 16%, #000 100%); mask: linear-gradient(180deg, transparent 0%, #000 16%, #000 100%); }
+.finale > footer { --ink: #f2f2f2; --muted: #d6d6d6; --deep: #ffffff; --line: rgba(255,255,255,.28); color: var(--ink); border-top: 0; text-shadow: none; flex: 0 0 auto; padding: 0 var(--gutter) 48px; }
+.finale > footer .footer-grid { padding-top: 28px; margin-bottom: 24px; border-top: 1px solid var(--line); }
+.finale .footer-brand > p { margin: 14px 0; max-width: 520px; }
+.finale .footer-col h4 { margin: 0 0 14px; }
+.finale .footer-col li { margin-bottom: 8px; }
+.finale .footer-bottom { padding-top: 18px; }
+/* The back-to-top button (left) and the chat button (right) float over the bottom corners: keep the last row clear of them. */
+@media (min-width: 641px) { .finale .footer-bottom { padding-left: 64px; padding-right: 96px; } }
+@media (min-width: 861px) { .finale .footer-col ul { display: grid; grid-template-columns: repeat(2, auto); justify-content: start; gap: 0 32px; } }
+@media (max-width: 640px) { .finale > footer { padding-bottom: 96px; } .finale > footer .footer-grid { gap: 24px; } }
+@media (min-width: 861px) and (max-height: 880px) {
+  .finale > .cta-section { padding: calc(var(--nav-space) + 8px) var(--gutter) 20px; }
+  .finale .cta-content h2 { font-size: clamp(2.25rem, min(5vw, 7.5vh), 4.5rem); }
+  .finale .cta-content p { margin-bottom: 18px; }
+  .finale > footer { padding-bottom: 44px; }
+  .finale > footer .footer-grid { padding-top: 18px; margin-bottom: 14px; }
+}
+@media (min-width: 861px) and (max-height: 780px) {
+  .finale .cta-content h2 { font-size: clamp(2.25rem, min(5vw, 7vh), 4.5rem); }
+  .finale .footer-brand > p { display: none; } /* the licence line is repeated in the copyright row below */
+  .finale .social-links { margin-top: 12px; }
+}
+}
+.finale > footer .social-btn:hover, .finale > footer .footer-col a:hover { color: var(--gold-light); }
 
 /* Meet the team (R-22): a row of portrait cards under "Who We Are". Initials stand in for a photo until one exists. */
 .about-team { margin-top: var(--space-8); }
@@ -1696,15 +1725,14 @@ main > .journey-finder + .enquiry-section { padding-top: clamp(40px, 5vw, 72px);
 }
 
 /* Season branches (season-branches.js): a tree branch hangs into each Best Time card from the top-right corner and
-   sways while the card is on screen. Spring blossoms and summer or autumn leaves flutter on their own timing,
+   sways while the card is on screen. Spring blossoms open and summer or autumn leaves sprout or turn once;
    rain drips off the monsoon leaves, autumn leaves let go and fall, winter snow clumps drop. Reduced motion keeps the
    branch still. The branch stays in the top 45% of the card so the text below is untouched. */
-.season-branch { position: absolute; top: -6px; right: -8px; width: 84%; height: auto; overflow: visible; transform-origin: 100% 0; filter: drop-shadow(0 3px 5px rgba(0,0,0,.4)); pointer-events: none; }
+.season-branch { position: absolute; top: -6px; right: -8px; width: 84%; height: auto; overflow: visible; transform-origin: 100% 0; pointer-events: none; }
 .season-branch .sb-sway { transform-box: fill-box; transform-origin: center; rotate: var(--r, 0deg); }
 .season-branch .sb-drop-leaf, .season-branch .sb-drip, .season-branch .sb-clump { opacity: 0; transform-box: fill-box; transform-origin: center; }
 @media (prefers-reduced-motion: no-preference) {
   .season-branch { animation: sb-branch 5s ease-in-out infinite; }
-  .season-branch .sb-sway { animation: sb-flutter calc(1.7s + var(--i, 0) * .09s) ease-in-out calc(var(--i, 0) * -.26s) infinite; }
   .season-branch .sb-drop-leaf { animation: sb-leaf-fall 5.2s ease-in calc(var(--n, 0) * -1.3s) infinite; }
   .season-branch .sb-drip { animation: sb-drip 1.6s ease-in calc(var(--n, 0) * -.32s) infinite; }
   .season-branch .sb-clump { animation: sb-clump 2.6s ease-in calc(var(--n, 0) * -.56s) infinite; }
@@ -1725,8 +1753,7 @@ main > .journey-finder + .enquiry-section { padding-top: clamp(40px, 5vw, 72px);
 @media (prefers-reduced-motion: no-preference) {
   .season-card:not(.fx-live) .season-branch .sb-lf { scale: 0; }
   .season-card.fx-live .season-branch .sb-lf {
-    animation: sb-sprout 1.05s cubic-bezier(.2, .8, .3, 1.15) calc(var(--i, 0) * .03s) backwards,
-               sb-leaf-sway calc(2s + var(--k, 0) * .25s) ease-in-out calc(1.05s + var(--i, 0) * .03s) infinite alternate;
+    animation: sb-sprout 1.05s cubic-bezier(.2, .8, .3, 1.15) calc(var(--i, 0) * .03s) backwards;
   }
 }
 @keyframes sb-sprout { 0% { scale: 0; rotate: -28deg; } 60% { scale: 1.06; } 100% { scale: 1; rotate: 0deg; } }
@@ -1749,7 +1776,6 @@ main > .journey-finder + .enquiry-section { padding-top: clamp(40px, 5vw, 72px);
 .season-branch .sb-turn1, .season-branch .sb-turn2 { opacity: 1; }
 @media (prefers-reduced-motion: no-preference) {
   .season-card.autumn:not(.fx-live) .season-branch .sb-lf { scale: 1; }
-  .season-card.autumn.fx-live .season-branch .sb-lf { animation: sb-leaf-sway calc(2s + var(--k, 0) * .25s) ease-in-out infinite alternate; }
   .season-card.autumn .season-branch .sb-turn1, .season-card.autumn .season-branch .sb-turn2 { opacity: 0; }
   .season-card.autumn.fx-live .season-branch .sb-turn1 { animation: sb-turn-yellow 7s ease-in-out calc(var(--i, 0) * .06s) both; }
   .season-card.autumn.fx-live .season-branch .sb-turn2 { animation: sb-turn-final 7s ease-in-out calc(var(--i, 0) * .06s) both; }
@@ -1761,3 +1787,73 @@ main > .journey-finder + .enquiry-section { padding-top: clamp(40px, 5vw, 72px);
 /* Once every autumn leaf has turned, the card keeps the finished colours (season-branches.js adds .turned), also after it
    scrolls out of view and back. */
 .season-card.autumn.turned .season-branch .sb-turn1, .season-card.autumn.turned .season-branch .sb-turn2 { opacity: 1; animation: none; }
+
+/* Plan My Trip v2 (R-31, owner request 2026-11-16). One guided two-step flow: a step pill with a progress line, the compass as controls
+   beside photo cards, then the form with a live "Your trip so far" summary and a confirmation. Class names and ids are unchanged. */
+.plan-step { position: relative; width: fit-content; max-width: 100%; margin: 0 auto 22px; padding: 9px 16px 14px; border: 1px solid var(--line); color: var(--gold-light); text-align: center; }
+.plan-step::before { content: ''; display: block; position: absolute; left: -1px; bottom: -1px; width: calc(50% + 1px); height: 3px; margin: 0; background: var(--gold); }
+#enquiry .plan-step::before { width: calc(100% + 2px); }
+.enquiry-info .plan-step { margin-left: 0; }
+
+/* Step 1: centred header, then one planner card (controls left, photo results right), then the "how we plan" strip. */
+.journey-finder .finder-grid { grid-template-columns: minmax(0, 1fr); gap: 0; align-items: start; }
+.finder-intro { display: contents; }
+.finder-intro > .plan-step, .finder-intro > .section-label, .finder-intro > h2, .finder-intro > p { justify-self: center; text-align: center; }
+.finder-intro .section-label { justify-content: center; }
+.finder-intro > h2 { margin-bottom: 16px; }
+.finder-intro > p { max-width: 62ch; margin: 0 auto var(--space-7); }
+.finder-panel { order: 1; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: clamp(32px, 4vw, 64px); align-items: start; }
+.finder-panel-top { grid-column: 1 / -1; }
+.finder-fieldset, .finder-controls, .finder-season { grid-column: 1; }
+.finder-results { grid-column: 2; grid-row: 2 / span 3; border-top: 0; padding-top: 0; }
+.finder-custom-btn, .plan-skip { grid-column: 2; }
+.finder-intro > .finder-microfacts { order: 2; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: var(--space-8); }
+.finder-match { display: grid; grid-template-columns: clamp(96px, 14vw, 148px) minmax(0, 1fr); gap: 0 18px; align-items: center; padding: 14px 76px 14px 0; }
+.finder-match:hover { padding-left: 0; }
+.finder-match-photo { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--line); }
+.finder-match-photo img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.finder-match:hover .finder-match-photo img, .finder-match:focus-visible .finder-match-photo img { transform: scale(1.05); }
+.finder-match-body { display: block; min-width: 0; }
+.finder-match strong { font-size: clamp(1.125rem, 1.6vw, 1.5rem); }
+.wm.wm-compact::before { width: 28px; height: 28px; right: 6px; bottom: 6px; background: url('img/druk-voyages-mark.svg') center / 18px 18px no-repeat; }
+
+/* Step 2: the live summary, three form groups, the promise and the confirmation. */
+.enquiry-form { display: grid; gap: 0; }
+.plan-summary { margin: 0 0 var(--space-6); }
+.plan-summary-title { margin: 0 0 10px; color: var(--gold); font-size: var(--fs-xs); font-weight: 500; letter-spacing: var(--track); text-transform: uppercase; }
+.plan-summary-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; margin: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.plan-summary-list > div { min-width: 0; padding: 12px 14px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--paper); }
+.plan-summary-list dt { margin: 0 0 4px; color: var(--muted); font-size: 0.6875rem; letter-spacing: .08em; text-transform: uppercase; }
+.plan-summary-list dd { margin: 0; color: var(--ink); font: 400 1.0625rem/1.3 var(--display); overflow-wrap: anywhere; }
+.plan-summary-list dd.is-empty { color: var(--muted); font-style: italic; font-weight: 300; }
+.plan-group { min-width: 0; margin: 0 0 var(--space-5); padding: 0; border: 0; }
+.plan-group legend { display: block; width: 100%; margin: 0 0 18px; padding: 0 0 12px; border-bottom: 1px solid var(--line); color: var(--ink); font: 400 1.25rem/1.2 var(--display); }
+.plan-reply { margin: 14px 0 0; color: var(--muted); font-size: var(--fs-sm); text-align: center; }
+.enquiry-sent { display: grid; gap: 18px; align-content: start; padding: clamp(24px, 4vw, 44px); border: 1px solid var(--line); background: var(--paper); }
+.enquiry-sent[hidden], #enquiryForm[hidden] { display: none; }
+.enquiry-sent h3 { margin: 0; color: var(--ink); font: 300 clamp(1.75rem, 3vw, 2.5rem)/1.15 var(--display); text-wrap: balance; }
+.enquiry-sent h3:focus { outline: none; }
+.enquiry-sent > p { margin: 0; color: var(--muted); max-width: 52ch; }
+.plan-again { justify-self: start; min-height: 52px; padding: 0 28px; border: 1px solid var(--deep); background: transparent; color: var(--deep); font-size: var(--fs-xs); letter-spacing: var(--track); text-transform: uppercase; cursor: pointer; transition: background .2s, color .2s; }
+.plan-again:hover, .plan-again:focus-visible { background: var(--deep); color: var(--paper); }
+
+@media (max-width: 960px) {
+  .finder-panel { grid-template-columns: minmax(0, 1fr); }
+  .finder-fieldset, .finder-controls, .finder-season, .finder-results, .finder-custom-btn, .plan-skip { grid-column: 1; grid-row: auto; }
+  .finder-results { margin-top: 8px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .finder-intro > .finder-microfacts { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+}
+@media (max-width: 520px) {
+  .finder-match { grid-template-columns: 88px minmax(0, 1fr); gap: 0 12px; padding-right: 0; }
+  .finder-match-arrow { position: static; transform: none; grid-column: 1 / -1; flex-direction: row; justify-content: flex-end; margin-top: 8px; }
+  .finder-match-route { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .finder-match-photo img { transition: none; } .finder-match:hover .finder-match-photo img { transform: none; } }
+
+/* Lazy backgrounds (R-11, T187). See motion-flag.js: a section's background photos (card photos, the title photograph, the season
+   watercolours, the closing photograph) are not requested until the section is near the viewport. Screen only, so print is complete. */
+@media screen {
+  .lazy-bg main > section:not(.hero):not(.is-near), .lazy-bg .finale:not(.is-near) { --emerge-img: none; }
+  .lazy-bg main > section:not(.hero):not(.is-near) *, .lazy-bg main > section:not(.hero):not(.is-near) *::before, .lazy-bg main > section:not(.hero):not(.is-near) *::after,
+  .lazy-bg .finale:not(.is-near) *, .lazy-bg .finale:not(.is-near) *::before, .lazy-bg .finale:not(.is-near) *::after { background-image: none !important; }
+}

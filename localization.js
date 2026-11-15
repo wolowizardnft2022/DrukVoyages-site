@@ -47,6 +47,15 @@
   "planStep1": "Step 1 of 2 · Find your journey",
   "planStep2": "Step 2 of 2 · Send your request",
   "planSkip": "Already know your plans? Skip to the form",
+  "planSummary": "Your trip so far",
+  "planNotChosen": "Not chosen yet",
+  "planReply": "We reply within 24 hours. No obligation.",
+  "planGroupTrip": "Your trip",
+  "planGroupYou": "About you",
+  "planGroupMessage": "Your message",
+  "planSentTitle": "Thank you, your request is on its way",
+  "planSentBody": "One of our Bhutanese travel architects will reply within 24 hours. Here is what you asked for.",
+  "planSendAnother": "Send another request",
   "navBestTime": "Equinox",
   "navStories": "Stories",
   "mapEntry": "Entry from India",
@@ -244,7 +253,7 @@
   async function load(lang){
     if(!supported.includes(lang))throw new Error('Unsupported language');
     if(catalogs.has(lang))return;
-    if(!pending.has(lang))pending.set(lang,fetch(`i18n/${lang}.json?v=20261115-book1`,{cache:'no-cache'}).then(async response=>{
+    if(!pending.has(lang))pending.set(lang,fetch(`i18n/${lang}.json?v=20261116-plan1`,{cache:'no-cache'}).then(async response=>{
       if(!response.ok)throw new Error('Translation catalog unavailable');
       const data=await response.json();
       if(data.language!==lang)throw new Error('Translation catalog mismatch');

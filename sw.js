@@ -7,7 +7,7 @@
    Bump VERSION to drop every cached file on the next visit. To switch the worker off, open any page with ?nosw. */
 'use strict';
 
-const VERSION = '20261115-2';
+const VERSION = '20261116-3';
 const BASE = new URL('./', self.location.href).pathname;
 const PAGES = `druk-pages-${VERSION}`;
 const ASSETS = `druk-assets-${VERSION}`;
@@ -88,8 +88,13 @@ self.addEventListener('fetch', event => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
   if (url.pathname.startsWith(BASE + 'api/') || url.pathname === BASE + 'health' || url.pathname === BASE + 'sw.js' || url.pathname.startsWith(BASE + 'brochures/')) return;
+  // An invite link (share-story.html?t=<token>) carries a secret in its URL: always fetch it, never keep it in the cache.
+  if (request.mode === 'navigate' && url.pathname === BASE + 'share-story.html' && url.searchParams.has('t')) {
+    event.respondWith(fetch(request).catch(() => new Response('You are offline. Please reconnect to open your upload link.', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } })));
+    return;
+  }
   if (request.mode === 'navigate') { event.respondWith(networkFirst(event)); return; }
   if (url.pathname.startsWith(BASE + 'img/team/')) { event.respondWith(staleWhileRevalidate(event, IMAGES)); return; }
-  if ((url.pathname.startsWith(BASE + 'img/') || url.pathname.startsWith(BASE + 'ICON/'))) { event.respondWith(cacheFirst(event)); return; }
+  if (url.pathname.startsWith(BASE + 'img/') || url.pathname.startsWith(BASE + 'ICON/')) { event.respondWith(cacheFirst(event)); return; }
   if (/\.(?:js|css|json|svg)$/.test(url.pathname)) { event.respondWith(staleWhileRevalidate(event, ASSETS)); }
 });

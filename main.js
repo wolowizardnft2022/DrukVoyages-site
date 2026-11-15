@@ -59,7 +59,8 @@ let activeLanguage='en';
 let activeCategory='all';
 let pendingLanguage=null;
 try{activeLanguage=localStorage.getItem('druk-language')||'en';}catch(_err){}
-if(!Object.hasOwn(window.DRUK_I18N,activeLanguage))activeLanguage='en';
+// The home page carries English only (translations-core.js); the other languages load from i18n/<lang>.json.
+if(!window.DRUK_L10N.supported.includes(activeLanguage))activeLanguage='en';
 
 function locale(){return window.DRUK_L10N.catalog(activeLanguage)?.page||window.DRUK_I18N[activeLanguage]||window.DRUK_I18N.en;}
 function tr(key,vars={}){return window.DRUK_L10N.text(key,vars,activeLanguage);}
@@ -192,17 +193,19 @@ function renderFinder(){
     if(season!=='any')score+=matchesSeason(signals,season)?4:0;
     return {it,signals,score};
   }).sort((a,b)=>b.score-a.score||itineraryDays(a.it)-itineraryDays(b.it)).slice(0,3);
-  document.getElementById('finderResults').innerHTML=`<div class="finder-results-head"><span>${f.results}</span><span>${days} ${f.days} · ${document.querySelector('#tripSeason option:checked').textContent}</span></div>${matches.map(({it,signals})=>`<button type="button" class="finder-match" data-finder-itinerary="${it.id}"><span class="finder-match-top"><span class="finder-match-tag">${it.tag}</span><span>${localizedDuration(it.duration)}</span></span><strong>${it.title}</strong><div class="finder-match-route">${routeGraphic(signals.route,true)}</div><small>${finderReason(it,signals,days,season)}</small><b class="finder-match-arrow">${f.suggested} <i>↗</i></b></button>`).join('')}`;
+  document.getElementById('finderResults').innerHTML=`<div class="finder-results-head"><span>${f.results}</span><span>${days} ${f.days} · ${document.querySelector('#tripSeason option:checked').textContent}</span></div>${matches.map(({it,signals})=>`<button type="button" class="finder-match" data-finder-itinerary="${it.id}"><span class="finder-match-photo wm wm-compact"><img src="${it.image}" alt="" loading="lazy" decoding="async"/></span><span class="finder-match-body"><span class="finder-match-top"><span class="finder-match-tag">${it.tag}</span><span>${localizedDuration(it.duration)}</span></span><strong>${it.title}</strong><div class="finder-match-route">${routeGraphic(signals.route,true)}</div><small>${finderReason(it,signals,days,season)}</small></span><b class="finder-match-arrow">${f.suggested} <i>↗</i></b></button>`).join('')}`;
   document.querySelectorAll('[data-finder-itinerary]').forEach(button=>button.addEventListener('click',()=>openModal(Number(button.dataset.finderItinerary))));
 }
 document.querySelectorAll('.interest-chip').forEach(chip=>chip.addEventListener('click',()=>{
+  planTouched=true;
   finderInterest=chip.dataset.interest;
   document.querySelectorAll('.interest-chip').forEach(item=>{const active=item===chip;item.classList.toggle('active',active);item.setAttribute('aria-pressed',String(active));});
-  renderFinder();
+  renderFinder();renderPlanSummary();
 }));
-document.getElementById('tripDays').addEventListener('input',renderFinder);
-document.getElementById('tripSeason').addEventListener('change',renderFinder);
+document.getElementById('tripDays').addEventListener('input',()=>{planTouched=true;renderFinder();renderPlanSummary();});
+document.getElementById('tripSeason').addEventListener('change',()=>{planTouched=true;renderFinder();renderPlanSummary();});
 document.getElementById('customJourneyBtn').addEventListener('click',()=>{
+  planTouched=true;
   const preferred=document.querySelector('.interest-chip.active').textContent.trim().toLowerCase();
   const select=document.getElementById('itinerary');
   select.value='Custom / Other';
@@ -211,10 +214,63 @@ document.getElementById('customJourneyBtn').addEventListener('click',()=>{
   handoffToEnquiry(['itinerary','duration','message']);
 });
 
+/* Plan My Trip summary (R-31): "Your trip so far". Built from the form's own labels and values (so it is already translated), plus the
+   Journey Compass choices once the visitor has touched the compass. Rendered into the form and, after sending, into the confirmation.
+   var, not let: the language switch can call this before the line below has run. */
+var planTouched=false;
+function planSummaryRows(){
+  const none=tr('planNotChosen');
+  const text=selector=>document.querySelector(selector)?.textContent.trim()||'';
+  const value=id=>document.getElementById(id)?.value||'';
+  const itinerary=document.getElementById('itinerary');
+  const arrival=value('arrival');
+  let date=none;
+  if(arrival){try{date=new Intl.DateTimeFormat(activeLanguage,{dateStyle:'medium'}).format(new Date(arrival+'T00:00:00'));}catch(_error){date=arrival;}}
+  const season=document.getElementById('tripSeason');
+  const rows=[];
+  if(planTouched){
+    rows.push([text('.finder-fieldset legend'),text('.interest-chip.active')||none]);
+    rows.push([text('.finder-range-label>span'),text('#tripDaysValue')||none]);
+    rows.push([text('.finder-season>span'),season.value==='any'?none:season.options[season.selectedIndex].textContent.trim()]);
+  }
+  rows.push([text('label[for="itinerary"]'),itinerary.value?itinerary.options[itinerary.selectedIndex].textContent.trim():none]);
+  rows.push([text('label[for="guests"]'),value('guests')||none]);
+  rows.push([text('label[for="arrival"]'),date]);
+  rows.push([text('label[for="duration"]'),value('duration')?`${value('duration')} ${(locale().finderUi||{days:'days'}).days}`:none]);
+  return {rows,none};
+}
+function fillPlanSummary(container){
+  if(!container)return;
+  const {rows,none}=planSummaryRows();
+  const title=document.createElement('p');title.className='plan-summary-title';title.textContent=tr('planSummary');
+  if(container.id==='planSummary')title.id='planSummaryTitle';
+  const list=document.createElement('dl');list.className='plan-summary-list';
+  rows.forEach(([label,val])=>{
+    const cell=document.createElement('div');
+    const dt=document.createElement('dt');dt.textContent=label;
+    const dd=document.createElement('dd');dd.textContent=val;if(val===none)dd.className='is-empty';
+    cell.append(dt,dd);list.append(cell);
+  });
+  container.replaceChildren(title,list);
+}
+function renderPlanSummary(){fillPlanSummary(document.getElementById('planSummary'));}
+(function(){
+  const form=document.getElementById('enquiryForm');
+  if(!form)return;
+  ['input','change'].forEach(type=>form.addEventListener(type,renderPlanSummary));
+  form.addEventListener('reset',()=>setTimeout(renderPlanSummary));
+  document.getElementById('enquiryAgain')?.addEventListener('click',()=>{
+    document.getElementById('enquirySent').hidden=true;form.hidden=false;
+    document.getElementById('formMsg').className='form-msg';document.getElementById('formMsg').textContent='';
+    renderPlanSummary();document.getElementById('fname').focus();
+  });
+})();
+
 /* Enquiry hand-off (PRD R-14). Every "plan" path — the hero bar, an itinerary, the compass —
    fills the form itself, then calls this: glide to the form, mark the fields that were filled,
    confirm with a toast, and put the cursor in the first required field that is still empty. */
 function handoffToEnquiry(filledIds){
+  renderPlanSummary();
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const enquiry=document.getElementById('enquiry');
   const glide=()=>enquiry.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
@@ -324,6 +380,7 @@ bookForm.addEventListener('submit',async e=>{
   const data=Object.fromEntries(new FormData(bookForm));
   data.guests=Number(data.guests);data.itinerary=BOOKING_NAMES[activeItineraryId];
   try{
+    if(!API_URL)throw new Error('no api');
     const res=await fetch(`${API_URL}/api/booking`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),signal:AbortSignal.timeout(20000)});
     const json=await res.json();
     if(!res.ok)throw new Error(json.error||'Server error');
@@ -372,7 +429,7 @@ document.querySelectorAll('.gallery-item').forEach(item=>{
 let languageRevision=0;
 async function applyLanguage(language){
   const revision=++languageRevision;
-  const nextLanguage=window.DRUK_I18N[language]?language:'en';
+  const nextLanguage=window.DRUK_L10N.supported.includes(language)?language:'en';
   try{await window.DRUK_L10N.load(nextLanguage);}catch(error){syncLanguageSelects(activeLanguage);showToast(tr('translationError'));console.error('[Translation]',error);return;}
   if(revision!==languageRevision)return;
   activeLanguage=nextLanguage;
@@ -391,6 +448,7 @@ async function applyLanguage(language){
   setTextList('.mobile-nav>a:not([data-map-nav]):not([data-nav-i18n])',l.menu);
   document.querySelectorAll('[data-nav-i18n]').forEach(link=>{link.textContent=tr(link.dataset.navI18n);});
   document.querySelectorAll('[data-ui-text]').forEach(node=>{node.textContent=tr(node.dataset.uiText);});
+  renderPlanSummary();
   document.getElementById('mobilePlanBar').textContent=document.querySelector('.nav-links .nav-cta').textContent;
   const mapNavLabels={en:'Explore Bhutan',ja:'ブータン地図',zh:'探索不丹',ko:'부탄 지도',es:'Explora Bután',fr:'Explorer le Bhoutan',vi:'Khám phá Bhutan',pt:'Explore o Butão'};
   document.querySelectorAll('[data-map-nav]').forEach(link=>{link.textContent=mapNavLabels[activeLanguage]||mapNavLabels.en;});
@@ -402,10 +460,10 @@ async function applyLanguage(language){
   setText('#gallery .section-label',l.gallery[0]);setHtml('#gallery .section-title',l.gallery[1]);setText('#gallery .gallery-intro p',l.gallery[2]);
   setText('#experiences .section-label',l.experience[0]);setHtml('#experiences .section-title',l.experience[1]);document.querySelectorAll('.exp-card').forEach((card,i)=>{setTextIn(card,'h3',l.experience[i+2][0]);setTextIn(card,'p',l.experience[i+2][1]);});
   setText('.calendar-section .section-label',l.planning[0]);setHtml('.calendar-section .section-title',l.planning[1]);setText('.calendar-header p',l.planning[2]);document.querySelectorAll('.season-card').forEach((card,i)=>{setTextIn(card,'.season-name',l.planning[i+3][0]);setTextIn(card,'.season-months',l.planning[i+3][1]);setTextIn(card,'.season-desc',l.planning[i+3][2]);});
-  setText('.enquiry-info .section-label',l.enquiry[0]);setHtml('.enquiry-info h2',l.enquiry[1]);setText('.enquiry-info>p',l.enquiry[2]);setText('.contact-item:last-child span',l.enquiry[3]);setTextList('.enquiry-form label',l.enquiry.slice(4,13));setText('#itinerary option',l.enquiry[13]);document.querySelectorAll('#itinerary option:not(:first-child)').forEach((option,i)=>option.textContent=l.enquiry[14][i]);document.getElementById('message').placeholder=l.enquiry[15];setText('#submitBtn',l.enquiry[16]);
+  setText('.enquiry-info .section-label',l.enquiry[0]);setHtml('.enquiry-info h2',l.enquiry[1]);setText('.enquiry-info>p',l.enquiry[2]);setText('.contact-item:last-child span',l.enquiry[3]);['fname','lname','email','phone','itinerary','guests','arrival','duration','message'].forEach((id,i)=>setText(`.enquiry-form label[for="${id}"]`,l.enquiry[4+i]));setText('#itinerary option',l.enquiry[13]);document.querySelectorAll('#itinerary option:not(:first-child)').forEach((option,i)=>option.textContent=l.enquiry[14][i]);document.getElementById('message').placeholder=l.enquiry[15];setText('#submitBtn',l.enquiry[16]);
   setText('.testimonials .section-label',l.testimonials[0]);setHtml('.testimonials .section-title',l.testimonials[1]);setTextList('.testi-card:not([data-guest]) .testi-text',l.testimonials.slice(2,5));setTextList('.testi-card:not([data-guest]) .testi-from',l.testimonials.slice(5,8));
   setText('.cta-section .section-label',l.cta[0]);setHtml('.cta-section h2',l.cta[1]);setText('.cta-section p',l.cta[2]);setTextList('.cta-section .hero-btns a',l.cta.slice(3));
-  setText('.footer-brand>p',l.footer[0]);setTextList('.footer-col h4',l.footer.slice(1,4));setTextList('.footer-col:nth-child(2) li a',l.footer[4]);setText('.footer-col:nth-child(4) li:last-child span',l.footer[5]);setText('.footer-bottom>span:first-child',l.footer[6]);setText('.footer-bottom-links a',l.footer[9]);
+  setText('.footer-brand>p',l.footer[0]);setText('.footer-col h4',l.footer[3]);setText('.footer-col li:last-child span',l.footer[5]);setText('.footer-bottom>span:first-child',l.footer[6]);setText('.footer-bottom-links a',l.footer[9]);
   setTextList('.footer-bottom-links a',[l.footer[9]]);
   setText('.translation-dialog-label',x.disclaimerTitle);setText('#translationDisclaimerTitle',x.disclaimerTitle);setText('#translationDisclaimerText',x.disclaimerText);setText('.translation-dialog-cancel',x.cancel);setText('.translation-dialog-agree',x.agree);
   setText('.finder-intro .section-label',x.compass);setText('.finder-intro h2',x.compassTitle);setText('.finder-panel-top>span:first-child',x.preferences);const live=document.querySelector('.finder-live');if(live)live.innerHTML=`<i></i> ${x.live}`;setText('.finder-fieldset legend',x.drawn);setTextList('.interest-chip',[x.culture,x.nature,x.trekking,x.wellness,x.wildlife,x.photography]);setText('.finder-range-label>span',x.travelDays);setText('.finder-season>span',x.season);setText('#tripSeason option[value="any"]',x.flexible);['spring','summer','autumn','winter'].forEach((key,i)=>{const season=l.planning[i+3];setText(`#tripSeason option[value="${key}"]`,`${season[0]} · ${season[1]}`);});const custom=document.getElementById('customJourneyBtn');if(custom)custom.innerHTML=`${x.routeCustom} <span>↗</span>`;
@@ -451,8 +509,6 @@ function applyCompleteTranslations(){
   document.getElementById('chatWin').setAttribute('aria-label',tr('chatDialog'));
   document.querySelectorAll('.hero-dot').forEach((dot,i)=>dot.setAttribute('aria-label',tr('slide',{count:i+1})));
   heroPause.setAttribute('aria-label',tr(heroPaused?'resume':'pause'));
-  const destinations=['Paro Valley','Thimphu','Punakha','Bumthang','Haa Valley','Phobjikha'];
-  document.querySelectorAll('.footer-col:nth-child(3) li a').forEach((link,i)=>link.textContent=window.DRUK_L10N.place(destinations[i],activeLanguage));
   const chatLabels=locale().extraUi||{chatSettings:'Settings',chatClear:'Clear',chatClose:'Close'};
   document.querySelectorAll('.chat-hbtn').forEach((button,i)=>button.title=[chatLabels.chatSettings,chatLabels.chatClear,chatLabels.chatClose][i]);
   window.DRUK_COUNTRY_PICKER?.refresh();
@@ -795,8 +851,7 @@ const SAMPLE_TEAM=[
 // Rebuilt on language change; names, bios and languages are shown exactly as written, as text.
 window.renderTeam=function(){
   const block=document.getElementById('team'),grid=document.getElementById('teamGrid');if(!block||!grid)return;
-  const showSampleTeam=true;
-  const members=[...TEAM,...((showSampleTeam||showSampleStories)?SAMPLE_TEAM.map(person=>({...person,sample:true})):[])];
+  const members=[...TEAM,...(showSampleStories?SAMPLE_TEAM.map(person=>({...person,sample:true})):[])];
   block.hidden=!members.length;if(!members.length)return;
   const copy=window.DRUK_L10N?.catalog?.(activeLanguage)?.page?.aboutTeam||{};
   const make=(tag,className,text)=>{const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;};
@@ -855,6 +910,7 @@ setTestiLabels();
    cards, featured first (the API's order). Guests' words are set with textContent, and the photo URL must match
    the API's own pattern before it is used in CSS. If the API is missing or slow, the built-in cards simply stay. */
 async function loadGuestStories(){
+  if(!API_URL)return;
   let stories=[];
   try{
     const res=await fetch(`${API_URL}/api/stories`,{signal:AbortSignal.timeout(5000)});
@@ -913,7 +969,7 @@ function showToast(msg,gold=false){const t=document.getElementById('toast');t.te
   Sends the form fields to the configured API. By default production uses the
   same domain as the website; set window.DRUK_VOYAGES_API_URL for split hosting.
 */
-const API_URL=(window.DRUK_VOYAGES_API_URL||window.location.origin).replace(/\/+$/,'');
+const API_URL=(window.DRUK_VOYAGES_API_URL||(/\.github\.io$/i.test((window.location||{}).hostname)||(window.location||{}).protocol==='file:'?'':(window.location||{}).origin||'')).replace(/\/+$/,'');
 loadGuestStories(); // defined with the testimonials slider above; it needs API_URL
 document.getElementById('enquiryForm').addEventListener('submit',async(e)=>{
   e.preventDefault();
@@ -930,12 +986,15 @@ document.getElementById('enquiryForm').addEventListener('submit',async(e)=>{
   if(!data.firstName||!data.email||!data.message){msg.className='form-msg error';msg.textContent=locale().ui.required;return;}
   btn.disabled=true;btn.textContent=locale().ui.sending;msg.className='form-msg';msg.textContent='';
   try{
+if(!API_URL)throw new Error('no api');
 const res=await fetch(`${API_URL}/api/enquiry`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
 const json=await res.json();
 if(res.ok){
   msg.className='form-msg success';
   msg.textContent=locale().ui.success;
+  fillPlanSummary(document.getElementById('enquirySentSummary'));
   form.reset();showToast(locale().ui.toast,true);
+  form.hidden=true;document.getElementById('enquirySent').hidden=false;document.getElementById('enquirySentTitle').focus();
 }else{throw new Error(json.error||'Server error');}
   }catch(err){
 msg.className='form-msg error';

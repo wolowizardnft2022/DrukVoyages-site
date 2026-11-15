@@ -6,7 +6,7 @@
    Strings come from i18n/<lang>.json → "shareStory"; the English in the HTML is the fallback. */
 (() => {
   'use strict';
-  const API_URL = (window.DRUK_VOYAGES_API_URL || window.location.origin).replace(/\/+$/, '');
+  const API_URL = (window.DRUK_VOYAGES_API_URL || (/\.github\.io$/i.test((window.location || {}).hostname) || (window.location || {}).protocol === 'file:' ? '' : (window.location || {}).origin || '')).replace(/\/+$/, '');
   const LANGUAGES = ['en', 'ja', 'zh', 'ko', 'es', 'fr', 'vi', 'pt'];
   const MAX_EDGE = 1600, MIN_EDGE = 400, MAX_BYTES = 2.8 * 1024 * 1024;
   const $ = id => document.getElementById(id);

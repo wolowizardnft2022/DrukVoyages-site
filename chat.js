@@ -153,7 +153,7 @@ renderProviderSetup();
 updateChatMeta();
 // With no provider chosen yet (or Groq without a key), use the server's Ollama when the server says it is up.
 // On static hosting there is no /api, so the chat stays in its built-in travel-guide mode.
-if(!providerChosen||(aiProvider==='groq'&&!groqKey)){
+if(API_URL&&(!providerChosen||(aiProvider==='groq'&&!groqKey))){
   fetch(`${API_URL}/api/chat/status`,{signal:AbortSignal.timeout(4000)})
     .then(res=>res.ok?res.json():null)
     .then(info=>{
@@ -240,7 +240,7 @@ async function callGroq(systemPrompt,messages){
     }),
     signal:AbortSignal.timeout(30000),
   });
-  if(!res.ok){const e=await res.text();throw new Error(`Groq ${res.status}: ${e}`);}
+  if(!res.ok){const e=await res.text();throw Object.assign(new Error(`Groq ${res.status}: ${e}`),{status:res.status});}
   const j=await res.json();
   const reply=j.choices?.[0]?.message?.content;
   if(typeof reply!=='string'||!reply.trim())throw new Error('Groq returned an empty reply');
@@ -258,7 +258,7 @@ async function callOllamaCloud(messages,language='en'){
     // The server may need up to two minutes to load its model on a cold start.
     signal:AbortSignal.timeout(150000),
   });
-  if(!res.ok){const e=await res.text();throw new Error(`Ollama ${res.status}: ${e}`);}
+  if(!res.ok){const e=await res.text();throw Object.assign(new Error(`Ollama ${res.status}: ${e}`),{status:res.status});}
   const j=await res.json();
   if(typeof j.reply!=='string'||!j.reply.trim())throw new Error('Ollama returned an empty reply');
   // Offline replies are the server's answers from the knowledge base (real prices, days and fees), so show them as is.
@@ -314,7 +314,7 @@ ${context}`;
   }catch(err){
     hideTyping();
     console.warn('[Chat]',err.message);
-    if(/401|403|invalid_api_key|unauthorized/i.test(err.message)){
+    if(err.status===401||err.status===403||/invalid_api_key/i.test(err.message)){
       if(aiProvider==='groq'){
         groqKey='';
         botMsg(chatText('invalidGroq'),'invalidGroq');
