@@ -1012,6 +1012,13 @@ html.geo-locked #navbar, html.geo-locked .chat-fab, html.geo-locked .chat-win, h
 .modal-actions { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 28px; }
 .modal-plan-btn { min-height: 56px; width: 100%; border: 1px solid var(--deep); background: var(--deep); color: var(--paper); font-size: var(--fs-xs); letter-spacing: var(--track); text-transform: uppercase; }
 .modal-close-btn { margin-top: 0; border: 1px solid var(--line); background: transparent; color: var(--ink); }
+.modal-book-toggle { min-height: 52px; width: 100%; border: 1px solid var(--deep); background: transparent; color: var(--deep); font-size: var(--fs-xs); letter-spacing: var(--track); text-transform: uppercase; cursor: pointer; }
+.modal-book-toggle:hover, .modal-book-toggle[aria-expanded="true"] { background: var(--deep); color: var(--paper); }
+.modal-book[hidden] { display: none; }
+.modal-book { display: grid; gap: 4px; margin-top: 8px; }
+.modal-book .form-group { margin-bottom: 14px; }
+.modal-book-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 480px) { .modal-book-row { grid-template-columns: 1fr; gap: 0; } }
 .modal-brochure-btn { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 8px 16px; border: 1px solid var(--gold); color: var(--gold); font-size: var(--fs-xs); letter-spacing: var(--track); text-transform: uppercase; text-align: center; text-decoration: none; transition: background-color .3s, color .3s; }
 .modal-brochure-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
 .modal-brochure-btn:hover, .modal-brochure-btn:focus-visible { background: var(--gold); color: var(--paper); }
@@ -1696,12 +1703,12 @@ main > .journey-finder + .enquiry-section { padding-top: clamp(40px, 5vw, 72px);
 .season-branch .sb-sway { transform-box: fill-box; transform-origin: center; rotate: var(--r, 0deg); }
 .season-branch .sb-drop-leaf, .season-branch .sb-drip, .season-branch .sb-clump { opacity: 0; transform-box: fill-box; transform-origin: center; }
 @media (prefers-reduced-motion: no-preference) {
-  .season-branch { animation: sb-branch 7s ease-in-out infinite; }
-  .season-branch .sb-sway { animation: sb-flutter calc(2.4s + var(--i, 0) * .13s) ease-in-out calc(var(--i, 0) * -.37s) infinite; }
-  .season-branch .sb-drop-leaf { animation: sb-leaf-fall 7.5s ease-in calc(var(--n, 0) * -1.9s) infinite; }
-  .season-branch .sb-drip { animation: sb-drip 2.2s ease-in calc(var(--n, 0) * -.45s) infinite; }
-  .season-branch .sb-clump { animation: sb-clump 3.6s ease-in calc(var(--n, 0) * -.8s) infinite; }
-  .season-branch .sb-ice { animation: sb-ice 3s ease-in-out calc(var(--i, 0) * -.7s) infinite; }
+  .season-branch { animation: sb-branch 5s ease-in-out infinite; }
+  .season-branch .sb-sway { animation: sb-flutter calc(1.7s + var(--i, 0) * .09s) ease-in-out calc(var(--i, 0) * -.26s) infinite; }
+  .season-branch .sb-drop-leaf { animation: sb-leaf-fall 5.2s ease-in calc(var(--n, 0) * -1.3s) infinite; }
+  .season-branch .sb-drip { animation: sb-drip 1.6s ease-in calc(var(--n, 0) * -.32s) infinite; }
+  .season-branch .sb-clump { animation: sb-clump 2.6s ease-in calc(var(--n, 0) * -.56s) infinite; }
+  .season-branch .sb-ice { animation: sb-ice 2.2s ease-in-out calc(var(--i, 0) * -.5s) infinite; }
   .season-card:not(.fx-live) .season-branch, .season-card:not(.fx-live) .season-branch * { animation-play-state: paused; }
 }
 @keyframes sb-branch { 0%, 100% { rotate: -1.2deg; } 50% { rotate: 1.6deg; } }
@@ -1718,8 +1725,8 @@ main > .journey-finder + .enquiry-section { padding-top: clamp(40px, 5vw, 72px);
 @media (prefers-reduced-motion: no-preference) {
   .season-card:not(.fx-live) .season-branch .sb-lf { scale: 0; }
   .season-card.fx-live .season-branch .sb-lf {
-    animation: sb-sprout 1.5s cubic-bezier(.2, .8, .3, 1.15) calc(var(--i, 0) * .045s) backwards,
-               sb-leaf-sway calc(2.8s + var(--k, 0) * .35s) ease-in-out calc(1.5s + var(--i, 0) * .045s) infinite alternate;
+    animation: sb-sprout 1.05s cubic-bezier(.2, .8, .3, 1.15) calc(var(--i, 0) * .03s) backwards,
+               sb-leaf-sway calc(2s + var(--k, 0) * .25s) ease-in-out calc(1.05s + var(--i, 0) * .03s) infinite alternate;
   }
 }
 @keyframes sb-sprout { 0% { scale: 0; rotate: -28deg; } 60% { scale: 1.06; } 100% { scale: 1; rotate: 0deg; } }
@@ -1731,6 +1738,26 @@ main > .journey-finder + .enquiry-section { padding-top: clamp(40px, 5vw, 72px);
 .season-branch .sb-bloom { transform-box: fill-box; transform-origin: center; }
 @media (prefers-reduced-motion: no-preference) {
   .season-card:not(.fx-live) .season-branch .sb-bloom { scale: 0; }
-  .season-card.fx-live .season-branch .sb-bloom { animation: sb-bloom 1.8s cubic-bezier(.22, .8, .3, 1.1) calc(var(--o, 0) * .05s) backwards; }
+  .season-card.fx-live .season-branch .sb-bloom { animation: sb-bloom 1.25s cubic-bezier(.22, .8, .3, 1.1) calc(var(--o, 0) * .035s) backwards; }
 }
 @keyframes sb-bloom { 0% { scale: 0; rotate: -60deg; opacity: 0; } 12% { opacity: 1; } 35% { scale: .45; } 72% { scale: 1.16; } 100% { scale: 1; rotate: 0deg; } }
+
+/* Autumn leaves turn colour instead of sprouting (season-branches.js): each leaf is drawn green, with a yellow copy and
+   its final orange or red copy stacked above that fade in one after the other, nearest the trunk first. They stay
+   that colour for good once turned (no loop, see .turned below). The leaves that
+   fall wait until the colour has turned. Reduced motion shows the finished autumn colours, still. */
+.season-branch .sb-turn1, .season-branch .sb-turn2 { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .season-card.autumn:not(.fx-live) .season-branch .sb-lf { scale: 1; }
+  .season-card.autumn.fx-live .season-branch .sb-lf { animation: sb-leaf-sway calc(2s + var(--k, 0) * .25s) ease-in-out infinite alternate; }
+  .season-card.autumn .season-branch .sb-turn1, .season-card.autumn .season-branch .sb-turn2 { opacity: 0; }
+  .season-card.autumn.fx-live .season-branch .sb-turn1 { animation: sb-turn-yellow 7s ease-in-out calc(var(--i, 0) * .06s) both; }
+  .season-card.autumn.fx-live .season-branch .sb-turn2 { animation: sb-turn-final 7s ease-in-out calc(var(--i, 0) * .06s) both; }
+  .season-card.autumn .season-branch .sb-drop-leaf { animation: sb-leaf-fall 5.2s ease-in calc(6s + var(--n, 0) * 1.2s) infinite; }
+}
+@keyframes sb-turn-yellow { 0%, 6% { opacity: 0; } 45%, 100% { opacity: 1; } }
+@keyframes sb-turn-final { 0%, 40% { opacity: 0; } 100% { opacity: 1; } }
+@media (prefers-reduced-motion: no-preference) { .season-card.autumn:not(.fx-live) .season-branch .sb-drop-leaf { animation-play-state: paused; } }
+/* Once every autumn leaf has turned, the card keeps the finished colours (season-branches.js adds .turned), also after it
+   scrolls out of view and back. */
+.season-card.autumn.turned .season-branch .sb-turn1, .season-card.autumn.turned .season-branch .sb-turn2 { opacity: 1; animation: none; }

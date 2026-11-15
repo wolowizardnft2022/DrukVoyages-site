@@ -79,14 +79,21 @@
       `<g id="sb-leaf-${season}"><path d="${BLADE}"/><path d="M0,0 L24,0 C21,1 19.5,2.2 17,3.8 C11,8 3,6.5 0,0Z" fill="rgba(0,0,0,.16)"/>` +
       '<path d="M0,0 L22,0 M6,0 L11,-4.6 M6,0 L11,4.2 M11.5,0 L16.5,-3.7 M11.5,0 L16.5,3.5" stroke="rgba(0,0,0,.26)" stroke-width=".55" fill="none" stroke-linecap="round"/>' +
       (season === 'summer' ? '<ellipse cx="9" cy="-3" rx="4.2" ry="1.1" fill="rgba(255,255,255,.28)" transform="rotate(-14 9 -3)"/>' : '') + '</g>';
+    const turning = season === 'autumn'
+      ? '<linearGradient id="sbg-autumn-green" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3b8a41"/><stop offset="1" stop-color="#6fae4d"/></linearGradient>' +
+        '<linearGradient id="sbg-autumn-yellow" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a9b53a"/><stop offset="1" stop-color="#e8c93f"/></linearGradient>' : '';
     const leaves = leafPlacements();
     let out = '';
     leaves.forEach(l => {
       const grad = Math.floor(pick(l.n, 37) * grads.length);
       const order = Math.floor(Math.hypot(l.x - 336, l.y + 8) / 7);
+      const blade = fill => `<use href="#sb-leaf-${season}" x="${STALK}" fill="url(#${fill})"/>`;
+      // Autumn leaves start green and turn: two coloured copies fade in over the green one (.sb-turn1 yellow, .sb-turn2 final).
+      const body = season === 'autumn'
+        ? blade('sbg-autumn-green') + `<g class="sb-turn1">${blade('sbg-autumn-yellow')}</g><g class="sb-turn2">${blade(`sbg-autumn-${grad}`)}</g>`
+        : blade(`sbg-${season}-${grad}`);
       out += `<g transform="translate(${num(l.x)} ${num(l.y)}) rotate(${num(l.a * 180 / Math.PI)}) scale(${num(l.s)})">` +
-        `<g class="sb-lf" style="--i:${order};--k:${l.n % 7}"><path d="M0,0 L${STALK + 1},0" stroke="${BARK}" stroke-width="1.1" stroke-linecap="round"/>` +
-        `<use href="#sb-leaf-${season}" x="${STALK}" fill="url(#sbg-${season}-${grad})"/></g></g>`;
+        `<g class="sb-lf" style="--i:${order};--k:${l.n % 7}"><path d="M0,0 L${STALK + 1},0" stroke="${BARK}" stroke-width="1.1" stroke-linecap="round"/>${body}</g></g>`;
     });
     // Leaves that let go (autumn) or drops that run off the leaf tips (monsoon).
     const tipOf = l => ({ x: l.x + Math.cos(l.a) * (STALK + 22) * l.s, y: l.y + Math.sin(l.a) * (STALK + 22) * l.s });
@@ -102,7 +109,7 @@
         moving += `<g transform="translate(${num(t.x)} ${num(t.y + 1.5)})"><circle class="sb-drip" style="--n:${n}" r="1.9" fill="#e4f3ff" opacity=".9"/></g>`;
       });
     }
-    return `<defs>${defs}</defs>${out}${moving}`;
+    return `<defs>${defs}${turning}</defs>${out}${moving}`;
   }
 
   function foliage(season) {
@@ -147,6 +154,13 @@
       }
       layer.insertAdjacentHTML('afterbegin',
         `<svg class="season-branch season-branch-${season}" viewBox="0 0 320 190" aria-hidden="true" focusable="false">${limbs(season)}${foliage(season)}</svg>`);
+      if (season === 'autumn') {   // the colour turns once: when the last leaf has finished, the card keeps it
+        const svg = layer.querySelector('.season-branch');
+        let waiting = svg.querySelectorAll('.sb-turn2').length;
+        svg.addEventListener('animationend', event => {
+          if (event.animationName === 'sb-turn-final' && --waiting <= 0) card.classList.add('turned');
+        });
+      }
     });
   });
 })();

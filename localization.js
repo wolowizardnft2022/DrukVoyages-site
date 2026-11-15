@@ -90,6 +90,15 @@
   "planThisJourney": "Plan this journey",
   "downloadBrochure": "Download brochure (PDF)",
   "itineraryMessage": "I’d like to plan “{title}” ({days} days). Please help me adapt it to my dates and interests.",
+  "bookOpen": "Request this trip",
+  "bookName": "Your name",
+  "bookEmail": "Your email",
+  "bookGuests": "Guests",
+  "bookArrival": "Arrival date",
+  "bookSend": "Send request",
+  "bookSending": "Sending…",
+  "bookDone": "Request received. Your reference is {ref}. We will confirm availability within 48 hours.",
+  "bookFail": "Your request could not be sent. Please try again or use the enquiry form.",
   "prefilled": "We’ve added your choices to the form.",
   "planning": "Planning",
   "customQuote": "Custom quote",
@@ -235,7 +244,7 @@
   async function load(lang){
     if(!supported.includes(lang))throw new Error('Unsupported language');
     if(catalogs.has(lang))return;
-    if(!pending.has(lang))pending.set(lang,fetch(`i18n/${lang}.json?v=20261114-eq1`,{cache:'no-cache'}).then(async response=>{
+    if(!pending.has(lang))pending.set(lang,fetch(`i18n/${lang}.json?v=20261115-book1`,{cache:'no-cache'}).then(async response=>{
       if(!response.ok)throw new Error('Translation catalog unavailable');
       const data=await response.json();
       if(data.language!==lang)throw new Error('Translation catalog mismatch');

@@ -19,6 +19,14 @@
   <meta name="twitter:image" content="https://drukvoyages.bt/img/web/maps-image/dzongs_of_bhutan/Paro Tasktsang.jpg"/>
   <link rel="canonical" href="https://drukvoyages.bt"/>
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20261002-mainlogo"/>
+  <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png"/>
+  <link rel="manifest" href="site.webmanifest"/>
+  <meta name="theme-color" content="#0e0e10"/>
+  <meta name="color-scheme" content="dark"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="Druk Voyages"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
   <link rel="sitemap" type="application/xml" href="sitemap.xml"/>
   <link rel="preload" as="image" fetchpriority="high" href="img/web/homepage_slides/615796-1920x1282-desktop-hd-bhutan-background-photo.jpg"/>
   <title>Druk Voyages — Kingdom of Bhutan Travel</title>
@@ -39,7 +47,7 @@
     "sameAs": ["https://instagram.com/drukvoyages","https://facebook.com/drukvoyages"]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261114-br6"/>
+  <link rel="stylesheet" href="styles.css?v=20261115-book1"/>
   <!-- Intro splash: decided before first paint so the home page never flashes first. Shown on every load
     and refresh, never with reduced motion, and never without JavaScript (the class is set here). Without a
     #section link, the page opens at the top (the home page) instead of the browser's restored scroll. -->
@@ -701,6 +709,17 @@
   <div class="modal-days" id="modalDays"></div>
   <div class="modal-actions">
     <button type="button" class="modal-plan-btn" id="modalPlan">Plan this journey</button>
+    <button type="button" class="modal-book-toggle" id="modalBook" aria-expanded="false" aria-controls="bookForm">Request this trip</button>
+    <form class="modal-book" id="bookForm" hidden novalidate>
+      <div class="form-group"><label for="bookName" id="bookNameLabel">Your name</label><input id="bookName" name="firstName" type="text" autocomplete="given-name" maxlength="80" required/></div>
+      <div class="form-group"><label for="bookEmail" id="bookEmailLabel">Your email</label><input id="bookEmail" name="email" type="email" autocomplete="email" maxlength="120" required/></div>
+      <div class="modal-book-row">
+        <div class="form-group"><label for="bookGuests" id="bookGuestsLabel">Guests</label><input id="bookGuests" name="guests" type="number" min="1" max="20" value="2" inputmode="numeric" required/></div>
+        <div class="form-group"><label for="bookArrival" id="bookArrivalLabel">Arrival date</label><input id="bookArrival" name="arrivalDate" type="date" required/></div>
+      </div>
+      <button type="submit" class="modal-plan-btn" id="bookSubmit">Send request</button>
+      <p class="form-msg" id="bookMsg" role="status" aria-live="polite"></p>
+    </form>
     <a class="modal-brochure-btn" id="modalBrochure" href="brochures/druk-voyages-1-bhutan-highlights.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Download brochure (PDF)</span></a>
     <button class="modal-close-btn" data-act="closeItineraryModal">Close Itinerary</button>
   </div>
@@ -714,11 +733,11 @@
 <div class="toast" id="toast"></div>
 
 <script src="translations.js?v=20261002-hero-captions"></script>
-<script src="localization.js?v=20261114-eq2"></script>
+<script src="localization.js?v=20261115-book1"></script>
 <script src="chat-locales.js?v=20261002-complete4"></script>
-<script src="main.js?v=20261114-csp1"></script>
+<script src="main.js?v=20261115-photos1"></script>
 <script src="actions.js?v=20261114-csp1"></script>
-<script src="season-branches.js?v=20261114-br6"></script>
+<script src="season-branches.js?v=20261114-br9"></script>
 <script src="atlas-loader.js?v=20261114-photos1"></script>
 
 <!-- AI CHATBOT — Groq + Ollama Cloud + Client-side RAG
@@ -790,7 +809,7 @@
   <div class="chat-powered" id="chatPowered">Pema · Druk Voyages AI travel guide</div>
 </div>
 
-<script src="chat.js?v=20261114-csp1"></script>
+<script src="chat.js?v=20261115-book1"></script>
 <script src="sw-register.js?v=20261114-csp1"></script>
 </body>
 </html>

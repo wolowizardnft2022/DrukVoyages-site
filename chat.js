@@ -326,7 +326,6 @@ ${context}`;
     }else{
       botMsg(staticFallback(text),fallbackKey(text));
     }
-    history.push({role:'assistant',content:'[fallback]'});saveConversation();
   }finally{busy=false;snd.disabled=false;inp.focus();}
 }
 window.chatSend=chatSend;
