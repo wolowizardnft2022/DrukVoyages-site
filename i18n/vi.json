@@ -57,6 +57,7 @@
     "planSendAnother": "Gửi yêu cầu khác",
     "navBestTime": "Phân điểm",
     "navStories": "Câu chuyện",
+    "navTrekking": "Trekking",
     "mapEntry": "Cửa khẩu từ Ấn Độ",
     "mapFlightsPause": "Tạm dừng chuyến bay",
     "mapFlightsPlay": "Phát chuyến bay",
@@ -84,6 +85,8 @@
     "valleyAlt": "Cảnh quan Thung lũng Bhutan",
     "finderLink": "Bạn không chắc nên bắt đầu từ đâu?",
     "finderLinkAction": "Tìm nhịp điệu của bạn ↗",
+    "treksLink": "Bạn muốn một hành trình trekking dài hơn?",
+    "treksLinkAction": "Xem cả chín tuyến trên trang Trekking ↗",
     "finderIntro": "Bhutan đáng để khám phá thong thả. Dùng la bàn hành trình để tìm điểm khởi đầu, rồi cùng đội ngũ địa phương điều chỉnh nhịp đi theo sở thích và ngày đi của bạn.",
     "finderHow": "Cách chúng tôi lên kế hoạch cho chuyến hành trình đến Bhutan",
     "finderFact1": "Bắt đầu với những gì bạn muốn cảm nhận chứ không phải một danh sách kiểm tra.",
@@ -1112,7 +1115,8 @@
       "Giữa núi cao,<br> tìm thấy <em>ý nghĩa.</em>",
       "Chuyện xưa.<br> Truyền thống <em>sống động.</em>",
       "Chọn con đường<br> không <em>vội vã.</em>",
-      "Một vương quốc<br> ở lại trong <em>tim bạn.</em>"
+      "Một vương quốc<br> ở lại trong <em>tim bạn.</em>",
+      "Bước đến nơi<br> lời nguyện <em>bay cao.</em>"
     ],
     "gnhPillars": [
       "Phát triển kinh tế xã hội<br>bền vững và công bằng",

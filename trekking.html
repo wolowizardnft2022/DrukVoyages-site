@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <script src="desktop-site.js?v=20261114-csp1"></script>
+  <script src="trekking.js?v=20261117-titles1" defer></script>
+  <meta name="description" content="Trekking in Bhutan with Druk Voyages: the Snowman, Laya Gasa, Jomolhari, Druk Path and more. Fully supported camping treks with pack ponies, a trek chef and Bhutanese guides."/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:title" content="Trekking in Bhutan — Druk Voyages"/>
+  <meta property="og:description" content="High passes, glacial lakes and yak-herder valleys: fully supported treks across the Bhutan Himalaya, from the Druk Path to the Snowman Trek."/>
+  <meta property="og:image" content="https://drukvoyages.bt/img/web/trekking/trek-03.jpg"/>
+  <meta property="og:url" content="https://drukvoyages.bt/trekking.html"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="canonical" href="https://drukvoyages.bt/trekking.html"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20261002-mainlogo"/>
+  <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png"/>
+  <link rel="manifest" href="site.webmanifest"/>
+  <meta name="theme-color" content="#0e0e10"/>
+  <meta name="color-scheme" content="dark"/>
+  <title>Trekking in Bhutan — Druk Voyages</title>
+  <link rel="preload" as="image" fetchpriority="high" href="img/web/trekking/trek-03.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css?v=20261117-treks1"/>
+  <!-- Trekking page (R-32, T189). Photos: img/web/trekking/ (1600px) and img/web/trekking/sm/ (800px), made from
+       img/snowman trekking/. Trek facts are checked against public sources; copy is our own. Look: docs/DESIGN_SYSTEM.md. -->
+  <style>
+    .trek-page { background: var(--paper); color: var(--ink); }
+    /* styles.css adds a halo to home-page section text with main > section:not(.hero):not(.cta-section); out-rank it here. */
+    body.trek-page main > section:not(.x):not(.y), body.trek-page main > div, body.trek-page footer:not(.x):not(.y) { text-shadow: none; }
+    .trek-hero-copy h1, .trek-hero-copy p, .trek-closing-copy h2, .trek-closing-copy p { text-shadow: 0 2px 18px rgba(0,0,0,.55); }
+    .trek-page .btn-primary, .trek-page .btn-outline { text-shadow: none; }
+    .trek-top { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px var(--gutter); background: rgba(14,14,16,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    .trek-brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--ink); text-decoration: none; }
+    .trek-brand img:first-child { width: 36px; height: 36px; }
+    .trek-brand .brand-wordmark { width: 150px; height: auto; }
+    .trek-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .trek-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--on-dark); text-decoration: none; font-size: var(--fs-xs); letter-spacing: var(--track); text-transform: uppercase; }
+    .trek-links a:hover, .trek-links a:focus-visible { color: var(--gold); }
+    .trek-links .trek-cta { padding: 0 20px; border: 1px solid var(--ink); color: var(--ink); }
+    .trek-links .trek-cta:hover { background: var(--gold); border-color: var(--gold); color: var(--paper); }
+    @media (max-width: 900px) { .trek-links li:not(:last-child) { display: none; } .trek-brand .brand-wordmark { width: 120px; } }
+
+    .trek-hero { position: relative; display: grid; align-items: end; min-height: min(86svh, 820px); padding: var(--space-9) var(--gutter) var(--space-8); overflow: hidden; }
+    /* Hero slideshow (trekking.js): photos crossfade every 7s with a slow zoom; dots pick a slide, the button pauses. */
+    .trek-slides { position: absolute; inset: 0; }
+    .trek-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.6s ease; }
+    .trek-slide.is-active { opacity: 1; }
+    @media (prefers-reduced-motion: no-preference) {
+      .trek-slide { transform: scale(1.06); transition: opacity 1.6s ease, transform 8.5s linear; }
+      .trek-slide.is-active { transform: scale(1); }
+    }
+    .trek-slide-controls { position: absolute; z-index: 2; right: var(--gutter); bottom: clamp(20px, 4svh, 40px); display: flex; align-items: center; gap: 12px; }
+    .trek-slide-controls:not(.is-ready) { display: none; }
+    .trek-hero.wm::before { top: 16px; bottom: auto; }
+    @media (max-width: 640px) { .trek-slide-controls { bottom: auto; top: 8px; right: auto; left: var(--gutter); } }
+    .trek-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14,14,16,.92) 0%, rgba(14,14,16,.45) 45%, rgba(14,14,16,.15) 100%); }
+    .trek-hero-copy { position: relative; z-index: 1; max-width: 760px; }
+    .trek-hero .section-label { color: var(--on-dark); }
+    .trek-hero h1 { font: 300 clamp(3rem, 8vw, 6.5rem)/1 var(--display); letter-spacing: -.01em; margin-bottom: var(--space-5); }
+    .trek-hero h1 em { font-style: italic; }
+    .trek-hero h1 { transition: opacity .45s ease, translate .45s ease; }
+    .trek-hero h1.is-swapping { opacity: 0; translate: 0 10px; }
+    .trek-hero p { max-width: 58ch; color: var(--on-dark); font-size: var(--fs-lede); font-weight: 300; line-height: 1.75; margin-bottom: var(--space-6); }
+    .trek-hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+
+    .trek-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .trek-facts div { padding: var(--space-6) var(--gutter); border-right: 1px solid var(--line); }
+    .trek-facts div:last-child { border-right: 0; }
+    .trek-facts strong { display: block; font: 400 clamp(2rem, 4vw, 3rem)/1 var(--display); color: var(--ink); margin-bottom: var(--space-2); }
+    .trek-facts span { color: var(--muted); font-size: var(--fs-sm); }
+    @media (max-width: 760px) { .trek-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .trek-facts div:nth-child(2) { border-right: 0; } .trek-facts div:nth-child(-n+2) { border-bottom: 1px solid var(--line); } }
+
+    .trek-section { padding: var(--section-y) var(--gutter); }
+    .trek-section.alt { background: var(--charcoal); }
+    .trek-head { max-width: 760px; margin: 0 auto var(--space-8); text-align: center; }
+    .trek-head p { color: var(--muted); font-weight: 300; line-height: 1.8; }
+
+    .trek-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); max-width: var(--container); margin: 0 auto; }
+    @media (max-width: 1100px) { .trek-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { .trek-grid { grid-template-columns: minmax(0, 1fr); } }
+    .trek-card { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--line); }
+    .trek-card-photo { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--slate); }
+    .trek-card-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+    .trek-card:hover .trek-card-photo img { transform: scale(1.04); }
+    .trek-grade { position: absolute; top: 12px; left: 12px; z-index: 1; padding: 6px 12px; background: rgba(14,14,16,.8); color: var(--ink); font-size: var(--fs-xs); letter-spacing: .12em; text-transform: uppercase; }
+    .trek-card-body { display: flex; flex-direction: column; flex: 1; padding: var(--space-5); }
+    .trek-card h3 { font: 400 var(--fs-h3)/1.2 var(--display); margin-bottom: var(--space-3); }
+    .trek-card p { color: var(--muted); font-size: var(--fs-base); font-weight: 300; line-height: 1.7; margin-bottom: var(--space-5); }
+    .trek-meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin-top: auto; padding-top: var(--space-4); border-top: 1px solid var(--line); }
+    .trek-meta dt { color: var(--muted); font-size: var(--fs-xs); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 2px; }
+    .trek-meta dd { font-size: var(--fs-sm); color: var(--ink); }
+
+    .trek-feature { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: var(--space-8); max-width: var(--container); margin: 0 auto; align-items: start; }
+    @media (max-width: 960px) { .trek-feature { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); } }
+    .trek-feature-photos { display: grid; gap: var(--space-3); position: sticky; top: 96px; }
+    @media (max-width: 960px) { .trek-feature-photos { position: static; } }
+    .trek-feature-photos img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+    .trek-feature-photos .pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+    .trek-feature-photos .pair img { aspect-ratio: 4 / 3; }
+    .trek-feature .section-title { text-align: left; }
+    .trek-feature > div > p { color: var(--muted); font-weight: 300; line-height: 1.8; margin-bottom: var(--space-5); }
+    .trek-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: var(--space-6) 0; }
+    .trek-stats div { background: var(--paper); padding: var(--space-4) var(--space-5); }
+    .trek-stats dt { color: var(--muted); font-size: var(--fs-xs); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 4px; }
+    .trek-stats dd { font: 400 1.5rem/1.2 var(--display); }
+    .trek-stages { list-style: none; border-left: 1px solid var(--jade); margin-left: 6px; }
+    .trek-stages li { position: relative; padding: 0 0 var(--space-6) var(--space-6); }
+    .trek-stages li::before { content: ''; position: absolute; left: -6px; top: 6px; width: 11px; height: 11px; border-radius: 50%; background: var(--paper); border: 2px solid var(--gold); }
+    .trek-stages .days { display: block; color: var(--gold); font-size: var(--fs-xs); letter-spacing: var(--track); text-transform: uppercase; margin-bottom: 4px; }
+    .trek-stages h3 { font: 400 1.375rem/1.25 var(--display); margin-bottom: 6px; }
+    .trek-stages p { color: var(--muted); font-weight: 300; line-height: 1.7; }
+    .trek-note { padding: var(--space-4) var(--space-5); border: 1px solid var(--line); color: var(--on-dark); font-size: var(--fs-sm); line-height: 1.7; }
+    .trek-note strong { color: var(--gold); font-weight: 400; }
+
+    .trek-life { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); max-width: var(--container); margin: 0 auto; }
+    @media (max-width: 960px) { .trek-life { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 600px) { .trek-life { grid-template-columns: minmax(0, 1fr); } }
+    .trek-life figure img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; margin-bottom: var(--space-4); }
+    .trek-life h3 { font: 400 var(--fs-h3)/1.2 var(--display); margin-bottom: var(--space-2); }
+    .trek-life figcaption p { color: var(--muted); font-weight: 300; line-height: 1.7; }
+
+    .trek-seasons { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4); max-width: var(--container); margin: 0 auto; }
+    @media (max-width: 960px) { .trek-seasons { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 520px) { .trek-seasons { grid-template-columns: minmax(0, 1fr); } }
+    .trek-season { padding: var(--space-6) var(--space-5); border: 1px solid var(--line); background: var(--paper); }
+    .trek-season.best { border-color: var(--gold); }
+    .trek-season .when { color: var(--muted); font-size: var(--fs-xs); letter-spacing: var(--track); text-transform: uppercase; }
+    .trek-season h3 { font: 400 1.75rem/1.2 var(--display); margin: var(--space-2) 0 var(--space-3); }
+    .trek-season .verdict { display: inline-block; margin-bottom: var(--space-3); color: var(--gold); font-size: var(--fs-sm); }
+    .trek-season p { color: var(--muted); font-weight: 300; line-height: 1.7; }
+
+    .trek-two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-8); max-width: var(--container); margin: 0 auto; }
+    @media (max-width: 900px) { .trek-two { grid-template-columns: minmax(0, 1fr); gap: var(--space-7); } }
+    .trek-two h2 { font: 400 clamp(2rem, 3.4vw, 2.75rem)/1.1 var(--display); margin-bottom: var(--space-5); }
+    .trek-two h2 em { font-style: italic; font-weight: 300; }
+    .trek-two > div > p { color: var(--muted); font-weight: 300; line-height: 1.8; margin-bottom: var(--space-5); }
+    .trek-two img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; margin-bottom: var(--space-5); }
+    .trek-list { list-style: none; display: grid; gap: var(--space-3); }
+    .trek-list li { position: relative; padding-left: 22px; color: var(--on-dark); font-weight: 300; line-height: 1.65; }
+    .trek-list li::before { content: ''; position: absolute; left: 0; top: .7em; width: 10px; height: 1px; background: var(--gold); }
+    .trek-list strong { color: var(--ink); font-weight: 400; }
+
+    .trek-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 220px; gap: 8px; max-width: var(--container); margin: 0 auto; }
+    .trek-gallery a { position: relative; display: block; overflow: hidden; background: var(--slate); }
+    .trek-gallery a.wide { grid-column: span 2; }
+    .trek-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+    .trek-gallery a:hover img, .trek-gallery a:focus-visible img { transform: scale(1.04); }
+    @media (max-width: 900px) { .trek-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 160px; } }
+
+    .trek-closing { position: relative; padding: var(--section-y) var(--gutter); text-align: center; overflow: hidden; }
+    .trek-closing > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .trek-closing::after { content: ''; position: absolute; inset: 0; background: rgba(14,14,16,.7); }
+    .trek-closing-copy { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+    .trek-closing p { color: var(--on-dark); font-weight: 300; line-height: 1.8; margin-bottom: var(--space-6); }
+    .trek-closing .trek-hero-actions { justify-content: center; }
+
+    .trek-foot { padding: var(--space-7) var(--gutter); border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: var(--space-5); align-items: center; justify-content: space-between; color: var(--muted); font-size: var(--fs-sm); }
+    .trek-foot nav { display: flex; flex-wrap: wrap; gap: var(--space-5); }
+    .trek-foot a { color: var(--on-dark); text-decoration: none; display: inline-flex; min-height: 44px; align-items: center; }
+    .trek-foot a:hover { color: var(--gold); }
+    /* One screen per section (owner, 2026-11-17), like the home page's gallery and Best Time: on laptops and desktops
+       each section fills the window under the sticky header, and grids share out the height. Text is clamped so a
+       section only grows past one screen on very short windows. Phones and tall tablets keep the normal flow. */
+    :root { --top-h: 69px; --facts-h: 104px; }
+    html { scroll-padding-top: var(--top-h); }
+    @media (min-width: 1024px) and (min-height: 620px) {
+      .trek-hero { min-height: 0; height: calc(100svh - var(--top-h) - var(--facts-h)); padding-block: var(--space-6) clamp(24px, 6svh, 64px); }
+      .trek-hero h1 { font-size: clamp(3rem, 10svh, 6.5rem); margin-bottom: clamp(12px, 2.5svh, 24px); }
+      .trek-hero p { margin-bottom: clamp(16px, 3.5svh, 32px); }
+      .trek-facts { height: var(--facts-h); }
+      .trek-facts div { display: flex; flex-direction: column; justify-content: center; padding-block: 0; }
+      .trek-facts strong { font-size: clamp(1.75rem, 4.2svh, 2.5rem); margin-bottom: 4px; }
+
+      .trek-section { display: flex; flex-direction: column; justify-content: center; min-height: calc(100svh - var(--top-h)); padding-block: clamp(20px, 3.5svh, 48px); }
+      /* Treks and the gallery have clamped text and cropped photos, so they take exactly one screen and share it out. */
+      #treks, #trek-gallery { height: calc(100svh - var(--top-h)); }
+      .trek-head { margin-bottom: clamp(16px, 3.5svh, 40px); }
+      .trek-head .section-label { margin-bottom: clamp(8px, 1.4svh, 16px); }
+      .trek-head .section-title { font-size: clamp(2rem, 6svh, 3.5rem); margin-bottom: clamp(8px, 1.4svh, 16px); }
+      .trek-head p { max-width: 80ch; margin-inline: auto; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font-size: var(--fs-sm); }
+      .trek-section > .trek-head + * { flex: 1; min-height: 0; width: 100%; }
+
+      /* Treks: three rows of side-by-side cards (photo left, words right). */
+      .trek-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); gap: clamp(8px, 1.6svh, 20px); }
+      .trek-card { overflow: hidden; }
+      .trek-card { flex-direction: row; min-height: 0; }
+      .trek-card-photo { flex: 0 0 34%; aspect-ratio: auto; }
+      .trek-card-photo img { position: absolute; inset: 0; }
+      .trek-card-body { min-width: 0; padding: clamp(10px, 1.8svh, 20px) clamp(12px, 1.2vw, 20px); }
+      .trek-card h3 { font-size: clamp(1.125rem, 2.6svh, 1.5rem); margin-bottom: 4px; }
+      .trek-card p { flex-shrink: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font-size: var(--fs-sm); line-height: 1.55; margin-bottom: 8px; }
+      .trek-meta { display: flex; flex-wrap: wrap; gap: 2px 14px; padding-top: 8px; position: relative; }
+      .trek-meta div { display: flex; align-items: baseline; }
+      .trek-meta div + div::before { content: '·'; margin-right: 14px; color: var(--gold); }
+      .trek-meta dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      .trek-meta dd { font-size: 0.8125rem; white-space: nowrap; }
+      .trek-grade { top: 8px; left: 8px; padding: 4px 8px; font-size: 0.6875rem; }
+
+      /* Snowman: photos fill the left column's height; stages sit in a 2 x 3 grid. */
+      #snowman .trek-feature { flex: 1; min-height: 0; width: 100%; gap: clamp(24px, 3vw, 56px); align-items: stretch; }
+      .trek-feature-photos { position: static; grid-template-rows: 1.3fr 1fr 1fr; min-height: 0; }
+      .trek-feature-photos img, .trek-feature-photos .pair img { aspect-ratio: auto; height: 100%; min-height: 0; }
+      .trek-feature-photos .pair { min-height: 0; }
+      .trek-feature .section-label { margin-bottom: 8px; }
+      .trek-feature .section-title { font-size: clamp(2rem, 6svh, 3.25rem); margin-bottom: clamp(8px, 1.4svh, 16px); }
+      .trek-feature > div > p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; font-size: var(--fs-sm); line-height: 1.6; margin-bottom: 0; }
+      .trek-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); margin: clamp(12px, 2svh, 24px) 0; }
+      .trek-stats div { padding: clamp(6px, 1.2svh, 14px) 14px; }
+      .trek-stats dd { font-size: clamp(1rem, 2.2svh, 1.25rem); }
+      .trek-stages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(10px, 1.8svh, 20px) 24px; border-left: 0; margin: 0 0 clamp(12px, 2svh, 20px); }
+      .trek-stages li { padding: 0 0 0 14px; border-left: 1px solid var(--jade); }
+      .trek-stages li::before { left: -6px; top: 3px; }
+      .trek-stages h3 { font-size: clamp(1rem, 2.2svh, 1.1875rem); margin-bottom: 2px; }
+      .trek-stages p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font-size: var(--fs-sm); line-height: 1.5; }
+      .trek-note { padding: 8px 14px; line-height: 1.5; font-size: 0.8125rem; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+
+      /* Life on the trail: two rows; photos take whatever height the captions leave. */
+      .trek-life { grid-template-rows: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 2.4svh, 28px) var(--space-5); }
+      .trek-life figure { display: flex; flex-direction: column; min-height: 0; }
+      .trek-life figure img { flex: 1; min-height: 90px; aspect-ratio: auto; margin-bottom: 10px; }
+      .trek-life h3 { font-size: clamp(1.125rem, 2.6svh, 1.5rem); margin-bottom: 2px; }
+      .trek-life figcaption p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font-size: var(--fs-sm); line-height: 1.55; }
+
+      /* Seasons: the four cards stand full height. */
+      #seasons .trek-seasons, #prepare .trek-two { flex: 0 0 auto; }
+      .trek-season { min-height: clamp(240px, 38svh, 400px); }
+      .trek-season { display: flex; flex-direction: column; justify-content: center; }
+
+      /* Prepare: the two lists side by side; the photos only show on tall windows. */
+      .trek-two { gap: clamp(32px, 4vw, 64px); align-content: center; }
+      .trek-two img { aspect-ratio: 4 / 1; margin-bottom: clamp(12px, 2svh, 20px); }
+      .trek-two h2 { font-size: clamp(1.75rem, 4.4svh, 2.5rem); margin-bottom: clamp(8px, 1.6svh, 16px); }
+      .trek-two > div > p { font-size: var(--fs-sm); line-height: 1.65; margin-bottom: clamp(10px, 1.8svh, 18px); }
+      .trek-list { gap: clamp(4px, 1svh, 10px); }
+      .trek-list li { font-size: var(--fs-sm); line-height: 1.55; }
+
+      /* Gallery: six columns by four rows (3 wide tiles + 18 singles = 24 cells). */
+      .trek-gallery { grid-template-columns: repeat(6, minmax(0, 1fr)); grid-template-rows: repeat(4, minmax(0, 1fr)); grid-auto-flow: dense; }
+
+      /* Closing call to action and footer share the last screen. */
+      .trek-closing { display: flex; align-items: center; justify-content: center; min-height: calc(100svh - var(--top-h) - 141px); }
+    }
+    /* Shorter laptop windows: drop the Prepare photos so both lists fit. */
+    @media (min-width: 1024px) and (min-height: 620px) and (max-height: 959px) {
+      .trek-two img { display: none; }
+    }
+    /* Short laptops (about 768px tall): drop the section ledes and clamp card text tighter so each section still fits. */
+    @media (min-width: 1024px) and (min-height: 620px) and (max-height: 820px) {
+      .trek-head p { display: none; }
+      .trek-card p, .trek-feature > div > p { -webkit-line-clamp: 2; }
+      .trek-stages p { -webkit-line-clamp: 1; }
+      .trek-life figcaption p { -webkit-line-clamp: 1; }
+      .trek-hero p { font-size: var(--fs-base); line-height: 1.6; }
+      .trek-stats div { padding-block: 4px; }
+      .trek-stats { margin: 10px 0; }
+      .trek-feature .section-title { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body class="trek-page">
+<a class="skip-link" href="#trekMain">Skip to content</a>
+
+<header class="trek-top">
+  <a class="trek-brand" href="./" aria-label="Druk Voyages home">
+    <img src="img/druk-voyages-mark.svg?v=20261002-mainlogo" width="36" height="36" alt=""/>
+    <img class="brand-wordmark" src="img/druk-voyages-wordmark.svg?v=20261002-mainlogo" width="180" height="17" alt="Druk Voyages"/>
+  </a>
+  <nav aria-label="Trekking page">
+    <ul class="trek-links">
+      <li><a href="./">Home</a></li>
+      <li><a href="#treks">Treks</a></li>
+      <li><a href="#snowman">Snowman Trek</a></li>
+      <li><a href="#trail-life">On the Trail</a></li>
+      <li><a href="#prepare">Prepare</a></li>
+      <li><a class="trek-cta" href="./#journey-finder">Plan My Trek</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="trekMain" tabindex="-1">
+<section class="trek-hero wm" aria-labelledby="trekTitle">
+  <div class="trek-slides" id="trekSlides">
+    <img data-title="Walk the *roof* of the kingdom." class="trek-slide is-active" src="img/web/trekking/trek-03.jpg" srcset="img/web/trekking/sm/trek-03.jpg 800w, img/web/trekking/trek-03.jpg 1600w" sizes="100vw" width="1600" height="642" alt="Snow-covered peaks of the Bhutan Himalaya under a clear blue sky" fetchpriority="high"/>
+    <img data-title="Glacial lakes, *turquoise* and still." class="trek-slide" data-src="img/web/trekking/trek-21.jpg" data-srcset="img/web/trekking/sm/trek-21.jpg 800w, img/web/trekking/trek-21.jpg 1600w" sizes="100vw" width="1600" height="604" alt="A milky turquoise glacial lake below a wall of snow peaks"/>
+    <img data-title="Every pass, a *prayer* in the wind." class="trek-slide" data-src="img/web/trekking/trek-40.jpg" data-srcset="img/web/trekking/sm/trek-40.jpg 800w, img/web/trekking/trek-40.jpg 1600w" sizes="100vw" width="1600" height="650" alt="A loaded pack pony on a snowy pass behind a wall of prayer flags"/>
+    <img data-title="Sleep beneath *the giants.*" class="trek-slide" data-src="img/web/trekking/trek-32.jpg" data-srcset="img/web/trekking/sm/trek-32.jpg 800w, img/web/trekking/trek-32.jpg 1600w" sizes="100vw" width="1600" height="650" alt="Yellow trek tents pitched below snow peaks"/>
+    <img data-title="One ridge *at a time.*" class="trek-slide" data-src="img/web/trekking/trek-06.jpg" data-srcset="img/web/trekking/sm/trek-06.jpg 800w, img/web/trekking/trek-06.jpg 1600w" sizes="100vw" width="1600" height="637" alt="Trekkers crossing a grassy ridge with prayer flags and snow peaks behind"/>
+    <img data-title="Into Lunana, *beyond the roads.*" class="trek-slide" data-src="img/web/trekking/trek-25.jpg" data-srcset="img/web/trekking/sm/trek-25.jpg 800w, img/web/trekking/trek-25.jpg 1600w" sizes="100vw" width="1600" height="643" alt="A village with prayer flags above a wide glacial river valley in autumn colours"/>
+  </div>
+  <div class="trek-slide-controls"><div class="hero-dots" id="trekDots"></div><button type="button" class="hero-pause" id="trekPause" aria-label="Pause slideshow" aria-pressed="false"><svg class="pause-icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z" fill="currentColor"/></svg><svg class="play-icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg></button></div>
+  <div class="trek-hero-copy">
+    <div class="section-label">Trekking in Bhutan</div>
+    <h1 id="trekTitle">Walk the <em>roof</em> of the kingdom.</h1>
+    <p>High passes strung with prayer flags, glacial lakes, yak-herder villages and peaks no one is allowed to climb. Bhutan's treks are fully supported camping journeys: ponies carry the load, a trek chef cooks every meal, and a Bhutanese guide walks beside you all the way.</p>
+    <div class="trek-hero-actions">
+      <a class="btn-primary" href="#treks">See the treks</a>
+      <a class="btn-outline" href="./#journey-finder">Plan my trek</a>
+    </div>
+  </div>
+</section>
+
+<div class="trek-facts" role="list">
+  <div role="listitem"><strong>9</strong><span>treks, from 3 to 24 walking days</span></div>
+  <div role="listitem"><strong>5,320 m</strong><span>Rinchen Zoe La, the Snowman's highest pass</span></div>
+  <div role="listitem"><strong>3,500–5,000 m</strong><span>where most trek camps sit</span></div>
+  <div role="listitem"><strong>2</strong><span>trekking seasons: spring and autumn</span></div>
+</div>
+
+<!-- Trek catalogue. Days = walking days; full trip length includes arrival, acclimatisation and drive days. -->
+<section class="trek-section" id="treks" aria-labelledby="treksTitle">
+  <div class="trek-head">
+    <div class="section-label section-label-centered">Choose your trail</div>
+    <h2 class="section-title section-title-centered" id="treksTitle">Nine treks, <em>one kingdom</em></h2>
+    <p>From a five-day ridge walk above Paro to the month-long Snowman, every trek is private, fully crewed and shaped around your fitness and dates. Walking days are shown; the full trip adds arrival, acclimatisation and sightseeing days.</p>
+  </div>
+  <div class="trek-grid">
+    <article class="trek-card">
+      <div class="trek-card-photo wm wm-compact"><span class="trek-grade">Easy – moderate</span><img src="img/web/trekking/sm/trek-06.jpg" width="800" height="319" alt="Trekkers crossing a grassy ridge with prayer flags and snow peaks behind" loading="lazy"/></div>
+      <div class="trek-card-body">
+        <h3>Druk Path</h3>
+        <p>The classic first trek: Paro to Thimphu over the ridges between them, past Jele Dzong, rhododendron forest and the trout lakes of Jimilang Tsho, with long views of the high Himalaya on clear days.</p>
+        <dl class="trek-meta"><div><dt>Walking</dt><dd>5–6 days</dd></div><div><dt>High point</dt><dd>~4,200 m</dd></div><div><dt>Season</dt><dd>Mar–Jun, Sep–Nov</dd></div></dl>
+      </div>
+    </article>
+    <article class="trek-card">
+      <div class="trek-card-photo wm wm-compact"><span class="trek-grade">Moderate – hard</span><img src="img/web/trekking/sm/lake.jpg" width="800" height="323" alt="A turquoise alpine lake in a high Himalayan valley" loading="lazy"/></div>
+      <div class="trek-card-body">
+        <h3>Dagala Thousand Lakes</h3>
+        <p>A short, high trek south of Thimphu through yak pastures to a plateau scattered with glacial lakes. Few trekkers, wide panoramas, and camps beside water that mirrors the sky.</p>
+        <dl class="trek-meta"><div><dt>Walking</dt><dd>5 days</dd></div><div><dt>High point</dt><dd>~4,500 m</dd></div><div><dt>Season</dt><dd>Apr–Jun, Sep–Nov</dd></div></dl>
+      </div>
+    </article>
+    <article class="trek-card">
+      <div class="trek-card-photo wm wm-compact"><span class="trek-grade">Moderate – hard</span><img src="img/web/trekking/sm/trek-02.jpg" width="800" height="315" alt="A great snow-covered massif above brown foothills" loading="lazy"/></div>
+      <div class="trek-card-body">
+        <h3>Jomolhari</h3>
+        <p>Up the Paro valley to base camp at Jangothang beneath Jomolhari (7,326 m), over Nyile La to Lingzhi Dzong, then across Yale La toward Thimphu. Bhutan's best-loved high trek.</p>
+        <dl class="trek-meta"><div><dt>Walking</dt><dd>7 days</dd></div><div><dt>High point</dt><dd>~4,900 m</dd></div><div><dt>Season</dt><dd>Apr–Jun, Sep–Nov</dd></div></dl>
+      </div>
+    </article>
+    <article class="trek-card">
+      <div class="trek-card-photo wm wm-compact"><span class="trek-grade">Moderate – hard</span><img src="img/web/trekking/sm/trek-18.jpg" width="800" height="324" alt="A forested valley leading to a snow peak" loading="lazy"/></div>
+      <div class="trek-card-body">
+        <h3>Soi Yaksa</h3>
+        <p>Jomolhari's quieter cousin: the same approach to Jangothang, then a loop through the hidden Soi Yaksa valley of nomad camps and waterfalls, returning to Paro.</p>
+        <dl class="trek-meta"><div><dt>Walking</dt><dd>7 days</dd></div><div><dt>High point</dt><dd>Above 4,500 m</dd></div><div><dt>Season</dt><dd>Apr–Jun, Sep–Nov</dd></div></dl>
+      </div>
+    </article>
+    <article class="trek-card">
+      <div class="trek-card-photo wm wm-compact"><span class="trek-grade">Difficult</span><img src="img/web/trekking/sm/trek-25.jpg" width="800" height="322" alt="A highland village of stone houses in a wide mountain valley" loading="lazy"/></div>
+      <div class="trek-card-body">
+        <h3>Laya Gasa</h3>
+        <p>From Paro across the northern passes to Laya, home of the Layap people and their conical bamboo hats, then down through takin country to the Gasa hot springs and Punakha.</p>
+        <dl class="trek-meta"><div><dt>Walking</dt><dd>11 days</dd></div><div><dt>High point</dt><dd>~5,000 m</dd></div><div><dt>Season</dt><dd>Apr–Jun, Sep–Nov</dd></div></dl>
+      </div>
+    </article>
+    <article class="trek-card">
+      <div class="trek-card-photo wm wm-compact"><span class="trek-grade">Very difficult</span><img src="img/web/trekking/sm/trek-21.jpg" width="800" height="302" alt="A milky turquoise glacial lake below a wall of snow peaks" loading="lazy"/></div>
+      <div class="trek-card-body">
+        <h3>Snowman</h3>
+        <p>The great traverse of the Bhutan Himalaya: Jomolhari, Laya and the remote Lunana region, eleven high passes and close to 350 km on foot. One of the hardest treks on earth. <a href="#snowman">See the route</a></p>
+        <dl class="trek-meta"><div><dt>Walking</dt><dd>24 days</dd></div><div><dt>High point</dt><dd>~5,320 m</dd></div><div><dt>Season</dt><dd>Late Sep–Oct</dd></div></dl>
+      </div>
+    </article>
+    <article class="trek-card">
+      <div class="trek-card-photo wm wm-compact"><span class="trek-grade">Moderate – hard</span><img src="img/web/trekking/sm/trek-45.jpg" width="800" height="324" alt="A line of prayer flags along a forested ridge below snowy mountains" loading="lazy"/></div>
+      <div class="trek-card-body">
+        <h3>Chele La</h3>
+        <p>A short ridge trek from Bhutan's highest road pass between Paro and Haa: prayer-flag summits, the Kila Gompa nunnery on its cliff, and on clear mornings Jomolhari on the horizon.</p>
+        <dl class="trek-meta"><div><dt>Walking</dt><dd>3 days</dd></div><div><dt>High point</dt><dd>~4,000 m</dd></div><div><dt>Season</dt><dd>Mar–Jun, Sep–Nov</dd></div></dl>
+      </div>
+    </article>
+    <article class="trek-card">
+      <div class="trek-card-photo wm wm-compact"><span class="trek-grade">Moderate – hard</span><img src="img/web/trekking/sm/trek-46.jpg" width="800" height="325" alt="Prayer flags above a dark mountain lake framed by snowy slopes" loading="lazy"/></div>
+      <div class="trek-card-body">
+        <h3>Nub Tshonapata</h3>
+        <p>Into the high country of Haa, one of Bhutan's least-visited districts, to the sacred lake of Nub Tshonapata and the yak pastures around it.</p>
+        <dl class="trek-meta"><div><dt>Walking</dt><dd>5 days</dd></div><div><dt>High point</dt><dd>Above 4,000 m</dd></div><div><dt>Season</dt><dd>Apr–Jun, Sep–Nov</dd></div></dl>
+      </div>
+    </article>
+    <article class="trek-card">
+      <div class="trek-card-photo wm wm-compact"><span class="trek-grade">Easy – moderate</span><img src="img/web/trekking/sm/trek-05.jpg" width="800" height="318" alt="A small white chorten at the edge of a forested mountain valley" loading="lazy"/></div>
+      <div class="trek-card-body">
+        <h3>Merak &amp; Sakteng</h3>
+        <p>Far eastern Bhutan, to the twin villages of the semi-nomadic Brokpa people, who still wear yak-hair hats and red woollen tunics, inside the Sakteng Wildlife Sanctuary.</p>
+        <dl class="trek-meta"><div><dt>Walking</dt><dd>3–7 days</dd></div><div><dt>Region</dt><dd>Trashigang</dd></div><div><dt>Season</dt><dd>Mar–May, Sep–Nov</dd></div></dl>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Snowman Trek feature. Stages follow a standard 28-day itinerary; altitudes are approximate and vary by source. -->
+<section class="trek-section alt" id="snowman" aria-labelledby="snowmanTitle">
+  <div class="trek-feature">
+    <div class="trek-feature-photos">
+      <img src="img/web/trekking/trek-40.jpg" srcset="img/web/trekking/sm/trek-40.jpg 800w, img/web/trekking/trek-40.jpg 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="650" alt="A loaded pack pony on a snowy pass behind a wall of prayer flags" loading="lazy"/>
+      <div class="pair">
+        <img src="img/web/trekking/sm/trek-16.jpg" width="800" height="304" alt="Glacial lakes beneath a snow peak" loading="lazy"/>
+        <img src="img/web/trekking/sm/trek-29.jpg" width="800" height="336" alt="A snowy cirque cradling a small lake" loading="lazy"/>
+      </div>
+      <div class="pair">
+        <img src="img/web/trekking/sm/trek-01.jpg" width="800" height="318" alt="Pack ponies carrying loads up a snowy trail" loading="lazy"/>
+        <img src="img/web/trekking/sm/trek-30.jpg" width="800" height="332" alt="A mountain ridge reflected in a still lake" loading="lazy"/>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">Featured journey</div>
+      <h2 class="section-title" id="snowmanTitle">The <em>Snowman</em> Trek</h2>
+      <p>Twenty-four walking days across the northern wall of Bhutan, from the Paro valley to Lunana, a district so remote it is cut off by snow for half the year. More people summit Everest each season than complete the Snowman. It asks a great deal: weeks above 4,000 metres, long days, and weather that decides the route. In return it gives you a Bhutan very few outsiders ever see.</p>
+      <dl class="trek-stats">
+        <div><dt>Trip length</dt><dd>28 days</dd></div>
+        <div><dt>Walking days</dt><dd>24</dd></div>
+        <div><dt>Distance</dt><dd>~350 km</dd></div>
+        <div><dt>High passes</dt><dd>11</dd></div>
+        <div><dt>Highest pass</dt><dd>~5,320 m</dd></div>
+        <div><dt>Best window</dt><dd>Late Sep – mid Oct</dd></div>
+      </dl>
+      <ol class="trek-stages">
+        <li><span class="days">Days 1–2</span><h3>Paro and Tiger's Nest</h3><p>Arrive, rest, and climb to Taktsang Monastery as a first acclimatisation walk.</p></li>
+        <li><span class="days">Days 3–6</span><h3>Up the Paro Chhu to Jangothang</h3><p>Through forest and yak meadows to base camp at about 4,040 m under Jomolhari, with a rest day to acclimatise.</p></li>
+        <li><span class="days">Days 7–13</span><h3>Lingzhi, Chebisa and Laya</h3><p>Over Nyile La, Gogu La and Jari La, past Lingzhi Dzong and the blue-sheep slopes of Shomuthang, then down to Laya village for a rest day.</p></li>
+        <li><span class="days">Days 14–20</span><h3>Into Lunana</h3><p>Across Tsomo La and Gangla Karchung La (about 5,100 m) beside glaciers and lakes, through Woche and Lhedi to Thanza, and a rest day among its farmers.</p></li>
+        <li><span class="days">Days 21–26</span><h3>The high crossing</h3><p>The hardest stretch: camps near 5,000 m at Tshochena and Jichu Dramo, the summit of the trek at Rinchen Zoe La, then the long descent past Tampe Tsho to the road at Nikka Chhu.</p></li>
+        <li><span class="days">Days 27–28</span><h3>Punakha, Thimphu, departure</h3><p>Hot showers, a dzong or two, and a farewell dinner before your flight.</p></li>
+      </ol>
+      <p class="trek-note"><strong>Before you book:</strong> the Snowman runs only when the high passes are open, usually from late September. Snow can close Gangla Karchung La or Rinchen Zoe La at short notice; your guide will then take a safe exit route through Lunana or Gasa. We ask every Snowman trekker for previous high-altitude trekking experience.</p>
+    </div>
+  </div>
+</section>
+
+<section class="trek-section" id="trail-life" aria-labelledby="lifeTitle">
+  <div class="trek-head">
+    <div class="section-label section-label-centered">Life on the trail</div>
+    <h2 class="section-title section-title-centered" id="lifeTitle">You walk. <em>We carry the rest.</em></h2>
+    <p>There are no lodges on Bhutan's high trails, so every trek is a fully supported camping journey. A small crew travels with you and has camp standing before you arrive.</p>
+  </div>
+  <div class="trek-life">
+    <figure><img src="img/web/trekking/sm/trek-38.jpg" width="800" height="324" alt="Pack ponies loaded with baskets on a mountain trail" loading="lazy"/><figcaption><h3>Your crew</h3><p>A licensed Bhutanese guide, a trek chef, camp assistants and local horsemen. A party of two travels with around five crew; larger groups have more.</p></figcaption></figure>
+    <figure><img src="img/web/trekking/sm/trek-31.jpg" width="800" height="321" alt="Ponies grazing around a trek camp in a high valley" loading="lazy"/><figcaption><h3>Ponies and yaks</h3><p>Horses, mules or, above the tree line, yaks carry the tents, kitchen and your duffel bag (about 15 kg each). You carry only a daypack with water, camera and layers.</p></figcaption></figure>
+    <figure><img src="img/web/trekking/sm/trek-32.jpg" width="800" height="325" alt="Yellow tents pitched below snow peaks" loading="lazy"/><figcaption><h3>Camp</h3><p>Sleeping tents with mats, a dining tent with tables and chairs, a kitchen tent and a toilet tent, pitched at established campsites, usually between 3,500 and 5,000 m.</p></figcaption></figure>
+    <figure><img src="img/web/trekking/sm/trek-33.jpg" width="800" height="323" alt="Trekkers sharing a meal at camp chairs in a mountain meadow" loading="lazy"/><figcaption><h3>Food</h3><p>Hot breakfast, a warm packed lunch, tea and snacks when you reach camp, and a three-course dinner: soup, rice, vegetables, meat or eggs, and Bhutanese, Indian or continental dishes.</p></figcaption></figure>
+    <figure><img src="img/web/trekking/sm/trek-34.jpg" width="800" height="323" alt="A trekker eating beside a camp table with snow peaks behind" loading="lazy"/><figcaption><h3>A day's rhythm</h3><p>Tea at your tent at dawn, walking by eight, five to seven hours on the trail with a long lunch, and evenings in the dining tent. Some days are short; pass days are long.</p></figcaption></figure>
+    <figure><img src="img/web/trekking/sm/trek-27.jpg" width="800" height="320" alt="Trekkers and ponies walking through mossy forest" loading="lazy"/><figcaption><h3>Water and terrain</h3><p>Water is boiled every day for your bottles. Expect forest paths, river stones, moraine, mud and stream crossings, and snow or ice on the high passes.</p></figcaption></figure>
+  </div>
+</section>
+
+<section class="trek-section alt" id="seasons" aria-labelledby="seasonsTitle">
+  <div class="trek-head">
+    <div class="section-label section-label-centered">When to trek</div>
+    <h2 class="section-title section-title-centered" id="seasonsTitle">Two windows <em>in the year</em></h2>
+    <p>The monsoon and the winter snows shape Bhutan's trekking calendar. High routes open in spring and autumn; the short, lower treks can run for longer.</p>
+  </div>
+  <div class="trek-seasons">
+    <div class="trek-season"><span class="when">March – May</span><h3>Spring</h3><span class="verdict">Good</span><p>Rhododendrons in flower and warming days. Views are hazier than autumn and afternoon showers build toward late May.</p></div>
+    <div class="trek-season"><span class="when">June – August</span><h3>Monsoon</h3><span class="verdict">Avoid high treks</span><p>Heavy rain, leeches, muddy trails and cloud on the peaks. Only short, lower walks make sense.</p></div>
+    <div class="trek-season best"><span class="when">Mid Sep – November</span><h3>Autumn</h3><span class="verdict">Best</span><p>Clear, settled skies and the sharpest mountain views. The only window for the Snowman. Nights at high camps are cold.</p></div>
+    <div class="trek-season"><span class="when">December – February</span><h3>Winter</h3><span class="verdict">Low treks only</span><p>Snow closes the high passes and trails ice over. Short, low-altitude walks around Punakha and Paro are still lovely.</p></div>
+  </div>
+</section>
+
+<section class="trek-section" id="prepare" aria-labelledby="prepareTitle">
+  <div class="trek-head">
+    <div class="section-label section-label-centered">Prepare</div>
+    <h2 class="section-title section-title-centered" id="prepareTitle">Altitude, fitness <em>and kit</em></h2>
+  </div>
+  <div class="trek-two">
+    <div>
+      <img src="img/web/trekking/sm/trek-37.jpg" width="800" height="327" alt="A trekker with poles climbing a rocky trail toward snowy peaks" loading="lazy"/>
+      <h2>Altitude and <em>fitness</em></h2>
+      <p>Most Bhutan treks spend days above 4,000 metres. Acute mountain sickness can affect anyone, however fit; what protects you is time. Every itinerary we build climbs gradually and includes rest days at altitude.</p>
+      <ul class="trek-list">
+        <li><strong>Train for months, not weeks.</strong> Long hill walks with a daypack, ideally on back-to-back days, are the best preparation.</li>
+        <li><strong>Go slowly and drink well.</strong> Three to four litres of water a day, and a pace where you can still talk.</li>
+        <li><strong>Know the signs.</strong> Headache, nausea, poor sleep and breathlessness at rest mean stop and tell your guide. Worsening symptoms mean going down.</li>
+        <li><strong>Talk to your doctor</strong> about acetazolamide (Diamox) and bring any personal medication.</li>
+        <li><strong>Travel insurance</strong> that covers trekking to the trek's high point and emergency evacuation is required.</li>
+      </ul>
+    </div>
+    <div>
+      <img src="img/web/trekking/sm/trek-22.jpg" width="800" height="327" alt="A trekker in an orange jacket photographing glaciers" loading="lazy"/>
+      <h2>What to <em>pack</em></h2>
+      <p>We provide tents, mats, dining and kitchen gear, and the ponies to carry it. Bring your personal kit in a soft duffel bag; city clothes stay safely in Thimphu or Paro.</p>
+      <ul class="trek-list">
+        <li><strong>Sleeping bag</strong> rated to −10 °C (we can arrange hire).</li>
+        <li><strong>Broken-in waterproof boots</strong> and camp shoes or sandals.</li>
+        <li><strong>Layers:</strong> thermal base, fleece, down jacket, waterproof shell and trousers, warm hat and gloves.</li>
+        <li><strong>Trekking poles, headlamp</strong> and spare batteries.</li>
+        <li><strong>Sun protection:</strong> glacier-grade sunglasses, sunscreen, lip balm, sun hat.</li>
+        <li><strong>2 litres of bottles</strong> and purification tablets for top-ups from streams.</li>
+        <li><strong>A 25–30 litre daypack</strong> and a small personal first-aid kit.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="trek-section alt" id="trek-gallery" aria-labelledby="galleryTitle">
+  <div class="trek-head">
+    <div class="section-label section-label-centered">From the Snowman Trek</div>
+    <h2 class="section-title section-title-centered" id="galleryTitle">Above <em>the clouds</em></h2>
+    <p>Frames from the trail across Bhutan's northern Himalaya. Select a photo to see it larger.</p>
+  </div>
+  <div class="trek-gallery">
+    <a class="wide wm wm-compact" href="img/web/trekking/trek-24.jpg"><img src="img/web/trekking/sm/trek-24.jpg" width="800" height="324" alt="Prayer flags blowing above a deep valley, with snow peaks beyond" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-08.jpg"><img src="img/web/trekking/sm/trek-08.jpg" width="800" height="320" alt="A gilded temple roof against snowy mountains" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-09.jpg"><img src="img/web/trekking/sm/trek-09.jpg" width="800" height="321" alt="Rows of lit butter lamps" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-17.jpg"><img src="img/web/trekking/sm/trek-17.jpg" width="800" height="323" alt="Two trekkers looking up a valley to a snow peak" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-12.jpg"><img src="img/web/trekking/sm/trek-12.jpg" width="800" height="325" alt="A trekker climbing a steep grassy slope toward rocky peaks" loading="lazy"/></a>
+    <a class="wide wm wm-compact" href="img/web/trekking/trek-13.jpg"><img src="img/web/trekking/sm/trek-13.jpg" width="800" height="322" alt="A sea of cloud below glaciated peaks" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-15.jpg"><img src="img/web/trekking/sm/trek-15.jpg" width="800" height="323" alt="Hanging glaciers on a steep mountain face" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-04.jpg"><img src="img/web/trekking/sm/trek-04.jpg" width="800" height="322" alt="A pony on a snow-covered slope beneath a peak" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-10.jpg"><img src="img/web/trekking/sm/trek-10.jpg" width="800" height="325" alt="Trekking boots crossing a log over a stream" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-11.jpg"><img src="img/web/trekking/sm/trek-11.jpg" width="800" height="317" alt="Mist rolling down a river valley over a camp" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-35.jpg"><img src="img/web/trekking/sm/trek-35.jpg" width="800" height="322" alt="Snow peaks above a valley trail" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-23.jpg"><img src="img/web/trekking/sm/trek-23.jpg" width="800" height="332" alt="A pointed peak rising above the clouds" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-07.jpg"><img src="img/web/trekking/sm/trek-07.jpg" width="800" height="317" alt="A village on a green hillside below a high peak" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-26.jpg"><img src="img/web/trekking/sm/trek-26.jpg" width="800" height="324" alt="A snow-dusted pyramid peak and glacier" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-39.jpg"><img src="img/web/trekking/sm/trek-39.jpg" width="800" height="329" alt="A yellow prayer flag against a blue sky" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-19.jpg"><img src="img/web/trekking/sm/trek-19.jpg" width="800" height="325" alt="Frosted ridges under a pale sky" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-28.jpg"><img src="img/web/trekking/sm/trek-28.jpg" width="800" height="322" alt="Ponies resting in a green forested valley" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-42.jpg"><img src="img/web/trekking/sm/trek-42.jpg" width="800" height="322" alt="A trekker in a cap looking across mountain ranges" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-14.jpg"><img src="img/web/trekking/sm/trek-14.jpg" width="800" height="323" alt="A stony moraine slope in the high mountains" loading="lazy"/></a>
+    <a class="wm wm-compact" href="img/web/trekking/trek-20.jpg"><img src="img/web/trekking/sm/trek-20.jpg" width="800" height="323" alt="A dark rock peak among clouds" loading="lazy"/></a>
+    <a class="wide wm wm-compact" href="img/web/trekking/trek-36.jpg"><img src="img/web/trekking/sm/trek-36.jpg" width="800" height="321" alt="Snowy ridges beneath a deep blue sky" loading="lazy"/></a>
+  </div>
+</section>
+
+<section class="trek-closing" aria-labelledby="ctaTitle">
+  <img src="img/web/trekking/sm/lake.jpg" width="800" height="323" alt="" loading="lazy"/>
+  <div class="trek-closing-copy">
+    <div class="section-label section-label-centered">Your trek, your dates</div>
+    <h2 class="section-title section-title-centered" id="ctaTitle">Ready for the <em>high trails?</em></h2>
+    <p>Tell us how far you want to go and when. We'll match you with the right trek, handle your visa, permits and the Sustainable Development Fee, and send a day-by-day plan within 24 hours.</p>
+    <div class="trek-hero-actions">
+      <a class="btn-primary" href="./#journey-finder">Plan my trek</a>
+      <a class="btn-outline" href="./#enquiry">Ask a question</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="trek-foot">
+  <span>© Druk Voyages · Authentic Bhutan, Extraordinary Journeys</span>
+  <nav aria-label="Footer">
+    <a href="./">Home</a>
+    <a href="./#itineraries">Itineraries</a>
+    <a href="./#experiences">Experiences</a>
+    <a href="./#journey-finder">Plan My Trip</a>
+  </nav>
+</footer>
+</body>
+</html>

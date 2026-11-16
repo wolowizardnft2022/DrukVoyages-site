@@ -57,6 +57,7 @@
     "planSendAnother": "다른 요청 보내기",
     "navBestTime": "분점",
     "navStories": "여행 이야기",
+    "navTrekking": "트레킹",
     "mapEntry": "인도에서 들어오는 입국 지점",
     "mapFlightsPause": "비행 일시정지",
     "mapFlightsPlay": "비행 재생",
@@ -84,6 +85,8 @@
     "valleyAlt": "부탄 계곡 풍경",
     "finderLink": "어디서부터 시작해야 할지 모르시나요?",
     "finderLinkAction": "당신의 리듬을 찾아보세요 ↗",
+    "treksLink": "더 긴 트레킹을 찾으시나요?",
+    "treksLinkAction": "트레킹 페이지에서 9개 코스 모두 보기 ↗",
     "finderIntro": "부탄은 천천히 여행하는 것을 보상합니다. 나침반을 사용하여 출발점을 찾은 다음 현지 플래너가 관심분야와 날짜에 맞춰 속도를 조정하도록 하세요.",
     "finderHow": "부탄 여행을 계획하는 방법",
     "finderFact1": "체크리스트가 아닌, 느끼고 싶은 것부터 시작하세요.",
@@ -1112,7 +1115,8 @@
       "산과 함께<br> 만나는 <em>깊은 울림.</em>",
       "오래된 이야기.<br> 살아 있는 <em>전통.</em>",
       "서두르지 않는<br> 나만의 <em>여정.</em>",
-      "여행이 끝나도<br> 마음에 남는 <em>왕국.</em>"
+      "여행이 끝나도<br> 마음에 남는 <em>왕국.</em>",
+      "기도 깃발이<br> <em>바람에 날리는 길.</em>"
     ],
     "gnhPillars": [
       "지속 가능하고 공정한<br>사회 경제 발전",

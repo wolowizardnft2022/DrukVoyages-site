@@ -7,7 +7,7 @@
    Bump VERSION to drop every cached file on the next visit. To switch the worker off, open any page with ?nosw. */
 'use strict';
 
-const VERSION = '20261116-4';
+const VERSION = '20261117-2';
 const BASE = new URL('./', self.location.href).pathname;
 const PAGES = `druk-pages-${VERSION}`;
 const ASSETS = `druk-assets-${VERSION}`;

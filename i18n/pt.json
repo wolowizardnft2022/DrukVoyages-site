@@ -57,6 +57,7 @@
     "planSendAnother": "Enviar outro pedido",
     "navBestTime": "Equinócio",
     "navStories": "Histórias",
+    "navTrekking": "Trekking",
     "mapEntry": "Entrada a partir da Índia",
     "mapFlightsPause": "Pausar voos",
     "mapFlightsPlay": "Ver voos",
@@ -84,6 +85,8 @@
     "valleyAlt": "Paisagem do Vale do Butão",
     "finderLink": "Não sabe por onde começar?",
     "finderLinkAction": "Encontre o seu ritmo ↗",
+    "treksLink": "Procura um trekking mais longo?",
+    "treksLinkAction": "Veja os nove treks na página de Trekking ↗",
     "finderIntro": "O Butão recompensa viajar devagar. Use a bússola para encontrar um ponto de partida e deixe que nossos planejadores locais ajustem o ritmo de acordo com seus interesses e datas.",
     "finderHow": "Como planejamos uma viagem ao Butão",
     "finderFact1": "Comece com o que você quer sentir, não com uma lista de verificação.",
@@ -1112,7 +1115,8 @@
       "Onde as montanhas<br> ganham <em>sentido.</em>",
       "Raízes antigas.<br> Tradições <em>vivas.</em>",
       "Siga um caminho<br> sem <em>pressa.</em>",
-      "Um reino que<br> fica <em>com você.</em>"
+      "Um reino que<br> fica <em>com você.</em>",
+      "Caminhe onde<br> as preces <em>voam.</em>"
     ],
     "gnhPillars": [
       "Desenvolvimento socioeconômico<br>sustentável e equitativo",

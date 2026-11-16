@@ -57,6 +57,7 @@
     "planSendAnother": "Send another request",
     "navBestTime": "Equinox",
     "navStories": "Stories",
+    "navTrekking": "Trekking",
     "mapEntry": "Entry from India",
     "mapFlightsPause": "Pause flights",
     "mapFlightsPlay": "Play flights",
@@ -84,6 +85,8 @@
     "valleyAlt": "Bhutan Valley Landscape",
     "finderLink": "Not sure where to begin?",
     "finderLinkAction": "Find your rhythm ↗",
+    "treksLink": "Looking for a longer trek?",
+    "treksLinkAction": "See all nine treks on the Trekking page ↗",
     "finderIntro": "Bhutan rewards travelling slowly. Use the compass to find a starting point, then let our local planners tune the pacing around your interests and dates.",
     "finderHow": "How we plan a Bhutan journey",
     "finderFact1": "Start with what you want to feel, not a checklist.",
@@ -1112,7 +1115,8 @@
       "Where mountains<br> meet <em>meaning.</em>",
       "Ancient stories.<br> Living <em>traditions.</em>",
       "Take the path<br> less <em>hurried.</em>",
-      "A kingdom that<br> stays <em>with you.</em>"
+      "A kingdom that<br> stays <em>with you.</em>",
+      "Walk where<br> prayers <em>fly.</em>"
     ],
     "gnhPillars": [
       "Sustainable &amp; Equitable<br>Socio-Economic Development",

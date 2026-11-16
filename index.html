@@ -47,19 +47,20 @@
     "sameAs": ["https://instagram.com/drukvoyages","https://facebook.com/drukvoyages"]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261116-lazy1"/>
+  <link rel="stylesheet" href="styles.css?v=20261117-treks1"/>
   <!-- Intro splash: decided before first paint so the home page never flashes first. Shown on every load
     and refresh, never with reduced motion, and never without JavaScript (the class is set here). Without a
     #section link, the page opens at the top (the home page) instead of the browser's restored scroll. -->
   <script src="motion-flag.js?v=20261116-lazy1"></script>
   <link rel="preload" as="fetch" href="img/druk-voyages-logo-animated.svg?v=20261109" crossorigin/>
+  <link rel="preload" as="image" href="img/web/splash-lake.jpg"/>
 </head>
 <body>
 <!-- INTRO SPLASH
-  The About logo builds itself (knot, dragon, bolt, name) on a dark screen, then shrinks into the
+  The About logo builds itself (knot, dragon, bolt, name) over the Snowman Trek lake photo, then shrinks into the
   masthead logo while the screen fades to the home page. Styles: styles.css "Intro splash".
 -->
-<div class="intro-splash" id="introSplash" aria-hidden="true"><div class="intro-clouds"><i class="intro-cloud c1"></i><i class="intro-cloud c2"></i><i class="intro-cloud c3"></i><i class="intro-cloud c4"></i><i class="intro-cloud c5"></i></div><div class="intro-logo"></div></div>
+<div class="intro-splash" id="introSplash" aria-hidden="true"><div class="intro-clouds"><i class="intro-cloud c1"></i><i class="intro-cloud c2"></i><i class="intro-cloud c3"></i><i class="intro-cloud c4"></i><i class="intro-cloud c5"></i></div><div class="intro-logo"></div><p class="intro-motto">Authentic Bhutan, Extraordinary Journeys</p></div>
 <div class="sky-drift" aria-hidden="true"><i class="sky-cloud d1"></i><i class="sky-cloud d2"></i><i class="sky-cloud d3"></i><i class="sky-cloud d4"></i></div>
 <script src="splash.js?v=20261114-csp1"></script>
 <a class="skip-link" href="#mainContent">Skip to content</a>
@@ -119,6 +120,7 @@
 <li><a href="#itineraries">Itineraries</a></li>
 <li><a href="#bhutan-map" data-map-nav>Explore Bhutan</a></li>
 <li><a href="#experiences">Experiences</a></li>
+<li><a href="trekking.html" data-nav-i18n="navTrekking">Trekking</a></li>
 <li><a href="#gallery">Gallery</a></li>
 <li><a href="#best-time" data-nav-i18n="navBestTime">Equinox</a></li>
 <li><a href="#guest-stories" data-nav-i18n="navStories">Stories</a></li>
@@ -152,6 +154,7 @@
   <a href="#itineraries" data-act="closeMobileNav">Itineraries</a>
   <a href="#bhutan-map" data-map-nav data-act="closeMobileNav">Explore Bhutan</a>
   <a href="#experiences" data-act="closeMobileNav">Experiences</a>
+  <a href="trekking.html" data-nav-i18n="navTrekking">Trekking</a>
   <a href="#gallery" data-act="closeMobileNav">Gallery</a>
   <a href="#best-time" data-nav-i18n="navBestTime" data-act="closeMobileNav">Equinox</a>
   <a href="#guest-stories" data-nav-i18n="navStories" data-act="closeMobileNav">Stories</a>
@@ -174,7 +177,7 @@
 
 <!-- HERO SECTION
   First screen users see. Background images are assigned in styles.css using
-  .hero-slide-1 through .hero-slide-5. Text and buttons can be edited here.
+  .hero-slide-1 through .hero-slide-6. Text and buttons can be edited here.
 -->
 <main id="mainContent" tabindex="-1">
 <section class="hero" id="home" aria-label="Discover Bhutan">
@@ -184,6 +187,7 @@
 <div class="hero-slide hero-slide-3"></div>
 <div class="hero-slide hero-slide-4"></div>
 <div class="hero-slide hero-slide-5"></div>
+<div class="hero-slide hero-slide-6"></div>
   </div>
   <div class="hero-content">
 <div class="hero-eyebrow">Bhutan, beyond the ordinary</div>
@@ -320,6 +324,7 @@
   <a class="itinerary-finder-link" href="#journey-finder">Not sure where to begin? <span>Find your rhythm ↗</span></a>
 </div>
 <div class="itinerary-grid" id="itineraryGrid"></div>
+<div class="itin-treks-more" id="itinTreksLink" hidden><a class="itinerary-finder-link" href="trekking.html">Looking for a longer trek? <span>See all nine treks on the Trekking page ↗</span></a></div>
   </div>
 </section>
 
@@ -729,10 +734,10 @@
 -->
 <div class="toast" id="toast"></div>
 
-<script src="translations-core.js?v=20261116-core1"></script>
-<script src="localization.js?v=20261116-plan1"></script>
+<script src="translations-core.js?v=20261117-slide6"></script>
+<script src="localization.js?v=20261117-treks1"></script>
 <script src="chat-locales.js?v=20261002-complete4"></script>
-<script src="main.js?v=20261116-book2"></script>
+<script src="main.js?v=20261117-treks1"></script>
 <script src="actions.js?v=20261114-csp1"></script>
 <script src="season-branches.js?v=20261114-br9"></script>
 <script src="atlas-loader.js?v=20261114-photos1"></script>

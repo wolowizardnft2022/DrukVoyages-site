@@ -58,6 +58,7 @@
   "planSendAnother": "Send another request",
   "navBestTime": "Equinox",
   "navStories": "Stories",
+  "navTrekking": "Trekking",
   "mapEntry": "Entry from India",
   "mapFlightsPause": "Pause flights",
   "mapFlightsPlay": "Play flights",
@@ -85,6 +86,8 @@
   "valleyAlt": "Bhutan Valley Landscape",
   "finderLink": "Not sure where to begin?",
   "finderLinkAction": "Find your rhythm ↗",
+  "treksLink": "Looking for a longer trek?",
+  "treksLinkAction": "See all nine treks on the Trekking page ↗",
   "finderIntro": "Bhutan rewards travelling slowly. Use the compass to find a starting point, then let our local planners tune the pacing around your interests and dates.",
   "finderHow": "How we plan a Bhutan journey",
   "finderFact1": "Start with what you want to feel, not a checklist.",
@@ -253,7 +256,7 @@
   async function load(lang){
     if(!supported.includes(lang))throw new Error('Unsupported language');
     if(catalogs.has(lang))return;
-    if(!pending.has(lang))pending.set(lang,fetch(`i18n/${lang}.json?v=20261116-plan1`,{cache:'no-cache'}).then(async response=>{
+    if(!pending.has(lang))pending.set(lang,fetch(`i18n/${lang}.json?v=20261117-treks1`,{cache:'no-cache'}).then(async response=>{
       if(!response.ok)throw new Error('Translation catalog unavailable');
       const data=await response.json();
       if(data.language!==lang)throw new Error('Translation catalog mismatch');

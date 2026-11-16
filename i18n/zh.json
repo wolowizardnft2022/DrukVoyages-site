@@ -57,6 +57,7 @@
     "planSendAnother": "再发送一份请求",
     "navBestTime": "二分点",
     "navStories": "旅客故事",
+    "navTrekking": "徒步",
     "mapEntry": "从印度入境",
     "mapFlightsPause": "暂停航班",
     "mapFlightsPlay": "播放航班",
@@ -84,6 +85,8 @@
     "valleyAlt": "不丹山谷风景",
     "finderLink": "不确定从哪里开始？",
     "finderLinkAction": "找到你的节奏↗",
+    "treksLink": "想要更长的徒步路线？",
+    "treksLinkAction": "在徒步页面查看全部九条路线 ↗",
     "finderIntro": "不丹奖励缓慢的旅行。使用指南针找到起点，然后让我们当地的规划人员根据您的兴趣和日期调整节奏。",
     "finderHow": "我们如何计划不丹之旅",
     "finderFact1": "从你想要的感觉开始，而不是清单。",
@@ -1112,7 +1115,8 @@
       "群山之间，<br> 寻觅<em>深意。</em>",
       "古老的故事，<br> 鲜活的<em>传统。</em>",
       "放慢脚步，<br> 自在<em>前行。</em>",
-      "一个王国，<br> 留在<em>心间。</em>"
+      "一个王国，<br> 留在<em>心间。</em>",
+      "走向<br> 经幡<em>飞扬处。</em>"
     ],
     "gnhPillars": [
       "可持续与公平的<br>社会经济发展",

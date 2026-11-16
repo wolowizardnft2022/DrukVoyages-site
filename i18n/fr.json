@@ -57,6 +57,7 @@
     "planSendAnother": "Envoyer une autre demande",
     "navBestTime": "Équinoxe",
     "navStories": "Récits",
+    "navTrekking": "Randonnée",
     "mapEntry": "Entrée depuis l’Inde",
     "mapFlightsPause": "Suspendre les vols",
     "mapFlightsPlay": "Lancer les vols",
@@ -84,6 +85,8 @@
     "valleyAlt": "Paysage de la vallée du Bhoutan",
     "finderLink": "Vous ne savez pas par où commencer ?",
     "finderLinkAction": "Trouvez votre rythme ↗",
+    "treksLink": "Envie d’un trek plus long ?",
+    "treksLinkAction": "Découvrez les neuf treks sur la page Randonnée ↗",
     "finderIntro": "Le Bhoutan récompense un voyage lent. Utilisez la boussole pour trouver un point de départ, puis laissez nos planificateurs locaux adapter le rythme en fonction de vos intérêts et de vos dates.",
     "finderHow": "Comment nous planifions un voyage au Bhoutan",
     "finderFact1": "Commencez par ce que vous voulez ressentir, pas par une liste de contrôle.",
@@ -1112,7 +1115,8 @@
       "Des montagnes<br> pleines de <em>sens.</em>",
       "Récits anciens.<br> Traditions <em>vivantes.</em>",
       "Prenez le chemin<br> sans <em>hâte.</em>",
-      "Un royaume qui<br> reste <em>en vous.</em>"
+      "Un royaume qui<br> reste <em>en vous.</em>",
+      "Marchez là où<br> volent les <em>prières.</em>"
     ],
     "gnhPillars": [
       "Développement socio-économique<br>durable et équitable",

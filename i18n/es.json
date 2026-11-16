@@ -57,6 +57,7 @@
     "planSendAnother": "Enviar otra solicitud",
     "navBestTime": "Equinoccio",
     "navStories": "Historias",
+    "navTrekking": "Trekking",
     "mapEntry": "Entrada desde la India",
     "mapFlightsPause": "Pausar vuelos",
     "mapFlightsPlay": "Ver vuelos",
@@ -84,6 +85,8 @@
     "valleyAlt": "Paisaje del valle de Bután",
     "finderLink": "¿No estás seguro de por dónde empezar?",
     "finderLinkAction": "Encuentra tu ritmo ↗",
+    "treksLink": "¿Buscas un trek más largo?",
+    "treksLinkAction": "Descubre los nueve treks en la página de Trekking ↗",
     "finderIntro": "Bután recompensa viajar despacio. Utilice la brújula para encontrar un punto de partida y luego deje que nuestros planificadores locales ajusten el ritmo según sus intereses y fechas.",
     "finderHow": "Cómo planificamos un viaje a Bután",
     "finderFact1": "Comience con lo que quiere sentir, no con una lista de verificación.",
@@ -1112,7 +1115,8 @@
       "Donde las montañas<br> cobran <em>sentido.</em>",
       "Historias antiguas.<br> Tradiciones <em>vivas.</em>",
       "Sigue un camino<br> sin <em>prisas.</em>",
-      "Un reino que<br> llevas <em>contigo.</em>"
+      "Un reino que<br> llevas <em>contigo.</em>",
+      "Camina donde<br> vuelan las <em>plegarias.</em>"
     ],
     "gnhPillars": [
       "Desarrollo socioeconómico<br>sostenible y equitativo",
