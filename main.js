@@ -305,7 +305,8 @@ function brochureFile(it){
   const slug=it.title.split(' — ')[0].normalize('NFKD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/['’]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
   return `druk-voyages-${it.id}-${slug}.pdf`;
 }
-function openModal(id){
+/* relabel: true when a language change re-renders the open dialog; the booking form keeps its state and focus stays put. */
+function openModal(id,relabel=false){
   activeItineraryId=id;
   const original=ITINERARIES.find(i=>i.id===id);if(!original)return;
   const it=localizedItinerary(original);
@@ -329,6 +330,7 @@ function openModal(id){
   document.getElementById('modalOverlay').classList.add('open');
   if(!itineraryTrigger||!document.getElementById('modalOverlay').contains(document.activeElement))itineraryTrigger=document.activeElement;
   document.body.style.overflow='hidden';
+  if(relabel){setBookingLabels();return;}
   resetBooking();
   document.getElementById('modalDismiss').focus();
 }
@@ -514,7 +516,7 @@ function applyCompleteTranslations(){
   window.DRUK_COUNTRY_PICKER?.refresh();
   const gallery=window.DRUK_L10N.catalog(activeLanguage)?.gallery||englishGallery;
   document.querySelectorAll('.gallery-item').forEach((item,i)=>{const img=item.querySelector('img');img.alt=gallery[i][0];img.dataset.caption=gallery[i][1];item.setAttribute('aria-label',tr('galleryView',{name:img.alt}));});
-  if(document.getElementById('modalOverlay').classList.contains('open')&&activeItineraryId)openModal(activeItineraryId);
+  if(document.getElementById('modalOverlay').classList.contains('open')&&activeItineraryId)openModal(activeItineraryId,true);
   if(document.getElementById('galleryLightbox').classList.contains('open')&&lastGalleryTrigger)openGalleryLightbox(lastGalleryTrigger.querySelector('img'));
   window.DRUK_CHAT_REFRESH_LANGUAGE?.();
 }
