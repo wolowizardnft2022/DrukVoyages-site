@@ -94,7 +94,10 @@ img { display: block; max-width: 100%; }
 .logo-text .tagline { display: block; margin-top: 6px; font-size: 0.75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); transition: opacity var(--dur); }
 /* The masthead tagline keeps one colour over every hero photo and after scrolling: light cream with a
    soft shadow, instead of grey that faded into bright or cloudy slides and vanished on scroll. */
-#navbar .logo-text .tagline { color: var(--ink); opacity: .88; text-shadow: 0 1px 6px rgba(0,0,0,.85), 0 0 2px rgba(0,0,0,.6); }
+/* Masthead motto (owner, 2026-11-17): centred under the name and set smaller than it, one quiet line at 10px
+   (a stated exception to the 12px label floor in R-02). The footer logo keeps the left-aligned 12px tagline. */
+#navbar .logo-text { align-items: center; }
+#navbar .logo-text .tagline { color: var(--ink); margin-top: 5px; font-size: 0.625rem; letter-spacing: .08em; opacity: .78; text-shadow: 0 1px 6px rgba(0,0,0,.85), 0 0 2px rgba(0,0,0,.6); }
 .nav-links { grid-area: links; display: flex; align-items: center; justify-content: center; gap: clamp(20px, 3vw, 44px); list-style: none; margin-top: 6px; }
 .nav-links a { position: relative; display: inline-flex; align-items: center; min-height: 44px; font-size: var(--fs-xs); font-weight: 400; letter-spacing: var(--track); text-transform: uppercase; text-decoration: none; color: var(--ink); transition: color var(--dur-fast); }
 .nav-links a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 8px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform var(--dur) var(--ease); }
